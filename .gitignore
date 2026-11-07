@@ -1,0 +1,9 @@
+# Temporary scrapings and raw dumps
+*.txt
+*.csv
+sheet.html
+extracted_raw.json
+website.zip
+build_*.py
+build_*.rb
+.DS_Store

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UPSC AWFG 3-Month Intensive Preparation Engine & Syllabus Tracker with Prelims & Mains Microthemes Synergy Mapping">
+  <title>UPSC AWFG 3-Month Prep Engine | 33 Tests & Microthemes Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="app-header">
+    <div class="header-top">
+      <!-- Brand & Title -->
+      <div class="brand-section">
+        <div class="brand-logo-badge">AWFG</div>
+        <div class="brand-info">
+          <h1>
+            <span>UPSC Prep Engine</span>
+            <span class="brand-badge" id="brand-days-badge">33 Tests • 90 Days</span>
+          </h1>
+          <p class="brand-subtitle">Prelims + Mains Microthemes Dynamic Syllabus Tracker</p>
+        </div>
+      </div>
+
+      <!-- Schedule Dynamic Controllers -->
+      <div class="schedule-controls">
+        <div class="control-item">
+          <label for="start-date-input">📅 Start Date:</label>
+          <input type="date" id="start-date-input" class="date-input" title="Change start date to dynamically recalculate all 33 test target dates">
+        </div>
+        <div class="control-item">
+          <label for="target-days-input">🎯 Target Duration:</label>
+          <div style="display: flex; align-items: center; gap: 5px;">
+            <input type="number" id="target-days-input" class="date-input" min="15" max="365" step="1" value="90" style="width: 72px; text-align: center; font-weight: 700;" title="Enter custom total target days to complete all 33 tests">
+            <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-secondary);">Days</span>
+          </div>
+        </div>
+        <div class="control-item">
+          <label for="cadence-selector">⏱️ Cadence:</label>
+          <select id="cadence-selector" class="select-input" title="Select frequency cadence for tests">
+            <option value="auto_distribute">Auto Distribute across Target Days</option>
+            <option value="mon_wed_fri">Mon-Wed-Fri Pattern</option>
+            <option value="tue_thu_sat">Tue-Thu-Sat Pattern</option>
+            <option value="every_2_days">Every 2 Days (Fixed 66d)</option>
+            <option value="every_3_days">Every 3 Days (Fixed 99d)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Actions & Profile -->
+      <div class="header-actions">
+        <div id="user-badge-container"></div>
+        <button id="theme-toggle-btn" class="btn btn-outline btn-sm" title="Toggle Light/Dark Theme">☀️ Light</button>
+        <button id="export-backup-btn" class="btn btn-outline btn-sm" title="Export all progress as JSON backup file">⬇ Export</button>
+        <button id="import-backup-btn" class="btn btn-outline btn-sm" title="Restore progress from JSON backup file">⬆ Restore</button>
+        <input type="file" id="import-file-input" style="display: none;" accept=".json">
+      </div>
+    </div>
+  </header>
+
+  <!-- KPI Metrics Dashboard -->
+  <section class="kpi-container" aria-label="Key Performance Indicators">
+    <div id="kpi-metrics-grid" class="kpi-grid">
+      <!-- Injected reactively by app.js -->
+    </div>
+  </section>
+
+  <!-- Navigation Toolbar & Filters -->
+  <section class="toolbar-container" aria-label="Toolbar and Filter Controls">
+    <div class="toolbar">
+      <!-- View Switcher Tabs -->
+      <div class="view-tabs" role="tablist">
+        <button class="tab-btn active" data-view="schedule" role="tab">📋 Test Schedule (33)</button>
+        <button class="tab-btn" data-view="roadmap" role="tab">🗺️ 13-Week Roadmap</button>
+        <button class="tab-btn" data-view="matrix" role="tab">⚡ Prelims vs Mains Synergy</button>
+        <button class="tab-btn" data-view="wysk" role="tab">✍️ WYSK Question Bank</button>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filter-group">
+        <!-- Paper Pills -->
+        <div class="paper-pills" role="group" aria-label="Filter by Paper">
+          <button class="pill-btn active" data-paper="ALL">ALL</button>
+          <button class="pill-btn" data-paper="GS-1">GS-1</button>
+          <button class="pill-btn" data-paper="GS-2">GS-2</button>
+          <button class="pill-btn" data-paper="GS-3">GS-3</button>
+          <button class="pill-btn" data-paper="GS-4">GS-4</button>
+        </div>
+
+        <!-- Status Filter -->
+        <select id="status-filter-select" class="select-input" aria-label="Filter by Completion Status">
+          <option value="ALL">All Statuses</option>
+          <option value="pending">Incomplete / Pending</option>
+          <option value="completed">Completed (🟢)</option>
+          <option value="overdue">Overdue (🔴)</option>
+        </select>
+
+        <!-- Live Search -->
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-query-input" class="search-input" placeholder="Search tests, topics, microthemes..." aria-label="Live Search">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Dynamic View Container -->
+  <main class="main-container">
+    <div id="view-content">
+      <!-- Injected dynamically based on active view -->
+    </div>
+  </main>
+
+  <!-- Auth / User Modal -->
+  <div id="auth-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-logo">🎯</div>
+        <h2 id="modal-heading">Aspirant Profile Sign In</h2>
+        <p>Save all your microtheme tick-marks, actual dates, and test progress locally in your browser.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="modal-username">Aspirant ID or Username</label>
+        <input type="text" id="modal-username" class="form-input" placeholder="e.g. Aspirant_2027" autofocus autocomplete="username">
+      </div>
+
+      <div class="form-group">
+        <label for="modal-password">Password (Optional)</label>
+        <input type="password" id="modal-password" class="form-input" placeholder="Keep blank for quick access" autocomplete="current-password">
+      </div>
+
+      <div class="auth-buttons">
+        <button id="modal-login-btn" class="btn btn-primary" style="width: 100%;">Sign In / Create Profile</button>
+        <div class="auth-divider"><span>OR</span></div>
+        <button id="modal-guest-btn" class="btn btn-subtle" style="width: 100%;">⚡ Continue as Default (Aspirant_2027)</button>
+        <button id="modal-close-btn" class="btn btn-outline btn-sm" style="width: 100%; margin-top: 6px;">Dismiss</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Microtheme PYQ Explorer Modal -->
+  <div id="pyq-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="pyq-modal-title">
+    <div class="modal-card pyq-modal-card">
+      <div class="pyq-modal-header">
+        <div class="pyq-header-top">
+          <div class="pyq-title-group">
+            <span class="pyq-type-badge">📚 Microtheme PYQ Explorer</span>
+            <h2 id="pyq-modal-title" class="pyq-title">Microtheme Title</h2>
+          </div>
+          <button id="pyq-modal-close" class="btn btn-outline btn-sm">✕ Close</button>
+        </div>
+        
+        <!-- Tab Switcher between Mains and Prelims -->
+        <div class="pyq-tabs-row">
+          <div class="pyq-tabs" role="tablist">
+            <button class="pyq-tab-btn active" data-pyq-tab="mains" id="pyq-tab-mains-btn" role="tab">
+              📝 Mains PYQs (<span id="pyq-mains-count">0</span>)
+            </button>
+            <button class="pyq-tab-btn" data-pyq-tab="prelims" id="pyq-tab-prelims-btn" role="tab">
+              🎯 Prelims PYQs (<span id="pyq-prelims-count">0</span>)
+            </button>
+          </div>
+          <div class="pyq-filter-box">
+            <input type="text" id="pyq-search-inp" class="search-input" placeholder="Search questions in this microtheme..." style="min-width: 200px;">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Body where questions are rendered -->
+      <div id="pyq-modal-body" class="pyq-modal-body">
+        <!-- Dynamic questions rendered by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Arrow Button -->
+  <button id="back-to-top-btn" class="back-to-top-btn hidden" aria-label="Scroll back to top" title="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Load Data and Application Scripts -->
+  <script src="data.js"></script>
+  <script src="questions_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
