@@ -28906,14 +28906,6 @@
       ],
       "questions": [
         {
-          "year": 2025,
-          "marks": 15,
-          "text": "e world will include events from 18th centuryution, world wars, redrawal of national boundcolonization, political philosophies like commalism etc.",
-          "subject": "World History",
-          "microtheme": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
-          "page": 11
-        },
-        {
           "year": 2014,
           "marks": 10,
           "text": "The anti-colonial struggles in West Africa were led by the new elite of Western-educated Africans.",
@@ -28938,9 +28930,9 @@
           "page": 11
         },
         {
-          "year": 2024,
+          "year": 2018,
           "marks": 15,
-          "text": "Analyse. Why indentured labour was taken by the British from India to other colonies?",
+          "text": "Why indentured labour was taken by the British from India to other colonies? Have they been able to preserve their cultural identity over there?",
           "subject": "World History",
           "microtheme": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
           "page": 11
@@ -28970,25 +28962,9 @@
           "page": 11
         },
         {
-          "year": 2021,
-          "marks": 15,
-          "text": "What were the events that led to the Suez Crisis in 1956?",
-          "subject": "World History",
-          "microtheme": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
-          "page": 11
-        },
-        {
-          "year": 2015,
-          "marks": 12.5,
-          "text": "How did it deal a final blow to Britain's self-image as a world power?",
-          "subject": "World History",
-          "microtheme": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
-          "page": 11
-        },
-        {
-          "year": 2023,
+          "year": 2014,
           "marks": 10,
-          "text": "What policy instruments were deployed to contain the great economic depression? How far is it correct to say that the First World War was fought essentially for the preservation of balance of power? \u201cThere arose a serious challenge to the Democratic State System between the two World Wars.\u201d Evaluate the statement. To what extent can Germany be held responsible for causing the two World Wars? Discuss critically Bring out the socio-economic effects of the introduction of railways in different countries of the world.",
+          "text": "What were the events that led to the Suez Crisis in 1956? How did it deal a final blow to Britain's self-image as a world power?",
           "subject": "World History",
           "microtheme": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
           "page": 11
@@ -29048,7 +29024,23 @@
         {
           "year": 2015,
           "marks": 12.5,
-          "text": "Have they been able to preserve their cultural identity over there?",
+          "text": "How far is it correct to say that the First World War was fought essentially for the preservation of balance of power?",
+          "subject": "World History",
+          "microtheme": "World Wars",
+          "page": 11
+        },
+        {
+          "year": 2021,
+          "marks": 15,
+          "text": "\u201cThere arose a serious challenge to the Democratic State System between the two World Wars.\u201d Evaluate the statement.",
+          "subject": "World History",
+          "microtheme": "World Wars",
+          "page": 11
+        },
+        {
+          "year": 2015,
+          "marks": 12.5,
+          "text": "To what extent can Germany be held responsible for causing the two World Wars? Discuss critically.",
           "subject": "World History",
           "microtheme": "World Wars",
           "page": 11
@@ -29056,7 +29048,23 @@
         {
           "year": 2013,
           "marks": 10,
-          "text": "Discuss the quality of life of the people there during the industrialization. How does it compare with that in India at present?",
+          "text": "What policy instruments were deployed to contain the Great Economic Depression?",
+          "subject": "World History",
+          "microtheme": "World Wars",
+          "page": 11
+        },
+        {
+          "year": 2023,
+          "marks": 15,
+          "text": "Bring out the socio-economic effects of the introduction of railways in different countries of the world.",
+          "subject": "World History",
+          "microtheme": "World Wars",
+          "page": 11
+        },
+        {
+          "year": 2013,
+          "marks": 10,
+          "text": "The Industrial Revolution was a mixed blessing. Discuss the quality of life of the people there during the industrialization. How does it compare with that in India at present?",
           "subject": "World History",
           "microtheme": "World Wars",
           "page": 11

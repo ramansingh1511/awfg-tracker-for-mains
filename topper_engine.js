@@ -9472,114 +9472,88 @@
   }
 
   // -------------------------------------------------------------
-  // Disciplinary Fine-Domain Classifier
+  // -------------------------------------------------------------
+  // Disciplinary Fine-Domain Classifier (Subject-First + Word-Boundary Regex)
   // -------------------------------------------------------------
   function detectQuestionDomain(qText, subject) {
     const q = (qText || '').toLowerCase();
     const s = (subject || '').toLowerCase();
 
-    // Geography - Climatology
-    if (q.includes('troposphere') || q.includes('monsoon') || q.includes('purvaiya') ||
-        q.includes('el-nino') || q.includes('el nino') || q.includes('enso') || q.includes('iod') ||
-        q.includes('cyclone') || q.includes('air mass') || q.includes('front') || q.includes('inversion') ||
-        q.includes('atmosphere') || q.includes('lapse rate') || q.includes('jet stream') ||
-        q.includes('insolation') || q.includes('heat budget') || q.includes('loo') ||
-        q.includes('chinook') || q.includes('foehn') || q.includes('desert') || s.includes('climatol')) {
-      return 'GEOGRAPHY_CLIMATOLOGY';
+    // Priority 1: Match explicit UPSC GS Paper Subject if provided
+    if (s.includes('world history')) {
+      return 'WORLD_HISTORY';
     }
-
-    // Geography - Geomorphology
-    if (q.includes('plate tectonic') || q.includes('earthquake') || q.includes('volcan') ||
-        q.includes('fold mountain') || q.includes('fjord') || q.includes('delta') || q.includes('rock') ||
-        q.includes('geomorphic') || q.includes('continental drift') || q.includes('seafloor') ||
-        q.includes('mantle plume') || q.includes('island arc') || q.includes('aeolian') ||
-        q.includes('desertification') || q.includes('landslide') || q.includes('circum-pacific') ||
-        q.includes('subcontinent') || s.includes('geomorph')) {
-      return 'GEOGRAPHY_GEOMORPHOLOGY';
+    if (s.includes('post independence') || s.includes('post-independence')) {
+      return 'POST_INDEPENDENCE';
     }
-
-    // Geography - Oceanography & Resources
-    if (q.includes('ocean current') || q.includes('tide') || q.includes('upwelling') ||
-        q.includes('coral') || q.includes('polymetallic') || q.includes('arctic') || q.includes('antarctic') ||
-        q.includes('mineral oil') || q.includes('petroleum') || q.includes('natural resource') ||
-        q.includes('iron and steel') || q.includes('western ghat') || s.includes('ocean') || s.includes('resource')) {
-      return 'GEOGRAPHY_RESOURCES';
-    }
-
-    // Art & Culture
-    if (q.includes('tandava') || q.includes('dance') || q.includes('gandhara') || q.includes('sculpture') ||
-        q.includes('stupa') || q.includes('rock-cut') || q.includes('rock cut') || q.includes('cave') ||
-        q.includes('temple') || q.includes('nagara') || q.includes('dravida') || q.includes('chola bronze') ||
-        q.includes('khajuraho') || q.includes('chandella') || q.includes('harappa') ||
-        q.includes('indus valley') || q.includes('sultanate') || q.includes('heritage') ||
-        q.includes('art form') || q.includes('architecture') || s.includes('art')) {
-      return 'ART_CULTURE';
-    }
-
-    // Ancient & Medieval History
-    if (q.includes('taxila') || q.includes('nalanda') || q.includes('ashoka') || q.includes('mauryan') ||
-        q.includes('inscript') || q.includes('sangam') || q.includes('traveller') || q.includes('traveler') ||
-        q.includes('fa-hien') || q.includes('hiuen tsang') || q.includes('al-biruni') || q.includes('ibn battuta') ||
-        q.includes('bhakti') || q.includes('sufi') || q.includes('chaitanya') || q.includes('kabir') ||
-        q.includes('gupta') || q.includes('chola') || q.includes('vijayanagara') || q.includes('vedic') ||
-        s.includes('ancient') || s.includes('medieval')) {
-      return 'ANCIENT_MEDIEVAL';
-    }
-
-    // Modern History
-    if (q.includes('1857') || q.includes('uprising') || q.includes('rebellion') || q.includes('freedom struggle') ||
-        q.includes('swadeshi') || q.includes('satyagraha') || q.includes('non-cooperation') ||
-        q.includes('civil disobedience') || q.includes('quit india') || q.includes('gandhi') ||
-        q.includes('subhas') || q.includes('bose') || q.includes('tagore') || q.includes('dalhousie') ||
-        q.includes('panipat') || q.includes('naval mutiny') || q.includes('rin') || q.includes('british armies') ||
-        q.includes('colonial') || q.includes('british') || q.includes('famine') || q.includes('tribal') ||
-        q.includes('peasant') || q.includes('drain of wealth') || s.includes('modern')) {
+    if (s.includes('modern history')) {
       return 'MODERN_HISTORY';
     }
-
-    // Post-Independence & World History
-    if (q.includes('bismarck') || q.includes('world war') || q.includes('revolution') ||
-        q.includes('industrial revolution') || q.includes('suez') || q.includes('decolonization') ||
-        q.includes('states reorganization') || q.includes('planned economy') || q.includes('land reform') ||
-        q.includes('linguistic') || s.includes('world history') || s.includes('post indep')) {
-      return 'WORLD_POST_INDEP';
+    if (s.includes('art and culture') || s.includes('art & culture') || s.includes('ancient history')) {
+      if (/\b(taxila|nalanda|ashoka|mauryan|sangam|traveller|traveler|fa-hien|hiuen tsang|al-biruni|ibn battuta|bhakti|sufi|chaitanya|kabir|gupta|chola|vijayanagara|vedic)\b/i.test(q)) {
+        return 'ANCIENT_MEDIEVAL';
+      }
+      return 'ART_CULTURE';
     }
-
-    // Society - Gender & Women
-    if (q.includes('women') || q.includes('gender') || q.includes('patriarch') || q.includes('care economy') ||
-        q.includes('feminization') || q.includes('self-help group') || q.includes('shg') ||
-        q.includes('fertility') || q.includes('sex ratio') || q.includes('marriage') || s.includes('women')) {
-      return 'SOCIETY_WOMEN';
+    if (s.includes('geography')) {
+      if (/\b(troposphere|monsoon|purvaiya|el-nino|el nino|enso|iod|cyclone|air mass|inversion|atmosphere|lapse rate|jet stream|insolation|heat budget|wind|climate|precipitation)\b/i.test(q)) {
+        return 'GEOGRAPHY_CLIMATOLOGY';
+      }
+      if (/\b(ocean|marine|coral|sea|arctic|antarctic|polar|natural resource|petroleum|coal|mineral|iron|steel|water|bauxite|soil|catchment|basin)\b/i.test(q)) {
+        return 'GEOGRAPHY_RESOURCES';
+      }
+      return 'GEOGRAPHY_GEOMORPHOLOGY';
     }
-
-    // Society - Caste & Diversity
-    if (q.includes('caste') || q.includes('untouchab') || q.includes('dalit') || q.includes('diversity') ||
-        q.includes('pluralism') || q.includes('secularism') || q.includes('communalism') ||
-        q.includes('regionalism') || q.includes('regional disparity') || q.includes('tribal knowledge') ||
-        q.includes('sons of the soil') || s.includes('diversity')) {
+    if (s.includes('society') || s.includes('social justice')) {
+      if (/\b(women|gender|patriarch|care economy|feminization|self-help|shg|fertility|sex ratio|marriage|maternal)\b/i.test(q)) {
+        return 'SOCIETY_WOMEN';
+      }
+      if (/\b(urban|city|cities|slum|smart cit|tier 2|tier-2|migration|poverty|hunger|globalization|globalisation|elderly|aging|youth|family|child labour|child labor|work from home|disability)\b/i.test(q)) {
+        return 'SOCIETY_URBAN';
+      }
       return 'SOCIETY_DIVERSITY';
     }
-
-    // Society - Urbanization & Poverty
-    if (q.includes('urban') || q.includes('slum') || q.includes('smart cit') || q.includes('tier 2') ||
-        q.includes('migration') || q.includes('poverty') || q.includes('hunger') ||
-        q.includes('globalization') || q.includes('globalisation') || q.includes('elderly') ||
-        q.includes('youth') || q.includes('family') || q.includes('child labour') ||
-        q.includes('work from home') || q.includes('disability') || s.includes('society')) {
-      return 'SOCIETY_URBAN';
-    }
-
-    // GS-2 Polity Fallback
-    if (q.includes('article ') || q.includes('fundamental rights') || q.includes('constitution') ||
-        q.includes('supreme court') || q.includes('governor') || q.includes('parliament') ||
-        s.includes('polity') || s.includes('governance')) {
+    if (s.includes('polity') || s.includes('governance')) {
       return 'POLITY_CONSTITUTION';
     }
 
-    return s.includes('geography') ? 'GEOGRAPHY_CLIMATOLOGY' : (s.includes('history') ? 'ART_CULTURE' : 'SOCIETY_DIVERSITY');
+    // Priority 2: Keyword-based inference if subject is absent
+    if (/\b(bismarck|world war|french revolution|american revolution|industrial revolution|suez|decolonization|indentured|mercantilism|malay peninsula|league of nations)\b/i.test(q)) {
+      return 'WORLD_HISTORY';
+    }
+    if (/\b(princely states|linguistic reorganization|fazal ali|tashkent|bhoodan|gramdan|jai jawan jai kisan|consolidation after independence|sardar patel|shastri|emergency|planned economy)\b/i.test(q)) {
+      return 'POST_INDEPENDENCE';
+    }
+    if (/\b(1857|swadeshi|satyagraha|non-cooperation|civil disobedience|quit india|gandhi|subhas|bose|tagore|dalhousie|panipat|naval mutiny|colonial rule|drain of wealth|british)\b/i.test(q)) {
+      return 'MODERN_HISTORY';
+    }
+    if (/\b(troposphere|monsoon|purvaiya|cyclone|atmosphere|climate|lapse rate)\b/i.test(q)) {
+      return 'GEOGRAPHY_CLIMATOLOGY';
+    }
+    if (/\b(plate tectonic|earthquake|volcan|fold mountain|delta|geomorphic|continental drift)\b/i.test(q)) {
+      return 'GEOGRAPHY_GEOMORPHOLOGY';
+    }
+    if (/\b(coral|ocean current|arctic|antarctic|natural resource|mineral)\b/i.test(q)) {
+      return 'GEOGRAPHY_RESOURCES';
+    }
+    if (/\b(stupa|rock-cut|cave|temple|sculpture|gandhara|chola bronze|art form|architecture)\b/i.test(q)) {
+      return 'ART_CULTURE';
+    }
+    if (/\b(caste|diversity|secularism|communalism|regionalism|pluralism|tribal)\b/i.test(q)) {
+      return 'SOCIETY_DIVERSITY';
+    }
+    if (/\b(women|gender|patriarch|sex ratio)\b/i.test(q)) {
+      return 'SOCIETY_WOMEN';
+    }
+    if (/\b(urban|city|slum|migration|poverty|globalization)\b/i.test(q)) {
+      return 'SOCIETY_URBAN';
+    }
+
+    return 'SOCIETY_DIVERSITY';
   }
 
-  // -------------------------------------------------------------
+  // Disciplinary Dynamic Fallback Generator (100% Domain-Calibrated)
+   // -------------------------------------------------------------
   // Fast Calibrated Topic Key Matcher (28 Master Topics)
   // -------------------------------------------------------------
   function matchCalibratedTopicKey(qText) {
@@ -9728,6 +9702,9 @@
     return null;
   }
 
+  // -------------------------------------------------------------
+  // Recommended Topper Key Selector
+  // -------------------------------------------------------------
   function getRecommendedTopperKey(qText, subject) {
     const domain = detectQuestionDomain(qText, subject);
     if (domain === 'GEOGRAPHY_CLIMATOLOGY') return 'medha';
@@ -9735,13 +9712,12 @@
     if (domain.startsWith('SOCIETY')) return 'ishita';
     if (domain === 'POLITY_CONSTITUTION') return 'aditya';
     if (domain === 'ART_CULTURE' || domain === 'ANCIENT_MEDIEVAL') return 'aditya';
-    if (domain === 'MODERN_HISTORY' || domain === 'WORLD_POST_INDEP') return 'anmol';
+    if (domain === 'WORLD_HISTORY' || domain === 'MODERN_HISTORY') return 'anmol';
+    if (domain === 'POST_INDEPENDENCE') return 'umaharathi';
     return 'aditya';
   }
 
-  // -------------------------------------------------------------
-  // Disciplinary Dynamic Fallback Generator (100% Domain-Calibrated)
-  // -------------------------------------------------------------
+ // -------------------------------------------------------------
   function generateDynamicFallback(topperKey, qText, marks, domain) {
     const topicTitle = extractCleanTopicTitle(qText);
     const cleanText = (qText || '').trim();
@@ -9844,44 +9820,124 @@
       return formatTopperArchetype(topperKey, paperLabel, topicTitle, p1Title, p1Points, p2Title, p2Points, p3Title, p3Points, diagTitle, diagAscii, diagSketch, stdSources, conclusionText);
     }
 
-    // 3. MODERN HISTORY & WORLD HISTORY
-    if (domain === 'MODERN_HISTORY' || domain === 'WORLD_POST_INDEP') {
-      const paperLabel = "GS-1 • Modern Indian & World History";
-      const p1Title = `1. Structural Socio-Economic Roots & Historical Catalysts of ${topicTitle}`;
+    // 3. MODERN INDIAN HISTORY (1757-1947)
+    if (domain === 'MODERN_HISTORY') {
+      const paperLabel = "GS-1 • Modern Indian History (1757–1947)";
+      const p1Title = `1. Colonial Subjugation, Structural Economic Drain & Grassroots Catalysts of ${topicTitle}`;
       const p1Points = [
-        { causalChain: `Colonial Exploitation / Autocratic Hegemony ──► Systematic Economic Drain & Social Subjugation ──► Volcanic Sub-soil Discontent (Underlined)`, evidence: `Documented in contemporary economic critiques (Naoroji, Dutt), archival records, and grassroots petition literature.` },
-        { causalChain: `Emergence of Vanguard Leadership & Vernacular Press ──► Articulates Popular Grievance into Structured Ideology ──► Mass Political Awakening`, evidence: `Vernacular newspapers, peasant kisan sabhas, and organizational resolutions mobilizing across class boundaries.` }
+        { causalChain: `Colonial Exploitation / Revenue Demands (Permanent/Ryotwari) ──► Systematic De-Industrialization & Economic Drain ──► Volcanic Grassroots Discontent (Underlined)`, evidence: `Documented in Dadabhai Naoroji's Drain Theory, R.C. Dutt's Economic History of India, and archival famine reports.` },
+        { causalChain: `Emergence of Vanguard Leadership & Vernacular Press ──► Articulates Popular Grievance into Structured Ideology ──► Mass Political Awakening`, evidence: `Synthesizes vernacular press (Amrita Bazar Patrika, Kesari), peasant kisan sabhas, and social reform movements.` }
       ];
-      const p2Title = `2. Methods of Resistance, Strategic Milestones & Structural Impact`;
+      const p2Title = `2. Evolution of Resistance: Mass Movements, Vanguard Leadership & Revolutionary Action`;
       const p2Points = [
-        { causalChain: `Strategic Mass Satyagraha / Revolutionary Action ──► Paralyses Imperial Administrative Machinery ──► Coerces Institutional Concessions`, evidence: `Civil Disobedience, boycott of foreign goods, parallel governments (Prati Sarkar), and mutinies shaking colonial control.` },
-        { causalChain: `Imperial Counter-Measures & Strategic Realignment ──► Repressive Ordinances + Communal Divide-and-Rule ──► Exposed Colonial Illegitimacy`, evidence: `British official commission inquiries and post-movement statutory constitutional acts (1861, 1909, 1919, 1935).` }
+        { causalChain: `Strategic Gandhian Mass Satyagraha (Non-Cooperation, Civil Disobedience, Quit India) ──► Paralyses Imperial Administrative Machinery ──► Coerces Institutional Concessions`, evidence: `Boycott of British manufactures, parallel governments (Satara Prati Sarkar, Tamluk Jatiya Sarkar), and mass court-arrests.` },
+        { causalChain: `Complementary Revolutionary Currents & Armed Assertion (INA, RIN Mutiny) ──► Shakes Military Reliability of the Raj ──► Accelerates British Withdrawal`, evidence: `Subhas Chandra Bose's Azad Hind Fauj (1943), Royal Indian Navy Mutiny (1946), and nationwide trial agitations.` }
       ];
-      const p3Title = `3. Enduring Historical Lessons for Modern Sovereign Nation-Building`;
+      const p3Title = `3. Enduring Constitutional & Ideological Legacy for the Sovereign Republic`;
       const p3Points = [
-        { causalChain: `Pluralistic Multi-Faith Coalition ──► Foundational Precursor to Secular Constitutional Democracy ──► Protects Democratic Ethos`, evidence: `Preamble values of Liberty, Equality, Fraternity, and Justice forged directly in the crucible of anti-colonial struggle.` },
-        { causalChain: `Vigilance against Sectarian Polarization ──► Institutionalizes Inclusive Socio-Economic Rights ──► Realizes Swaraj`, evidence: `Karachi Resolution (1931) on Fundamental Rights and Economic Program informing modern Directive Principles.` }
+        { causalChain: `Pluralistic Multi-Faith Freedom Coalition ──► Foundational Precursor to Secular Constitutional Democracy ──► Enshrines Preamble Guarantees`, evidence: `Values of Liberty, Equality, Fraternity, and Social Justice forged directly in the crucible of anti-colonial struggle.` },
+        { causalChain: `Ethos of Grassroots Swaraj & Self-Reliance (Swadeshi) ──► Institutionalized in Panchayati Raj & Atmanirbhar Bharat ──► Democratic Deepening`, evidence: `Directive Principles of State Policy (Part IV) and decentralized democratic governance (73rd/74th Amendments).` }
       ];
-      const diagTitle = `Historical Transformation Flow: ${topicTitle}`;
-      const diagAscii = `  [ STRUCTURAL CATALYST: Colonial Exploitation / Autocratic Hegemony ]
-                                   │
-                                   ▼
-  [ MASS MOBILIZATION AXIS: Multi-Class Coalitions & Vernacular Awakening ]
-                                   │
-         ┌─────────────────────────┴─────────────────────────┐
-         ▼                                                   ▼
-  [ Direct Mass Action & Boycott ]            [ Strategic Counter-Measures ]
-         │                                                   │
-         └─────────────────────────┬─────────────────────────┘
-                                   ▼
-  [ ENDURING OUTCOME: Democratic Consciousness & Constitutional Sovereignty ]`;
-      const diagSketch = "1. Top box for Structural Catalyst. 2. Central mobilization box. 3. Branch into Action vs Imperial Response. 4. Re-converge into Constitutional Sovereignty.";
+      const diagTitle = `Trajectory of Anti-Colonial Mobilization: ${topicTitle}`;
+      const diagAscii = `      [ Colonial Exploitative Policy / Sub-Soil Grievance ]
+                                       │
+         ┌─────────────────────────────┴─────────────────────────────┐
+         ▼                                                           ▼
+  [ GANDHIAN MASS SATYAGRAHA ]                                [ REVOLUTIONARY & ARMED ACTION ]
+  • Non-Cooperation & Civil Disobedience                      • INA Armed Resistance (Bose)
+  • Non-Violent Moral Mobilization                            • RIN Mutiny & Trade Union Strikes
+         │                                                           │
+         └─────────────────────────────┬─────────────────────────────┘
+                                       ▼
+        [ SOVEREIGN CONSTITUTIONAL DEMOCRACY & ATMANIRBHAR BHARAT (1947–PRESENT) ]`;
+      const diagSketch = "1. Top box for Colonial Policy/Grievance. 2. Middle split: Gandhian Mass Satyagraha vs Revolutionary/Armed Action. 3. Converge base into 1947 Sovereign Constitutional Democracy.";
       const stdSources = [
-        "Disciplinary Authorities: Bipan Chandra 'India's Struggle for Independence'; Shekhar Bandyopadhyay 'From Plassey to Partition'; Sumit Sarkar.",
-        "Archival Sources: National Archives of India official proceedings; contemporary political manifestos and resolutions.",
-        "Historiographical Balance: Synthesizes nationalist, Marxist, and subaltern perspectives to construct an objective multi-dimensional analysis."
+        "Disciplinary Authorities: Bipan Chandra 'India's Struggle for Independence'; Shekhar Bandyopadhyay 'From Plassey to Partition'; Sumit Sarkar 'Modern India'.",
+        "Archival & Vernacular Records: National Archives of India; contemporary nationalist press (Amrita Bazar Patrika, Kesari, Harijan).",
+        "Historiographical Synthesis: Integrates nationalist, Marxist, and subaltern perspectives into a balanced, rigorous analysis."
       ];
-      const conclusionText = `The epic struggle surrounding ${topicTitle} proves that sovereign freedom is won and preserved through moral conviction, unyielding unity, and democratic struggle. Upholding these hard-won constitutional values is modern India's highest national duty.`;
+      const conclusionText = `The crucible of ${topicTitle} demonstrates that India's freedom was not a colonial grant, but an unprecedented triumph of moral courage, pluralistic mass agency, and democratic conviction. Upholding these hard-won constitutional values is modern India's highest national duty.`;
+
+      return formatTopperArchetype(topperKey, paperLabel, topicTitle, p1Title, p1Points, p2Title, p2Points, p3Title, p3Points, diagTitle, diagAscii, diagSketch, stdSources, conclusionText);
+    }
+
+    // 4. MODERN WORLD HISTORY
+    if (domain === 'WORLD_HISTORY') {
+      const paperLabel = "GS-1 • Modern World History";
+      const p1Title = `1. Geopolitical Realpolitik, Imperial Rivalries & Ideological Drivers of ${topicTitle}`;
+      const p1Points = [
+        { causalChain: `Imperial Competition for Colonial Markets & Strategic Spheres ──► Secret Alliances & Revanchist Militarism ──► Global Geopolitical Polarization (Underlined)`, evidence: `Norman Lowe 'Mastering Modern World History'; documented in pre-1914 alliance systems, Scramble for Africa, and imperial trade blocs.` },
+        { causalChain: `Ideological Polarizations (Imperialism vs Anti-Colonialism; Democracy vs Totalitarianism) ──► Undermines Diplomatic Compromise ──► Systemic Conflict`, evidence: `Rise of Fascism in Italy, Nazism in Germany, and Soviet Marxist-Leninist confrontation with Western capitalist powers.` }
+      ];
+      const p2Title = `2. Systemic Crises, Institutional Fragility & Global Economic Repercussions`;
+      const p2Points = [
+        { causalChain: `Breakdown of Collective Security Architectures (League of Nations Impotence) ──► Unchecked Aggression & Territorial Annexations ──► Escalates to World War`, evidence: `Manchurian Crisis (1931), Abyssinian Crisis (1935), and collapse of Treaty of Versailles disarmament covenants.` },
+        { causalChain: `Macroeconomic Shocks (1929 Great Depression, Currency Wars) ──► Social Destabilization & Protectionist Tariff Barriers ──► Deepens International Rupture`, evidence: `Smoot-Hawley Tariff Act, hyperinflation in Weimar Germany, and global contraction of industrial output by >30%.` }
+      ];
+      const p3Title = `3. Enduring Historical Lessons for Multilateral Governance & Strategic Autonomy`;
+      const p3Points = [
+        { causalChain: `Rejection of Zero-Sum Imperial Spheres & Revanchist Treaties ──► Need for Inclusive Rules-Based Multilateral Order ──► Prevents Geopolitical Catastrophe`, evidence: `Formation of United Nations (1945), Bretton Woods institutions, and Universal Declaration of Human Rights.` },
+        { causalChain: `Strengthening Reformed Multilateralism & Strategic Autonomy ──► Resists Neo-Imperial Blocs ──► Safeguards Global Commons & Developing Nations`, evidence: `India's Non-Alignment / Strategic Autonomy, advocacy for UN Security Council reform, and G20 Delhi Declaration diplomacy.` }
+      ];
+      const diagTitle = `Geopolitical Dynamics & Global Realignment: ${topicTitle}`;
+      const diagAscii = `       [ Geopolitical Trigger / Hegemonic Rivalry ] ──► [ Institutional / Treaty Breakdown ]
+                                                                   │
+               ┌───────────────────────────────────────────────────┴───────────────────────────────────┐
+               ▼                                                                                       ▼
+        [ Military / Economic Escalation ]                                              [ Decolonization & Ideological Reshuffle ]
+        • Global Conflict / Depression                                                  • Rise of New Powers & Alliances
+               │                                                                                       │
+               └───────────────────────────────────────────────────┬───────────────────────────────────┘
+                                                                   ▼
+                         [ Reformed Multilateral Architecture & Rules-Based World Order ]`;
+      const diagSketch = "1. Top trigger box. 2. Institutional breakdown node. 3. Bifurcation into Military/Economic vs Decolonization. 4. Bottom base for Multilateral Order.";
+      const stdSources = [
+        "Disciplinary Authorities: Norman Lowe 'Mastering Modern World History'; Arjun Dev (NCERT World History); E.J. Hobsbawm's 'Age of Extremes'.",
+        "Archival & Treaty Records: Textual provisions of landmark international treaties (Treaty of Versailles, Locarno Pact, Yalta/Potsdam agreements).",
+        "Contemporary Multilateral Compass: Directly informs modern international relations, reformed multilateralism (UNSC), and non-alignment / strategic autonomy."
+      ];
+      const conclusionText = `World history demonstrates that lasting peace cannot be built upon punitive diktats or zero-sum imperial hegemonies, but upon inclusive multilateral institutions, shared economic prosperity, and inviolable respect for national sovereignty.`;
+
+      return formatTopperArchetype(topperKey, paperLabel, topicTitle, p1Title, p1Points, p2Title, p2Points, p3Title, p3Points, diagTitle, diagAscii, diagSketch, stdSources, conclusionText);
+    }
+
+    // 5. POST-INDEPENDENCE CONSOLIDATION
+    if (domain === 'POST_INDEPENDENCE') {
+      const paperLabel = "GS-1 • Post-Independence Consolidation & Reorganization";
+      const p1Title = `1. Post-Colonial Nation-Building Stresses & Institutional Challenges of ${topicTitle}`;
+      const p1Points = [
+        { causalChain: `Partition Trauma & Threat of Territorial Balkanization ──► Imperative of Integrating 565+ Princely States ──► Forges Sovereign Territorial Integrity (Underlined)`, evidence: `Sardar Vallabhbhai Patel and V.P. Menon's diplomatic mobilization of Instruments of Accession and Privy Purses.` },
+        { causalChain: `Popular Grassroots Linguistic & Regional Identity Assertions ──► Demands Democratic Devolution ──► Tests Federal Cohesion`, evidence: `Potti Sreeramulu's martyrdom, States Reorganisation Commission (Fazal Ali Commission 1956), and 7th Constitutional Amendment.` }
+      ];
+      const p2Title = `2. Policy Architecture, Democratic Accommodation & Socio-Economic Transformation`;
+      const p2Points = [
+        { causalChain: `Planned Industrialization & Agrarian Reforms (Abolition of Zamindari, Green/White Revolution) ──► Reverses Colonial Underdevelopment ──► Food Sovereignty`, evidence: `Planning Commission Five-Year Plans, Bhoodan-Gramdan movements (Vinoba Bhave), and high-yielding variety (HYV) seed technology.` },
+        { causalChain: `Strategic Non-Alignment (NAM) & Diplomatic Resilience in External Conflicts ──► Preserves Strategic Autonomy ──► Enhances Sovereign Security`, evidence: `Panchsheel Principles, Tashkent Agreement (1966), Simla Agreement (1972), and institutional victory in the 1971 Bangladesh Liberation.` }
+      ];
+      const p3Title = `3. Enduring Legacy for Modern Indian Federalism, Strategic Autonomy & Social Cohesion`;
+      const p3Points = [
+        { causalChain: `Evolution from Asymmetric Federalism to Cooperative & Competitive Federalism ──► Accommodates Diverse Regional Aspirations ──► Strengthens National Unity`, evidence: `Sarkaria and Punchhi Commission recommendations; institutional role of GST Council and NITI Aayog.` },
+        { causalChain: `Strengthening Democratic Institutionalism & Welfare Devolution ──► Deepens Social Inclusion ──► Accelerates Viksit Bharat @ 2047`, evidence: `Democratic resilience through peaceful transfers of power, Panchayati Raj decentralization, and digital public infrastructure (DPI).` }
+      ];
+      const diagTitle = `Post-Independence Nation-Building Triad: ${topicTitle}`;
+      const diagAscii = `                     [ FOUNDATIONAL PREMISE: Sovereign Republic (1947) ]
+                                              │
+              ┌───────────────────────────────┼───────────────────────────────┐
+              ▼                               ▼                               ▼
+       [ POLITICAL UNITY ]           [ ECONOMIC SELF-RELIANCE ]     [ SOCIAL ACCOMMODATION ]
+       • Princely States Integration • Planned Industrialization    • Linguistic States (1956)
+       • Constitutional Federalism   • Agrarian Reforms (Green Rev) • Tribal Panchsheel
+              │                               │                               │
+              └───────────────────────────────┼───────────────────────────────┘
+                                              ▼
+                [ Resilient Democratic Statehood & Viksit Bharat @ 2047 Roadmap ]`;
+      const diagSketch = "1. Top box for 1947 Sovereign Republic. 2. Three pillars: Political Unity, Economic Self-Reliance, Social Accommodation. 3. Base foundation for Modern Federalism.";
+      const stdSources = [
+        "Disciplinary Authorities: Ramachandra Guha 'India After Gandhi'; Bipan Chandra 'India Since Independence'; Granville Austin 'Working a Democratic Constitution'.",
+        "Statutory & Committee Reports: States Reorganisation Act 1956; Sarkaria and Punchhi Commission recommendations; 2nd ARC reports.",
+        "Federal Compass: Harmonizes national territorial unity with regional cultural aspirations through asymmetric constitutional federalism (Article 371)."
+      ];
+      const conclusionText = `India's post-independence nation-building journey is an unprecedented triumph of constitutional democracy over existential odds. Sustaining this legacy demands nurturing cooperative federalism, democratic institutions, and equitable regional growth to fulfill the aspirations of a modern Viksit Bharat.`;
 
       return formatTopperArchetype(topperKey, paperLabel, topicTitle, p1Title, p1Points, p2Title, p2Points, p3Title, p3Points, diagTitle, diagAscii, diagSketch, stdSources, conclusionText);
     }
@@ -10371,12 +10427,46 @@
       conclusion = dyn.signatureConclusion;
     }
 
+    let explicitDemands = `Directly analyze all explicit dimensions of "${cleanTitle}" as specified in the prompt.`;
+    let implicitDemands = `Examine underlying structural causes, counter-perspectives, and long-term socio-economic or environmental outcomes.`;
+    let evaluation = `Critically evaluates the long-term relevance of "${cleanTitle}" for 21st-century India's modern challenges and policy roadmap.`;
+
+    if (domain === 'ART_CULTURE' || domain === 'ANCIENT_MEDIEVAL') {
+      explicitDemands = `Deconstruct the artistic style, structural evolution, architectural anatomy, and canonical textual/epigraphic foundations of "${cleanTitle}".`;
+      implicitDemands = `Correlate royal/guild patronage, trade route diffusion (Uttarapatha/Dakshinapatha), and spiritual metaphysics with the preservation challenges of living heritage.`;
+      evaluation = `Safeguarding "${cleanTitle}" requires transitioning from reactive maintenance to proactive scientific conservation (3D LiDAR mapping, laser cleaning by ASI) and community-driven cultural tourism under PRASHAD & Dekho Apna Desh.`;
+    } else if (domain === 'MODERN_HISTORY') {
+      explicitDemands = `Chronologically examine the socio-economic catalysts, organizational milestones, and leadership methodologies associated with "${cleanTitle}".`;
+      implicitDemands = `Evaluate the dialectic between non-violent mass satyagraha, revolutionary currents, and imperial counter-strategies, tracing institutional outcomes for the nascent Republic.`;
+      evaluation = `The ideological crucible of "${cleanTitle}" anchors modern India's constitutional identity, reinforcing the foundational Preamble commitments to secular democracy, grassroots swaraj, and civic fraternity.`;
+    } else if (domain === 'WORLD_HISTORY') {
+      explicitDemands = `Analyze the geopolitical realpolitik, balance-of-power equations, and treaty frameworks governing "${cleanTitle}".`;
+      implicitDemands = `Examine the systemic collapse of collective security, macroeconomic repercussions (trade wars, depression), and subsequent global ideological realignments.`;
+      evaluation = `The historical lessons of "${cleanTitle}" demonstrate the perils of revanchist unilateralism, underscoring the urgent imperative for reformed multilateralism (UNSC expansion) and strategic autonomy in the contemporary multipolar world.`;
+    } else if (domain === 'POST_INDEPENDENCE') {
+      explicitDemands = `Trace the institutional decision-making, policy architecture, and democratic statecraft surrounding "${cleanTitle}".`;
+      implicitDemands = `Scrutinize the delicate balance between national sovereign integration and regional/linguistic aspirations, assessing long-term federal impacts.`;
+      evaluation = `Consolidating the democratic gains of "${cleanTitle}" requires reinvigorating cooperative and competitive federalism (Inter-State Council, NITI Aayog), resolving inter-state disputes, and ensuring balanced regional development for Viksit Bharat @ 2047.`;
+    } else if (domain === 'GEOGRAPHY_CLIMATOLOGY') {
+      explicitDemands = `Explain the thermodynamic drivers, pressure-gradient mechanics, and planetary atmospheric circulations responsible for "${cleanTitle}".`;
+      implicitDemands = `Account for coupled ocean-atmospheric teleconnections (ENSO/IOD), thermodynamic lapse rates, and micro-climatic anomalies across Indian agro-ecological zones.`;
+      evaluation = `Integrating empirical climate modeling of "${cleanTitle}" with ISRO Doppler radar networks, high-resolution nowcasting, and NDMA Sendai Framework protocols is vital for agrarian resilience and disaster mitigation.`;
+    } else if (domain === 'GEOGRAPHY_GEOMORPHOLOGY' || domain === 'GEOGRAPHY_RESOURCES') {
+      explicitDemands = `Examine the endogenic tectonic stresses, exogenic denudational cycles, or spatial distribution of natural endowments governing "${cleanTitle}".`;
+      implicitDemands = `Evaluate geological carrying capacities, lithological weathering controls, and environmental externalities of human extractive activities.`;
+      evaluation = `Sustainable spatial governance around "${cleanTitle}" demands enforcing ecological carrying capacity zoning, adhering to Mission LiFE principles, and deploying geospatial GIS monitoring to prevent geomorphic disasters.`;
+    } else if (domain.startsWith('SOCIETY')) {
+      explicitDemands = `Deconstruct the sociological institutions, structural hierarchies, and lived empirical realities defining "${cleanTitle}".`;
+      implicitDemands = `Unpack intersectional vulnerabilities (caste, gender, class, geography), institutional barriers to social mobility, and the efficacy of statutory affirmative policies.`;
+      evaluation = `Transforming "${cleanTitle}" requires moving beyond formal statutory equality to substantive lived justice through capability expansion (Amartya Sen), targeted social investments, and deepening constitutional morality across all strata of society.`;
+    }
+
     return {
       domainLabel,
       directive,
       directiveMeaning,
-      explicitDemands: `Directly analyze all explicit dimensions of "${cleanTitle}" as specified in the prompt.`,
-      implicitDemands: `Examine underlying structural causes, counter-perspectives, and long-term socio-economic or environmental outcomes.`,
+      explicitDemands,
+      implicitDemands,
       targetWords,
       suggestedTime,
       marksNum,
@@ -10387,7 +10477,7 @@
       diagramSketchInstructions,
       valueAdds,
       conclusion,
-      evaluation: `Critically evaluates the long-term relevance of "${cleanTitle}" for 21st-century India's modern challenges and policy roadmap.`
+      evaluation
     };
   }
 
@@ -10753,6 +10843,7 @@ ${topper.signatureConclusion}`;
     renderSectionHtml: renderTopperSectionHtml,
     getRecommendedTopperKey: getRecommendedTopperKey,
     detectQuestionDomain: detectQuestionDomain,
+    matchCalibratedTopicKey: matchCalibratedTopicKey,
     extractCleanTopicTitle: extractCleanTopicTitle
   };
 
