@@ -1649,6 +1649,533 @@
 `;
   }
 
+  
+  // -------------------------------------------------------------
+  // UPSC GS-1 Topper Archetype Engine
+  // Calibrated from official MGP Topper Copies (Aditya Srivastava, Ruhani,
+  // Ishita Kishore, Umaharathi N, Medha Anand, Anmol Rathore)
+  // -------------------------------------------------------------
+
+  const TOPPER_ARCHETYPES_DB = {
+    aditya: {
+      id: 'aditya',
+      name: 'Aditya Srivastava',
+      rank: 'IAS, AIR 1 (2023)',
+      pillLabel: '👑 Aditya (AIR 1)',
+      badge: '👑 AIR 1 • Causal Geopolitics & Policy Rigor',
+      theme: '#f59e0b',
+      quote: 'Enclose demands in boxes, chain every point with causality (Premise => Mechanism => Consequence), and conclude with philosophical/ethical vision.',
+      introFormula: 'Official Policy/Report title in verbatim quotes or exact historical timeline brackets (e.g. 1914–1919). Avoid vague abstract preambles.',
+      bodyFraming: 'Rectangular Boxed Headings for question demands + Cascading (└>) bullets + Active causal arrows (=>).',
+      diagramTitle: 'Causal Branching Tree / Institutional Flow Matrix',
+      diagramAscii: `[ Core Policy / Historical Driver ]
+   │
+   ├─► Dimension A ──► Mechanism A ──► Direct Impact (Underlined)
+   │     └─► Treaty / Official Committee Anchor
+   │
+   ├─► Dimension B ──► Mechanism B ──► 20% Stat / Global Benchmark
+   │     └─► Domestic Linkage (e.g. Cryosphere / Third Pole)
+   │
+   └─► Critical Counter-View: [However, X had deeper roots ──► ...]`,
+      valueAdds: [
+        'Hard Empirical Metrics: Quote exact figures (e.g. "20% of all oil & gas reserves in Arctic => energy security").',
+        'Specific Historical Anchors: Name exact treaties/crises (e.g. Reinsurance Treaty, Mediterranean Entente, Bosnia Crisis 1908).',
+        'Modern Development Links: Connect historical extraction directly to modern low UNDP Human Development Index (HDI).'
+      ],
+      interPaper: 'GS-4 Ethics & Philosophy into GS-1: Concludes with "Vasudhaiva Kutumbakam" and "Sarvodaya" for global commons preservation.',
+      conclusionFormula: 'Balanced, visionary synthesis linking national core interests with global sustainable solidarity.'
+    },
+    ruhani: {
+      id: 'ruhani',
+      name: 'Ruhani',
+      rank: 'IAS, AIR 5 (2023)',
+      badge: '🎨 AIR 5 • Spatial Maps & Parallel Schematics',
+      pillLabel: '🎨 Ruhani (AIR 5)',
+      theme: '#3b82f6',
+      quote: 'Split the page for comparative mechanisms, label figures clearly (Fig 1, Fig 2, Fig 3), and ground concepts in hand-drawn World Maps.',
+      introFormula: 'Crisp textbook 2-line scientific definition of the core phenomenon in under 20 words.',
+      bodyFraming: 'Two-Column Comparative Split with parallel micro-cross-sections and labeled figures (Fig 1 vs Fig 2).',
+      diagramTitle: '2-Column Comparative Diagrams + Hand-Drawn World Map (Fig 1, Fig 2, Fig 3)',
+      diagramAscii: `┌────────────────────────────┬────────────────────────────┐
+│ Fig 1: Convergent Boundary │ Fig 2: Divergent Boundary  │
+│  [Continental]  [Oceanic]  │       [Mid-Ocean Ridge]    │
+│       ▼           ▼        │        ◄─── | ───►         │
+│     (Subduction Zone)      │     (Seafloor Spreading)   │
+├────────────────────────────┼────────────────────────────┤
+│ • Oceanic subducts below   │ • Diverging plates allow   │
+│   continental plate        │   molten magma to rise     │
+│ • Melting forms volcanoes  │ • Creates new oceanic crust│
+└────────────────────────────┴────────────────────────────┘
+     Fig 3: Hand-Drawn World Map (Pacific Rim of Fire & Nazca Plate)`,
+      valueAdds: [
+        'Specific Tectonic Plates: Named plates (Nazca Plate, Pacific Plate, Indo-Australian Plate).',
+        'Geological Formations: Basaltic lava weathering into Black Soil (Deccan Traps).',
+        'Atmospheric Cooling: Sulphur dioxide releases lowering global temperatures.'
+      ],
+      interPaper: 'Physical Geography ──► GS-3 Economic Geography: Connects volcanic weathering to Deccan trap cotton soil and diamond/mineral extraction.',
+      conclusionFormula: 'Dialectical balance: "Although bringing destruction, yet critically useful for ecological balance and soil fertility."'
+    },
+    ishita: {
+      id: 'ishita',
+      name: 'Ishita Kishore',
+      rank: 'IAS, AIR 1 (2022)',
+      badge: '🧬 AIR 1 • Sociological Systems & Feedback Loops',
+      pillLabel: '🧬 Ishita (AIR 1)',
+      theme: '#ec4899',
+      quote: 'Deconstruct vulnerability into multi-spoke root causes, visualize the vicious cycle, and anchor with statutory safeguards.',
+      introFormula: 'Deep sociological/institutional definition addressing underlying vulnerability and systemic crisis exposure.',
+      bodyFraming: 'Connecting bridge sentence leading into formal roman numerals (-i-, -ii-, -iii-) with bold empirical micro-cases.',
+      diagramTitle: 'Central 7-Spoke Hub Diagram + Cyclical Feedback Loop',
+      diagramAscii: `               ┌──► Poverty
+               ├──► Malnutrition
+               ├──► Physical Disability
+    [ Social ] ┼──► Dependence (Children / Aged)
+    [ Causes ] ├──► Discrimination (Caste / Gender)
+               └──► Climate (Coastal Poor)
+                       │
+                       ▼
+       [ The Vicious Generational Cycle ]
+   Poverty ──► No Education ──► No Skills ──► Young Labour ──► Poverty`,
+      valueAdds: [
+        'Ground-Level Realism: "Cotton picking requires small soft hands (girls)", "Bidi rolling", "Garbage picking".',
+        'Statutory Safeguard Bubbles: POCSO Act, Child Labour Prohibition Act, Civil Society / NGO interventions.',
+        'Multi-Dimensional Spoke Matrix: Covering Poverty, Disability, Climate Distress, and Social Exclusion.'
+      ],
+      interPaper: 'Climate Disasters (Coastal Poor) ──► Social Vulnerability & Exploitation + Constitutional Substantive Equality (Art 14/21).',
+      conclusionFormula: 'Demographic dividend imperative: "Protection of vulnerable cohorts is paramount to secure our nation\'s future."'
+    },
+    umaharathi: {
+      id: 'umaharathi',
+      name: 'Umaharathi N',
+      rank: 'IAS, AIR 3 (2022)',
+      badge: '⚖️ AIR 3 • Dialectical 2-Way Bifurcation',
+      pillLabel: '⚖️ Umaharathi (AIR 3)',
+      theme: '#10b981',
+      quote: 'Fork the question immediately in the introduction into dual connotations ([Positive] vs [Negative]), then balance both sides.',
+      introFormula: 'Defines the concept, then branches immediately into dual connotations in the intro itself ([Positive] vs [Negative] => "double-edged sword").',
+      bodyFraming: 'Balanced contrast blocks: Affirmative role in identity/governance vs Destabilizing risks and chauvinism.',
+      diagramTitle: '2-Way Bifurcation Branching Tree (Intro Area)',
+      diagramAscii: `            [ Concept / Term Under Analysis ]
+                           │
+             ┌─────────────┴─────────────┐
+             ▼                           ▼
+      [ Positive Fork ]           [ Negative Fork ]
+    Cultural pride, local       Chauvinism, threat to
+    identity & solidarity       brotherhood & cohesion
+             │                           │
+             └─────────────┬─────────────┘
+                           ▼
+            "Makes it a double-edged sword"`,
+      valueAdds: [
+        'Linguistic & Cultural Identity: Tamil identity preservation, promotion of classical vernaculars.',
+        'Administrative Benefits: Linguistic State Reorganization Act (1956) facilitating ease of governance.',
+        'Constitutional Protections: 8th Schedule protections and Inter-State Council mechanisms.'
+      ],
+      interPaper: 'GS-1 Cultural Identity ──► GS-2 Cooperative Federalism & Decentralized Administration.',
+      conclusionFormula: 'Cooperative federalism: "Local/regional pride acting as a foundational pillar rather than an antithesis to national unity."'
+    },
+    medha: {
+      id: 'medha',
+      name: 'Medha Anand',
+      rank: 'IAS, AIR 13 (2023)',
+      badge: '📐 AIR 13 • Synchronized Margin Micro-Sketches',
+      pillLabel: '📐 Medha (AIR 13)',
+      theme: '#8b5cf6',
+      quote: 'Every single condition deserves its own miniature sketch on the right margin—never leave an examiner reading only plain text.',
+      introFormula: 'Immediate contrast between normal environmental lapse rate and the anomalous reverse inversion condition.',
+      bodyFraming: '1-to-1 Point-to-Diagram Pairing: Left 60% text, Right 40% margin contains an exact labeled cross-section sketch.',
+      diagramTitle: 'Multi-Panel Synchronized Margin Micro-Sketches',
+      diagramAscii: `[ Condition 1: Cold Ground Radiation ]  ┌──────────────────────┐
+• Cold surface air trapped below warm   │ [Warm Air]           │
+  air due to nocturnal cooling.         │ [Cold Air] [Ground]  │
+                                        └──────────────────────┘
+[ Condition 2: Mountain Valley Trap ]   ┌──────────────────────┐
+• Dense cold air rolls down slopes into │ \\  Warm Air  /       │
+  valley floor; ELR becomes positive.   │  \\ [Cold]  / (Valley)│
+                                        └──────────────────────┘
+[ Condition 3: Frontal Inversion ]      ┌──────────────────────┐
+• Warm air wedge forced up over dense   │   / [Warm Front]     │
+  cold front wedge.                     │  / [Cold Front Wedge]│
+                                        └──────────────────────┘`,
+      valueAdds: [
+        'Lapse Rate Mechanics: Normal environmental lapse rate turning positive during inversion.',
+        'Atmospheric Physics: Frontogenesis, nocturnal terrestrial radiation, katabatic valley winds.',
+        'Urban Smog Interaction: Trapping of particulate matter (PM2.5) during winter months.'
+      ],
+      interPaper: 'Physical Climatology ──► GS-3 Urban Air Pollution (Delhi/NCR winter smog trapping) + Public Health Impact.',
+      conclusionFormula: 'Science-backed meteorological forecasting and climate-resilient urban master planning.'
+    },
+    anmol: {
+      id: 'anmol',
+      name: 'Anmol Rathore',
+      rank: 'IAS, AIR 7 (2023)',
+      badge: '⏳ AIR 7 • Chronological Multi-Generational Matrix',
+      pillLabel: '⏳ Anmol (AIR 7)',
+      theme: '#06b6d4',
+      quote: 'Ground the phenomenon in historical-technological phases (1.0 to 4.0) and box your empirical chemical and physical markers.',
+      introFormula: 'Historical economic grounding in mechanization triggers (18th century England, steam engine, spinning jenny).',
+      bodyFraming: 'Central Generational Wheel tracing consecutive revolutions + Boxed chemical/empirical formulas.',
+      diagramTitle: '4-Stage Generational Evolution Wheel (1.0 to 4.0)',
+      diagramAscii: `         ┌─────────────────────────────────────────────────┐
+         │   Consecutive Industrial Revolutions & Impacts  │
+         └────────────────────────┬────────────────────────┘
+                                  │
+    ┌──────────────┬──────────────┴──────────────┬──────────────┐
+    ▼              ▼                             ▼              ▼
+ [ IR 1.0 ]     [ IR 2.0 ]                    [ IR 3.0 ]     [ IR 4.0 ]
+ Coal & Steam   Gas, Oil & Elect.             Nuclear & ICT  Digital & Green
+ Black carbon   Fossil fuel stress & GHGs     Atomic waste   Circular Economy
+                                                 │
+                                                 ▼
+      Boxed Formula Value-Adds: [ Acid Rain (HNO3, H2SO4) ] • [ Ozone Depletion (CFCs) ]`,
+      valueAdds: [
+        'Boxed Chemical Notations: [ Acid Rain (HNO3, H2SO4) ], [ Ozone Depletion (CFCs, HFCs) ], Black Carbon.',
+        'Generational Phase Transitions: IR 1.0 (Coal) -> 2.0 (Oil) -> 3.0 (Electronics) -> 4.0 (Digital/Green).',
+        'Atmospheric Concentration Shifts: Pre-industrial CO2 levels vs Anthropocene surge.'
+      ],
+      interPaper: 'Historical Industrial Revolution ──► Modern Anthropocene Climate Change, COP Pledges & Net-Zero Transitions.',
+      conclusionFormula: 'Paradigm shift: "Transitioning from 19th-century linear extractivism to 21st-century circular green economy."'
+    }
+  };
+
+  const activeTopperByMKey = {};
+
+  function getRecommendedTopperKey(qText, subject) {
+    const s = (subject || '').toLowerCase();
+    const q = (qText || '').toLowerCase();
+
+    if (s.includes('geography') || q.includes('tectonic') || q.includes('volcano') || q.includes('earthquake') || q.includes('ocean current') || q.includes('cyclone') || q.includes('marine')) {
+      if (q.includes('inversion') || q.includes('front') || q.includes('air mass') || q.includes('cloud') || q.includes('temperature') || q.includes('monsoon')) {
+        return 'medha';
+      }
+      return 'ruhani';
+    }
+    if (s.includes('society') || q.includes('vulnerab') || q.includes('child') || q.includes('women') || q.includes('caste') || q.includes('family') || q.includes('poverty') || q.includes('marriage')) {
+      if (q.includes('regionalism') || q.includes('unity') || q.includes('diversity') || q.includes('secularism') || q.includes('linguistic')) {
+        return 'umaharathi';
+      }
+      return 'ishita';
+    }
+    if (q.includes('industrial revolution') || q.includes('atmosphere') || q.includes('energy') || q.includes('pollution') || q.includes('fertility') || q.includes('wetland')) {
+      return 'anmol';
+    }
+    return 'aditya';
+  }
+
+  function getTopperMarkdownOutline(topperKey, qText, marks, subject) {
+    const is15M = (parseFloat(marks) >= 15);
+    const targetWords = is15M ? 250 : 150;
+    const topper = TOPPER_ARCHETYPES_DB[topperKey] || TOPPER_ARCHETYPES_DB['aditya'];
+
+    if (topperKey === 'ruhani') {
+      return `### Scientific Definition (~15-20 words)
+- Textbook scientific / conceptual definition of core phenomenon:
+
+### Two-Column Comparative Architecture
+┌──────────────────────────────────────┬──────────────────────────────────────┐
+│ Fig 1: [Primary Mechanism A]         │ Fig 2: [Primary Mechanism B]         │
+│  [Cross-section Sketch Idea]         │  [Cross-section Sketch Idea]         │
+├──────────────────────────────────────┼──────────────────────────────────────┤
+│ • Point 1: Physical process          │ • Point 1: Counter/Alternative process│
+│ • Point 2: Specific geological plate │ • Point 2: Tectonic / Spatial outcome │
+└──────────────────────────────────────┴──────────────────────────────────────┘
+
+### Fig 3: Hand-Drawn Map Schematic (World / India Distribution)
+- Spatial Distribution Annotation (e.g. Pacific Ring of Fire / Western Ghats):
+
+### Multifarious Impacts & Economic Linkages
+- Impact 1 (Geological / Mineral Wealth, e.g. Deccan Traps Basalt):
+- Impact 2 (Agricultural & Climatic consequence):
+
+### Dialectical Conclusion
+- Balanced synthesis: "Although bringing destruction/hazard, yet foundational for ecological and economic equilibrium."
+`;
+    }
+
+    if (topperKey === 'ishita') {
+      return `### Sociological Definition (~20-25 words)
+- Definition of core social vulnerability / institutional power dynamics:
+
+### [ Visual Anchor: Central 7-Spoke Hub Diagram ]
+• Spokes: 1. Poverty | 2. Malnutrition | 3. Gender | 4. Disability | 5. Caste | 6. Climate (Coastal Poor) | 7. Institutional Gaps
+
+### Core Dimensions (-i-, -ii-, -iii-)
+-i- Core Vulnerability 1 (Exploitative dynamics, Eg: Cotton picking / Bidi rolling):
+-ii- Core Vulnerability 2 (Conflict / Regional distress):
+-iii- Cyclical Trap:
+      Poverty ──► No Education ──► No Skills ──► Early Labour ──► Poverty
+
+### Institutional Initiatives & Statutory Safeguards
+- Statutory Bubbles: [ POCSO Act ] • [ Child Labour Act ] • [ Civil Society / NGOs ]
+
+### Constitutional Conclusion
+- Child rights & Human Capital vision: "Securing demographic dividend and substantive equality under Article 14 & 21."
+`;
+    }
+
+    if (topperKey === 'umaharathi') {
+      return `### Definition with 2-Way Bifurcation Branch
+- Definition of concept:
+  ┌──► [ Positive Connotation ]: Local identity, cultural preservation & solidarity
+  └──► [ Negative Connotation ]: Parochial chauvinism, threat to national cohesion
+       └─► "Makes it a double-edged sword"
+
+### [ 1. Affirmative Role in Unity & Identity ]
+1) Sense of identity & cultural pride (Eg: Linguistic preservation):
+2) Administrative decentralization & governance convenience (Eg: State Reorganization 1956):
+
+### [ 2. Destabilizing Challenges & Faultlines ]
+1) Inter-state river disputes / sub-national conflict:
+2) Friction with common national citizenship:
+
+### Cooperative Federalism Conclusion
+- Forward-looking synthesis: Regional pride acting as a foundational pillar rather than an antithesis to national unity.
+`;
+    }
+
+    if (topperKey === 'medha') {
+      return `### Environmental Anomaly Contrast (~20 words)
+- Contrast: Normal Environmental Lapse Rate vs Reverse / Anomalous condition:
+
+### Condition 1: Cold Radiation Inversion
+- Left: Mechanism of nocturnal terrestrial radiation and dense cold air trapping
+- Right Margin Sketch Idea: [Cold ground surface ──► trapped cold air ──► warm air above]
+
+### Condition 2: Mountain Valley Air Trapping
+- Left: Katabatic wind flow settling in valley floor; ELR becomes positive
+- Right Margin Sketch Idea: [Valley curve with cold air pool at bottom]
+
+### Condition 3: Frontal Inversion
+- Left: Warm front ascending over dense cold wedge
+- Right Margin Sketch Idea: [Sloping cold wedge with rising warm air wedge]
+
+### Environmental & Public Health Impacts
+- Smog trapping (e.g. Delhi NCR winter air quality) & agricultural frost damage:
+
+### Scientific Mitigation Conclusion
+- Integrated meteorological forecasting and climate-resilient urban master planning.
+`;
+    }
+
+    if (topperKey === 'anmol') {
+      return `### Historical-Technological Grounding (~25 words)
+- 18th Century Industrial Revolution grounding (Mechanization, Steam engines, Spinning Jenny):
+
+### Central 4-Stage Generational Evolution Wheel
+• [ IR 1.0 (Coal & Steam) ]: Black carbon, initial fossil fuel release
+• [ IR 2.0 (Gas & Electricity) ]: Atmospheric stress, GHG surge
+• [ IR 3.0 (Electronics & Nuclear) ]: Nuclear fallout & hazardous waste
+• [ IR 4.0 (Digital & Renewables) ]: Climate-friendly green transition
+
+### Changes in Atmospheric Composition (Boxed Chemical Markers)
+1) Increased air pollution & [ Ozone Depletion (CFCs, HFCs) ]:
+2) Industrial vehicular emissions & [ Acid Rain (HNO3, H2SO4) ]:
+
+### Multifaceted Repercussions & Anthropocene Transition
+- Climate feedback loops, cryosphere melting & global extreme events:
+
+### Circular Economy Conclusion
+- Paradigm shift: Transitioning from 19th-century linear extractivism to 21st-century circular green economy.
+`;
+    }
+
+    // Default: Aditya Srivastava
+    return `### Introduction (Official Policy / Exact Timeline Hook)
+- Official Policy / Committee / Timeline Bracket (Verbatim):
+- Core Geopolitical / Historical Premise:
+
+### [ 1. Core Drivers & Institutional Dimensions ]
+1) Core Point 1 (Fact / Keyword) => Direct Mechanism => Concrete Consequence
+   └> Statutory / Treaty Anchor:
+2) Core Point 2 (Institutional Dimension) => Impact on Sovereignty / Security
+   └> Empirical Metric / 20% Benchmark:
+
+### However, [Counter-Perspective / Underlying Structural Causes] had Deeper Roots —
+1) Counter-Point 1 (Systemic faultline / Crisis trigger):
+2) Counter-Point 2 (Domestic / Regional fallout):
+
+### Conclusion & Visionary Synthesis
+- Philosophical / Ethical Hook (Vasudhaiva Kutumbakam / Constitutional Morality):
+- Global cooperative solidarity & sustainable future:
+`;
+  }
+
+  function renderTopperContentHtml(mKey, topperKey, qText, marks, subject) {
+    const topper = TOPPER_ARCHETYPES_DB[topperKey] || TOPPER_ARCHETYPES_DB['aditya'];
+    const esc = escapeHtml;
+
+    return `
+      <div class="topper-profile-banner" style="border-left: 4px solid ${topper.theme};">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <h4 style="margin: 0; color: var(--text-primary); font-size: 1.02rem; display: flex; align-items: center; gap: 6px;">
+              <span>${topper.name}</span>
+              <span class="badge" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; font-size: 0.76rem;">${topper.rank}</span>
+            </h4>
+            <div style="font-size: 0.82rem; color: ${topper.theme}; font-weight: 700; margin-top: 2px;">
+              ${topper.badge}
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" onclick="AWFG_APP.insertTopperOutline('${mKey}', '${topper.id}', ${marks})" style="background: ${topper.theme}; font-weight: 700; font-size: 0.8rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+            📥 Pre-fill Pad with ${topper.name.split(' ')[0]}'s Outline
+          </button>
+        </div>
+
+        <div class="topper-quote-box">
+          <em>"${esc(topper.quote)}"</em>
+        </div>
+
+        <div class="topper-strategy-grid">
+          <div class="topper-strategy-col">
+            <span class="topper-strategy-label">🎯 Introduction Formula:</span>
+            <p style="margin: 4px 0 0; font-size: 0.84rem; color: var(--text-primary);">${esc(topper.introFormula)}</p>
+          </div>
+          <div class="topper-strategy-col">
+            <span class="topper-strategy-label">🏗️ Body Deconstruction & Headings:</span>
+            <p style="margin: 4px 0 0; font-size: 0.84rem; color: var(--text-primary);">${esc(topper.bodyStyle)}</p>
+          </div>
+        </div>
+
+        <!-- Hand-Drawn Blueprint Schematic Box -->
+        <div class="topper-diagram-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <strong style="color: #818cf8; font-size: 0.84rem;">📐 Topper's Schematic / Margin Diagram Blueprint:</strong>
+            <span style="font-size: 0.74rem; color: var(--text-muted);">${esc(topper.diagramTitle)}</span>
+          </div>
+          <pre class="topper-diagram-ascii">${esc(topper.diagramAscii)}</pre>
+        </div>
+
+        <!-- High-Yield Evidence & Inter-Paper Cross-Pollination -->
+        <div style="margin-top: 10px;">
+          <strong style="color: var(--text-primary); font-size: 0.84rem;">💡 Value Additions Embedded by ${esc(topper.name)}:</strong>
+          <ul style="margin: 4px 0 0 18px; padding: 0; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+            ${topper.valueAdds.map(va => `<li>${esc(va)}</li>`).join('')}
+          </ul>
+        </div>
+
+        <div class="topper-interpaper-box">
+          <span style="font-weight: 700; color: #10b981;">🌐 Inter-Paper Multi-Dimensionality:</span>
+          <span style="color: var(--text-primary); margin-left: 6px;">${esc(topper.interPaper)}</span>
+        </div>
+
+        <div style="margin-top: 8px; font-size: 0.82rem;">
+          <strong style="color: #f59e0b;">🏁 Trademark Conclusion Hook:</strong>
+          <span style="color: var(--text-secondary); margin-left: 6px;">${esc(topper.conclusionFormula)}</span>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTopperSectionHtml(mKey, qText, marks, subject) {
+    const recKey = getRecommendedTopperKey(qText, subject);
+    const activeKey = activeTopperByMKey[mKey] || recKey;
+    activeTopperByMKey[mKey] = activeKey;
+
+    const topperKeys = ['aditya', 'ruhani', 'ishita', 'umaharathi', 'medha', 'anmol'];
+
+    return `
+      <div class="topper-archetype-card">
+        <div class="topper-archetype-header">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.25rem;">🏆</span>
+            <div>
+              <strong style="color: #f59e0b; font-size: 0.94rem;">UPSC Topper's Framing Engine (GS-1)</strong>
+              <div style="font-size: 0.76rem; color: var(--text-secondary);">Directly calibrated from UPSC MGP Topper Copies (AIR 1–13)</div>
+            </div>
+          </div>
+          <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; font-weight: 700; font-size: 0.76rem;">
+            Recommended: ${TOPPER_ARCHETYPES_DB[recKey].name}
+          </span>
+        </div>
+
+        <!-- Interactive Topper Selection Pill Bar -->
+        <div class="topper-pill-bar" id="topper-pills-${mKey}">
+          ${topperKeys.map(k => {
+            const t = TOPPER_ARCHETYPES_DB[k];
+            const isAct = (k === activeKey);
+            return `
+              <button type="button" class="topper-pill-btn ${isAct ? 'active' : ''}" onclick="AWFG_APP.selectTopperLens('${mKey}', '${k}')" style="${isAct ? `border-color: ${t.theme}; background: ${t.theme}22; color: ${t.theme};` : ''}">
+                ${t.pillLabel}
+              </button>
+            `;
+          }).join('')}
+        </div>
+
+        <!-- Dynamic Content Container -->
+        <div id="topper-content-${mKey}">
+          ${renderTopperContentHtml(mKey, activeKey, qText, marks, subject)}
+        </div>
+      </div>
+    `;
+  }
+
+  function selectTopperLens(mKey, topperKey) {
+    const card = document.getElementById(`mcard-${mKey}`);
+    const stemEl = card ? card.querySelector('.pyq-stem-text') : null;
+    const qText = stemEl ? stemEl.textContent : '';
+    const marksBadge = card ? card.querySelector('.pyq-marks-badge') : null;
+    const marksMatch = marksBadge ? marksBadge.textContent.match(/(\d+(?:\.\d+)?)\s*Marks/) : null;
+    const marks = marksMatch ? parseFloat(marksMatch[1]) : 10;
+
+    activeTopperByMKey[mKey] = topperKey;
+
+    const cont = document.getElementById(`topper-content-${mKey}`);
+    if (cont) {
+      cont.innerHTML = renderTopperContentHtml(mKey, topperKey, qText, marks, '');
+    }
+
+    const pillBar = document.getElementById(`topper-pills-${mKey}`);
+    if (pillBar) {
+      const btns = pillBar.querySelectorAll('.topper-pill-btn');
+      const topperKeys = ['aditya', 'ruhani', 'ishita', 'umaharathi', 'medha', 'anmol'];
+      btns.forEach((btn, idx) => {
+        const k = topperKeys[idx];
+        const t = TOPPER_ARCHETYPES_DB[k];
+        if (k === topperKey) {
+          btn.classList.add('active');
+          btn.style.borderColor = t.theme;
+          btn.style.background = t.theme + '22';
+          btn.style.color = t.theme;
+        } else {
+          btn.classList.remove('active');
+          btn.style.borderColor = '';
+          btn.style.background = '';
+          btn.style.color = '';
+        }
+      });
+    }
+  }
+
+  function insertTopperOutline(mKey, topperKey, marks) {
+    const pad = document.getElementById(`pad-${mKey}`);
+    const ta = document.getElementById(`ta-${mKey}`);
+    if (!pad || !ta) return;
+
+    pad.classList.remove('hidden');
+
+    const card = document.getElementById(`mcard-${mKey}`);
+    const stemEl = card ? card.querySelector('.pyq-stem-text') : null;
+    const qText = stemEl ? stemEl.textContent : '';
+
+    const topper = TOPPER_ARCHETYPES_DB[topperKey] || TOPPER_ARCHETYPES_DB['aditya'];
+    const outline = getTopperMarkdownOutline(topperKey, qText, marks, '');
+
+    if (ta.value.trim().length > 0) {
+      if (confirm(`Your answer pad already has some text. Do you want to append ${topper.name}'s outline at the bottom?`)) {
+        ta.value = ta.value + '\n\n' + outline;
+      }
+    } else {
+      ta.value = outline;
+    }
+
+    const targetWords = (parseFloat(marks) >= 15) ? 250 : 150;
+    handleMainsWordCount(mKey, targetWords);
+
+    ta.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    ta.focus();
+    showToast(`${topper.name}'s structure inserted into Answer Pad!`, '🏆');
+  }
+
   function renderMainsApproachHtml(mKey, qText, marks, subject) {
     const approach = generateMainsApproach(qText, marks, subject);
     const is15M = approach.marksNum >= 15;
@@ -1669,6 +2196,9 @@
       <div class="approach-directive-desc">
         <strong>Directive Guidance (${approach.directive}):</strong> ${approach.directiveMeaning}
       </div>
+
+      <!-- Topper Archetype Engine Integration -->
+      ${renderTopperSectionHtml(mKey, qText, marks, subject)}
 
       <!-- Step-by-Step Architecture -->
       <div style="margin-top: 4px;">
@@ -2239,6 +2769,8 @@
     toggleMainsApproach: toggleMainsApproach,
     insertTemplateToPad: insertTemplateToPad,
     copyMainsOutline: copyMainsOutline,
+    selectTopperLens: selectTopperLens,
+    insertTopperOutline: insertTopperOutline,
     getState: () => STATE,
     showToast: showToast
   };

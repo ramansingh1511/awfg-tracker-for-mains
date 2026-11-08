@@ -26,8 +26,8 @@ This living document tracks all planned, ongoing, and completed enhancements. Fe
 | **F-05** | Prelims Interactive Practice & Reset/Re-attempt Engine | Prelims | High | `[x] Completed` | \$0 |
 | **F-06** | Mains Answer Pad with Stopwatch, Word Counter & Autosave | Mains Pad | High | `[x] Completed` | \$0 |
 | **F-07** | Directive-based Structural Approach & 3-Part Template Inserter | Mains Pad | High | `[x] Completed` | \$0 |
-| **F-08** | Topper Copy Pattern Analysis & "Topper's Lens" Blueprint Engine | Mains AI/UI | High | `[ ] Up Next` | \$0 |
-| **F-09** | Multimodal Handwritten Answer Evaluator (Gemini Vision) | Evaluation | High | `[ ] Planned` | \$0 |
+| **F-08** | Topper Copy Pattern Analysis & "Topper's Lens" Blueprint Engine (Aditya, Ruhani, Ishita, Umaharathi, Medha, Anmol) | Mains AI/UI | High | `[x] Completed` | \$0 |
+| **F-09** | Multimodal Handwritten Answer Evaluator (Gemini Vision) | Evaluation | High | `[ ] Up Next` | \$0 |
 | **F-10** | Visual Layout, Margin Discipline & Diagram Recognition | Evaluation | High | `[ ] Planned` | \$0 |
 | **F-11** | Novelty & Originality Scoring Engine (+0.5 to +1.0 Bonus) | Evaluation | Medium | `[ ] Planned` | \$0 |
 | **F-12** | Multi-Answer PDF Slicer & Batch Mock Test Evaluator (20 Qs) | Document AI | Medium | `[ ] Planned` | \$0 |
