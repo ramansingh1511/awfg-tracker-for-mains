@@ -8,7 +8,7 @@
   const STORAGE_KEY_API_KEY = 'awfg_gemini_api_key';
   const STORAGE_KEY_MODEL = 'awfg_gemini_model';
   const CACHE_PREFIX = 'awfg_gemini_cache_';
-  const DEFAULT_MODEL = 'gemini-2.0-flash';
+  const DEFAULT_MODEL = 'gemini-1.5-flash';
 
   const TOPPER_RULES = {
     aditya: {
@@ -62,11 +62,17 @@
     },
 
     getModel() {
-      return localStorage.getItem(STORAGE_KEY_MODEL) || DEFAULT_MODEL;
+      const stored = localStorage.getItem(STORAGE_KEY_MODEL);
+      if (!stored || stored === 'gemini-2.0-flash') {
+        localStorage.setItem(STORAGE_KEY_MODEL, DEFAULT_MODEL);
+        return DEFAULT_MODEL;
+      }
+      return stored;
     },
 
     setModel(model) {
-      localStorage.setItem(STORAGE_KEY_MODEL, model || DEFAULT_MODEL);
+      const val = (!model || model === 'gemini-2.0-flash') ? DEFAULT_MODEL : model;
+      localStorage.setItem(STORAGE_KEY_MODEL, val);
     },
 
     getCacheKey(qText, topperKey) {
@@ -106,39 +112,50 @@
       return keysToRemove.length;
     },
 
-    async testApiKey(key) {
+    async testApiKey(key, modelOverride) {
       const testKey = key || this.getApiKey();
       if (!testKey) throw new Error('No API Key provided');
 
-      const model = this.getModel();
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(testKey)}`;
-      
-      const payload = {
-        contents: [
-          {
-            parts: [{ text: 'Respond with the single word "OK" if this connection is successful.' }]
-          }
-        ],
-        generationConfig: {
-          maxOutputTokens: 10,
-          temperature: 0.1
-        }
-      };
-
-      const resp = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      if (!resp.ok) {
-        const errJson = await resp.json().catch(() => ({}));
-        const msg = errJson.error ? errJson.error.message : `HTTP ${resp.status}: ${resp.statusText}`;
-        throw new Error(msg);
+      if (testKey.startsWith('AQ.')) {
+        throw new Error("The key you pasted starts with 'AQ.' which appears to be a Google Cloud access token rather than a Gemini API Key. Google AI Studio API Keys start with 'AIzaSy...'. Please copy your key from aistudio.google.com/apikey");
       }
 
-      const resJson = await resp.json();
-      return !!(resJson.candidates && resJson.candidates.length > 0);
+      let model = modelOverride || this.getModel() || DEFAULT_MODEL;
+      if (model === 'gemini-2.0-flash') {
+        model = 'gemini-1.5-flash';
+      }
+
+      const callEndpoint = async (targetModel) => {
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/${targetModel}:generateContent?key=${encodeURIComponent(testKey)}`;
+        const payload = {
+          contents: [{ parts: [{ text: 'Respond with OK' }] }],
+          generationConfig: { maxOutputTokens: 10, temperature: 0.1 }
+        };
+        const resp = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (!resp.ok) {
+          const errJson = await resp.json().catch(() => ({}));
+          const msg = errJson.error ? errJson.error.message : `HTTP ${resp.status}: ${resp.statusText}`;
+          throw new Error(msg);
+        }
+        const resJson = await resp.json();
+        return !!(resJson.candidates && resJson.candidates.length > 0);
+      };
+
+      try {
+        return await callEndpoint(model);
+      } catch (err) {
+        if (model !== 'gemini-1.5-flash' && (err.message.includes('not found') || err.message.includes('no longer available'))) {
+          // Automatic fallback to gemini-1.5-flash
+          const success = await callEndpoint('gemini-1.5-flash');
+          this.setModel('gemini-1.5-flash');
+          return success;
+        }
+        throw err;
+      }
     },
 
     buildPrompt(qText, marks, subject, topperKey) {
@@ -235,36 +252,49 @@ Return ONLY a valid JSON object matching this schema (no markdown fences, no con
         return { data: cached, isFromCache: true };
       }
 
-      const model = this.getModel();
-      const prompt = this.buildPrompt(qText, marks, subject, topperKey);
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`;
-
-      const payload = {
-        contents: [
-          {
-            parts: [{ text: prompt }]
-          }
-        ],
-        generationConfig: {
-          temperature: 0.2,
-          maxOutputTokens: 2500,
-          responseMimeType: 'application/json'
-        }
-      };
-
-      const resp = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      if (!resp.ok) {
-        const errJson = await resp.json().catch(() => ({}));
-        const msg = (errJson.error && errJson.error.message) ? errJson.error.message : `HTTP error ${resp.status}`;
-        throw new Error(msg);
+      let model = this.getModel();
+      if (model === 'gemini-2.0-flash') {
+        model = 'gemini-1.5-flash';
       }
 
-      const resJson = await resp.json();
+      const prompt = this.buildPrompt(qText, marks, subject, topperKey);
+      const executeCall = async (targetModel) => {
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/${targetModel}:generateContent?key=${encodeURIComponent(apiKey)}`;
+        const payload = {
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: {
+            temperature: 0.2,
+            maxOutputTokens: 2500,
+            responseMimeType: 'application/json'
+          }
+        };
+
+        const resp = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!resp.ok) {
+          const errJson = await resp.json().catch(() => ({}));
+          const msg = (errJson.error && errJson.error.message) ? errJson.error.message : `HTTP error ${resp.status}`;
+          throw new Error(msg);
+        }
+        return await resp.json();
+      };
+
+      let resJson;
+      try {
+        resJson = await executeCall(model);
+      } catch (err) {
+        if (model !== 'gemini-1.5-flash' && (err.message.includes('not found') || err.message.includes('no longer available'))) {
+          resJson = await executeCall('gemini-1.5-flash');
+          model = 'gemini-1.5-flash';
+          this.setModel('gemini-1.5-flash');
+        } else {
+          throw err;
+        }
+      }
       const candidate = resJson.candidates && resJson.candidates[0];
       if (!candidate || !candidate.content || !candidate.content.parts || !candidate.content.parts[0]) {
         throw new Error('Gemini API returned an empty candidate response.');

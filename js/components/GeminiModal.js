@@ -15,6 +15,10 @@
       const inp = document.getElementById('gemini-api-key-inp');
       if (inp) {
         inp.value = GeminiService.getApiKey() || '';
+        if (!inp._hasListener) {
+          inp.addEventListener('input', () => GeminiModal.updateStatusDisplay());
+          inp._hasListener = true;
+        }
       }
 
       const modelSel = document.getElementById('gemini-model-select');
@@ -43,20 +47,27 @@
     },
 
     updateStatusDisplay() {
-      const hasKey = GeminiService.hasApiKey();
+      const inp = document.getElementById('gemini-api-key-inp');
+      const keyVal = inp ? inp.value.trim() : GeminiService.getApiKey();
       const statusEl = document.getElementById('gemini-key-status');
-      if (statusEl) {
-        if (hasKey) {
-          statusEl.innerHTML = `<span style="color: #10b981; font-weight: 700;">✅ Active Key Configured</span> (${GeminiService.getModel()})`;
-        } else {
-          statusEl.innerHTML = `<span style="color: #f59e0b; font-weight: 600;">⚠️ No Key Configured (Get a free key from Google AI Studio)</span>`;
-        }
+      if (!statusEl) return;
+
+      if (!keyVal) {
+        statusEl.innerHTML = `<span style="color: #f59e0b; font-weight: 600;">⚠️ No Key Configured (Get a free key from Google AI Studio)</span>`;
+      } else if (keyVal.startsWith('AQ.')) {
+        statusEl.innerHTML = `<span style="color: #ef4444; font-weight: 600;">⚠️ OAuth token ("AQ.") detected. AI Studio keys start with "AIzaSy..."</span>`;
+      } else if (keyVal.startsWith('AIzaSy')) {
+        statusEl.innerHTML = `<span style="color: #10b981; font-weight: 700;">✅ Valid AI Studio Key format</span> (${GeminiService.getModel()})`;
+      } else {
+        statusEl.innerHTML = `<span style="color: #10b981; font-weight: 700;">✅ Active Key Configured</span> (${GeminiService.getModel()})`;
       }
     },
 
     async testConnection() {
       const inp = document.getElementById('gemini-api-key-inp');
       const key = inp ? inp.value.trim() : GeminiService.getApiKey();
+      const modelSel = document.getElementById('gemini-model-select');
+      const model = modelSel ? modelSel.value : GeminiService.getModel();
       const statusEl = document.getElementById('gemini-test-result');
       
       if (!key) {
@@ -66,14 +77,27 @@
         return;
       }
 
+      if (key.startsWith('AQ.')) {
+        if (statusEl) {
+          statusEl.innerHTML = `
+            <div style="padding: 10px 12px; background: rgba(245, 158, 11, 0.15); border: 1px solid #f59e0b; border-radius: 6px; color: #f59e0b; font-size: 0.8rem; line-height: 1.45;">
+              <strong>⚠️ Notice on API Key Format:</strong><br>
+              The key entered starts with <code>AQ.</code> which is typically a Google Cloud OAuth token, not a Gemini API key.<br>
+              Please go to <a href="https://aistudio.google.com/apikey" target="_blank" style="color: #818cf8; font-weight: 700; text-decoration: underline;">Google AI Studio</a>, click <strong>"Create API key"</strong>, and copy the key starting with <code>AIzaSy...</code>.
+            </div>
+          `;
+        }
+        return;
+      }
+
       if (statusEl) {
-        statusEl.innerHTML = `<span style="color: #818cf8;">⏳ Testing connection to Google Gemini API...</span>`;
+        statusEl.innerHTML = `<span style="color: #818cf8;">⏳ Testing connection to Google Gemini API (${Utils.escapeHtml(model)})...</span>`;
       }
 
       try {
-        await GeminiService.testApiKey(key);
+        await GeminiService.testApiKey(key, model);
         if (statusEl) {
-          statusEl.innerHTML = `<span style="color: #10b981; font-weight: 700;">✅ Success! Google Gemini connected successfully.</span>`;
+          statusEl.innerHTML = `<span style="color: #10b981; font-weight: 700;">✅ Success! Google Gemini connected successfully using ${Utils.escapeHtml(model)}.</span>`;
         }
         Utils.showToast('Gemini API Connection Verified!', '✨');
       } catch (err) {
@@ -89,7 +113,7 @@
       const key = inp ? inp.value.trim() : '';
       
       const modelSel = document.getElementById('gemini-model-select');
-      const model = modelSel ? modelSel.value : 'gemini-2.0-flash';
+      const model = modelSel ? modelSel.value : 'gemini-1.5-flash';
 
       GeminiService.setApiKey(key);
       GeminiService.setModel(model);
