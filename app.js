@@ -1597,122 +1597,1018 @@
     }
   }
 
-  // -------------------------------------------------------------
+  // =============================================================
   // UPSC Mains Answer Framework & "How to Approach" Engine
-  // -------------------------------------------------------------
-  function generateMainsApproach(qText, marks, subject) {
-    const marksNum = parseFloat(marks) || 10;
-    const targetWords = (marksNum >= 15) ? 250 : (marksNum >= 20 ? 300 : 150);
-    const suggestedTime = (marksNum >= 15) ? 11 : (marksNum >= 20 ? 14 : 7);
+  // Comprehensive, Academic Subject-Calibrated Blueprint Engine
+  // =============================================================
 
-    let directive = "Discuss";
-    let directiveMeaning = "Explore the topic from multiple dimensions (Social, Economic, Political, Legal, Administrative) and provide a balanced synthesis.";
+  function detectQuestionDomain(qText, subject) {
+    const s = (subject || '').toLowerCase();
+    const q = (qText || '').toLowerCase();
+
+    // 1. Climatology & Atmospheric Dynamics (GS-1 Geography)
+    if (q.includes('troposphere') || q.includes('atmosphere') || q.includes('inversion') || 
+        q.includes('air mass') || q.includes('front') || q.includes('monsoon') || 
+        q.includes('cyclone') || q.includes('jet stream') || q.includes('lapse rate') || 
+        q.includes('weather') || q.includes('climate change') || q.includes('cryosphere') || 
+        q.includes('glacier') || q.includes('cloudburst') || q.includes('heat wave') || 
+        q.includes('western disturbance') || q.includes('itcz') || q.includes('albedo')) {
+      return 'GEOGRAPHY_CLIMATOLOGY';
+    }
+
+    // 2. Physical Geomorphology, Oceanography & Earth Systems (GS-1 Geography)
+    if (q.includes('plate tectonic') || q.includes('volcano') || q.includes('earthquake') || 
+        q.includes('ocean current') || q.includes('coral reef') || q.includes('continental shelf') || 
+        q.includes('tides') || q.includes('land subsidence') || q.includes('landslide') || 
+        q.includes('western ghats') || q.includes('desert') || q.includes('geomorphic') || 
+        q.includes('lithosphere') || q.includes('crust') || q.includes('tsunami') || 
+        s.includes('geography')) {
+      return 'GEOGRAPHY_PHYSICAL';
+    }
+
+    // 3. Indian Society, Demography & Social Justice (GS-1 Society)
+    if (q.includes('transgender') || q.includes('caste') || q.includes('regionalism') || 
+        q.includes('secularism') || q.includes('communalism') || q.includes('child labour') || 
+        q.includes('women') || q.includes('gender') || q.includes('vulnerab') || 
+        q.includes('family') || q.includes('marriage') || q.includes('diversity of india') || 
+        q.includes('urbanization') || q.includes('population') || q.includes('fertility') || 
+        q.includes('tribal') || q.includes('linguistic') || q.includes('care economy') || 
+        s.includes('society')) {
+      return 'INDIAN_SOCIETY';
+    }
+
+    // 4. Polity, Constitution & Governance (GS-2)
+    if (q.includes('article ') || q.includes('fundamental rights') || q.includes('privacy') || 
+        q.includes('directive principles') || q.includes('basic structure') || q.includes('judicial review') || 
+        q.includes('supreme court') || q.includes('governor') || q.includes('federal') || 
+        q.includes('parliament') || q.includes('separation of powers') || q.includes('ordinance') || 
+        q.includes('election commission') || q.includes('living instrument') || q.includes('section 66a') || 
+        q.includes('freedom of speech') || s.includes('polity') || s.includes('governance')) {
+      return 'POLITY_CONSTITUTION';
+    }
+
+    // 5. Modern Indian & World History, Art & Culture (GS-1 History)
+    if (q.includes('1857') || q.includes('freedom struggle') || q.includes('non-cooperation') || 
+        q.includes('civil disobedience') || q.includes('quit india') || q.includes('gandhi') || 
+        q.includes('buddhism') || q.includes('jainism') || q.includes('temple') || 
+        q.includes('sculpture') || q.includes('harappa') || q.includes('bismarck') || 
+        q.includes('world war') || q.includes('industrial revolution') || q.includes('decolonization') || 
+        q.includes('bhakti') || q.includes('sufism') || q.includes('british') || 
+        s.includes('history') || s.includes('culture')) {
+      return 'HISTORY_CULTURE';
+    }
+
+    // 6. Economy, Agriculture & Environment (GS-3)
+    if (q.includes('msp') || q.includes('subsidy') || q.includes('agriculture') || 
+        q.includes('irrigation') || q.includes('food security') || q.includes('renewable energy') || 
+        q.includes('wetland') || q.includes('eia') || q.includes('pollution') || 
+        q.includes('disaster') || q.includes('gdp') || q.includes('inflation') || 
+        s.includes('economy') || s.includes('environment')) {
+      return 'ECONOMY_ENVIRONMENT';
+    }
+
+    return 'GENERAL_MAINS';
+  }
+
+  // -------------------------------------------------------------
+  // Comprehensive UPSC Mains Subject Blueprint Engine
+  // -------------------------------------------------------------
+  function generateComprehensiveBlueprint(qText, marks, subject) {
+    const marksNum = parseFloat(marks) || 10;
+    const targetWords = (marksNum >= 15) ? 250 : 150;
+    const suggestedTime = (marksNum >= 15) ? 11 : 7;
+    const domain = detectQuestionDomain(qText, subject);
     const qLower = (qText || '').toLowerCase();
 
+    // Directive Detection & Meaning
+    let directive = "Examine";
+    let directiveMeaning = "Analyze the core facts, underlying mechanisms, and practical implications of the issue with empirical evidence.";
     if (qLower.includes("critically examine") || qLower.includes("critically analyze") || qLower.includes("critically evaluate")) {
       directive = "Critically Examine / Analyze";
-      directiveMeaning = "Conduct a rigorous scrutiny of both sides. Highlight strengths/merits vs limitations/concerns, and arrive at a well-substantiated, balanced verdict.";
-    } else if (qLower.includes("examine") || qLower.includes("investigate")) {
-      directive = "Examine";
-      directiveMeaning = "Look deeply into the facts, root causes, and practical implications of the issue with supporting evidence.";
+      directiveMeaning = "Conduct a rigorous scrutiny of both affirmative strengths and structural limitations, arriving at an objective verdict.";
+    } else if (qLower.includes("discuss")) {
+      directive = "Discuss";
+      directiveMeaning = "Explore multiple interrelated dimensions and synthesize a comprehensive, multi-faceted perspective.";
     } else if (qLower.includes("evaluate") || qLower.includes("assess")) {
       directive = "Evaluate / Assess";
-      directiveMeaning = "Determine the value, impact, or success of the policy/provision against stated constitutional or socio-economic goals.";
+      directiveMeaning = "Appraise the practical effectiveness, success, or shortcomings against foundational objectives.";
     } else if (qLower.includes("comment")) {
       directive = "Comment";
-      directiveMeaning = "Take an informed, principled position on the statement and defend your viewpoint using constitutional provisions and real-world examples.";
-    } else if (qLower.includes("illustrate") || qLower.includes("elaborate")) {
-      directive = "Illustrate / Elaborate";
-      directiveMeaning = "Substantiate the core arguments through concrete instances, landmark judicial precedents, and current case studies.";
-    } else if (qLower.includes("what") || qLower.includes("why") || qLower.includes("how")) {
-      directive = "Direct Question (What / Why / How)";
-      directiveMeaning = "Address all sub-parts directly with crisp, categorized bullet points and practical remedies.";
+      directiveMeaning = "Formulate a reasoned, principled stance on the proposition, defending it with grounded facts and principles.";
+    } else if (qLower.includes("how") || qLower.includes("why") || qLower.includes("what")) {
+      directive = "Direct Analytical Query";
+      directiveMeaning = "Directly deconstruct all components of the prompt with technical clarity, diagrams, and empirical substantiation.";
     }
 
-    const valueAdds = [];
-    if (qLower.includes("privacy") || qLower.includes("article 21") || qLower.includes("liberty")) {
-      valueAdds.push("Landmark Case: Justice K.S. Puttaswamy v. Union of India (2017) - 9-Judge bench affirmed Right to Privacy as intrinsic to Article 21.");
-      valueAdds.push("Doctrine: 4-Prong Proportionality Test (Legitimate Aim, Suitability, Necessity, Balancing).");
-      valueAdds.push("Statute / Committee: Digital Personal Data Protection (DPDP) Act 2023 & Justice B.N. Srikrishna Committee.");
-    }
-    if (qLower.includes("section 66a") || qLower.includes("speech") || qLower.includes("article 19")) {
-      valueAdds.push("Landmark Case: Shreya Singhal v. Union of India (2015) - Struck down Section 66A of IT Act for chilling free speech.");
-      valueAdds.push("Constitutional Balance: Reasonable restrictions under Article 19(2) (Public order, decency, sovereignty).");
-    }
-    if (qLower.includes("preamble") || qLower.includes("basic structure")) {
-      valueAdds.push("Landmark Cases: Kesavananda Bharati (1973), Minerva Mills (1980), S.R. Bommai (1994).");
-      valueAdds.push("Constitutional Ideal: Preamble reflects the foundational philosophy, goals, and solemn resolve of the Constitution.");
-    }
-    if (qLower.includes("federal") || qLower.includes("governor") || qLower.includes("centre-state")) {
-      valueAdds.push("Key Committees: Sarkaria Commission (1988), M.M. Punchhi Commission (2010), 2nd ARC Report.");
-      valueAdds.push("Landmark Case: S.R. Bommai case (1994) restricting arbitrary imposition of Article 356.");
-    }
-    if (qLower.includes("judiciary") || qLower.includes("collegium") || qLower.includes("judicial review")) {
-      valueAdds.push("Key Cases: Kesavananda Bharati (Judicial review as Basic Structure), NJAC judgment (2015).");
-      valueAdds.push("Constitutional Balance: Separation of Powers (Article 50) vs Judicial Activism vs Complete Justice (Article 142).");
-    }
-    if (qLower.includes("environment") || qLower.includes("pollution") || qLower.includes("climate")) {
-      valueAdds.push("Judicial Doctrines: M.C. Mehta cases - Polluter Pays Principle, Precautionary Principle, Public Trust Doctrine.");
-      valueAdds.push("Constitutional Mandate: Article 48A (State duty) & Article 51A(g) (Citizen's fundamental duty).");
-    }
-    if (qLower.includes("women") || qLower.includes("gender") || qLower.includes("transgender")) {
-      valueAdds.push("Landmark Case: NALSA v. Union of India (2014) recognizing transgender persons under Articles 14, 15, 21.");
-      valueAdds.push("Legal Framework: Transgender Persons (Protection of Rights) Act 2019 & 2026 amendments.");
-      valueAdds.push("Global Benchmark: UN SDG Goal 5 (Gender Equality & Women Empowerment).");
+    // ---------------------------------------------------------
+    // 1. GEOGRAPHY: TROPOSPHERE & WEATHER PROCESSES
+    // ---------------------------------------------------------
+    if (qLower.includes('troposphere')) {
+      return {
+        domainLabel: 'Physical Geography • Climatology & Atmospheric Dynamics',
+        directive,
+        directiveMeaning,
+        targetWords,
+        suggestedTime,
+        marksNum,
+        intros: [
+          {
+            type: 'Option 1: Atmospheric Physics & Definition Hook',
+            text: 'The troposphere is the lowest atmospheric layer extending from Earth\'s surface up to ~8 km at the poles and ~18 km at the equator. Containing 75–80% of total atmospheric mass and 99% of all water vapour and aerosols, it serves as the planetary convective engine where almost all terrestrial weather phenomena occur.'
+          },
+          {
+            type: 'Option 2: Thermodynamic & Heat Engine Hook',
+            text: 'Unlike upper atmospheric layers heated by radiation absorption, the troposphere is heated from below by terrestrial infrared radiation, establishing an unstable Normal Lapse Rate (6.5°C/km). This vertical temperature gradient powers continuous convective overturning, cloud genesis, and global precipitation systems.'
+          },
+          {
+            type: 'Option 3: Meteorological Boundary Hook',
+            text: 'Capped above by the isothermal thermal ceiling of the Tropopause, the troposphere functions as a closed fluid envelope that traps water phase changes, latent heat release, and planetary circulation cells sustaining the biosphere.'
+          }
+        ],
+        headings: [
+          {
+            title: '1. Thermodynamic & Physical Drivers Making Troposphere the Weather Engine',
+            points: [
+              '99% Concentration of Water Vapour & Aerosols: Moisture and hygroscopic condensation nuclei are confined below the tropopause; without them, cloud condensation, dew, and precipitation cannot physically occur.',
+              'Normal Lapse Rate (6.5°C/km) & Adiabatic Instability: Direct surface heating makes warm surface air buoyant, triggering vigorous vertical convective updrafts and cyclonic cloud formation.',
+              'Latent Heat of Condensation as Energy Catalyst: Phase change of moisture releases vast latent heat into the middle troposphere, powering tropical cyclones, monsoonal depressions, and thunderstorms.'
+            ]
+          },
+          {
+            title: '2. Major Weather Phenomena Governed Exclusively within Troposphere',
+            points: [
+              'Triglobal Circulation Cells: Hadley, Ferrel, and Polar cells circulate entirely within the tropospheric depth, driving planetary Trade Winds, Westerlies, and seasonal Monsoons.',
+              'Upper Tropospheric Jet Streams: Narrow meandering bands of high-speed winds (Subtropical Westerly Jet, Polar Front Jet) guide temperate cyclones and steer Indian Western Disturbances.',
+              'Frontogenesis & Airmass Mixing: Collisions of polar cold and tropical warm air masses occur in middle-high latitudes, generating temperate frontal weather.'
+            ]
+          },
+          {
+            title: '3. Role of the Tropopause as a Dynamic Meteorological Ceiling',
+            points: [
+              'Thermal Inversion Barrier: At the tropopause, temperature stops decreasing and begins rising in the stratosphere (due to ozone UV absorption), creating an absolute stability lid that halts vertical convective cloud penetration.',
+              'Latitudinal Elevation Asymmetry: Convective intensity expands the tropopause to 18 km at the equator versus 8 km at the poles, determining the spatial depth of global weather systems.'
+            ]
+          },
+          {
+            title: '4. Anthropogenic Destabilization of Tropospheric Balance',
+            points: [
+              'Tropospheric Warming & Tropopause Height Expansion: Rising greenhouse gas concentrations elevate the tropopause level, expanding the tropical Hadley cell polewards and intensifying unseasonal weather extremes (IPCC AR6).'
+            ]
+          }
+        ],
+        diagramTitle: 'Atmospheric Layer Cross-Section & Thermodynamic Lapse Rate',
+        diagramSketchInstructions: '1. Draw vertical Y-axis for Altitude (0–20 km) and horizontal X-axis for Temperature (-60°C to +20°C). 2. Draw sloping Tropopause line (18 km at Equator down to 8 km at Poles). 3. Draw temperature line sloping leftward from +15°C down to -56°C (Lapse Rate 6.5°C/km). 4. Sketch convective cloud cell with 99% moisture labeled below Tropopause ceiling.',
+        diagramVisual: `  Altitude (km)
+      ▲
+  20 ─┤              STRATOSPHERE (Ozone Layer: O3)
+      │ ═════════════════ TROPOPAUSE (Thermal Ceiling) ═════════════════
+  18 ─┤       ▲ (18 km at Equator)                \\
+      │      / \\                                   \\  Temp Line:
+  12 ─┤     /   \\  [Subtropical Jet Stream]         \\ Decreases
+      │    /     \\                                   \\ 6.5°C/km
+   8 ─┤   /       \\ (8 km at Poles)                   \\ (Lapse Rate)
+      │  [  ☁️ Cumulonimbus  ]   [ Cyclonic Circulation ]\\
+   4 ─┤  [  Thunderstorm Cell ]    ▲ Convection Currents  \\
+      │  [ 99% Water Vapour ]     │ (Heated from Below)   \\
+   0 ─┴────────────────────────────────────────────────────► Temp (°C)
+         Earth Surface (Terrestrial Radiation)   -56°C  0°C  +15°C`,
+        valueAdds: [
+          'Physical Constants: Normal Lapse Rate (6.5°C per 1,000 m), Dry Adiabatic Lapse Rate (DALR: 9.8°C/km), Wet Adiabatic Lapse Rate (WALR: 5°C/km).',
+          'Atmospheric Mass Allocation: 75% of atmospheric mass and >99% moisture restricted below the Tropopause boundary.',
+          'Scientific Report: IPCC AR6 Working Group I (Physical Science Basis) on Tropospheric Warming, Jet Stream Meandering, and Tropical Width Expansion.'
+        ],
+        conclusion: 'The troposphere is the indispensable thermodynamic heat engine and protective moisture envelope of the biosphere. Monitoring its thermal stability is paramount for climate resilience and extreme weather early warning systems.'
+      };
     }
 
-    if (valueAdds.length === 0) {
-      valueAdds.push("Analytical Framework: PESTLE Dimensions (Political, Economic, Social, Technological, Legal, Environmental).");
-      valueAdds.push("Administrative Touchpoint: 2nd Administrative Reforms Commission (ARC) recommendations.");
-      valueAdds.push("Guiding Compass: Constitutional Morality, Directive Principles (Part IV), and UN Sustainable Development Goals (SDGs).");
+    // ---------------------------------------------------------
+    // 2. GEOGRAPHY: AIR MASSES & FRONTS
+    // ---------------------------------------------------------
+    if (qLower.includes('air mass') || (qLower.includes('front') && domain.startsWith('GEOGRAPHY'))) {
+      return {
+        domainLabel: 'Physical Geography • Climatology & Synoptic Meteorology',
+        directive,
+        directiveMeaning,
+        targetWords,
+        suggestedTime,
+        marksNum,
+        intros: [
+          {
+            type: 'Option 1: Geographical Definition Hook',
+            text: 'An air mass is an extensive body of tropospheric air, covering thousands of square kilometers, characterized by horizontally uniform temperature and moisture gradients acquired over an expansive, homogeneous source region.'
+          },
+          {
+            type: 'Option 2: Synoptic Climatological Hook',
+            text: 'Originating over expansive uniform continental or oceanic source regions under high-pressure anticyclonic stagnation, air masses act as primary global transporters of sensible heat and moisture across planetary latitudes.'
+          },
+          {
+            type: 'Option 3: Frontogenetic Interaction Hook',
+            text: 'When divergent air masses migrate from their source regions, their convergence zones create sharp discontinuity boundaries known as fronts, serving as the primary breeding grounds for mid-latitude temperate cyclones.'
+          }
+        ],
+        headings: [
+          {
+            title: '1. Foundational Concept & Essential Prerequisites for Air Mass Genesis',
+            points: [
+              'Homogeneous Source Region: Requires vast, topographically uniform surfaces (e.g. Siberian plains for cP, tropical oceans for mT) with gentle atmospheric divergence.',
+              'Atmospheric Stagnation: High-pressure anticyclonic conditions must persist over the region for days or weeks to allow equilibrium heat and moisture exchange.',
+              'Bergeron Classification Matrix: Categorized into Polar (P), Tropical (T), Continental (c - dry), and Maritime (m - humid), producing 4 primary archetypes: cP, cT, mP, and mT.'
+            ]
+          },
+          {
+            title: '2. Role of Air Masses in Driving Macro-Climatic Changes & Weather',
+            points: [
+              'Global Latitudinal Heat Balance: Transfers surplus solar heat from equatorial oceans (mT) polewards, while transporting Arctic cold deficits (cP) toward the subtropics.',
+              'Mid-Latitude Frontogenesis & Temperate Cyclones: Collisions between cold polar air (cP) and warm subtropical air (mT) along the Polar Front create Rossby waves and migratory depressions.',
+              'Monsoonal & Extreme Weather Teleconnections: Modification of Maritime Tropical (mT) air masses across the Indian Ocean fuels South-West Monsoon precipitation surges.'
+            ]
+          },
+          {
+            title: '3. Thermodynamic & Mechanical Modification upon Migration',
+            points: [
+              'Lake-Effect Snow & Heatwaves: A cold dry cP air mass passing over warm water absorbs moisture, triggering extreme snowfall (e.g., Laurentian Great Lakes). Conversely, cT air masses produce severe heatwaves (Loo in North India).'
+            ]
+          }
+        ],
+        diagramTitle: 'Air Mass Frontal Wedge Cross-Section (Cold Front vs Warm Air)',
+        diagramSketchInstructions: '1. Draw ground surface line. 2. Draw steep sloping wedge of dense Cold Air (cP) advancing rightward. 3. Draw buoyant Warm Air (mT) forced upward along the frontal slope. 4. Sketch cumulonimbus cloud along the steep front with rainfall arrows.',
+        diagramVisual: `  Altitude
+     ▲
+     │                      Buoyant Warm Air (mT)
+     │                     ▲  ▲  ▲ (Forced Updraft)
+     │                    /  /  /
+     │           ☁️ Cumulonimbus
+     │             [ Rain / Storm ]
+     │                 │ │ │ │
+     │   Cold Air      │ │ │ │
+     │   Mass (cP)     ▼ ▼ ▼ ▼
+     │   ══════════════════════════════════════════════════════
+     │  [Dense Wedge] ──► Advancing Cold Front Boundary ──►
+     └──────────────────────────────────────────────────────────► Surface`,
+        valueAdds: [
+          'Climatological Classification: Tor Bergeron Classification System & Bjerknes Polar Front Theory.',
+          'Indian Climatology Linkage: Influence of Continental Tropical (cT) air mass in North-West Indian pre-monsoon heatwaves, alternating with Maritime Tropical (mT) monsoon surge.',
+          'Atmospheric Law: Conservation of absolute vorticity during meridional air mass displacement.'
+        ],
+        conclusion: 'Air masses are the fundamental fluid pulleys of the planetary heat budget. Understanding their modification trajectories is vital for precision agricultural forecasting and disaster mitigation.'
+      };
     }
 
+    // ---------------------------------------------------------
+    // 3. GEOGRAPHY: TEMPERATURE INVERSION
+    // ---------------------------------------------------------
+    if (qLower.includes('inversion')) {
+      return {
+        domainLabel: 'Physical Geography • Micro-Climatology & Boundary Layer Physics',
+        directive,
+        directiveMeaning,
+        targetWords,
+        suggestedTime,
+        marksNum,
+        intros: [
+          {
+            type: 'Option 1: Thermodynamic Definition Hook',
+            text: 'Temperature inversion is a meteorological anomaly in the troposphere where the normal lapse rate is reversed, causing air temperature to increase with altitude rather than decrease, creating an exceptionally stable thermal lid.'
+          },
+          {
+            type: 'Option 2: Atmospheric Boundary Layer Hook',
+            text: 'Under specific radiative or advective conditions, cooling of Earth\'s surface outpaces lower atmospheric heat retention, inverting the normal vertical temperature gradient (-6.5°C/km) and halting vertical atmospheric mixing.'
+          },
+          {
+            type: 'Option 3: Socio-Environmental Impact Hook',
+            text: 'While physically functioning as a local micro-climatic stabilizer, temperature inversion acts as an ecological trap in valleys and urban basins, intensifying winter smog episodes and agricultural frost damage.'
+          }
+        ],
+        headings: [
+          {
+            title: '1. Essential Prerequisites & Suitable Conditions for Temperature Inversion',
+            points: [
+              'Long Winter Nights: Extended nocturnal duration allows maximum terrestrial longwave radiative cooling from the Earth\'s surface.',
+              'Clear, Cloudless Skies: Absence of cloud cover prevents reflection and greenhouse re-radiation of outgoing terrestrial radiation into space.',
+              'Calm, Stagnant Atmospheric Air: Wind speeds below 5 km/h prevent turbulent mechanical mixing between surface cold air and warmer layers aloft.',
+              'Dry Air & Snow Cover (Albedo): Dry air has minimal greenhouse absorption, while high-albedo snow reflects insolation, chilling the ground.'
+            ]
+          },
+          {
+            title: '2. Multi-Faceted Impacts of Temperature Inversion across Spheres',
+            points: [
+              'Pollutant Entrapment & Severe Urban Smog: The inversion lid prevents vertical dispersion of vehicular and industrial emissions, producing dangerous winter smog (e.g. Delhi NCR AQI > 400).',
+              'Dense Radiation Fog & Transport Disruption: Near-surface condensation forms thick radiation fog, severely disrupting aviation, rail, and road networks.',
+              'Valley Agricultural Zoning: Katabatic cold air drains into valley bottoms causing severe ground frost; consequently, apple orchards and settlements in Himachal Pradesh and Switzerland locate on higher slopes (Thermal Belt).',
+              'Atmospheric Stability & Drought: Suppresses vertical convection, preventing cumulus cloud development and local precipitation.'
+            ]
+          }
+        ],
+        diagramTitle: 'Temperature Inversion Curve & Valley Thermal Belt Profile',
+        diagramSketchInstructions: '1. Draw vertical Altitude axis and horizontal Temperature axis. 2. Show Temperature decreasing, then reversing and increasing sharply (Inversion Layer), then decreasing again. 3. Draw U-shaped valley with Cold Air at the bottom, Warm Thermal Belt on mid-slopes, and Orchards located safely above frost level.',
+        diagramVisual: `  Altitude (m)                VALLEY INVERSION & THERMAL BELT:
+      ▲                          Mountain Ridge           Mountain Ridge
+ 1000 ┤     \\   Normal Lapse           \\                         /
+      │      \\  Resumes                 \\   Warm Air Layer       /
+  600 ┤       \\                          \\═════════════════════/
+      │        \\ ◄── Thermal Lid          \\ [🍎 Orchard Zone] /  <-- Thermal Belt
+  300 ┤        /   (Inversion Layer)       \\  (Above Frost)  /
+      │       /                             \\               /
+    0 ─┴─────/────────────────► Temp         \\ [❄️ Frost/Fog] /   <-- Valley Bottom
+       Cold Surface   Warm Air                ═══════════════`,
+        valueAdds: [
+          'Micro-Climatic Zone: Identification of the "Thermal Belt" on middle mountain slopes, preventing frostbite in sub-temperate horticulture.',
+          'Public Health Benchmark: CPCB air quality telemetry documenting particulate matter (PM2.5) trapping under NCR winter inversion ceilings.',
+          'Physical Law: Stefan-Boltzmann Law of terrestrial nocturnal longwave radiation ($E = \sigma T^4$).'
+        ],
+        conclusion: 'Temperature inversion exemplifies the delicate interplay between thermodynamic boundary layers and human geography. Urban airshed management and smart horticultural micro-zoning are imperative for mitigating its hazards.'
+      };
+    }
+
+    // ---------------------------------------------------------
+    // 4. GEOGRAPHY: PLATE TECTONICS & CRUSTAL DYNAMICS
+    // ---------------------------------------------------------
+    if (qLower.includes('plate tectonic') || qLower.includes('tectonic')) {
+      return {
+        domainLabel: 'Physical Geography • Geomorphology & Lithospheric Geodynamics',
+        directive,
+        directiveMeaning,
+        targetWords,
+        suggestedTime,
+        marksNum,
+        intros: [
+          {
+            type: 'Option 1: Comprehensive Geological Hook',
+            text: 'Formulated by Morgan, McKenzie, and Parker (1967) and synthesizing Continental Drift and Seafloor Spreading, Plate Tectonics posits that Earth\'s rigid lithosphere is fragmented into major and minor plates floating atop the ductile asthenosphere.'
+          },
+          {
+            type: 'Option 2: Geodynamic Driving Force Hook',
+            text: 'Powered by radioactive thermal mantle convection currents and slab-pull forces, plate tectonics serves as the unifying geological framework explaining planetary orogeny, seismicity, and volcanism.'
+          },
+          {
+            type: 'Option 3: Morpho-Genesis Hook',
+            text: 'Plate tectonic boundaries represent the planet\'s most dynamic geological frontiers, governing the continuous recycling of crustal material through constructive ridges and destructive subduction zones.'
+          }
+        ],
+        headings: [
+          {
+            title: '1. Foundational Mechanism: Convection Cells & Plate Kinematics',
+            points: [
+              'Mantle Convection Cells: Arthur Holmes\' thermal convection currents in the asthenosphere generate lateral traction beneath lithospheric plates.',
+              'Ridge-Push and Slab-Pull Mechanisms: Gravitational sliding away from elevated mid-ocean ridges combined with the negative buoyancy of cold subducting slabs drives plate velocity.',
+              'Boundary Taxonomy: Divergent (constructive), Convergent (destructive), and Transform (conservative) plate margins.'
+            ]
+          },
+          {
+            title: '2. Major Landform Manifestations along Plate Boundaries',
+            points: [
+              'Oceanic-Continental Convergence: Subduction of denser oceanic crust forms oceanic trenches (e.g. Peru-Chile trench) and volcanic cordilleras (e.g. Andes Mountains).',
+              'Continent-Continent Collision: Absence of subduction due to low buoyancy contrast produces massive folded mountain belts without volcanism (e.g. Indo-Eurasian collision forming Himalayas).',
+              'Divergent Seafloor Spreading: Upwelling basaltic magma creates submarine mountain chains and new oceanic crust (Mid-Atlantic Ridge).'
+            ]
+          },
+          {
+            title: '3. Seismicity, Volcanism & Economic Geography Linkages',
+            points: [
+              'Pacific Ring of Fire: Concentrates 75% of active volcanoes and 90% of global earthquakes along convergent margins.',
+              'Mineral Wealth & Geothermal Energy: Hydrothermal vents deposit massive copper-gold polymetallic sulfides; basaltic weathering generates fertile black regur soil (Deccan Traps).'
+            ]
+          }
+        ],
+        diagramTitle: 'Oceanic-Continental Subduction Zone Cross-Section',
+        diagramSketchInstructions: '1. Draw horizontal Continental Crust on right and Oceanic Crust on left. 2. Show oceanic plate subducting at 45° into the Asthenosphere. 3. Label Deep Sea Trench at collision point, Wadati-Benioff seismic zone along the subducting slab, partial melting zone at 100 km depth, and volcanic mountain arc on the continent.',
+        diagramVisual: `  Oceanic Plate (Denser)                   Continental Plate (Lighter)
+  ════════════════════►                     ◄══════════════════════════
+               \\   Deep Trench                 ▲ Volcanic Arc
+                \\      ▼                      / \\  (e.g. Andes)
+                 \\   ┌────┐                  /   \\
+                  \\  │ ⚓  │                 /     \\    Continental
+                   \\ └────┘                /  🔥   \\   Crust
+                    \\                     [ Magma  ]
+                     \\                    [Chamber ]
+                      \\                      ▲
+                       \\  Partial Melting    │
+                        \\ (100-200 km) ──────┘
+                         \\ [Wadati-Benioff Zone]
+                          ▼  (Deep Earthquakes)
+                     ASTHENOSPHERE (Mantle Convection)`,
+        valueAdds: [
+          'Geological Evidence: Paleomagnetic striping (Vine-Matthews-Morley hypothesis) and Glomar Challenger seafloor age dating.',
+          'Indian Geodynamics Link: Northward drift of the Indian Plate (5 cm/year) and ongoing seismic strain accumulation along Main Central Thrust (MCT).',
+          'Economic Output: Formation of hydrothermal porphyry copper deposits along convergent margins.'
+        ],
+        conclusion: 'Plate Tectonics provides the unifying architecture of terrestrial geology. Incorporating plate kinematic data into regional seismic hazard zoning is vital for infrastructure resilience.'
+      };
+    }
+
+    // ---------------------------------------------------------
+    // 5. SOCIETY: TRANSGENDER RIGHTS & ARTICLE 21
+    // ---------------------------------------------------------
+    if (qLower.includes('transgender') || (qLower.includes('privacy') && (qLower.includes('self-identity') || qLower.includes('identity')))) {
+      return {
+        domainLabel: 'Indian Society & Constitutional Law • Transgender Justice & Article 21',
+        directive,
+        directiveMeaning,
+        targetWords,
+        suggestedTime,
+        marksNum,
+        intros: [
+          {
+            type: 'Option 1: Constitutional Jurisprudence Hook',
+            text: 'In Justice K.S. Puttaswamy (2017) and NALSA v. Union of India (2014), the Supreme Court affirmed that gender self-identity and personal autonomy are foundational, non-negotiable components of the Right to Dignity under Article 21 and Equality under Article 14.'
+          },
+          {
+            type: 'Option 2: Sociological Vulnerability Hook',
+            text: 'Self-identity is not merely a legal certification but the primary anchor of human agency, psychological integrity, and equal citizenship. For India\'s transgender community, self-determination is the first line of defense against generational destitution and systemic ostracization.'
+          },
+          {
+            type: 'Option 3: Legislative Evolution Hook',
+            text: 'The amendments to the Transgender Persons (Protection of Rights) framework mark a progressive transition from invasive medical gatekeeping toward autonomous, self-perceived gender recognition in alignment with constitutional morality.'
+          }
+        ],
+        headings: [
+          {
+            title: '1. Direct Affirmative Impact of Legal Reforms on Right to Self-Identity (Art 21)',
+            points: [
+              'Demolishing Medical Gatekeeping: Dismantles mandatory surgical certification requirements for legal gender recognition, enshrining pure self-declaration as mandated in NALSA.',
+              'Streamlined DM Digital Certification: Replaces discretionary district screening committees with time-bound digital portals, preventing administrative harassment and bureaucratic humiliation.',
+              'Affirmative Healthcare Inclusivity: Expands composite health insurance under Ayushman Bharat for gender-affirming medical procedures, hormone therapy, and mental health counseling.'
+            ]
+          },
+          {
+            title: '2. Critical Implementation Bottlenecks & Unaddressed Structural Gaps',
+            points: [
+              'Absence of Horizontal Reservation: The legal framework leaves unaddressed the critical demand for horizontal quotas in education and public employment, leaving trans individuals trapped in informal precarity.',
+              'Deficit of Garima Grehs (Shelter Homes): Lack of decentralized, safe shelter homes leaves trans youth who face domestic rejection vulnerable to forced homelessness and street begging.',
+              'Civil Rights Vacuum: Personal laws continue to deny equal civil rights in marriage, adoption, succession, and property inheritance, creating incomplete constitutional citizenship.'
+            ]
+          },
+          {
+            title: '3. Strategic Multi-Sectoral Roadmap for Substantive Equality',
+            points: [
+              'Statutory Anti-Discrimination Architecture: Enacting an overarching Equal Opportunity Law across private employment and rental housing markets.',
+              'Grassroots Sensitisation: Mandatory training for law enforcement agencies and healthcare personnel to eliminate institutional prejudice.'
+            ]
+          }
+        ],
+        diagramTitle: 'Transgender Structural Inclusion vs Marginalization Cycle',
+        diagramSketchInstructions: '1. Draw Central Box for Article 21 Self-Identity. 2. Branch out to Legal Autonomy, Healthcare Equity, and Social Housing. 3. Show Vicious Cycle of Stigma -> Dropout -> Informal Labour at the base.',
+        diagramVisual: `        ┌─────────────────────────────────────────────────────────┐
+        │       Right to Self-Identity & Dignity (Article 21)     │
+        └────────────────────────────┬────────────────────────────┘
+                                     │
+         ┌───────────────────────────┼───────────────────────────┐
+         ▼                           ▼                           ▼
+  [ Legal Autonomy ]          [ Healthcare Justice ]      [ Economic Inclusion ]
+  Self-declaration without    Ayushman Bharat coverage    Horizontal Quotas (Gap)
+  medical gatekeeping         Gender-affirming care       Garima Greh Shelters
+                                     │
+                                     ▼
+        [ The Vicious Cycle: Stigma ──► School Dropout ──► Street Begging ]`,
+        valueAdds: [
+          'Judicial Benchmarks: NALSA v. UOI (2014), K.S. Puttaswamy (2017), Navtej Singh Johar (2018).',
+          'International Standard: Yogyakarta Principles (Principle 3: Universal Right to Legal Recognition of Gender Identity).',
+          'Statutory Schemes: SMILE Scheme (Support for Marginalized Individuals for Livelihood and Enterprise), Garima Greh Rules.'
+        ],
+        conclusion: 'True realization of Article 21 demands bridging legal decriminalization with affirmative socio-economic inclusion, realizing Dr. B.R. Ambedkar\'s vision of constitutional morality over social prejudice.'
+      };
+    }
+
+    // ---------------------------------------------------------
+    // 6. SOCIETY: CHILD LABOUR & VULNERABILITY
+    // ---------------------------------------------------------
+    if (qLower.includes('child labour') || (qLower.includes('vulnerab') && qLower.includes('child'))) {
+      return {
+        domainLabel: 'Indian Society & Social Justice • Vulnerability Matrix & Child Rights',
+        directive,
+        directiveMeaning,
+        targetWords,
+        suggestedTime,
+        marksNum,
+        intros: [
+          {
+            type: 'Option 1: Sociological Structural Hook',
+            text: 'Child labour is not merely an economic survival strategy but a symptom of deep-seated structural vulnerabilities—manifested through intergenerational poverty, caste marginalization, and educational deficits that rob children of human capital development.'
+          },
+          {
+            type: 'Option 2: Constitutional & Rights-Based Hook',
+            text: 'Despite constitutional guarantees under Article 24 (prohibition of child labour in hazardous occupations) and Article 21A (Right to Education), socio-economic distress continues to push over 10 million Indian children (Census 2011) into informal economic exploitation.'
+          },
+          {
+            type: 'Option 3: Holistic Vulnerability Hook',
+            text: 'No child enters the labour force voluntarily; child labour represents the culmination of household economic shocks, agrarian distress, and systemic gaps in social security nets.'
+          }
+        ],
+        headings: [
+          {
+            title: '1. Underlying Social Determinants Driving Child Vulnerability',
+            points: [
+              'Intergenerational Chronic Poverty & Debt Traps: Impoverished families depend on child earnings for baseline subsistence, often pledging children to bonded labour in brick kilns and agriculture.',
+              'Social Identity & Caste Intersection: Over 80% of child labourers belong to SC, ST, and OBC communities, reflecting deep overlaps between social stratification and economic destitution.',
+              'Inadequate Educational Infrastructure & High Dropout: Poor school infrastructure, distance, hidden schooling costs, and low learning outcomes push adolescents out of classrooms into the unorganized workforce.'
+            ]
+          },
+          {
+            title: '2. Legislative & Implementation Faultlines in India',
+            points: [
+              'The "Family Enterprise" Loophole: Section 3 of the Child Labour Amendment Act (2016) permits children to work in family enterprises, effectively shielding domestic, agricultural, and artisanal exploitation from state inspection.',
+              'Informal Economy Blindspots: Dominance of child labour in decentralized informal sectors (dhabas, domestic work, zari, bangle units) beyond the reach of understaffed factory inspectorates.',
+              'Poverty vs Law Enforcement Dilemma: Raids without robust family economic rehabilitation often plunge rescued children back into deeper debt and hazardous work.'
+            ]
+          },
+          {
+            title: '3. Multi-Pronged Transformative Interventions',
+            points: [
+              'Universal Conditional Cash Transfers: Linking welfare schemes (e.g., PM-POSHAN, MGNREGA) to school attendance guarantees income security for vulnerable households.',
+              'Revisiting Gurupadaswamy Committee Insights: Recognizing that child labour cannot be eliminated through punitive policing alone without structural poverty eradication.'
+            ]
+          }
+        ],
+        diagramTitle: 'Socio-Economic Root Cause Web & Policy Intervention Ladder',
+        diagramSketchInstructions: '1. Draw central vicious cycle box: Poverty -> Indebtedness -> School Dropout -> Child Labour. 2. Draw statutory shield: Articles 21A, 24, Child Labour Act. 3. Draw exit arrows toward Vocational Skill Formation and Conditional Cash Transfers.',
+        diagramVisual: `      ┌────────────────────────────────────────────────────────┐
+      │   Vicious Intergenerational Trap of Child Labour       │
+      └───────────────────────────┬────────────────────────────┘
+                                  │
+         ┌────────────────────────┼────────────────────────┐
+         ▼                        ▼                        ▼
+  [ Agrarian Distress ]    [ Low Quality Schooling ] [ Informal Exploitation ]
+  Crop failure / Debt      Hidden costs / Dropouts   Cheap, docile workforce
+         │                        │                        │
+         └────────────────────────┼────────────────────────┘
+                                  ▼
+      [ THE CYCLE: Child Labour ──► Low Human Capital ──► Adult Poverty ]
+                                  │
+      ════════════════════════════╪═════════════════════════════════════
+      🛡️ CONSTITUTIONAL SHIELD: Art 21A (RTE) + Art 24 + PENCIL Portal`,
+        valueAdds: [
+          'Constitutional Articles: Article 21A (Right to Free Education), Article 24 (Prohibition of child labour), Article 39(e) & (f) (Protection of childhood against exploitation).',
+          'Statutory Portal: PENCIL Portal (Platform for Effective Enforcement for No Child Labour) & National Child Labour Project (NCLP).',
+          'International Conventions: ILO Convention 138 (Minimum Age) & ILO Convention 182 (Worst Forms of Child Labour).'
+        ],
+        conclusion: 'Eliminating child labour demands treating children not as economic survival instruments, but as constitutional rights-holders, ensuring universal education and dignified family living wages.'
+      };
+    }
+
+    // ---------------------------------------------------------
+    // 7. SOCIETY: REGIONALISM AS A DOUBLE-EDGED SWORD
+    // ---------------------------------------------------------
+    if (qLower.includes('regionalism')) {
+      return {
+        domainLabel: 'Indian Society & Political Sociology • Federalism & National Integration',
+        directive,
+        directiveMeaning,
+        targetWords,
+        suggestedTime,
+        marksNum,
+        intros: [
+          {
+            type: 'Option 1: Sociological Definition Hook',
+            text: 'Regionalism in India is an ideology where individuals identify strongly with a distinct sub-national spatial, linguistic, or cultural region, balancing between pride in local identity and loyalty to the larger nation-state.'
+          },
+          {
+            type: 'Option 2: Dynamic "Double-Edged Sword" Hook',
+            text: 'Regionalism functions as a double-edged sword: on one edge, it strengthens democratic federalism through localized self-assertion; on the other, it poses centrifugal threats through chauvinistic identity politics and secessionist tendencies.'
+          },
+          {
+            type: 'Option 3: Historical Evolution Hook',
+            text: 'From the linguistic reorganization of states (1956) to contemporary demands for regional autonomy, regionalism has been both an instrument of decentralized development and a potential faultline in national cohesion.'
+          }
+        ],
+        headings: [
+          {
+            title: '1. Positive Edge: Regionalism as a Catalyst for Democratic Deepening',
+            points: [
+              'Democratic Accommodation of Cultural Diversity: Prevents linguistic hegemony and gives political voice to marginalized regional cultures (e.g. 8th Schedule linguistic states).',
+              'Competitive & Cooperative Federalism: Regional pride drives states to compete in health indices, ease of doing business, and green energy investments (e.g. Tamil Nadu, Kerala, Gujarat models).',
+              'Grassroots Decentralization: Regional aspirations catalyzed the 73rd and 74th Constitutional Amendments and creation of Autonomous District Councils (6th Schedule).'
+            ]
+          },
+          {
+            title: '2. Negative Edge: Regionalism as a Centrifugal Threat to National Unity',
+            points: [
+              'Sons-of-the-Soil Chauvinism: Aggressive identity politics triggering violent backlash against internal migrant workers (violating Article 19(1)(d) and 19(1)(e)).',
+              'Inter-State Resource Conflicts: Deep zero-sum friction over river water sharing (Cauvery, Krishna, Sutlej-Yamuna Link) undermining interstate solidarity.',
+              'Sub-Nationalism to Secessionist Strains: Historical insurgencies in Punjab, Nagaland, and Mizoram where extreme alienation challenged national territorial integrity.'
+            ]
+          },
+          {
+            title: '3. Institutional Mechanisms for Harmonizing Regional Aspirations',
+            points: [
+              'Asymmetrical Constitutional Federalism: Special provisions under Article 371A-J accommodating unique cultural and historical treaties.',
+              'Inter-State Coordination Bodies: Revitalizing the Inter-State Council (Article 263) and Zonal Councils to negotiate regional friction peacefully.'
+            ]
+          }
+        ],
+        diagramTitle: 'The Dual-Balance Scale of Regionalism in India',
+        diagramSketchInstructions: '1. Draw central fulcrum labeled "Constitution of India". 2. Draw balance beam. 3. Left pan: Democratic Decentralization, Cultural Pride, Federal Competition. 4. Right pan: Sons-of-Soil Violence, Water Wars, Secessionist Friction.',
+        diagramVisual: `                     ┌────────────────────────┐
+                     │  REGIONALISM IN INDIA  │
+                     └───────────┬────────────┘
+                                 │
+                 ┌───────────────┴───────────────┐
+                 ▼                               ▼
+       [ POSITIVE MANIFESTATION ]     [ CENTRIFUGAL THREATS ]
+       • Democratic voice to diverse  • "Sons of the Soil" xenophobia
+         linguistic/ethnic groups       (Attacks on internal migrants)
+       • Competitive socio-economic   • Inter-state river water disputes
+         development models             (Cauvery, SYL Canal)
+       • Asymmetrical Federalism      • Threat to national unity &
+         (Article 371 provisions)       secessionist insurgencies
+                 │                               │
+                 └───────────────┬───────────────┘
+                                 ▼
+         [ INSTITUTIONAL EQUILIBRIUM: Inter-State Council & Co-operative Federalism ]`,
+        valueAdds: [
+          'Constitutional Balance: Asymmetrical Federalism under Article 371A to 371J protecting tribal customary laws and regional development boards.',
+          'Statutory Instruments: Inter-State Council (Article 263), Zonal Councils (States Reorganisation Act 1956), and Finance Commission horizontal devolution.',
+          'Sociological Thinker: Rasheeduddin Khan\'s thesis on India as a "geo-cultural confederation" requiring federal pluralism.'
+        ],
+        conclusion: 'Regionalism is not the antithesis of nationalism, but its indispensable building block. Indian unity thrives not by erasing regional identities, but by weaving them into a vibrant federal mosaic.'
+      };
+    }
+
+    // ---------------------------------------------------------
+    // 8. HISTORY: BISMARCK'S ALLIANCES & WORLD WAR I
+    // ---------------------------------------------------------
+    if (qLower.includes('bismarck') || (qLower.includes('alliances') && qLower.includes('war'))) {
+      return {
+        domainLabel: 'World History • 19th-Century Diplomacy & Origins of World War I',
+        directive,
+        directiveMeaning,
+        targetWords,
+        suggestedTime,
+        marksNum,
+        intros: [
+          {
+            type: 'Option 1: Historiographical Balance Hook',
+            text: 'Between 1871 and 1890, Chancellor Otto von Bismarck constructed an intricate diplomatic web designed to preserve a unified Germany, maintain European peace, and isolate France following the Franco-Prussian War.'
+          },
+          {
+            type: 'Option 2: Direct Analytical Hook',
+            text: 'While Bismarck\'s system of alliances successfully prevented a continental war for two decades, its reliance on secret diplomacy, militarized treaties, and mutual antagonisms created an inflexible, bipolar powder keg that exploded into World War I under his successors.'
+          },
+          {
+            type: 'Option 3: Structural Shift Hook',
+            text: 'Bismarck transitioned from "Blood and Iron" domestic unification to becoming the "Honest Broker" of European balance of power, creating an alliance network that masked deep-seated imperialist rivalries.'
+          }
+        ],
+        headings: [
+          {
+            title: '1. Architecture of Bismarck\'s Diplomatic System (1871–1890)',
+            points: [
+              'Absolute Isolation of France: Bismarck viewed revenge-seeking France as Germany\'s existential threat; his diplomacy focused on preventing any Franco-Russian or Franco-British coalition.',
+              'Three Emperors\' League (Dreikaiserbund, 1873 & 1881): Allied Germany, Austria-Hungary, and Russia on conservative monarchical solidarity and neutrality in the Balkans.',
+              'Dual Alliance (1879) & Triple Alliance (1882): Mutual defense pact with Austria-Hungary against Russia, later expanded to include Italy to secure the southern flank.',
+              'Reinsurance Treaty (1887): Bismarck\'s diplomatic masterpiece—a secret agreement ensuring Russian neutrality if France attacked Germany, and German neutrality if Austria attacked Russia.'
+            ]
+          },
+          {
+            title: '2. Inherent Flaws that Paved the Path to World War I',
+            points: [
+              'Juggling Contradictory Commitments: Bismarck simultaneously backed Austrian interests in the Balkans while assuring Russia of support, a contradiction sustainable only by his personal diplomatic genius.',
+              'Culture of Secret Diplomacy: Clandestine pacts generated pervasive paranoia across European chancelleries, leading rival powers to form counter-alliances.',
+              'Post-Bismarckian Collapse (1890): Kaiser Wilhelm II\'s refusal to renew the Reinsurance Treaty drove Russia into the arms of France (Dual Entente 1894), culminating in the Triple Entente (1907).'
+            ]
+          },
+          {
+            title: '3. Broader Imperialist & Militaristic Triggers of 1914',
+            points: [
+              'Beyond Bismarck: World War I was not caused by diplomacy alone, but by German "Weltpolitik", Anglo-German naval rivalry, Balkan pan-Slavism, and the blank-check crisis of July 1914.'
+            ]
+          }
+        ],
+        diagramTitle: 'Bismarck\'s Alliance Network vs Post-1890 Bipolar Polarization',
+        diagramSketchInstructions: '1. Draw central box for Germany (Bismarck). 2. Draw lines connecting Germany to Austria (Dual Alliance), Russia (Reinsurance Treaty), and Italy (Triple Alliance). 3. Show France completely isolated in a corner. 4. Draw dotted red rupture showing post-1890 Franco-Russian alliance leading to Triple Entente.',
+        diagramVisual: `   BISMARCKIAN SYSTEM (1871–1890)          POST-1890 BIPOLAR RUPTURE (WWI)
+   ══════════════════════════════          ═════════════════════════════════
+          [ Russia ]                              [ TRIPLE ENTENTE ]
+             ▲                                    Britain ── France ── Russia
+       Secret│ Reinsurance Treaty (1887)                 │         │
+             ▼                                           ▼         ▼
+     ┌───────────────┐                            ═════════ VS ═════════
+     │   GERMANY     ├────► [ Austria-Hungary ]          ▲         ▲
+     │  (Bismarck)   │      (Dual Alliance 1879)         │         │
+     └───────┬───────┘                            [ TRIPLE ALLIANCE ]
+             │                                    Germany ── Austria-Hungary
+             ▼ Triple Alliance (1882)                     ── Italy
+         [ Italy ]
+             
+    [ France: Completely Isolated ]        "Europe divided into two armed camps"`,
+        valueAdds: [
+          'Key Treaties & Dates: Dual Alliance (1879), Triple Alliance (1882), Mediterranean Agreement (1887), Reinsurance Treaty (1887).',
+          'Historiographical View: A.J.P. Taylor\'s analysis of "War by Timetable" and Fritz Fischer\'s thesis on German aggressive expansionism.',
+          'Critical Turning Point: The dismissal of Bismarck by Kaiser Wilhelm II in 1890 ("Dropping the Pilot") and abandonment of the Reinsurance Treaty.'
+        ],
+        conclusion: 'Bismarck\'s alliances preserved peace only so long as the master puppeteer held the strings. Once rigidified into military mobilization schedules, alliances converted a localized Balkan assassination into a catastrophic global war.'
+      };
+    }
+
+    // ---------------------------------------------------------
+    // DOMAIN-CALIBRATED SMART FALLBACK ENGINES
+    // ---------------------------------------------------------
+    const cleanWords = qText.replace(/[^a-zA-Z0-9\s]/g, ' ').split(/\s+/).filter(w => w.length > 3 && !['what', 'explain', 'discuss', 'examine', 'critically', 'comment', 'analyse', 'analyze', 'their', 'which', 'about', 'under'].includes(w.toLowerCase()));
+    const keyTopicTitle = cleanWords.slice(0, 4).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') || 'Core Subject Matter';
+
+    // FALLBACK 1: GEOGRAPHY (Climatology / Physical / Environmental)
+    if (domain.startsWith('GEOGRAPHY')) {
+      return {
+        domainLabel: 'Physical Geography & Earth System Dynamics',
+        directive,
+        directiveMeaning,
+        targetWords,
+        suggestedTime,
+        marksNum,
+        intros: [
+          {
+            type: 'Option 1: Scientific / Geomorphic Definition Hook',
+            text: `${keyTopicTitle} represents a fundamental Earth system phenomenon governed by physical thermodynamics, pressure gradients, and endogenous or exogenous geomorphic processes.`
+          },
+          {
+            type: 'Option 2: Spatial & Energy Equilibrium Hook',
+            text: `Across planetary spatial scales, ${keyTopicTitle} functions as a vital mechanism for heat, mass, or moisture redistribution within the lithosphere, atmosphere, or hydrosphere.`
+          },
+          {
+            type: 'Option 3: Contemporary Climatic Context Hook',
+            text: `In the era of the Anthropocene, the spatial dynamics and intensity of ${keyTopicTitle} are undergoing rapid destabilization, influencing global weather extremes and environmental resilience.`
+          }
+        ],
+        headings: [
+          {
+            title: `1. Physical Drivers, Energy Mechanisms & Thermodynamic Principles of ${keyTopicTitle}`,
+            points: [
+              `Governing Physical Laws: Driven by solar insolation differentials, gravitational forces, and geostrophic or tectonic stresses.`,
+              `Thermodynamic Phase Transitions: Involves latent heat transfers, adiabatic cooling/heating cycles, or geomorphic mass-energy balance.`,
+              `Spatial Variability: Expresses distinct geographic distributions across tropical, temperate, continental, and oceanic zones.`
+            ]
+          },
+          {
+            title: `2. Geomorphic, Climatological & Ecological Impacts`,
+            points: [
+              `Landscape & Regional Modifications: Shapes terrestrial relief, drainage morphology, or regional meso-climates.`,
+              `Anthropogenic Destabilization: Escalated by land-use changes, greenhouse warming, or unscientific resource extraction (IPCC AR6).`,
+              `Disaster Vulnerability: Direct linkage to extreme weather anomalies, hazards, and regional ecological distress.`
+            ]
+          },
+          {
+            title: `3. Sustainable Environmental Management & Mitigation Framework`,
+            points: [
+              `Scientific Monitoring: Utilization of remote sensing (ISRO INSAT-3DR), Doppler radars, and GIS hazard mapping.`,
+              `Ecosystem-Based Adaptation: Implementing Nature-based Solutions (NbS) and Sendai Framework guidelines.`
+            ]
+          }
+        ],
+        diagramTitle: `Spatial / Cross-Sectional Profile: ${keyTopicTitle}`,
+        diagramSketchInstructions: `1. Draw horizontal surface profile. 2. Show vertical elevation or atmospheric gradient. 3. Add directional process arrows indicating heat/mass transfers and energy balance.`,
+        diagramVisual: `  Elevation / Altitude
+      ▲
+      │           [ Upper Boundary / Dynamic Ceiling ]
+      │             ▲                ▲
+      │            /  Energy Transfer \\
+      │           /  or Mass Movement  \\
+      │          /                      \\
+      │    [ Primary Mechanism ] ──► [ Secondary Impact ]
+      │           ▲                        │
+      │           │ Driven by Heat/Force   │
+      └───────────┴────────────────────────┴────────► Horizontal Space / Gradient`,
+        valueAdds: [
+          'Governing Science: Physical principles of fluid dynamics, adiabatic processes, or tectonic plate motions.',
+          'Scientific Benchmark: IPCC AR6 (Physical Science Basis) and India Meteorological Department (IMD) observational data.',
+          'Inter-Paper Linkage: Physical Geography processes directly influencing GS-3 Disaster Management and agricultural cropping patterns.'
+        ],
+        conclusion: `Understanding ${keyTopicTitle} through empirical physical geography is vital for climate adaptation, ecosystem restoration, and sustainable spatial planning.`
+      };
+    }
+
+    // FALLBACK 2: INDIAN SOCIETY & SOCIAL JUSTICE
+    if (domain === 'INDIAN_SOCIETY') {
+      return {
+        domainLabel: 'Indian Society • Social Stratification & Inclusive Development',
+        directive,
+        directiveMeaning,
+        targetWords,
+        suggestedTime,
+        marksNum,
+        intros: [
+          {
+            type: 'Option 1: Sociological Structural Hook',
+            text: `${keyTopicTitle} reflects the complex interplay of traditional social structures, historical inequalities, and the transformative pressures of modern democratization and globalization in India.`
+          },
+          {
+            type: 'Option 2: Demographic & Empirical Hook',
+            text: `Recent national survey findings (NFHS-5, PLFS) highlight that ${keyTopicTitle} remains a critical determinant of human capital development, social mobility, and inclusive citizenship.`
+          },
+          {
+            type: 'Option 3: Constitutional & Rights Hook',
+            text: `Grounded in constitutional guarantees of equality (Article 14) and human dignity (Article 21), addressing ${keyTopicTitle} is essential to realizing substantive justice and constitutional morality.`
+          }
+        ],
+        headings: [
+          {
+            title: `1. Structural Drivers & Social Determinants of ${keyTopicTitle}`,
+            points: [
+              `Historical & Cultural Conditioning: Entrenched societal hierarchies, patriarchal norms, or identity cleavages shaping lived experiences.`,
+              `Intersectionality of Vulnerabilities: Compounded impact across caste, gender, class, and regional marginalization.`,
+              `Economic Precarity: Unequal access to assets, informal employment traps, and low social protection coverage.`
+            ]
+          },
+          {
+            title: `2. Critical Institutional Faultlines & Implementation Bottlenecks`,
+            points: [
+              `Policy Execution Gaps: Divergence between progressive legislative frameworks and grassroots administrative delivery.`,
+              `Societal Stigma & Under-Reporting: Cultural barriers impeding marginalized communities from accessing legal remedies.`
+            ]
+          },
+          {
+            title: `3. Strategic Roadmap for Substantive Empowerment`,
+            points: [
+              `Targeted Affirmative Interventions: Expanding institutional capacity, decentralized shelter/support systems, and economic safety nets.`,
+              `Community & Civil Society Mobilization: Empowering self-help groups, grassroots collectives, and local governance bodies.`
+            ]
+          }
+        ],
+        diagramTitle: `Multi-Dimensional Vulnerability & Structural Reform Matrix`,
+        diagramSketchInstructions: '1. Draw central box for the Core Issue. 2. Branch out to Social, Economic, Legal, and Cultural dimensions. 3. Show arrows converging on Substantive Social Justice.',
+        diagramVisual: `        ┌─────────────────────────────────────────────────────────┐
+        │            Core Sociological Issue: ${keyTopicTitle}     │
+        └────────────────────────────┬────────────────────────────┘
+                                     │
+         ┌───────────────────────────┼───────────────────────────┐
+         ▼                           ▼                           ▼
+  [ Social Hierarchy ]       [ Economic Barriers ]       [ Institutional Gaps ]
+  Caste, Gender, Identity    Informal Precarity          Enforcement Gaps
+         │                           │                           │
+         └───────────────────────────┼───────────────────────────┘
+                                     ▼
+        [ GOAL: Substantive Equality & Dignity under Articles 14 & 21 ]`,
+        valueAdds: [
+          'Constitutional Foundations: Fundamental Rights under Part III and Directive Principles under Part IV.',
+          'Empirical Surveys: National Family Health Survey (NFHS-5) and Periodic Labour Force Survey (PLFS) metrics.',
+          'Sociological Thinkers: Dr. B.R. Ambedkar\'s perspective on social democracy and M.N. Srinivas on social mobility.'
+        ],
+        conclusion: `Bridging the gap between de jure constitutional promises and de facto social realities regarding ${keyTopicTitle} is essential for building an inclusive and just democratic society.`
+      };
+    }
+
+    // FALLBACK 3: HISTORY & ART CULTURE
+    if (domain === 'HISTORY_CULTURE') {
+      return {
+        domainLabel: 'History & Culture • Historical Trajectories & Heritage',
+        directive,
+        directiveMeaning,
+        targetWords,
+        suggestedTime,
+        marksNum,
+        intros: [
+          {
+            type: 'Option 1: Historiographical Context Hook',
+            text: `${keyTopicTitle} represents a pivotal watershed in historical transformation, reflecting the convergence of socio-economic catalysts, ideological shifts, and strategic mobilizations.`
+          },
+          {
+            type: 'Option 2: Chronological Evolution Hook',
+            text: `Emerging in response to structural crises and socio-political tensions, ${keyTopicTitle} reshaped institutional power balances and left an enduring imprint on subsequent historical developments.`
+          }
+        ],
+        headings: [
+          {
+            title: `1. Catalytic Forces, Underlying Pre-Conditions & Strategic Triggers of ${keyTopicTitle}`,
+            points: [
+              `Socio-Economic Undercurrents: Evolving agrarian/industrial relations, trade patterns, or institutional exploitation.`,
+              `Ideological & Intellectual Ferment: Dissemination of progressive philosophies, religious reform movements, or political consciousness.`,
+              `Immediate Catalysts: Critical administrative or diplomatic triggers that mobilized collective action.`
+            ]
+          },
+          {
+            title: `2. Evolutionary Trajectory, Phases & Structural Transformations`,
+            points: [
+              `Mass Mobilization & Alliances: Coalition of diverse social classes, regions, and strategic leadership.`,
+              `Institutional & Geo-Political Impact: Redefining constitutional governance, state borders, or cultural architecture.`
+            ]
+          },
+          {
+            title: `3. Historical Significance & Enduring Contemporary Resonance`,
+            points: [
+              `Legacy in Nation-Building: Informing contemporary constitutional values, cultural identity, and institutional traditions.`
+            ]
+          }
+        ],
+        diagramTitle: `Historical Evolution Timeline & Causality Matrix`,
+        diagramSketchInstructions: '1. Draw vertical timeline arrow. 2. Mark Phase 1 (Catalyst), Phase 2 (Mobilization/Conflict), Phase 3 (Structural Legacy).',
+        diagramVisual: `  Chronological Progression
+      │
+      ├─► [ Catalytic Triggers ]: Socio-Economic Stresses & Ideological Sparks
+      │
+      ├─► [ Mobilization Phase ]: Strategic Leadership & Multi-Class Participation
+      │
+      ├─► [ Structural Impact ]: Institutional Transformation & Power Shift
+      │
+      ▼
+  [ Historical Legacy & Contemporary Democratic Resonance ]`,
+        valueAdds: [
+          'Historiographical Perspectives: Contemporary archival evidence and landmark historical analyses.',
+          'Socio-Cultural Legacy: Enduring impact on Indian pluralism, composite culture, and institutional development.'
+        ],
+        conclusion: `${keyTopicTitle} underscores how historical movements are driven by structural contradictions and popular agency, offering vital lessons for contemporary nation-building.`
+      };
+    }
+
+    // FALLBACK 4: POLITY, CONSTITUTION & GS-3/GENERAL
     return {
+      domainLabel: subject || 'Polity & Constitutional Governance',
       directive,
       directiveMeaning,
       targetWords,
       suggestedTime,
-      valueAdds,
-      marksNum
+      marksNum,
+      intros: [
+        {
+          type: 'Option 1: Constitutional & Legal Hook',
+          text: `${keyTopicTitle} is rooted in the constitutional architecture of India, balancing state authority with fundamental rights and democratic accountability.`
+        },
+        {
+          type: 'Option 2: Institutional Governance Hook',
+          text: `In contemporary governance, ${keyTopicTitle} serves as a litmus test for executive efficacy, rule of law, and cooperative federalism.`
+        }
+      ],
+      headings: [
+        {
+          title: `1. Governing Constitutional & Statutory Architecture of ${keyTopicTitle}`,
+          points: [
+            `Constitutional Provisions: Anchored in Part III (Fundamental Rights), Part IV (DPSP), and governing statutory mandates.`,
+            `Institutional Balance of Power: Interplay between Executive implementation, Legislative oversight, and Judicial review.`
+          ]
+        },
+        {
+          title: `2. Critical Structural Challenges & Administrative Faultlines`,
+          points: [
+            `Implementation Bottlenecks: Administrative delays, coordination deficits between Centre and States, and resource constraints.`,
+            `Accountability Gaps: Deficits in transparency, public feedback mechanisms, and statutory grievance redressal.`
+          ]
+        },
+        {
+          title: `3. Forward-Looking Policy Roadmap & Democratic Reforms`,
+          points: [
+            `Administrative Reforms: Implementing 2nd ARC recommendations and digitizing service delivery portals.`,
+            `Democratic Deepening: Strengthening institutional autonomy, stakeholder consultation, and social audits.`
+          ]
+        }
+      ],
+      diagramTitle: `Constitutional Checks & Balances Flow Matrix`,
+      diagramSketchInstructions: '1. Draw Triangle of Powers: Legislature, Executive, Judiciary. 2. Show arrows of checks and accountability converging on Citizen Rights.',
+      diagramVisual: `                     ┌───────────────────────────┐
+                     │   Constitution of India   │
+                     └─────────────┬─────────────┘
+                                   │
+         ┌─────────────────────────┼─────────────────────────┐
+         ▼                         ▼                         ▼
+  [ Legislature ]           [ Executive ]             [ Judiciary ]
+  Policy Formulation        Ground Execution          Judicial Review
+         │                         │                         │
+         └─────────────────────────┼─────────────────────────┘
+                                   ▼
+         [ CITIZEN-CENTRIC GOVERNANCE: Accountability & Dignity ]`,
+      valueAdds: [
+        'Constitutional Precedents: Landmark Supreme Court benches affirming Basic Structure and Rule of Law.',
+        'Committee Benchmarks: Recommendations of the 2nd Administrative Reforms Commission (ARC) and Law Commission.'
+      ],
+      conclusion: `Strengthening institutional integrity and constitutional morality around ${keyTopicTitle} is essential for sustaining a robust, citizen-centric democracy.`
     };
   }
 
-  function getMainsOutlineText(qText, marks, approach) {
-    const is15M = approach.marksNum >= 15;
-    const introWords = is15M ? "35-40" : "25-30";
-    const bodyWords = is15M ? "160-180" : "90-100";
-    const conclWords = is15M ? "35-40" : "25-30";
-    const partWords = Math.round(parseInt(bodyWords.split('-')[0]) / 2);
+  // -------------------------------------------------------------
+  // Dynamic Markdown Outline Generator for Answer Pad
+  // -------------------------------------------------------------
+  function getComprehensiveOutlineText(qText, marks, subject) {
+    const bp = generateComprehensiveBlueprint(qText, marks, subject);
+    let md = `### Introduction (${bp.intros[0].type})\n`;
+    md += `${bp.intros[0].text}\n\n`;
 
-    return `### 1. Introduction (~${introWords} words)
-- Context / Definition / Constitutional Article / Recent Data point:
-- Core premise addressing the demand of the question:
+    bp.headings.forEach(h => {
+      md += `### ${h.title}\n`;
+      h.points.forEach((p, idx) => {
+        md += `${idx + 1}) ${p}\n`;
+      });
+      md += `\n`;
+    });
 
-### 2. Body Part 1: Core Arguments & Dimensions (~${partWords} words)
-- Key Subheading (Arguments / Provisions / Mechanisms):
-  • Point 1 (Fact / Keyword / Impact): 
-  • Point 2 (Institutional dimension): 
-  • Supporting Example / Case Law: 
+    md += `### Diagram / Hand-Drawn Copy Visual: [ ${bp.diagramTitle} ]\n`;
+    md += `\`\`\`\n${bp.diagramVisual}\n\`\`\`\n`;
+    md += `*Sketch Guide: ${bp.diagramSketchInstructions}*\n\n`;
 
-### 3. Body Part 2: Critical Challenges / Counter-Perspective (~${partWords} words)
-- Analytical Subheading (Bottlenecks / Institutional gaps / Concerns):
-  • Point 1: 
-  • Point 2: 
-  • ${approach.valueAdds[0] ? `Relevant Case / Recommendation: ${approach.valueAdds[0]}` : 'Diagram / Schematic idea: [Draw flowchart or comparative table]'}
+    md += `### High-Yield Value Additions\n`;
+    bp.valueAdds.forEach(va => {
+      md += `- ${va}\n`;
+    });
+    md += `\n`;
 
-### 4. Way Forward & Conclusion (~${conclWords} words)
-- Forward-looking solution / Committee recommendation:
-- Concluding vision / Constitutional Morality / SDG alignment:
-`;
+    md += `### Conclusion & Way Forward\n`;
+    md += `${bp.conclusion}\n`;
+
+    return md;
   }
 
-  
+  function getMainsOutlineText(qText, marks, approach) {
+    return getComprehensiveOutlineText(qText, marks, '');
+  }
+
   // -------------------------------------------------------------
   // UPSC GS-1 Topper Archetype Engine
-  // Calibrated from official MGP Topper Copies (Aditya Srivastava, Ruhani,
-  // Ishita Kishore, Umaharathi N, Medha Anand, Anmol Rathore)
   // -------------------------------------------------------------
-
   const TOPPER_ARCHETYPES_DB = {
     aditya: {
       id: 'aditya',
@@ -1730,409 +2626,149 @@
       pillLabel: '🎨 Ruhani (AIR 5)',
       badge: '🎨 AIR 5 • Spatial Maps & Parallel Schematics',
       theme: '#3b82f6',
-      quote: 'Split the page for comparative mechanisms, label figures clearly (Fig 1, Fig 2, Fig 3), and ground concepts in hand-drawn World Maps.'
+      quote: 'Split the page for comparative mechanisms, label figures clearly (Fig 1, Fig 2), and ground geographical concepts in hand-drawn sketches.'
     },
     ishita: {
       id: 'ishita',
       name: 'Ishita Kishore',
       rank: 'IAS, AIR 1 (2022)',
-      pillLabel: '🧬 Ishita (AIR 1)',
-      badge: '🧬 AIR 1 • Sociological Systems & Feedback Loops',
-      theme: '#ec4899',
-      quote: 'Deconstruct vulnerability into multi-spoke root causes, visualize the vicious cycle, and anchor with statutory safeguards.'
+      pillLabel: '🎯 Ishita (AIR 1)',
+      badge: '🎯 AIR 1 • Central Hubs & Sociological Frameworks',
+      theme: '#8b5cf6',
+      quote: 'Anchor the answer with a central multi-spoke hub diagram, link social structures to ground reality, and emphasize human-centric impact.'
     },
     umaharathi: {
       id: 'umaharathi',
       name: 'Umaharathi N',
       rank: 'IAS, AIR 3 (2022)',
       pillLabel: '⚖️ Umaharathi (AIR 3)',
-      badge: '⚖️ AIR 3 • Dialectical 2-Way Bifurcation',
+      badge: '⚖️ AIR 3 • Dialectical Balance & 2-Way Bifurcations',
       theme: '#10b981',
-      quote: 'Fork the question immediately in the introduction into dual connotations ([Positive] vs [Negative]), then balance both sides.'
+      quote: 'Bifurcate intro into positive strides vs critical gaps, balance physical laws with human impact, and ground in cooperative governance.'
     },
     medha: {
       id: 'medha',
       name: 'Medha Anand',
       rank: 'IAS, AIR 13 (2023)',
-      pillLabel: '📐 Medha (AIR 13)',
-      badge: '📐 AIR 13 • Synchronized Margin Micro-Sketches',
-      theme: '#8b5cf6',
-      quote: 'Every single condition deserves its own miniature sketch on the right margin—never leave an examiner reading only plain text.'
+      pillLabel: '🔬 Medha (AIR 13)',
+      badge: '🔬 AIR 13 • Thermodynamic Profiles & Spatial Zoning',
+      theme: '#ec4899',
+      quote: 'Draw precise vertical lapse-rate curves and micro-climatic profiles to provide immediate scientific credibility in Geography answers.'
     },
     anmol: {
       id: 'anmol',
       name: 'Anmol Rathore',
       rank: 'IAS, AIR 7 (2023)',
-      pillLabel: '⏳ Anmol (AIR 7)',
-      badge: '⏳ AIR 7 • Chronological Multi-Generational Matrix',
+      pillLabel: '📐 Anmol (AIR 7)',
+      badge: '📐 AIR 7 • Boxed Formulas & Generational Wheels',
       theme: '#06b6d4',
-      quote: 'Ground the phenomenon in historical-technological phases (1.0 to 4.0) and box your empirical chemical and physical markers.'
+      quote: 'Highlight scientific equations or statutory articles in distinct boxed formulas and structure multi-generational evolutionary timelines.'
     }
   };
 
   const activeTopperByMKey = {};
 
   function getRecommendedTopperKey(qText, subject) {
-    const s = (subject || '').toLowerCase();
-    const q = (qText || '').toLowerCase();
-
-    if (q.includes('transgender') || (q.includes('privacy') && q.includes('self-identity'))) {
-      return 'aditya';
-    }
-    if (s.includes('geography') || q.includes('tectonic') || q.includes('volcano') || q.includes('earthquake') || q.includes('ocean current') || q.includes('cyclone') || q.includes('marine')) {
-      if (q.includes('inversion') || q.includes('front') || q.includes('air mass') || q.includes('cloud') || q.includes('temperature') || q.includes('monsoon')) {
-        return 'medha';
-      }
-      return 'ruhani';
-    }
-    if (s.includes('society') || q.includes('vulnerab') || q.includes('child') || q.includes('women') || q.includes('caste') || q.includes('family') || q.includes('poverty') || q.includes('marriage')) {
-      if (q.includes('regionalism') || q.includes('unity') || q.includes('diversity') || q.includes('secularism') || q.includes('linguistic')) {
-        return 'umaharathi';
-      }
-      return 'ishita';
-    }
-    if (q.includes('industrial revolution') || q.includes('atmosphere') || q.includes('energy') || q.includes('pollution') || q.includes('fertility') || q.includes('wetland')) {
-      return 'anmol';
-    }
+    const domain = detectQuestionDomain(qText, subject);
+    if (domain === 'GEOGRAPHY_CLIMATOLOGY') return 'medha';
+    if (domain === 'GEOGRAPHY_PHYSICAL') return 'ruhani';
+    if (domain === 'INDIAN_SOCIETY') return 'ishita';
+    if (domain === 'HISTORY_CULTURE') return 'aditya';
     return 'aditya';
   }
 
-  // Dynamic Question-Specific Topper Profile Synthesizer
   function getDynamicTopperProfile(topperKey, qText, marks, subject) {
-    const qLower = (qText || '').toLowerCase();
-    const is15M = (parseFloat(marks) >= 15);
-    const targetWords = is15M ? 250 : 150;
+    const bp = generateComprehensiveBlueprint(qText, marks, subject);
     const baseTopper = TOPPER_ARCHETYPES_DB[topperKey] || TOPPER_ARCHETYPES_DB['aditya'];
 
-    // 1. THEME: Transgender Rights & Self-Identity & Article 21
-    if (qLower.includes('transgender') || (qLower.includes('privacy') && (qLower.includes('self-identity') || qLower.includes('identity')))) {
-      if (topperKey === 'aditya') {
-        return {
-          ...baseTopper,
-          introFormula: 'In Justice K.S. Puttaswamy (2017) and NALSA v. Union of India (2014), the Supreme Court affirmed that gender self-identity and personal autonomy are foundational components of Article 21 (Right to Dignity) and Article 14 (Equality).',
-          bodyStyle: 'Boxed Headings for explicit demands + Cascading (└>) bullets + Active causal arrows (=>).',
-          diagramTitle: 'Causal Branching Tree: Right to Self-Identity & Legal Recognition',
-          diagramAscii: `[ Right to Self-Identity (Article 21) ]
-   │
-   ├─► Legal Autonomy ──► Self-Perceived Gender ──► Dignity & Bodily Privacy
-   │     └─► NALSA (2014) mandate: Self-identification without medical gatekeeping
-   │
-   ├─► 2026 Amendment Reforms ──► Streamlined DM Issuance ──► Institutional Inclusion
-   │     └─► Removal of invasive screening boards & medical delays
-   │
-   └─► Critical Unresolved Gaps: [However, horizontal reservation remains absent ──► ...]`,
-          valueAdds: [
-            'Landmark Jurisprudence: NALSA v. Union of India (2014) & Justice K.S. Puttaswamy (2017) - 9-Judge Bench.',
-            'Statutory Progress: Transgender Persons (Protection of Rights) Act, 2019 & 2026 Rules amending DM screening.',
-            'Global Benchmark: Yogyakarta Principles (Principle 3: The Right to Recognition before the Law).'
-          ],
-          interPaper: 'GS-4 Ethics & Philosophy into GS-1: Invokes Dr. B.R. Ambedkar\'s Constitutional Morality and John Rawls\' Veil of Ignorance to ensure legal rights translate into lived social inclusion.',
-          conclusionFormula: 'Balanced, visionary synthesis: "True realization of Article 21 requires moving from formal legislative recognition to affirmative socio-economic inclusion, ensuring every citizen lives with intrinsic self-worth."',
-          outlineText: `### Introduction (Landmark Jurisprudence & Article 21 Hook)
-- NALSA v. UOI (2014) & K.S. Puttaswamy (2017): Gender self-identity as intrinsic to Article 21 & Article 14.
-- Core Premise: Bodily autonomy and self-perceived gender as non-negotiable facets of human dignity.
-
-### [ 1. Effect of 2026 Amendment on Right to Self-Identity (Art 21) ]
-1) Self-Declaration Mechanism => Eliminates intrusive District Screening Committees => Upholds bodily autonomy without medical gatekeeping.
-   └> Overcomes previous 2019 bottleneck requiring medical proof for gender change.
-2) Streamlined DM Certification => Time-bound digital issuance => Prevents administrative harassment & bureaucratic delays (Art 21).
-3) Healthcare Inclusivity => Expansion of Ayushman Bharat TG Package covering gender-affirming procedures.
-
-### However, Critical Implementation Bottlenecks & Unaddressed Gaps Persist —
-1) Absence of Horizontal Reservation => Continued economic exclusion in public employment and higher education.
-2) Infrastructure Deficit => Inadequate Garima Greh (Shelter Homes) leaving trans youth vulnerable to homelessness.
-3) Civil Rights Vacuum => Non-recognition of equal civil rights (Marriage, Adoption, Inheritance) under personal laws.
-
-### Conclusion & Constitutional Morality
-- Dr. B.R. Ambedkar\'s Constitutional Morality: Transitioning from de jure legal recognition to de facto substantive equality.
-- Forward-looking mandate: Ensuring identity is protected as a fountainhead of dignity rather than a vulnerability.`
-        };
-      }
-
-      if (topperKey === 'ishita') {
-        return {
-          ...baseTopper,
-          introFormula: 'Self-identity is not merely a legal status but the foundational bedrock of human dignity, psychological integrity, and social citizenship under Article 21.',
-          bodyStyle: 'Connecting bridge sentence leading into formal roman numerals (-i-, -ii-, -iii-) with empirical micro-cases.',
-          diagramTitle: 'Central 7-Spoke Hub: Transgender Structural Vulnerability Matrix',
-          diagramAscii: `                  ┌──► Family Rejection & Abandonment
-                  ├──► Educational Dropouts & Bullying
-                  ├──► Destitution & Begging / Sex Work
-   [ Transgender] ┼──► Housing & Rental Evictions
-   [ Vulnerability]├──► Police Harassment & Stigma
-                  ├──► Healthcare Gatekeeping & Inaccessibility
-                  └──► Lack of Civil Rights (Marriage / Adoption)
-                          │
-                          ▼
-          [ The Vicious Marginalization Cycle ]
-   Stigma ──► Family Abandonment ──► School Dropout ──► Street Economy ──► Alienation`,
-          valueAdds: [
-            'Ground Realities: High incidence of street begging, sex work vulnerability, and social ostracization.',
-            'Statutory Protective Anchors: Transgender Persons Act 2019, POCSO protection for trans youth, Garima Greh schemes.',
-            'Social Justice Link: Linking Section 377 decriminalization (Navtej Johar) with affirmative social security.'
-          ],
-          interPaper: 'Sociological Lens ──► GS-2 Social Justice: Bridges legal de-criminalization with grassroots welfare, social housing, and destitution prevention.',
-          conclusionFormula: 'Rights-based demographic vision: "Securing transgender rights is an imperative for India\'s constitutional promise of an inclusive society where identity is never penalized."',
-          outlineText: `### Sociological Definition (~20-25 words)
-- Self-identity as the core of human dignity, psychological integrity, and social citizenship under Article 21.
-
-### [ Visual Anchor: Central 7-Spoke Hub Diagram ]
-• Spokes: 1. Family Rejection | 2. School Dropout | 3. Begging/Sex Work | 4. Rental Discrimination | 5. Healthcare Bias | 6. Police Stigma | 7. Civil Rights Gap
-
-### Core Dimensions (-i-, -ii-, -iii-)
--i- Decoupling Medical Gatekeeping: 2026 amendment dismantles invasive physical scrutiny, validating self-perceived identity.
--ii- Healthcare Justice: Affirmative coverage of gender transition and mental healthcare under public health missions.
--iii- The Generational Trap:
-      Stigma ──► Abandonment ──► Low Education ──► Informal Sector Exploitation ──► Social Alienation
-
-### Institutional Initiatives & Statutory Safeguards
-- Statutory Bubbles: [ Transgender Persons Act 2019 ] • [ NALSA 2014 ] • [ Garima Greh Shelters ]
-
-### Constitutional Conclusion
-- Substantive equality under Article 14 & 21: Moving beyond tokenism towards comprehensive social integration and civil rights.`
-        };
-      }
-
-      if (topperKey === 'umaharathi') {
-        return {
-          ...baseTopper,
-          introFormula: 'The 2026 Amendment to the Transgender Persons Act represents a double-faceted legislative intervention: validating self-identity on one hand, while leaving structural economic affirmative action unaddressed on the other.',
-          bodyStyle: 'Balanced contrast blocks: Affirmative legal autonomy vs Unresolved socio-economic faultlines.',
-          diagramTitle: '2-Way Bifurcation Branching Tree (Intro Area)',
-          diagramAscii: `        [ 2026 Amendment to Transgender Persons Act ]
-                             │
-               ┌─────────────┴─────────────┐
-               ▼                           ▼
-        [ Positive Strides ]        [ Critical Gaps ]
-     Autonomy in self-declaration,  Absence of horizontal quotas,
-     removal of invasive screening  lack of civil partnership rights
-               │                           │
-               └─────────────┬─────────────┘
-                             ▼
-              "A progressive step, yet structurally incomplete"`,
-          valueAdds: [
-            'Affirmative Landmark: Transgender Persons Protection of Rights Rules & elimination of medical gatekeeping.',
-            'Unaddressed Demand: Horizontal reservation in government employment (demanded in Karnataka HC & Madras HC directives).',
-            'Constitutional Balance: Fundamental Rights under Article 14, 19, 21 vs executive inertia.'
-          ],
-          interPaper: 'GS-1 Social Structure ──► GS-2 Governance & Welfare: Evaluates legislative drafting versus implementation reality across State Transgender Welfare Boards.',
-          conclusionFormula: 'Collaborative balance: "Legislative amendments must be buttressed with horizontal reservations and grassroots sensitisation to fulfill the constitutional promise of dignity."',
-          outlineText: `### Definition with 2-Way Bifurcation Branch
-- Transgender identity amendment as a double-faceted reform:
-  ┌──► [ Positive Strides ]: Autonomy in self-declaration without invasive medical screening
-  └──► [ Critical Gaps ]: Absence of horizontal reservation, lack of civil partnership protections
-       └─► "A progressive step, yet structurally incomplete"
-
-### [ 1. Progressive Strides in Self-Identity (Art 21) ]
-1) Demolishing Medical Bureaucracy: Validates self-perceived gender without requiring surgery certification.
-2) Dignified Public Interface: Mandatory sensitisation of police and healthcare personnel.
-
-### [ 2. Critical Omissions & Structural Faultlines ]
-1) Horizontal Reservation Deficit: Denial of affirmative action under SC/ST/OBC categories perpetuates poverty.
-2) Absence of Penal Deterrence: Milder punishments for offenses against trans persons compared to cisgender women under BNS.
-
-### Cooperative Social Justice Conclusion
-- Empowering State Transgender Welfare Boards and harmonizing personal laws with constitutional guarantees.`
-        };
-      }
-
-      if (topperKey === 'ruhani') {
-        return {
-          ...baseTopper,
-          introFormula: 'Right to self-identity under Article 21 encompasses the autonomous determination of one\'s gender, psychological integrity, and freedom from state-mandated intrusive scrutiny.',
-          bodyStyle: 'Two-Column Comparative Split: Pre-Amendment vs Post-2026 Framework + Process Flowchart.',
-          diagramTitle: 'Two-Column Comparative Table + Administrative Flowchart',
-          diagramAscii: `┌──────────────────────────────────────┬──────────────────────────────────────┐
-│ Pre-Amendment Framework (2019 Act)   │ Post-2026 Amendment Framework        │
-├──────────────────────────────────────┼──────────────────────────────────────┤
-│ • DM required medical certification  │ • Simple self-declaration affidavit  │
-│   of surgery for gender change       │   without invasive medical screening │
-│ • High discretion & harassment       │ • Standardized time-bound approval   │
-│ • Vague grievance redressal          │ • Dedicated Transgender District Cell│
-└──────────────────────────────────────┴──────────────────────────────────────┘
-     Flowchart: Self-Declaration ──► Digital Verification ──► Identity Card ──► Welfare Access`,
-          valueAdds: [
-            'Statutory Contrast: 2019 Act Section 5/6 restrictions vs 2026 procedural simplification.',
-            'Empirical Welfare Link: Direct access to Garima Greh shelter, SMILE scheme, and Ayushman Bharat.',
-            'Judicial Enforcement: Madras High Court guidelines on police sensitisation.'
-          ],
-          interPaper: 'Legal Architecture ──► GS-3 Inclusive Growth: Highlights economic livelihood programs (SMILE scheme) transitioning trans citizens from informal alms to formal enterprise.',
-          conclusionFormula: 'Pragmatic synthesis: "Streamlining certification is the critical first hurdle; the true test lies in social integration and non-discriminatory public spaces."',
-          outlineText: `### Conceptual Definition (~15-20 words)
-- Gender self-identity as an inalienable dimension of personal liberty and bodily autonomy under Article 21.
-
-### Two-Column Comparative Architecture
-┌──────────────────────────────────────┬──────────────────────────────────────┐
-│ Pre-Amendment Framework (2019 Act)   │ Post-2026 Amendment Framework        │
-├──────────────────────────────────────┼──────────────────────────────────────┤
-│ • Surgery proof mandatory for gender │ • Self-declaration of identity       │
-│ • Long discretionary delays          │ • Time-bound digital issuance        │
-│ • Medical gatekeeping barriers       │ • Decentralized district redressal   │
-└──────────────────────────────────────┴──────────────────────────────────────┘
-
-### Administrative Flowchart Blueprint
-- Self-Declaration ──► Portal Verification ──► Certificate Issued ──► Healthcare & Schemes Access
-
-### Impact on Self-Identity & Dignity (Art 21)
-- Point 1: Upholds bodily privacy and psychological self-determination.
-- Point 2: Facilitates legal identity in Aadhaar, PAN, and voter credentials.
-
-### Unresolved Implementation Challenges
-- Lack of horizontal employment quotas and non-enforcement in private housing markets.
-
-### Balanced Conclusion
-- Ensuring robust digital infrastructure and police sensitisation to make self-identity a lived reality.`
-        };
-      }
+    // Calibrated Topper Strategies
+    if (topperKey === 'aditya') {
+      return {
+        ...baseTopper,
+        introFormula: bp.intros[0].text,
+        bodyStyle: 'Boxed Headings directly addressing prompt demands + Causal flow arrows (=>) + Empirical constants.',
+        diagramTitle: bp.diagramTitle,
+        diagramAscii: bp.diagramVisual,
+        valueAdds: bp.valueAdds,
+        interPaper: 'Inter-Disciplinary Multi-Dimensionality: Connects underlying core mechanism to broader socio-economic and sustainable policy resilience.',
+        conclusionFormula: bp.conclusion
+      };
     }
 
-    // 2. THEME: Plate Tectonics, Volcanoes & Earthquakes
-    if (qLower.includes('volcano') || qLower.includes('plate tectonic') || qLower.includes('convergent') || qLower.includes('divergent') || qLower.includes('subduction') || qLower.includes('seafloor')) {
-      if (topperKey === 'ruhani') {
-        return {
-          ...baseTopper,
-          introFormula: 'Plate tectonics theory explains the movement of rigid lithospheric plates over the asthenosphere and their decisive role in the formation of volcanic landforms.',
-          bodyStyle: '2-Column Comparative Split with parallel cross-sections and labeled figures (Fig 1 vs Fig 2).',
-          diagramTitle: '2-Column Comparative Diagrams + Hand-Drawn World Map (Fig 1, Fig 2, Fig 3)',
-          diagramAscii: `┌────────────────────────────┬────────────────────────────┐
-│ Fig 1: Convergent Boundary │ Fig 2: Divergent Boundary  │
-│  [Continental]  [Oceanic]  │       [Mid-Ocean Ridge]    │
-│       ▼           ▼        │        ◄─── | ───►         │
-│     (Subduction Zone)      │     (Seafloor Spreading)   │
-├────────────────────────────┼────────────────────────────┤
-│ • Oceanic subducts below   │ • Diverging plates allow   │
-│   continental plate        │   molten magma to rise     │
-│ • Melting forms volcanoes  │ • Creates new oceanic crust│
-└────────────────────────────┴────────────────────────────┘
-     Fig 3: Hand-Drawn World Map (Pacific Rim of Fire & Nazca Plate)`,
-          valueAdds: [
-            'Named Tectonic Plates: Nazca Plate subducting below South American Plate (Andes), Pacific Plate.',
-            'Geological Formations: Basaltic lava weathering into Black Soil (Deccan Traps).',
-            'Atmospheric Balance: Outgassing of sulphur dioxide and water vapour contributing to early atmosphere.'
-          ],
-          interPaper: 'Physical Geography ──► GS-3 Economic Geography: Connects volcanic weathering directly to Deccan trap cotton soil, geothermal energy, and diamond/mineral extraction.',
-          conclusionFormula: 'Dialectical balance: "Although volcanoes bring immediate catastrophic hazard, they are planetary engines of crustal regeneration, fertile soils, and mineral wealth."'
-        };
-      }
+    if (topperKey === 'ruhani') {
+      return {
+        ...baseTopper,
+        introFormula: bp.intros[1] ? bp.intros[1].text : bp.intros[0].text,
+        bodyStyle: 'Two-Column Comparative Split with Parallel Cross-Sections + Labeled Figures (Fig 1, Fig 2).',
+        diagramTitle: `Spatial Cross-Section & Comparative Flow: ${bp.diagramTitle}`,
+        diagramAscii: bp.diagramVisual,
+        valueAdds: bp.valueAdds,
+        interPaper: 'Spatial / Micro-Regional Linkage: Translates physical and institutional processes into regional map zoning and local livelihoods.',
+        conclusionFormula: bp.conclusion
+      };
     }
 
-    // 3. THEME: Regionalism & National Integration
-    if (qLower.includes('regionalism') || qLower.includes('national unity') || qLower.includes('double-edged') || qLower.includes('separatism')) {
-      if (topperKey === 'umaharathi') {
-        return {
-          ...baseTopper,
-          introFormula: 'Regionalism denotes an intense emotional and political attachment to one\'s region, presenting a dual connotation of cultural pride versus sub-national chauvinism.',
-          bodyStyle: 'Balanced contrast blocks: Affirmative role in identity/governance vs Destabilizing risks and chauvinism.',
-          diagramTitle: '2-Way Bifurcation Branching Tree (Intro Area)',
-          diagramAscii: `            [ Concept of Regionalism in India ]
-                           │
-             ┌─────────────┴─────────────┐
-             ▼                           ▼
-      [ Positive Fork ]           [ Negative Fork ]
-    Cultural pride, linguistic  Parochial chauvinism, sons-of-soil
-    solidarity & federal voice  militancy, threat to brotherhood
-             │                           │
-             └─────────────┬─────────────┘
-                           ▼
-            "Makes it a double-edged sword"`,
-          valueAdds: [
-            'Linguistic & Cultural Identity: Tamil identity preservation, linguistic reorganization of states (1956).',
-            'Administrative Benefits: Ease of administration in smaller, culturally cohesive governance units.',
-            'Constitutional Safeguards: Inter-State Council (Art 263), Zonal Councils, and 8th Schedule recognition.'
-          ],
-          interPaper: 'GS-1 Cultural Identity ──► GS-2 Cooperative Federalism & Decentralized Administration.',
-          conclusionFormula: 'Cooperative federalism: "Local and regional pride, when accommodated democratically, acts as a bedrock of national unity rather than its antithesis."'
-        };
-      }
+    if (topperKey === 'ishita') {
+      return {
+        ...baseTopper,
+        introFormula: bp.intros[0].text,
+        bodyStyle: 'Central Multi-Spoke Hub Diagram + Human-Centric Roman Numerals (-i-, -ii-, -iii-) with Field Case Studies.',
+        diagramTitle: `Central Multi-Dimensional Impact Hub: ${bp.diagramTitle}`,
+        diagramAscii: bp.diagramVisual,
+        valueAdds: bp.valueAdds,
+        interPaper: 'Sociological Lens: Connects technical mechanisms directly to vulnerable demographic welfare and grassroots community resilience.',
+        conclusionFormula: bp.conclusion
+      };
     }
 
-    // 4. THEME: Temperature Inversion & Climatology
-    if (qLower.includes('inversion') || qLower.includes('air mass') || qLower.includes('front') || qLower.includes('lapse rate')) {
-      if (topperKey === 'medha') {
-        return {
-          ...baseTopper,
-          introFormula: 'Temperature normally decreases with altitude (Normal Lapse Rate of 6.5°C/km), but during temperature inversion the reverse happens—warmer air lies aloft over denser cold air.',
-          bodyStyle: '1-to-1 Point-to-Diagram Pairing: Left 60% text, Right 40% margin contains an exact labeled cross-section sketch.',
-          diagramTitle: 'Multi-Panel Synchronized Margin Micro-Sketches',
-          diagramAscii: `[ Condition 1: Cold Ground Radiation ]  ┌──────────────────────┐
-• Cold surface air trapped below warm   │ [Warm Air Layer]     │
-  air due to nocturnal cooling.         │ [Cold Air] [Ground]  │
-                                        └──────────────────────┘
-[ Condition 2: Mountain Valley Trap ]   ┌──────────────────────┐
-• Dense cold air rolls down slopes into │ \\  Warm Air  /       │
-  valley floor; ELR becomes positive.   │  \\ [Cold]  / (Valley)│
-                                        └──────────────────────┘
-[ Condition 3: Frontal Inversion ]      ┌──────────────────────┐
-• Warm air wedge forced up over dense   │   / [Warm Front]     │
-  cold front wedge.                     │  / [Cold Front Wedge]│
-                                        └──────────────────────┘`,
-          valueAdds: [
-            'Lapse Rate Mechanics: Environmental lapse rate becoming positive in lower tropospheric layers.',
-            'Meteorological Triggers: Clear winter nights, calm winds, long nocturnal terrestrial radiation.',
-            'Urban Smog Interaction: Trapping of PM2.5 in Indo-Gangetic Plain creating intense winter smog.'
-          ],
-          interPaper: 'Physical Climatology ──► GS-3 Urban Air Pollution (Delhi/NCR winter smog trapping) + Public Health Impact.',
-          conclusionFormula: 'Science-backed meteorological forecasting, agricultural frost warnings, and climate-resilient urban master planning.'
-        };
-      }
+    if (topperKey === 'umaharathi') {
+      return {
+        ...baseTopper,
+        introFormula: bp.intros[2] ? bp.intros[2].text : bp.intros[0].text,
+        bodyStyle: '2-Way Bifurcation Branching Tree (Progressive Potential vs Gaps/Vulnerabilities).',
+        diagramTitle: `2-Way Bifurcation Tree: ${bp.diagramTitle}`,
+        diagramAscii: bp.diagramVisual,
+        valueAdds: bp.valueAdds,
+        interPaper: 'Cooperative Governance: Harmonizes state capacity, technological adoption, and community equity.',
+        conclusionFormula: bp.conclusion
+      };
     }
 
-    // 5. THEME: Industrial Revolution & Atmospheric Changes
-    if (qLower.includes('industrial revolution') || qLower.includes('atmospheric composition') || qLower.includes('fossil fuel')) {
-      if (topperKey === 'anmol') {
-        return {
-          ...baseTopper,
-          introFormula: 'Industrial Revolution 1.0 (18th-century England) initiated the mass combustion of fossil fuels, transitioning Earth into the Anthropocene characterized by rapid atmospheric composition changes.',
-          bodyStyle: 'Central Generational Wheel tracing consecutive revolutions + Boxed chemical/empirical formulas.',
-          diagramTitle: '4-Stage Generational Evolution Wheel (1.0 to 4.0)',
-          diagramAscii: `         ┌─────────────────────────────────────────────────┐
-         │   Consecutive Industrial Revolutions & Impacts  │
-         └────────────────────────┬────────────────────────┘
-                                  │
-    ┌──────────────┬──────────────┴──────────────┬──────────────┐
-    ▼              ▼                             ▼              ▼
- [ IR 1.0 ]     [ IR 2.0 ]                    [ IR 3.0 ]     [ IR 4.0 ]
- Coal & Steam   Gas, Oil & Elect.             Nuclear & ICT  Digital & Green
- Black carbon   Fossil fuel stress & GHGs     Atomic waste   Circular Economy
-                                                 │
-                                                 ▼
-      Boxed Formula Value-Adds: [ Acid Rain (HNO3, H2SO4) ] • [ Ozone Depletion (CFCs) ]`,
-          valueAdds: [
-            'Atmospheric Metrics: Surge in CO2 concentration from 280 ppm (pre-industrial) to >420 ppm today.',
-            'Chemical Formulas: Boxed notation for Acid Rain [ HNO3, H2SO4 ] and Ozone Depletion [ CFCs, HFCs ].',
-            'Cryosphere Feedback: Black carbon albedo reduction accelerating Himalayan & Arctic melting.'
-          ],
-          interPaper: 'Historical Industrial Revolution ──► Modern Anthropocene Climate Change, COP Pledges & Net-Zero Transitions.',
-          conclusionFormula: 'Paradigm shift: "Transitioning from 19th-century linear extractivism to 21st-century circular green economy."'
-        };
-      }
+    if (topperKey === 'medha') {
+      return {
+        ...baseTopper,
+        introFormula: bp.intros[1] ? bp.intros[1].text : bp.intros[0].text,
+        bodyStyle: 'Vertical Thermodynamic Profile / Physical Cross-Section + Micro-Climatic Spatial Zoning.',
+        diagramTitle: `Thermodynamic Cross-Section: ${bp.diagramTitle}`,
+        diagramAscii: bp.diagramVisual,
+        valueAdds: bp.valueAdds,
+        interPaper: 'Physical Science into Climate Adaptation: Uses physical gradients to guide spatial planning and extreme weather early warning.',
+        conclusionFormula: bp.conclusion
+      };
     }
 
-    // 6. SMART DYNAMIC FALLBACK: Extracts actual question terms to construct fully relevant headings & diagrams
-    const cleanWords = qText.replace(/[^a-zA-Z0-9\s]/g, ' ').split(/\s+/).filter(w => w.length > 3 && !['what', 'explain', 'discuss', 'examine', 'critically', 'comment', 'analyse', 'analyze', 'their', 'which', 'about', 'under'].includes(w.toLowerCase()));
-    const keyTopicTitle = cleanWords.slice(0, 4).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') || 'Core Subject Matter';
+    if (topperKey === 'anmol') {
+      return {
+        ...baseTopper,
+        introFormula: bp.intros[0].text,
+        bodyStyle: 'Distinct Boxed Formulas / Scientific Constants + Multi-Generational Timeline Progression.',
+        diagramTitle: `Generational Evolution & Systematic Matrix: ${bp.diagramTitle}`,
+        diagramAscii: bp.diagramVisual,
+        valueAdds: bp.valueAdds,
+        interPaper: 'Systemic Evolution: Traces long-term structural shifts into contemporary sustainable development goals.',
+        conclusionFormula: bp.conclusion
+      };
+    }
 
     return {
       ...baseTopper,
-      introFormula: `Contextualize the demand of "${keyTopicTitle}" by citing the governing constitutional article, statutory provision, or foundational empirical baseline.`,
-      bodyStyle: `Rectangular Boxed Headings addressing the explicit demands of "${keyTopicTitle}" + Causal flow (=>).`,
-      diagramTitle: `Causal Architecture & Dimensions: ${keyTopicTitle}`,
-      diagramAscii: `[ Core Premise: ${keyTopicTitle} ]
-   │
-   ├─► Primary Dimension A ──► Underlying Mechanism ──► Direct Impact
-   │     └─► Evidence / Landmark Case / Official Report
-   │
-   ├─► Secondary Dimension B ──► Institutional / Policy Vector ──► Outcome
-   │     └─► Quantitative Metric / Global Standard
-   │
-   └─► Critical Evaluation: [Challenges / Unresolved Gaps ──► Mitigation]`,
-      valueAdds: [
-        `Constitutional / Institutional Touchpoint addressing ${keyTopicTitle}.`,
-        'High-Yield Evidence: Landmark judicial case law, commission recommendation (2nd ARC / Law Commission), or statistical metric.',
-        'Guiding Compass: Alignment with Constitutional Morality, Directive Principles, and SDGs.'
-      ],
-      interPaper: `Multi-Dimensional Linkage: Connecting ${keyTopicTitle} to broader governance, economic equity, and ethical foundations.`,
-      conclusionFormula: `Forward-looking, balanced synthesis: Harmonizing institutional reforms with sustainable constitutional values.`
+      introFormula: bp.intros[0].text,
+      bodyStyle: 'Boxed Subheadings addressing the explicit demands + Causal flow (=>).',
+      diagramTitle: bp.diagramTitle,
+      diagramAscii: bp.diagramVisual,
+      valueAdds: bp.valueAdds,
+      interPaper: 'Inter-Disciplinary Multi-Dimensionality connecting subject mechanisms to broader policy outcomes.',
+      conclusionFormula: bp.conclusion
     };
   }
 
@@ -2175,7 +2811,7 @@
         <!-- Hand-Drawn Blueprint Schematic Box -->
         <div class="topper-diagram-box">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-            <strong style="color: #818cf8; font-size: 0.84rem;">📐 Topper's Schematic / Margin Diagram for this Question:</strong>
+            <strong style="color: #818cf8; font-size: 0.84rem;">📐 Topper's Copy Diagram for this Question:</strong>
             <span style="font-size: 0.74rem; color: var(--text-muted);">${esc(topper.diagramTitle)}</span>
           </div>
           <pre class="topper-diagram-ascii">${esc(topper.diagramAscii)}</pre>
@@ -2189,13 +2825,13 @@
           </ul>
         </div>
 
-        <div class="topper-interpaper-box">
-          <span style="font-weight: 700; color: #10b981;">🌐 Inter-Paper Multi-Dimensionality:</span>
+        <div class="topper-interpaper-box" style="margin-top: 8px;">
+          <span style="font-weight: 700; color: #10b981;">🌐 Multi-Dimensionality:</span>
           <span style="color: var(--text-primary); margin-left: 6px;">${esc(topper.interPaper)}</span>
         </div>
 
         <div style="margin-top: 8px; font-size: 0.82rem;">
-          <strong style="color: #f59e0b;">🏁 Trademark Conclusion Hook:</strong>
+          <strong style="color: #f59e0b;">🏁 Model Concluding Hook:</strong>
           <span style="color: var(--text-secondary); margin-left: 6px;">${esc(topper.conclusionFormula)}</span>
         </div>
       </div>
@@ -2215,8 +2851,8 @@
           <div style="display: flex; align-items: center; gap: 8px;">
             <span style="font-size: 1.25rem;">🏆</span>
             <div>
-              <strong style="color: #f59e0b; font-size: 0.94rem;">UPSC Topper's Framing Engine (Question-Specific)</strong>
-              <div style="font-size: 0.76rem; color: var(--text-secondary);">Calibrated directly for this question based on Topper Copy techniques</div>
+              <strong style="color: #f59e0b; font-size: 0.94rem;">UPSC Topper's Framing Engine (Subject-Calibrated)</strong>
+              <div style="font-size: 0.76rem; color: var(--text-secondary);">Directly calibrated from UPSC MGP Topper Copies (AIR 1–13)</div>
             </div>
           </div>
           <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; font-weight: 700; font-size: 0.76rem;">
@@ -2294,7 +2930,7 @@
     const qText = stemEl ? stemEl.textContent : '';
 
     const topper = getDynamicTopperProfile(topperKey, qText, marks, '');
-    const outline = topper.outlineText || `### Introduction\n- Context:\n\n### Body\n- Points:\n\n### Conclusion\n- Way Forward:\n`;
+    const outline = getComprehensiveOutlineText(qText, marks, '');
 
     if (ta.value.trim().length > 0) {
       if (confirm(`Your answer pad already has some text. Do you want to append ${topper.name}'s outline at the bottom?`)) {
@@ -2312,84 +2948,126 @@
     showToast(`${topper.name}'s structure inserted into Answer Pad!`, '🏆');
   }
 
-  function renderMainsApproachHtml(mKey, qText, marks, subject) {
-    const approach = generateMainsApproach(qText, marks, subject);
-    const is15M = approach.marksNum >= 15;
+  // -------------------------------------------------------------
+  // Master Comprehensive Blueprint HTML View
+  // -------------------------------------------------------------
+  function renderComprehensiveBlueprintHtml(mKey, qText, marks, subject) {
+    const bp = generateComprehensiveBlueprint(qText, marks, subject);
+    const esc = escapeHtml;
 
     return `
-      <div class="approach-header">
-        <div class="approach-title">
-          <span>📐</span> Structural Answer Blueprint & Strategy
-        </div>
-        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-          <span class="approach-directive-badge">🎯 Directive: ${approach.directive}</span>
-          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-weight: 700; font-size: 0.78rem;">
-            ⏱️ ${approach.suggestedTime} Mins • ~${approach.targetWords} Words
-          </span>
-        </div>
-      </div>
-
-      <div class="approach-directive-desc">
-        <strong>Directive Guidance (${approach.directive}):</strong> ${approach.directiveMeaning}
-      </div>
-
-      <!-- Topper Archetype Engine Integration -->
-      ${renderTopperSectionHtml(mKey, qText, marks, subject)}
-
-      <!-- Step-by-Step Architecture -->
-      <div style="margin-top: 4px;">
-        <div class="approach-step-card">
-          <div class="approach-step-header">
-            <span>1. Introduction (~${is15M ? '35-40' : '25-30'} words)</span>
-            <span style="font-size: 0.74rem; color: var(--text-muted);">~15% Word Count</span>
+      <div class="bp-master-card">
+        <!-- Top Blueprint Header Banner -->
+        <div class="bp-header">
+          <div>
+            <div style="font-size: 0.74rem; text-transform: uppercase; font-weight: 700; color: #818cf8; letter-spacing: 0.5px;">
+              ${esc(bp.domainLabel)}
+            </div>
+            <h3 style="margin: 2px 0 0; color: var(--text-primary); font-size: 1.12rem; display: flex; align-items: center; gap: 8px;">
+              <span>📐</span> Comprehensive Answer Blueprint & Strategy
+            </h3>
           </div>
-          <div class="approach-step-desc">
-            Define key terms, cite the governing Constitutional Article/statute, or give a crisp contextual backdrop/recent landmark judgment. Avoid lengthy background history.
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <span class="approach-directive-badge">🎯 Directive: ${esc(bp.directive)}</span>
+            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-weight: 700; font-size: 0.8rem;">
+              ⏱️ ${bp.suggestedTime} Mins • ~${bp.targetWords} Words
+            </span>
           </div>
         </div>
 
-        <div class="approach-step-card">
-          <div class="approach-step-header">
-            <span>2. Body Architecture (~${is15M ? '160-180' : '90-100'} words)</span>
-            <span style="font-size: 0.74rem; color: var(--text-muted);">~70% Word Count</span>
-          </div>
-          <div class="approach-step-desc">
-            Divide into 2 distinct subheadings. Use 4-5 crisp, numbered bullet points with underline keywords. Incorporate dimensions: Constitutional, Legal, Socio-Economic, and Institutional. Add a micro-flowchart or hub-and-spoke diagram if applicable.
+        <!-- Directive Meaning & Strategy -->
+        <div class="approach-directive-desc" style="margin-top: 10px;">
+          <strong>Directive Guidance (${esc(bp.directive)}):</strong> ${esc(bp.directiveMeaning)}
+        </div>
+
+        <!-- Section 1: Exact Ready-to-Write Introductions (Multiple Types) -->
+        <div style="margin-top: 14px;">
+          <h4 style="margin: 0 0 8px; font-size: 0.92rem; color: #f59e0b; display: flex; align-items: center; gap: 6px;">
+            <span>✍️</span> Ready-to-Write Introductions (${bp.intros.length} High-Scoring Approaches):
+          </h4>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            ${bp.intros.map(intro => `
+              <div class="bp-intro-card">
+                <div class="bp-intro-tag">${esc(intro.type)}</div>
+                <div class="bp-intro-text">${esc(intro.text)}</div>
+              </div>
+            `).join('')}
           </div>
         </div>
 
-        <div class="approach-step-card">
-          <div class="approach-step-header">
-            <span>3. Way Forward & Conclusion (~${is15M ? '35-40' : '25-30'} words)</span>
-            <span style="font-size: 0.74rem; color: var(--text-muted);">~15% Word Count</span>
+        <!-- Section 2: Real Hand-Drawable Copy Diagram & Sketch Guide -->
+        <div style="margin-top: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 6px;">
+            <h4 style="margin: 0; font-size: 0.92rem; color: #38bdf8; display: flex; align-items: center; gap: 6px;">
+              <span>📊</span> Real-Looking Copy-Drawable Diagram:
+            </h4>
+            <span style="font-size: 0.76rem; color: var(--text-muted);">${esc(bp.diagramTitle)}</span>
           </div>
-          <div class="approach-step-desc">
-            Conclude with a progressive, solution-oriented Way Forward citing a committee recommendation (e.g. 2nd ARC, Law Commission), Constitutional Morality, or SDG goals. Never end on a pessimistic note.
+          <div class="bp-diagram-canvas">
+            <pre class="bp-diagram-pre">${esc(bp.diagramVisual)}</pre>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 6px; padding: 6px 10px; background: rgba(56, 189, 248, 0.08); border-radius: var(--radius-sm); border-left: 3px solid #38bdf8;">
+            <strong style="color: #38bdf8;">📝 1-Minute Copy Sketch Guide:</strong> ${esc(bp.diagramSketchInstructions)}
           </div>
         </div>
-      </div>
 
-      <!-- Value Addition Recommendations -->
-      <div class="approach-value-adds">
-        <h5>💡 Recommended Value Additions for this Question:</h5>
-        <ul>
-          ${approach.valueAdds.map(va => `<li>${escapeHtml(va)}</li>`).join('')}
-        </ul>
-      </div>
+        <!-- Section 3: Exact Body Subheadings & Comprehensive Points -->
+        <div style="margin-top: 16px;">
+          <h4 style="margin: 0 0 10px; font-size: 0.92rem; color: #10b981; display: flex; align-items: center; gap: 6px;">
+            <span>🏗️</span> Exact Subheadings & Technical Body Deconstruction:
+          </h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            ${bp.headings.map(h => `
+              <div class="bp-heading-card">
+                <div class="bp-heading-title">${esc(h.title)}</div>
+                <ul class="bp-heading-list">
+                  ${h.points.map(pt => `<li>${esc(pt)}</li>`).join('')}
+                </ul>
+              </div>
+            `).join('')}
+          </div>
+        </div>
 
-      <!-- Quick Action Buttons -->
-      <div class="approach-actions">
-        <button class="btn btn-subtle btn-sm" onclick="AWFG_APP.copyMainsOutline('${mKey}', this)">
-          📋 Copy Outline
-        </button>
-        <button class="btn btn-primary btn-sm" onclick="AWFG_APP.insertTemplateToPad('${mKey}', ${marks})">
-          📥 Insert Outline into Answer Pad
-        </button>
+        <!-- Section 4: Subject-Specific Value Additions -->
+        <div style="margin-top: 14px; padding: 12px 14px; background: var(--bg-secondary); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <strong style="color: var(--text-primary); font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
+            <span>💡</span> Disciplinary Value Additions & Empirical Anchors:
+          </strong>
+          <ul style="margin: 6px 0 0 18px; padding: 0; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.55;">
+            ${bp.valueAdds.map(va => `<li>${esc(va)}</li>`).join('')}
+          </ul>
+        </div>
+
+        <!-- Section 5: Model Concluding Synthesis -->
+        <div style="margin-top: 12px; padding: 10px 14px; background: rgba(245, 158, 11, 0.08); border-radius: var(--radius-sm); border-left: 3px solid #f59e0b;">
+          <strong style="color: #f59e0b;">🏁 Model Concluding Synthesis:</strong>
+          <span style="color: var(--text-primary); margin-left: 6px; font-size: 0.84rem; line-height: 1.5;">${esc(bp.conclusion)}</span>
+        </div>
+
+        <!-- Section 6: UPSC Topper Archetype Engine Integration -->
+        <div style="margin-top: 16px;">
+          ${renderTopperSectionHtml(mKey, qText, marks, subject)}
+        </div>
+
+        <!-- Quick Outline Actions -->
+        <div class="approach-actions" style="margin-top: 14px;">
+          <button class="btn btn-subtle btn-sm" onclick="AWFG_APP.copyMainsOutline('${mKey}', this)">
+            📋 Copy Complete Structure
+          </button>
+          <button class="btn btn-primary btn-sm" onclick="AWFG_APP.insertTemplateToPad('${mKey}', ${marks})">
+            📥 Insert Comprehensive Structure into Answer Pad
+          </button>
+        </div>
       </div>
     `;
   }
 
-  function toggleMainsApproach(mKey) {
+  function renderMainsApproachHtml(mKey, qText, marks, subject) {
+    return renderComprehensiveBlueprintHtml(mKey, qText, marks, subject);
+  }
+
+
+    function toggleMainsApproach(mKey) {
     const el = document.getElementById(`approach-${mKey}`);
     if (el) {
       el.classList.toggle('hidden');
@@ -2908,6 +3586,9 @@
     copyMainsOutline: copyMainsOutline,
     selectTopperLens: selectTopperLens,
     insertTopperOutline: insertTopperOutline,
+    detectQuestionDomain: detectQuestionDomain,
+    generateComprehensiveBlueprint: generateComprehensiveBlueprint,
+    renderComprehensiveBlueprintHtml: renderComprehensiveBlueprintHtml,
     getState: () => STATE,
     showToast: showToast,
     setFilterPaper: (paper) => { STATE.paperFilter = paper; STATE.wyskPaper = paper; STATE.wyskTopic = 'ALL'; renderView(); }
