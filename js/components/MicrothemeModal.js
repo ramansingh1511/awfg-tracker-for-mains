@@ -23,6 +23,9 @@
     open(microthemeName, preferredTab, context) {
       if (!microthemeName) return;
 
+      const modal = document.getElementById('pyq-modal');
+      if (modal) modal.classList.remove('hidden');
+
       const qData = (window.getMicrothemeQuestions && typeof window.getMicrothemeQuestions === 'function')
         ? window.getMicrothemeQuestions(microthemeName, context)
         : { mains: [], prelims: [] };
@@ -56,11 +59,16 @@
       const searchInp = document.getElementById('pyq-search-inp');
       if (searchInp) searchInp.value = '';
 
-      MicrothemeModal.updateTabsUI();
-      MicrothemeModal.renderBody();
-
-      const modal = document.getElementById('pyq-modal');
-      if (modal) modal.classList.remove('hidden');
+      try {
+        MicrothemeModal.updateTabsUI();
+        MicrothemeModal.renderBody();
+      } catch (err) {
+        console.error('Error rendering MicrothemeModal body:', err);
+        const body = document.getElementById('pyq-modal-body');
+        if (body) {
+          body.innerHTML = `<div style="text-align: center; padding: 40px; color: var(--text-secondary);">An error occurred rendering questions: ${Utils.escapeHtml(err.message)}</div>`;
+        }
+      }
     },
 
     close() {

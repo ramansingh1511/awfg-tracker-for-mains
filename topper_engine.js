@@ -10413,7 +10413,9 @@
       directiveMeaning = "Directly deconstruct all components of the prompt with technical clarity, diagrams, and empirical substantiation.";
     }
 
-    // 0. Check pre-baked Topper Answer Master DB
+    // 0. Check pre-baked Topper Answer Master DB & calibrated topics
+    const calKey = matchCalibratedTopicKey(qText);
+    const topicObj = (calKey && CALIBRATED_TOPICS[calKey]) ? CALIBRATED_TOPICS[calKey] : null;
     const normQ = (qText || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 80);
     const baked = (window.AWFG_TOPPER_ANSWERS_DB && window.AWFG_TOPPER_ANSWERS_DB[normQ]) ? window.AWFG_TOPPER_ANSWERS_DB[normQ] : null;
 
