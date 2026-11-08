@@ -306,7 +306,7 @@
     jumpToTest: (id) => SchedulePage.jumpToTest(id),
 
     // Microtheme Explorer Modal
-    openPyqModal: (name, tab) => MicrothemeModal.open(name, tab),
+    openPyqModal: (name, tab, context) => MicrothemeModal.open(name, tab, context),
     closePyqModal: () => MicrothemeModal.close(),
     switchPyqTab: (tab) => MicrothemeModal.switchTab(tab),
 

@@ -1,4 +1,27 @@
 {
+  "accountabilityandethicalgovernance": {
+    "name": "Accountability and Ethical Governance",
+    "tokens": [
+      "ethical",
+      "governance",
+      "accountability"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "Mr. X, a senior officer, was overseeing a critical vaccination programme durina pandemic. He found that a private servicprovider responsible for vaccine distribution was compromising on quality to make profits. Despite immense pressure tmanage the issue due to vested interests, he raised his voice based on the principles - e of public administration which he learnt during various training programmes attended across his career. He reported the issue to the appropriate vigilance authority and halted the contract to ensure citizen welfare. Which one among the following principles of public administration was most strongly demonstrated by Mr. X’s actions?",
+        "options": [
+          "(a) Esprit de corps",
+          "(b) Equity",
+          "(c) Accountability",
+          "(d) Delegation"
+        ],
+        "ans": "C",
+        "fullText": "Mr. X, a senior officer, was overseeing a critical vaccination programme durina pandemic. He found that a private servicprovider responsible for vaccine distribution was compromising on quality to make profits. Despite immense pressure tmanage the issue due to vested interests, he raised his voice based on the principles - e of public administration which he learnt during various training programmes attended across his career. He reported the issue to the appropriate vigilance authority and halted the contract to ensure citizen welfare. Which one among the following principles of public administration was most strongly demonstrated by Mr. X’s actions? (a) Esprit de corps (b) Equity (c) Accountability (d) Delegation"
+      }
+    ]
+  },
   "ethicaldilemmaresolution": {
     "name": "Ethical Dilemma Resolution",
     "tokens": [

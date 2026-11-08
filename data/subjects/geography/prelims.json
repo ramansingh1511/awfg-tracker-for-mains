@@ -2118,55 +2118,6 @@
       }
     ]
   },
-  "internationalorgxcriticalminerals": {
-    "name": "International OrgXCritical Minerals",
-    "tokens": [
-      "international",
-      "orgxcritical",
-      "minerals"
-    ],
-    "questions": [
-      {
-        "qNum": 1,
-        "year": 2012,
-        "stem": "Recently there has been a concerover the short supply of a group of elements called rare earth metals. Why? 1. China, which is the largest producer of these elements, has imposed some restrictions on their export. 2. Other than China, Australia, Canada, Chile, these elements are not found in any country. 3. Rare earth metals are essential for the manufacture of various kinds of electronic items and there is growing demand for these elements. Select the correct answer using the code given below:",
-        "options": [
-          "(a) 1 only",
-          "(b) 2 and 3 only",
-          "(c) 1 and 3 only",
-          "(d) 1, 2 and 3"
-        ],
-        "ans": "C",
-        "fullText": "Recently there has been a concerover the short supply of a group of elements called rare earth metals. Why? 1. China, which is the largest producer of these elements, has imposed some restrictions on their export. 2. Other than China, Australia, Canada, Chile, these elements are not found in any country. 3. Rare earth metals are essential for the manufacture of various kinds of electronic items and there is growing demand for these elements. Select the correct answer using the code given below: (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
-      },
-      {
-        "qNum": 1,
-        "year": 2025,
-        "stem": "Consider the following statementsI. India has joined the Minerals Security Partnership as a member. II. India is a resource-rich country in all the 30 critical minerals that it has identified. III. The Parliament in 2023 has amended the Mines and Minerals (Development and Regulation) Act, 1957 empowering the Central Government to exclusively auction mining lease and composite license for certain critical minerals. Which of the statements given above are correct?",
-        "options": [
-          "(a) I and II only",
-          "(b) II and III only",
-          "(c) I and III only",
-          "(d) I, II and III"
-        ],
-        "ans": "C",
-        "fullText": "Consider the following statementsI. India has joined the Minerals Security Partnership as a member. II. India is a resource-rich country in all the 30 critical minerals that it has identified. III. The Parliament in 2023 has amended the Mines and Minerals (Development and Regulation) Act, 1957 empowering the Central Government to exclusively auction mining lease and composite license for certain critical minerals. Which of the statements given above are correct? (a) I and II only (b) II and III only (c) I and III only (d) I, II and III"
-      },
-      {
-        "qNum": 2,
-        "year": 2021,
-        "stem": "Consider the following statements1. The Global Ocean Commission grants licenses for seabed exploration and mining in international waters. 2. India has received licenses for seabed mineral exploration in international waters. 3. ‘Rare earth minerals’ are present on the seafloor in international waters. Which of the statements given above are correct?",
-        "options": [
-          "(a) 1 and 2 only",
-          "(b) 2 and 3 only",
-          "(c) 1 and 3 only",
-          "(d) 1, 2, and 3"
-        ],
-        "ans": "B",
-        "fullText": "Consider the following statements1. The Global Ocean Commission grants licenses for seabed exploration and mining in international waters. 2. India has received licenses for seabed mineral exploration in international waters. 3. ‘Rare earth minerals’ are present on the seafloor in international waters. Which of the statements given above are correct? (a) 1 and 2 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2, and 3"
-      }
-    ]
-  },
   "internationalorgtreatiesxenvironment12026attheunitednationsocean": {
     "name": "“International Org,TreatiesXEnvironment”1.   [2026] At the United Nations Ocean",
     "tokens": [

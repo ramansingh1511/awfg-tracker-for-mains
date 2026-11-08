@@ -1627,6 +1627,202 @@
       }
     ]
   },
+  "emergingtechxcommunication": {
+    "name": "Emerging TechXCommunication",
+    "tokens": [
+      "emerging",
+      "techxcommunication"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2025,
+        "stem": "Consider the following statementsI. Indian Railways have prepared a NationaRail Plan (NRP) to create a future ready railway system by 2028. II. ‘Kavach’ is an Automatic Train Protectiosystem developed in collaboration with Germany. III. ‘Kavach’ system consists of RFID tags fitted on track in station section. Which of the statements given above are not correct?",
+        "options": [
+          "(a) I and II only",
+          "(b) II and III only",
+          "(c) I and III only",
+          "(d) I, II and III"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following statementsI. Indian Railways have prepared a NationaRail Plan (NRP) to create a future ready railway system by 2028. II. ‘Kavach’ is an Automatic Train Protectiosystem developed in collaboration with Germany. III. ‘Kavach’ system consists of RFID tags fitted on track in station section. Which of the statements given above are not correct? (a) I and II only (b) II and III only (c) I and III only (d) I, II and III"
+      },
+      {
+        "qNum": 3,
+        "year": 2020,
+        "stem": "With reference to Visible Light Communication (VLC) technology, which othe following statements are correct? (1) VLC uses electromagnetic spectrum wavelengths 375 to 780 nm. (2) VLC is known as long-range optical wireless communication. (3) VLC can transmit large amounts of datfaster than Bluetooth, (4) VLC has no electromagnetic interference. Select the correct using the code given below:",
+        "options": [
+          "(a) 1, 2 and 3 only",
+          "(b) 1, 2 and 4 only",
+          "(c) 1, 3 and 4 only",
+          "(d) 2, 3 and 4 only"
+        ],
+        "ans": "C",
+        "fullText": "With reference to Visible Light Communication (VLC) technology, which othe following statements are correct? (1) VLC uses electromagnetic spectrum wavelengths 375 to 780 nm. (2) VLC is known as long-range optical wireless communication. (3) VLC can transmit large amounts of datfaster than Bluetooth, (4) VLC has no electromagnetic interference. Select the correct using the code given below: (a) 1, 2 and 3 only (b) 1, 2 and 4 only (c) 1, 3 and 4 only (d) 2, 3 and 4 only"
+      },
+      {
+        "qNum": 2,
+        "year": 2022,
+        "stem": "Consider the following communication technologies : 1. Closed-circuit Television 2. Radio Frequency Identification 3. Wireless Local Area Network Which of the above are considered ShortRange devices/technologies?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following communication technologies : 1. Closed-circuit Television 2. Radio Frequency Identification 3. Wireless Local Area Network Which of the above are considered ShortRange devices/technologies? (a) 1 and 2 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 4,
+        "year": 2019,
+        "stem": "With reference to communication technologies, what is/are the difference / differences between LTE (Long-Term Evolution) and VoLTE (Voice over Long-Term Evolution)? f 1. LTE ‘is commonly marketed as 3G and VoLTE is commonly marketed as advanced 3G. 2. LTE is data-only technology and VoLTE ivoice-only technology.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "With reference to communication technologies, what is/are the difference / differences between LTE (Long-Term Evolution) and VoLTE (Voice over Long-Term Evolution)? f 1. LTE ‘is commonly marketed as 3G and VoLTE is commonly marketed as advanced 3G. 2. LTE is data-only technology and VoLTE ivoice-only technology. (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 5,
+        "year": 2019,
+        "stem": "In the context of wearable technology, which of the following tasks is/are accomplished by wearable devices? 1. Location identification of a person 2. Sleep monitoring of a person 3. Assisting the hearing impaired person Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "In the context of wearable technology, which of the following tasks is/are accomplished by wearable devices? 1. Location identification of a person 2. Sleep monitoring of a person 3. Assisting the hearing impaired person Select the correct answer using the code given below. (a) 1 only (b) 2 and 3 only (c) 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 6,
+        "year": 2018,
+        "stem": "In which of the following areas can GPS technology be used ? 1. Mobile phone operations 2. Banking operations 3. Controlling the power grids Select the correct answer using the code given below :",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "In which of the following areas can GPS technology be used ? 1. Mobile phone operations 2. Banking operations 3. Controlling the power grids Select the correct answer using the code given below : (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 7,
+        "year": 2018,
+        "stem": "When the alarm of your smartphone rings in the morning, you wake up and tap it to stop the alarm which causes your geyser to be switched on automatically. The smart mirror in your bathroom shows the day’s weather and also indicates the level of water in your overhead tank. After you take some groceries from your refrigerator for making breakfast, it recognises the shortage of stock in it and places an order for the supply of fresh grocery items. When you step’ out of your house and lock the door, all lights, fans, geysers and AC machines get switched off automatically. On your way to office, your car warns you about traffic congestion ahead and suggests an alternative route, and if you are late for a meeting, it sends a message to your office accordingly. In the context of emerging communication technologies, which one of the following terms best applies to the above scenario?",
+        "options": [
+          "(a) (a)Border Gateway Protocol",
+          "(b) Internet of Things",
+          "(c) Internet Protocol",
+          "(d) Virtual Private Network"
+        ],
+        "ans": "B",
+        "fullText": "When the alarm of your smartphone rings in the morning, you wake up and tap it to stop the alarm which causes your geyser to be switched on automatically. The smart mirror in your bathroom shows the day’s weather and also indicates the level of water in your overhead tank. After you take some groceries from your refrigerator for making breakfast, it recognises the shortage of stock in it and places an order for the supply of fresh grocery items. When you step’ out of your house and lock the door, all lights, fans, geysers and AC machines get switched off automatically. On your way to office, your car warns you about traffic congestion ahead and suggests an alternative route, and if you are late for a meeting, it sends a message to your office accordingly. In the context of emerging communication technologies, which one of the following terms best applies to the above scenario? (a) (a)Border Gateway Protocol (b) Internet of Things (c) Internet Protocol (d) Virtual Private Network"
+      },
+      {
+        "qNum": 8,
+        "year": 2016,
+        "stem": "With reference to ‘LiFi’, recently in the news, which of the following statements is/are correct? 1. It uses light as the medium for highspeed data transmission. 2. It is a wireless technology and is several times faster than ‘WiFi’. Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "C",
+        "fullText": "With reference to ‘LiFi’, recently in the news, which of the following statements is/are correct? 1. It uses light as the medium for highspeed data transmission. 2. It is a wireless technology and is several times faster than ‘WiFi’. Select the correct answer using the code given below. (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 9,
+        "year": 2015,
+        "stem": "With reference to ‘Near Field Communication (NFC) Technology’, which of thfollowing statements is/are correct : (1) It is a contactless communication technology that uses electromagnetic radio fields. (2) NFC is designed for use by devices which can be at a distance of even a metre from each other. (3) NFC can use encryption when sending sensitive information. Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "C",
+        "fullText": "With reference to ‘Near Field Communication (NFC) Technology’, which of thfollowing statements is/are correct : (1) It is a contactless communication technology that uses electromagnetic radio fields. (2) NFC is designed for use by devices which can be at a distance of even a metre from each other. (3) NFC can use encryption when sending sensitive information. Select the correct answer using the code given below. (a) 1 and 2 only (b) 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 10,
+        "year": 2011,
+        "stem": "What is a “Virtual Private Network”?",
+        "options": [
+          "(a) It is a private computer network of an organization where the remote users can transmit encrypted information through the server of the organization.",
+          "(b) It is a computer network across a public internet that provides users accesto their organization’s network while maintaining the security of the information transmitted.",
+          "(c) It is a computer network in which usercan access a shared pool of computing resources through a service provider.",
+          "(d) None of the statements",
+          "(a),",
+          "(b) and",
+          "(c) given above is the correct description of virtual private networks."
+        ],
+        "ans": "B",
+        "fullText": "What is a “Virtual Private Network”? (a) It is a private computer network of an organization where the remote users can transmit encrypted information through the server of the organization. (b) It is a computer network across a public internet that provides users accesto their organization’s network while maintaining the security of the information transmitted. (c) It is a computer network in which usercan access a shared pool of computing resources through a service provider. (d) None of the statements (a), (b) and (c) given above is the correct description of virtual private networks."
+      },
+      {
+        "qNum": 11,
+        "year": 2011,
+        "stem": "What is the difference between Bluetooth and Wi-Fi devices?",
+        "options": [
+          "(a) Bluetooth uses 2.4 GHz radio frequency band, whereas Wi-Fi can use 2.4 GHz or 5 GHz frequency band.",
+          "(b) Bluetooth is used for wireless local area networks (WLAN) only, whereas WiFi is used for wireless wide area networks (WWAN) only.",
+          "(c) When information is transmitted between two devices using Bluetooth technology, the devices have to be in the line of sight of each other, but when Wi-Fi technology is used the devices need not be in the line of sight of each other.",
+          "(d) The statements",
+          "(a) and",
+          "(b) given abovare correct in this context."
+        ],
+        "ans": "A",
+        "fullText": "What is the difference between Bluetooth and Wi-Fi devices? (a) Bluetooth uses 2.4 GHz radio frequency band, whereas Wi-Fi can use 2.4 GHz or 5 GHz frequency band. (b) Bluetooth is used for wireless local area networks (WLAN) only, whereas WiFi is used for wireless wide area networks (WWAN) only. (c) When information is transmitted between two devices using Bluetooth technology, the devices have to be in the line of sight of each other, but when Wi-Fi technology is used the devices need not be in the line of sight of each other. (d) The statements (a) and (b) given abovare correct in this context."
+      },
+      {
+        "qNum": 12,
+        "year": 2010,
+        "stem": "Consider the following : 1. Bluetooth device 2. Cordless phone 3. Microwave oven 4. Wi-Fi device Which of the above can operate between 2-4 and 2-5 GHz range of radio frequencband ?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 3 and 4 only",
+          "(c) 1,2 and 4 only",
+          "(d) 1,2,3 and 4"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following : 1. Bluetooth device 2. Cordless phone 3. Microwave oven 4. Wi-Fi device Which of the above can operate between 2-4 and 2-5 GHz range of radio frequencband ? (a) 1 and 2 only (b) 3 and 4 only (c) 1,2 and 4 only (d) 1,2,3 and 4"
+      },
+      {
+        "qNum": 13,
+        "year": 2010,
+        "stem": "Which among the following do/ does not belong/belongs to the GSM family of wireless technologies ?",
+        "options": [
+          "(a) EDGE",
+          "(b) LTE",
+          "(c) DSL",
+          "(d) Both EDGE and LTE"
+        ],
+        "ans": "C",
+        "fullText": "Which among the following do/ does not belong/belongs to the GSM family of wireless technologies ? (a) EDGE (b) LTE (c) DSL (d) Both EDGE and LTE"
+      },
+      {
+        "qNum": 14,
+        "year": 2009,
+        "stem": "WiMAX is related to which one of the following ?",
+        "options": [
+          "(a) Biotechnology",
+          "(b) Space Technology",
+          "(c) Missile Technology",
+          "(d) Communication Technology"
+        ],
+        "ans": "D",
+        "fullText": "WiMAX is related to which one of the following ? (a) Biotechnology (b) Space Technology (c) Missile Technology (d) Communication Technology"
+      }
+    ]
+  },
   "emergingtechxit": {
     "name": "Emerging TechXIT",
     "tokens": [

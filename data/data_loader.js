@@ -64,8 +64,113 @@
   window.compileTopperAnswers = compileTopperAnswers;
   compileTopperAnswers();
 
-  // Microtheme lookup function
-  window.getMicrothemeQuestions = function(microthemeName) {
+  // Subject-to-Paper mapping
+  const SUBJECT_PAPER_MAP = {
+    'art_and_culture': 'GS-1',
+    'modern_history': 'GS-1',
+    'world_history': 'GS-1',
+    'post_independence': 'GS-1',
+    'geography': 'GS-1',
+    'society': 'GS-1',
+    'polity': 'GS-2',
+    'governance': 'GS-2',
+    'social_justice': 'GS-2',
+    'international_relations': 'GS-2',
+    'economy': 'GS-3',
+    'agriculture': 'GS-3',
+    'science_technology': 'GS-3',
+    'environment': 'GS-3',
+    'disaster_management': 'GS-3',
+    'internal_security': 'GS-3',
+    'ethics': 'GS-4',
+    'essay': 'Essay'
+  };
+
+  const PAPER_SUBJECTS_MAP = {
+    'GS-1': ['art_and_culture', 'modern_history', 'world_history', 'post_independence', 'geography', 'society'],
+    'GS-2': ['polity', 'governance', 'social_justice', 'international_relations'],
+    'GS-3': ['economy', 'agriculture', 'science_technology', 'environment', 'disaster_management', 'internal_security'],
+    'GS-4': ['ethics'],
+    'Essay': ['essay']
+  };
+
+  const CONTEXT_TO_SLUGS = {
+    'art_and_culture': ['art_and_culture'],
+    'art and culture': ['art_and_culture'],
+    'arts & culture': ['art_and_culture'],
+    'modern_history': ['modern_history'],
+    'modern history': ['modern_history'],
+    'world_history': ['world_history'],
+    'world history': ['world_history'],
+    'post_independence': ['post_independence'],
+    'post independence': ['post_independence'],
+    'geography': ['geography'],
+    'society': ['society'],
+    'indian society': ['society'],
+    'polity': ['polity'],
+    'indian polity': ['polity'],
+    'governance': ['governance'],
+    'social_justice': ['social_justice'],
+    'social justice': ['social_justice'],
+    'international_relations': ['international_relations'],
+    'international relations': ['international_relations'],
+    'ir': ['international_relations'],
+    'economy': ['economy'],
+    'economics': ['economy'],
+    'economic development': ['economy'],
+    'agriculture': ['agriculture'],
+    'science_technology': ['science_technology'],
+    'science & technology': ['science_technology'],
+    'science and technology': ['science_technology'],
+    'environment': ['environment'],
+    'disaster_management': ['disaster_management'],
+    'disaster management': ['disaster_management'],
+    'internal_security': ['internal_security'],
+    'internal security': ['internal_security'],
+    'security': ['internal_security'],
+    'ethics': ['ethics'],
+    'essay': ['essay'],
+    'gs-1': PAPER_SUBJECTS_MAP['GS-1'],
+    'gs-2': PAPER_SUBJECTS_MAP['GS-2'],
+    'gs-3': PAPER_SUBJECTS_MAP['GS-3'],
+    'gs-4': PAPER_SUBJECTS_MAP['GS-4']
+  };
+
+  function resolveTargetSlugs(context) {
+    if (!context) return Object.keys(SUBJECT_PAPER_MAP);
+    const cNorm = String(context).toLowerCase().trim();
+    if (CONTEXT_TO_SLUGS[cNorm]) return CONTEXT_TO_SLUGS[cNorm];
+
+    const clean = cNorm.replace(/[^a-z0-9]/g, '');
+    if (clean.includes('gs1') || clean.includes('paper1')) return PAPER_SUBJECTS_MAP['GS-1'];
+    if (clean.includes('gs2') || clean.includes('paper2')) return PAPER_SUBJECTS_MAP['GS-2'];
+    if (clean.includes('gs3') || clean.includes('paper3')) return PAPER_SUBJECTS_MAP['GS-3'];
+    if (clean.includes('gs4') || clean.includes('paper4')) return PAPER_SUBJECTS_MAP['GS-4'];
+
+    for (const k in CONTEXT_TO_SLUGS) {
+      if (cNorm.includes(k) || k.includes(cNorm)) return CONTEXT_TO_SLUGS[k];
+    }
+    return Object.keys(SUBJECT_PAPER_MAP);
+  }
+
+  const STOP_WORDS = {
+    'and': 1, 'the': 1, 'for': 1, 'with': 1, 'from': 1, 'under': 1,
+    'which': 1, 'that': 1, 'this': 1, 'their': 1, 'other': 1, 'into': 1,
+    'system': 1, 'issues': 1, 'india': 1, 'indian': 1, 'sector': 1,
+    'development': 1, 'reforms': 1, 'structure': 1, 'framework': 1,
+    'overview': 1, 'basis': 1, 'focus': 1, 'analysis': 1, 'between': 1
+  };
+
+  function getCleanTokens(str) {
+    return (str || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter(t => t.length >= 3 && !STOP_WORDS[t]);
+  }
+
+  // Microtheme lookup function with Paper & Subject Scoping
+  window.getMicrothemeQuestions = function(microthemeName, context) {
     if (!microthemeName) return { mains: [], prelims: [] };
 
     // Ensure indices are compiled
@@ -73,113 +178,122 @@
       compileGlobalIndices();
     }
 
+    const targetSlugs = resolveTargetSlugs(context);
+    const isRestricted = context && targetSlugs.length < Object.keys(SUBJECT_PAPER_MAP).length;
+
     const rawClean = microthemeName.trim();
     const norm = rawClean.toLowerCase().replace(/[^a-z0-9]/g, '');
-    const tokens = rawClean.toLowerCase()
-      .replace(/[^a-z0-9\s]/g, ' ')
-      .split(/\s+/)
-      .filter(t => t.length > 2 && !['and', 'the', 'for', 'with', 'from', 'under'].includes(t));
+    const tokens = getCleanTokens(rawClean);
 
-    let prelims = [];
-    let mains = [];
+    function searchForQuestions(isPrelims) {
+      const prop = isPrelims ? 'prelims' : 'mains';
 
-    // 1. Direct normalized key match
-    if (window.PRELIMS_QUESTIONS_DB && window.PRELIMS_QUESTIONS_DB[norm]) {
-      prelims = window.PRELIMS_QUESTIONS_DB[norm].questions || [];
-    }
-    if (window.MAINS_QUESTIONS_DB && window.MAINS_QUESTIONS_DB[norm]) {
-      mains = window.MAINS_QUESTIONS_DB[norm].questions || [];
-    }
+      function searchInSlugs(slugs) {
+        const candidates = [];
+        for (const slug of slugs) {
+          const sData = window.AWFG_SUBJECT_DATA[slug];
+          if (!sData || !sData[prop]) continue;
+          const db = sData[prop];
 
-    // 2. Substring match on key
-    if (prelims.length === 0 && window.PRELIMS_QUESTIONS_DB) {
-      for (const k in window.PRELIMS_QUESTIONS_DB) {
-        if (k.length >= 6 && (norm.includes(k) || k.includes(norm))) {
-          prelims = window.PRELIMS_QUESTIONS_DB[k].questions || [];
-          break;
-        }
-      }
-    }
-    if (mains.length === 0 && window.MAINS_QUESTIONS_DB) {
-      for (const k in window.MAINS_QUESTIONS_DB) {
-        if (k.length >= 6 && (norm.includes(k) || k.includes(norm))) {
-          mains = window.MAINS_QUESTIONS_DB[k].questions || [];
-          break;
-        }
-      }
-    }
+          for (const k in db) {
+            const entry = db[k];
+            const qs = entry.questions || [];
+            if (qs.length === 0) continue;
 
-    // 3. Fuzzy Stemming Overlap Search
-    function findBestOverlap(db) {
-      let bestScore = 0;
-      let bestMatch = [];
-      for (const k in db) {
-        const entry = db[k];
-        const eTokens = entry.tokens || (entry.name || '').toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/);
-        let score = 0;
-        for (let i = 0; i < tokens.length; i++) {
-          const t = tokens[i];
-          for (let j = 0; j < eTokens.length; j++) {
-            const et = eTokens[j];
-            if (t === et || (t.length >= 5 && et.length >= 5 && (t.slice(0, 5) === et.slice(0, 5) || t.includes(et) || et.includes(t)))) {
-              score++;
-              break;
+            const eName = entry.name || '';
+            const eNorm = eName.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const kNorm = k.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+            let score = 0;
+            if (norm === kNorm || norm === eNorm) {
+              score += 300;
+            } else if (norm.length >= 10 && kNorm.length >= 10 && (norm.includes(kNorm) || kNorm.includes(norm))) {
+              score += 100;
+            }
+
+            const eTokens = entry.tokens || getCleanTokens(eName);
+            let tMatches = 0;
+            for (let i = 0; i < tokens.length; i++) {
+              const t = tokens[i];
+              for (let j = 0; j < eTokens.length; j++) {
+                const et = eTokens[j];
+                if (t === et) {
+                  tMatches += 3;
+                  break;
+                } else if (t.length >= 5 && et.length >= 5 && (t.slice(0, 5) === et.slice(0, 5) || t.includes(et) || et.includes(t))) {
+                  tMatches += 2;
+                  break;
+                }
+              }
+            }
+            score += tMatches * 10;
+
+            if (score > 0) {
+              candidates.push({ entry, score, slug });
             }
           }
         }
-        if (score > bestScore) {
-          bestScore = score;
-          bestMatch = entry.questions || [];
+
+        candidates.sort((a, b) => b.score - a.score);
+        if (candidates.length > 0 && candidates[0].score >= 20) {
+          return candidates[0].entry.questions || [];
         }
-      }
-      return bestMatch;
-    }
 
-    if (prelims.length === 0 && window.PRELIMS_QUESTIONS_DB) {
-      prelims = findBestOverlap(window.PRELIMS_QUESTIONS_DB);
-    }
-    if (mains.length === 0 && window.MAINS_QUESTIONS_DB) {
-      mains = findBestOverlap(window.MAINS_QUESTIONS_DB);
-    }
+        // Stem / text search WITHIN candidate slugs
+        const scoredQs = [];
+        const seen = new Set();
+        for (const slug of slugs) {
+          const sData = window.AWFG_SUBJECT_DATA[slug];
+          if (!sData || !sData[prop]) continue;
+          const db = sData[prop];
 
-    // 4. Token Scoring Search in question texts/stems (ensures 100% microthemes hit)
-    function searchByStemTokens(db, isPrelims) {
-      if (!db || tokens.length === 0) return [];
-      const scored = [];
-      const seen = new Set();
-      for (const k in db) {
-        const qs = db[k].questions || [];
-        for (const q of qs) {
-          const id = q.text || q.stem || '';
-          if (seen.has(id)) continue;
-          seen.add(id);
-          const txt = (isPrelims ? (q.stem + ' ' + (q.options || []).join(' ')) : (q.text || '')).toLowerCase();
-          let count = 0;
-          for (let i = 0; i < tokens.length; i++) {
-            const tok = tokens[i];
-            if (txt.includes(tok) || (tok.length >= 5 && txt.includes(tok.slice(0, 5)))) {
-              count++;
+          for (const k in db) {
+            const qs = db[k].questions || [];
+            for (const q of qs) {
+              const id = q.text || q.stem || '';
+              if (!id || seen.has(id)) continue;
+              seen.add(id);
+
+              const txt = (isPrelims ? (q.stem + ' ' + (q.options || []).join(' ')) : (q.text || '')).toLowerCase();
+              let qScore = 0;
+              for (let t = 0; t < tokens.length; t++) {
+                const tok = tokens[t];
+                if (txt.includes(tok)) {
+                  qScore += 3;
+                } else if (tok.length >= 5 && txt.includes(tok.slice(0, 5))) {
+                  qScore += 2;
+                }
+              }
+              if (qScore > 0) {
+                scoredQs.push({ q, score: qScore });
+              }
             }
           }
-          if (count > 0) {
-            scored.push({ q, count });
-          }
         }
+
+        scoredQs.sort((a, b) => b.score - a.score);
+        if (scoredQs.length > 0 && scoredQs[0].score >= 3) {
+          const top = scoredQs[0].score;
+          return scoredQs.filter(sq => sq.score >= Math.max(3, top - 3)).slice(0, 15).map(sq => sq.q);
+        }
+
+        return [];
       }
-      scored.sort((a, b) => b.count - a.count);
-      if (scored.length > 0) {
-        const minCount = tokens.length <= 1 ? 1 : Math.min(2, scored[0].count);
-        return scored.filter(s => s.count >= minCount).slice(0, 20).map(s => s.q);
+
+      const hits = searchInSlugs(slugsForSearch(targetSlugs));
+      if (hits.length > 0) return hits;
+      if (!isRestricted) {
+        return searchInSlugs(Object.keys(SUBJECT_PAPER_MAP));
       }
       return [];
     }
 
-    if (prelims.length === 0 && window.PRELIMS_QUESTIONS_DB) {
-      prelims = searchByStemTokens(window.PRELIMS_QUESTIONS_DB, true);
+    function slugsForSearch(target) {
+      return target;
     }
-    if (mains.length === 0 && window.MAINS_QUESTIONS_DB) {
-      mains = searchByStemTokens(window.MAINS_QUESTIONS_DB, false);
-    }
+
+    const mains = searchForQuestions(false);
+    const prelims = searchForQuestions(true);
 
     return { mains, prelims };
   };

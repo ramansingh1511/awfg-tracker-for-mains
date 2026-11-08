@@ -129,8 +129,8 @@
                 return `
                   <div class="mt-pill ${isChecked ? 'completed' : ''}">
                     <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="AWFG_SCHEDULE_PAGE.toggleCheckbox('mains', '${t.id}_${idx}')">
-                    <span class="mt-pill-text" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(mt)}', 'mains')">${Utils.escapeHtml(mt)}</span>
-                    <span class="mt-open-btn" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(mt)}', 'mains')" title="Explore PYQs">🔍</span>
+                    <span class="mt-pill-text" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(mt)}', 'mains', '${t.paper}')">${Utils.escapeHtml(mt)}</span>
+                    <span class="mt-open-btn" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(mt)}', 'mains', '${t.paper}')" title="Explore PYQs">🔍</span>
                   </div>
                 `;
               }).join('')}
@@ -149,9 +149,9 @@
                   return `
                     <div class="mt-pill overlap ${isChecked ? 'completed' : ''}">
                       <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="AWFG_SCHEDULE_PAGE.toggleCheckbox('coinciding', '${t.id}_${idx}')">
-                      <span class="mt-pill-text" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(cp.name)}', 'prelims')">${Utils.escapeHtml(cp.name)}</span>
+                      <span class="mt-pill-text" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(cp.name)}', 'prelims', '${t.paper}')">${Utils.escapeHtml(cp.name)}</span>
                       <span class="mt-badge-overlap">${cp.qs} Qs</span>
-                      <span class="mt-open-btn" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(cp.name)}', 'prelims')" title="Practice MCQs">🎯</span>
+                      <span class="mt-open-btn" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(cp.name)}', 'prelims', '${t.paper}')" title="Practice MCQs">🎯</span>
                     </div>
                   `;
                 }).join('')}

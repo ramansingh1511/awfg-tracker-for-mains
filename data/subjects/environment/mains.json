@@ -1,1 +1,136 @@
-{}
+{
+  "airpollutionandrelated": {
+    "name": "Air Pollution and Related",
+    "subject": "Environment",
+    "tokens": [
+      "related",
+      "pollution",
+      "air"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "n, Environmental Pollution and Degradation, Impact Assessment.",
+        "subject": "Environment",
+        "microtheme": "Air Pollution and Related",
+        "page": 66
+      },
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "What is Carbon Capture, Utilization and Storage (CCUS)?",
+        "subject": "Environment",
+        "microtheme": "Air Pollution and Related",
+        "page": 66
+      },
+      {
+        "year": 2026,
+        "marks": 10,
+        "text": "Explain the 1999 Gothenburg Protocol. Describe the key points of the revised Global Air Quality Guidelines (AQGs) recently released by the World Health Organisation (WHO). How are these different from its last update in 2005?",
+        "subject": "Environment",
+        "microtheme": "Air Pollution and Related",
+        "page": 66
+      },
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "What changes in India’s National Clean Air Programme are required to achieve these revised standards?",
+        "subject": "Environment",
+        "microtheme": "Air Pollution and Related",
+        "page": 66
+      },
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "What are the key features of the National Clean Air Programme (NCAP) initiated by the Government of India?",
+        "subject": "Environment",
+        "microtheme": "Air Pollution and Related",
+        "page": 66
+      }
+    ]
+  },
+  "climatechangeeia": {
+    "name": "Climate Change EIA",
+    "subject": "Environment",
+    "tokens": [
+      "climate",
+      "change",
+      "eia"
+    ],
+    "questions": [
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "What is the potential role of CCUS in tackling climate change?",
+        "subject": "Environment",
+        "microtheme": "Climate Change EIA",
+        "page": 66
+      },
+      {
+        "year": 2020,
+        "marks": 10,
+        "text": "Mention India's commitments and initiatives to achieve the goals and targets of this framework giving suitable examples.",
+        "subject": "Environment",
+        "microtheme": "Climate Change EIA",
+        "page": 66
+      },
+      {
+        "year": 2014,
+        "marks": 12.5,
+        "text": "How India will be affected by climate change? How Himalayan and coastal states of India will be affected by climate change?",
+        "subject": "Environment",
+        "microtheme": "Climate Change EIA",
+        "page": 66
+      },
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "What role do environmental NGOs and activists play in influencing Environmental Impact Assessment (EIA) outcomes for major projects in India? Cite four examples with all important details. How does the draft Environment Impact Assessment (EIA) Notification, 2020 differ from the existing EIA Notification, 2006? Rehabilitation of human settlements is one of the important environmental impacts which always attracts controversy while planning major projects. Discuss the measures suggested for mitigation of this impact while proposing major developmental projects. Environmental Impact Assessment studies are increasingly undertaken before project is cleared by the government. Discuss the environmental impacts of coal-fired thermal plants located at Pitheads. The adoption of electric vehicles is rapidly growing worldwide. How do electric vehicles contribute to reducing carbon emissions and what are the key benefits they offer compared to traditional combustion engine vehicles?",
+        "subject": "Environment",
+        "microtheme": "Climate Change EIA",
+        "page": 66
+      }
+    ]
+  },
+  "issues": {
+    "name": "Issues",
+    "subject": "Environment",
+    "tokens": [],
+    "questions": [
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "Discuss in detail the photochemical smog emphasizing its formation, effects and mitigation.",
+        "subject": "Environment",
+        "microtheme": "Issues",
+        "page": 66
+      }
+    ]
+  },
+  "biodiversity": {
+    "name": "Biodiversity",
+    "subject": "Environment",
+    "tokens": [
+      "biodiversity"
+    ],
+    "questions": [
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "Discuss the aim and goals of Kunming-Montreal global biodiversity framework.",
+        "subject": "Environment",
+        "microtheme": "Biodiversity",
+        "page": 66
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "How does biodiversity vary in India? How is the Biological Diversity Act, 2002 helpful in conservation of flora and fauna? ‘Climate Change’ is a global problem.",
+        "subject": "Environment",
+        "microtheme": "Biodiversity",
+        "page": 66
+      }
+    ]
+  }
+}

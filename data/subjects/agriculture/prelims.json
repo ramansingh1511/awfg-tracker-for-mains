@@ -653,6 +653,170 @@
       }
     ]
   },
+  "subsidiesxagriculture": {
+    "name": "SubsidiesXAgriculture",
+    "tokens": [
+      "subsidiesxagriculture"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2023,
+        "stem": "Consider the following statements : 1. The Government of India provides Minimum Support Price for niger (Guizotia abyssinica) seeds. 2. Niger is cultivated as a Kharif crop. 3. Some tribal people in India use niger seed oil for cooking. How many of the above statements are correct?",
+        "options": [
+          "(a) Only one",
+          "(b) Only two",
+          "(c) All three",
+          "(d) None"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following statements : 1. The Government of India provides Minimum Support Price for niger (Guizotia abyssinica) seeds. 2. Niger is cultivated as a Kharif crop. 3. Some tribal people in India use niger seed oil for cooking. How many of the above statements are correct? (a) Only one (b) Only two (c) All three (d) None"
+      },
+      {
+        "qNum": 2,
+        "year": 2020,
+        "stem": "With reference to chemical fertilizers in India, consider the following statements: 1. At present, the retail price of chemical fertilizers is market-driven and not administered by the Government. 2. Ammonia, which is an input of urea, is produced from natural gas. 3. Sulphur, which is a raw material for Phosphoric acid fertilizer, is a by-product of oil refineries. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 2 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "B",
+        "fullText": "With reference to chemical fertilizers in India, consider the following statements: 1. At present, the retail price of chemical fertilizers is market-driven and not administered by the Government. 2. Ammonia, which is an input of urea, is produced from natural gas. 3. Sulphur, which is a raw material for Phosphoric acid fertilizer, is a by-product of oil refineries. Which of the statements given above is/ are correct? (a) 1 only (b) 2 and 3 only (c) 2 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 3,
+        "year": 2020,
+        "stem": "Consider the following statements1. In the case of all cereals, pulses and oil-seeds, the procurement at Minimum Support Price (MSP) is unlimited in any State/UT of India. 2. In the case of cereals and pulses, the MSP is fixed in any State/UT at a level to which the market price will never rise. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following statements1. In the case of all cereals, pulses and oil-seeds, the procurement at Minimum Support Price (MSP) is unlimited in any State/UT of India. 2. In the case of cereals and pulses, the MSP is fixed in any State/UT at a level to which the market price will never rise. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 4,
+        "year": 2020,
+        "stem": "In India, which of the following can be considered as public investment in agriculture? 1. Fixing Minimum Support Price for agricultural produce of all crops 2. Computerization of Primary Agricultural Credit Societies 3. Social Capital development 4. Free electricity supply to farmers 5. Waiver of agricultural loans by the banking system 6. Setting up of cold storage facilities by the governments Select the correct answer using the code given below:",
+        "options": [
+          "(a) 1, 2 and 5 only",
+          "(b) 1, 3, 4 and 5 only",
+          "(c) 2, 3 and 6 only",
+          "(d) 1, 2 3, 4, 5 and 6"
+        ],
+        "ans": "C",
+        "fullText": "In India, which of the following can be considered as public investment in agriculture? 1. Fixing Minimum Support Price for agricultural produce of all crops 2. Computerization of Primary Agricultural Credit Societies 3. Social Capital development 4. Free electricity supply to farmers 5. Waiver of agricultural loans by the banking system 6. Setting up of cold storage facilities by the governments Select the correct answer using the code given below: (a) 1, 2 and 5 only (b) 1, 3, 4 and 5 only (c) 2, 3 and 6 only (d) 1, 2 3, 4, 5 and 6"
+      },
+      {
+        "qNum": 5,
+        "year": 2020,
+        "stem": "Which of the following factors/ policies were affecting the price of rice in India in the recent past? 1. Minimum Support Price 2. Government’s trading 3. Government’s stockpiling 4. Consumer subsidies Select the correct answer using the code given below:",
+        "options": [
+          "(a) 1, 2 and 4 only",
+          "(b) 1, 3 and 4 only",
+          "(c) 2 and 3 only",
+          "(d) 1, 2, 3 and 4"
+        ],
+        "ans": "D",
+        "fullText": "Which of the following factors/ policies were affecting the price of rice in India in the recent past? 1. Minimum Support Price 2. Government’s trading 3. Government’s stockpiling 4. Consumer subsidies Select the correct answer using the code given below: (a) 1, 2 and 4 only (b) 1, 3 and 4 only (c) 2 and 3 only (d) 1, 2, 3 and 4"
+      },
+      {
+        "qNum": 6,
+        "year": 2018,
+        "stem": "Consider the following: 1. Areca nut 2. Barley 3. Coffee 4. Finger millet 5. Groundnut 6. Sesamum 7. Turmeric The Cabinet Committee on Economic Affair, has announced the Minimum Support Prick for which of the above?",
+        "options": [
+          "(a) 1, 2, 3 and 7 only",
+          "(b) 2, 4, 5 and 6 only",
+          "(c) 1, 3, 4, 5 and 6 only",
+          "(d) 1, 2, 3, 4, 5, 6 and 7"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following: 1. Areca nut 2. Barley 3. Coffee 4. Finger millet 5. Groundnut 6. Sesamum 7. Turmeric The Cabinet Committee on Economic Affair, has announced the Minimum Support Prick for which of the above? (a) 1, 2, 3 and 7 only (b) 2, 4, 5 and 6 only (c) 1, 3, 4, 5 and 6 only (d) 1, 2, 3, 4, 5, 6 and 7"
+      },
+      {
+        "qNum": 7,
+        "year": 2016,
+        "stem": "In the context of which of the following do you sometimes find the terms ‘amber box, blue box and green box’ in the news?",
+        "options": [
+          "(a) WTO affairs",
+          "(b) SAARC affairs",
+          "(c) UNFCCC affairs",
+          "(d) India-EU negotiations on FTA"
+        ],
+        "ans": "A",
+        "fullText": "In the context of which of the following do you sometimes find the terms ‘amber box, blue box and green box’ in the news? (a) WTO affairs (b) SAARC affairs (c) UNFCCC affairs (d) India-EU negotiations on FTA"
+      },
+      {
+        "qNum": 8,
+        "year": 2015,
+        "stem": "The Fair and Remunerative Price (FRP) of sugarcane is approved by the",
+        "options": [
+          "(a) Cabinet Committee on Economic Affairs",
+          "(b) Commission for Agricultural Costs and Prices",
+          "(c) Directorate of Marketing and InspectioMinistry of Agriculture",
+          "(d) Agricultural Produce Market Committe"
+        ],
+        "ans": "A",
+        "fullText": "The Fair and Remunerative Price (FRP) of sugarcane is approved by the (a) Cabinet Committee on Economic Affairs (b) Commission for Agricultural Costs and Prices (c) Directorate of Marketing and InspectioMinistry of Agriculture (d) Agricultural Produce Market Committe"
+      },
+      {
+        "qNum": 9,
+        "year": 2015,
+        "stem": "In India, markets in agricultural products are regulated under the",
+        "options": [
+          "(a) Essential Commodities Act, 1955",
+          "(b) Agricultural Produce Market CommitteAct enacted by States",
+          "(c) Agricultural Produce (Grading and Marking) Act, 1937",
+          "(d) Food Products Order, 1956 and Meat and Food Products Order, 1973"
+        ],
+        "ans": "B",
+        "fullText": "In India, markets in agricultural products are regulated under the (a) Essential Commodities Act, 1955 (b) Agricultural Produce Market CommitteAct enacted by States (c) Agricultural Produce (Grading and Marking) Act, 1937 (d) Food Products Order, 1956 and Meat and Food Products Order, 1973"
+      },
+      {
+        "qNum": 10,
+        "year": 2014,
+        "stem": "In the context of food and nutritional security of India, enhancing the ‘Seed Replacement Rates’ of various crops helps in achieving the food production targets of the future. But what is/are the constraint/constraints in its wider/ greater implementation? 1. There is no National Seeds Policy in place. 2. There is no participation of private sector seed companies in the supply of quality seeds of vegetables and planting materials of horticultural crops. 3. There is a demand-supply gap regarding quality seeds in case of low value and high volume crops. Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 3 only",
+          "(c) 2 and 3 only",
+          "(d) None of the above"
+        ],
+        "ans": "B",
+        "fullText": "In the context of food and nutritional security of India, enhancing the ‘Seed Replacement Rates’ of various crops helps in achieving the food production targets of the future. But what is/are the constraint/constraints in its wider/ greater implementation? 1. There is no National Seeds Policy in place. 2. There is no participation of private sector seed companies in the supply of quality seeds of vegetables and planting materials of horticultural crops. 3. There is a demand-supply gap regarding quality seeds in case of low value and high volume crops. Select the correct answer using the code given below. (a) 1 and 2 only (b) 3 only (c) 2 and 3 only (d) None of the above"
+      },
+      {
+        "qNum": 11,
+        "year": 2010,
+        "stem": "Consider the following statements: 1. The Union Government fixes the Statutory Minimum Price of sugarcane for each sugar season 2. Sugar and sugarcane are essential commodities under the Essential Commodities Act Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following statements: 1. The Union Government fixes the Statutory Minimum Price of sugarcane for each sugar season 2. Sugar and sugarcane are essential commodities under the Essential Commodities Act Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 12,
+        "year": 2009,
+        "stem": "Consider the following statements : 1. The Commission for Agricultural Costs and Prices recommends the Minimum Support Prices for 32 crops. 2. The Union Ministry of Consumer Affairs, Food and Public Distribution has launched the National Food Security Mission. Which of the statements given above is/ are correct ?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following statements : 1. The Commission for Agricultural Costs and Prices recommends the Minimum Support Prices for 32 crops. 2. The Union Ministry of Consumer Affairs, Food and Public Distribution has launched the National Food Security Mission. Which of the statements given above is/ are correct ? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      }
+    ]
+  },
   "soils": {
     "name": "Soils",
     "tokens": [
@@ -967,184 +1131,6 @@
         ],
         "ans": "D",
         "fullText": "Which among the following is/ are the objective(s) of the Rainfed Area Development (RAD) initiative under the National Mission for Sustainable Agriculture (NMSA)? 1. Encouraging monoculture in rainfed areas 2. Increasing rice cultivation in irrigated regions 3. Enhancing productivity and minimising climatic risks through Integrated Farming Systems (IFS) (a) 1 only (b) 1 and 2 (c) 2 and 3 (d) 3 only"
-      }
-    ]
-  },
-  "biofertilizersfuels": {
-    "name": "Biofertilizers/Fuels",
-    "tokens": [
-      "fuels",
-      "biofertilizers"
-    ],
-    "questions": [
-      {
-        "qNum": 1,
-        "year": 2025,
-        "stem": "Consider the following statementsStatement I: Of the two major ethanol producers in the world, i.e., Brazil and the United States of America, the former produces more ethanol than the latter. Statement II: Unlike in the United States of America, where corn is the principal feedstock for ethanol production, sugarcane is the principal feedstock for ethanol production in Brazil. Which one of the following is correct in respect of the above statements?",
-        "options": [
-          "(a) Both Statement I and Statement II are correct and Statement II explains Statement I",
-          "(b) Both Statement I and Statement II are correct but Statement II does not explain Statement I",
-          "(c) Statement I is correct but Statement II is not correct",
-          "(d) Statement I is not correct but Statement II is correct"
-        ],
-        "ans": "D",
-        "fullText": "Consider the following statementsStatement I: Of the two major ethanol producers in the world, i.e., Brazil and the United States of America, the former produces more ethanol than the latter. Statement II: Unlike in the United States of America, where corn is the principal feedstock for ethanol production, sugarcane is the principal feedstock for ethanol production in Brazil. Which one of the following is correct in respect of the above statements? (a) Both Statement I and Statement II are correct and Statement II explains Statement I (b) Both Statement I and Statement II are correct but Statement II does not explain Statement I (c) Statement I is correct but Statement II is not correct (d) Statement I is not correct but Statement II is correct"
-      },
-      {
-        "qNum": 2,
-        "year": 2020,
-        "stem": "According to India’s National Policon Biofuels, which of the following can be used as raw materials for the production of biofuels? 1. Cassava 2. Damaged wheat grains 3. Groundnut seeds 4. Horse gram 5. Rotten potatoes 6. Sugar beet Select the correct answer using the code given below:",
-        "options": [
-          "(a) 1, 2, 5 and 6 only",
-          "(b) 1, 3, 4 and 6 only",
-          "(c) 2, 3, 4 and 5 only",
-          "(d) 1, 2, 3, 4, 5 and 6"
-        ],
-        "ans": "A",
-        "fullText": "According to India’s National Policon Biofuels, which of the following can be used as raw materials for the production of biofuels? 1. Cassava 2. Damaged wheat grains 3. Groundnut seeds 4. Horse gram 5. Rotten potatoes 6. Sugar beet Select the correct answer using the code given below: (a) 1, 2, 5 and 6 only (b) 1, 3, 4 and 6 only (c) 2, 3, 4 and 5 only (d) 1, 2, 3, 4, 5 and 6"
-      },
-      {
-        "qNum": 3,
-        "year": 2019,
-        "stem": "In the context of proposals to the use of hydrogen-enriched CNG (H-CNG) afuel for buses in public transport, consider the following statements: 1. The main adyantage of the use of H-CNG is the elimination of carbon monoxide emissions. 2. H-CNG as fuel reduces carbon dioxide and hydrocarbon emissions. 3. Hydrogen up to one-fifth by volume can be blended with CNG as fuel for buses. 4. H-CNG makes the fuel less expensive than CNG. Which of the statements given above is / are correct?",
-        "options": [
-          "(a) 1 only",
-          "(b) 2 and 3 only",
-          "(c) 4 only",
-          "(d) 1, 2, 3 and 4"
-        ],
-        "ans": "B",
-        "fullText": "In the context of proposals to the use of hydrogen-enriched CNG (H-CNG) afuel for buses in public transport, consider the following statements: 1. The main adyantage of the use of H-CNG is the elimination of carbon monoxide emissions. 2. H-CNG as fuel reduces carbon dioxide and hydrocarbon emissions. 3. Hydrogen up to one-fifth by volume can be blended with CNG as fuel for buses. 4. H-CNG makes the fuel less expensive than CNG. Which of the statements given above is / are correct? (a) 1 only (b) 2 and 3 only (c) 4 only (d) 1, 2, 3 and 4"
-      },
-      {
-        "qNum": 4,
-        "year": 2017,
-        "stem": "It is possible to produce algae based biofuels, but what is/are the likely limitation(s) of developing countries in promoting this industry? 1. Production of algae based biofuels is possible in seas only and not on continents. 2. Setting up and engineering the algae based biofuel production requires high level of expertise/technology until the construction is completed. 3. Economically viable production necessitates the setting up of large scale facilities which may raise ecological and social concerns. Select the correct answer using the code given below:",
-        "options": [
-          "(a) 1 and 2 only",
-          "(b) 2 and 3 only",
-          "(c) 3 only",
-          "(d) 1, 2 and 3"
-        ],
-        "ans": "B",
-        "fullText": "It is possible to produce algae based biofuels, but what is/are the likely limitation(s) of developing countries in promoting this industry? 1. Production of algae based biofuels is possible in seas only and not on continents. 2. Setting up and engineering the algae based biofuel production requires high level of expertise/technology until the construction is completed. 3. Economically viable production necessitates the setting up of large scale facilities which may raise ecological and social concerns. Select the correct answer using the code given below: (a) 1 and 2 only (b) 2 and 3 only (c) 3 only (d) 1, 2 and 3"
-      },
-      {
-        "qNum": 5,
-        "year": 2015,
-        "stem": "With reference to ‘fuel cells’ in which hydrogen-rich fuel and oxygen are used to generate electriity, consider the following statements : (1) If pure hydrogen is used as a fuel, the fuel cell emits heat and water as by-products. (2) Fuel cells can be used for powering buildings and not for small devices like laptop computers (3) Fuel cells produce electricity in the form of Alternating Current (AC). Which of the statements given above is/ are correct?",
-        "options": [
-          "(a) 1 only",
-          "(b) 2 and 3 only",
-          "(c) 1 and 3 only",
-          "(d) 1, 2 and 3"
-        ],
-        "ans": "A",
-        "fullText": "With reference to ‘fuel cells’ in which hydrogen-rich fuel and oxygen are used to generate electriity, consider the following statements : (1) If pure hydrogen is used as a fuel, the fuel cell emits heat and water as by-products. (2) Fuel cells can be used for powering buildings and not for small devices like laptop computers (3) Fuel cells produce electricity in the form of Alternating Current (AC). Which of the statements given above is/ are correct? (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
-      },
-      {
-        "qNum": 6,
-        "year": 2013,
-        "stem": "With reference to the usefulness of the by-products of sugar industry, which of the following statements is/are correct? (1). Bagasse can be used as biomass fuel for the generation of energy. (2). Molasses can be used as one of the feedstocks for the production of synthetic chemical fertilizers. (3). Molasses can be used for the production of ethanol. Select the correct answer using the codes given below.",
-        "options": [
-          "(a) 1 only",
-          "(b) 2 and 3 only",
-          "(c) 1 and 3 only",
-          "(d) 1, 2, and 3"
-        ],
-        "ans": "C",
-        "fullText": "With reference to the usefulness of the by-products of sugar industry, which of the following statements is/are correct? (1). Bagasse can be used as biomass fuel for the generation of energy. (2). Molasses can be used as one of the feedstocks for the production of synthetic chemical fertilizers. (3). Molasses can be used for the production of ethanol. Select the correct answer using the codes given below. (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2, and 3"
-      },
-      {
-        "qNum": 7,
-        "year": 2012,
-        "stem": "Consider the following kinds of organisms: 1. Bacteria 2. Fungi 3. Flowering plants Some species of which of the above kinds of organisms are employed as biopesticides?",
-        "options": [
-          "(a) 1 only",
-          "(b) 2 and 3 only",
-          "(c) 1 and 3 only",
-          "(d) 1, 2 and 3"
-        ],
-        "ans": "D",
-        "fullText": "Consider the following kinds of organisms: 1. Bacteria 2. Fungi 3. Flowering plants Some species of which of the above kinds of organisms are employed as biopesticides? (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
-      },
-      {
-        "qNum": 8,
-        "year": 2012,
-        "stem": "Biomass gasification is considereto be one of the sustainable solutions to the power crisis in India. In this context which of the following statements is/ are correct? 1. Coconut shells, groundnut shells and rice husk can be used in biomass gasification 2. The combustible gases generated from biomass gasificatioconsist of hydrogen and carbon dioxide only 3. The combustible gases generated from biomass gasification can be used for direct heat generation but not in internal combustion engines.",
-        "options": [
-          "(a) 1 only",
-          "(b) 2 and 3 only",
-          "(c) 1 and 3 only",
-          "(d) 1, 2 and 3"
-        ],
-        "ans": "A",
-        "fullText": "Biomass gasification is considereto be one of the sustainable solutions to the power crisis in India. In this context which of the following statements is/ are correct? 1. Coconut shells, groundnut shells and rice husk can be used in biomass gasification 2. The combustible gases generated from biomass gasificatioconsist of hydrogen and carbon dioxide only 3. The combustible gases generated from biomass gasification can be used for direct heat generation but not in internal combustion engines. (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
-      },
-      {
-        "qNum": 9,
-        "year": 2010,
-        "stem": "Hydrogen fuel cell vehicles produce one of the following as ‘exhaust’",
-        "options": [
-          "(a) NH3",
-          "(b) CH4",
-          "(c) H2O",
-          "(d) H2O2"
-        ],
-        "ans": "C",
-        "fullText": "Hydrogen fuel cell vehicles produce one of the following as ‘exhaust’ (a) NH3 (b) CH4 (c) H2O (d) H2O2"
-      },
-      {
-        "qNum": 10,
-        "year": 2010,
-        "stem": "Which feature of some species of blue green algae helps promoted them as bio-fertilizers?",
-        "options": [
-          "(a) They convert atmospheric methane into ammonia which the crop plants can absorb readily.",
-          "(b) They induce the crop plants to produce the enzymes which help convert atmospheric nitrogen to nitrates.",
-          "(c) They have the mechanism to convert atmospheric nitrogen into a form that the crop plants can absorb readily.",
-          "(d) They induce the roots of the crop plants to absorb the soil nitrates in larger quantities."
-        ],
-        "ans": "C",
-        "fullText": "Which feature of some species of blue green algae helps promoted them as bio-fertilizers? (a) They convert atmospheric methane into ammonia which the crop plants can absorb readily. (b) They induce the crop plants to produce the enzymes which help convert atmospheric nitrogen to nitrates. (c) They have the mechanism to convert atmospheric nitrogen into a form that the crop plants can absorb readily. (d) They induce the roots of the crop plants to absorb the soil nitrates in larger quantities."
-      },
-      {
-        "qNum": 11,
-        "year": 2010,
-        "stem": "Other than Jatropha curcas, why is Pongamia pinnata also considered a good option for the production of biodiesel in India? 1. Pongamia pinnata grows naturally in most of the arid regions of India 2. The seeds of Pongamia pinnata are rich in lipid content of which nearly half is oleic acid Which of the statement given above is/ are correct?",
-        "options": [
-          "(a) 1 only",
-          "(b) 2 only",
-          "(c) Both 1 and 2",
-          "(d) Neither 1 nor 2"
-        ],
-        "ans": "C",
-        "fullText": "Other than Jatropha curcas, why is Pongamia pinnata also considered a good option for the production of biodiesel in India? 1. Pongamia pinnata grows naturally in most of the arid regions of India 2. The seeds of Pongamia pinnata are rich in lipid content of which nearly half is oleic acid Which of the statement given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
-      },
-      {
-        "qNum": 12,
-        "year": 2010,
-        "stem": "Given below are the names of four energy crops. Which one of them can be cultivated for ethanol?",
-        "options": [
-          "(a) Jatropha",
-          "(b) Maize",
-          "(c) Pongamia",
-          "(d) Sunflower"
-        ],
-        "ans": "B",
-        "fullText": "Given below are the names of four energy crops. Which one of them can be cultivated for ethanol? (a) Jatropha (b) Maize (c) Pongamia (d) Sunflower"
-      },
-      {
-        "qNum": 13,
-        "year": 2009,
-        "stem": "In the context of alternative sources of energy, ethanol as a viable bio-fuel can be obtained from:",
-        "options": [
-          "(a) Potato",
-          "(b) Rice",
-          "(c) Sugarcane",
-          "(d) Wheat"
-        ],
-        "ans": "C",
-        "fullText": "In the context of alternative sources of energy, ethanol as a viable bio-fuel can be obtained from: (a) Potato (b) Rice (c) Sugarcane (d) Wheat"
       }
     ]
   }

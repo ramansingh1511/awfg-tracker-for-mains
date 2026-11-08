@@ -53,11 +53,11 @@
             <tr>
               ${i === 0 ? `<td rowspan="${items.length}" style="font-weight: 700; vertical-align: top; background: var(--bg-primary);"><span class="paper-badge ${SUBJECT_PAPER_MAP[sub] || 'GS-1'}" style="font-size: 0.65rem; padding: 2px 6px; margin-right: 4px;">${SUBJECT_PAPER_MAP[sub] || 'GS-1'}</span><br>${sub}</td>` : ''}
               <td style="font-weight: 600;">
-                <span class="microtheme-clickable" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(item.name)}', '${isCoinciding ? 'mains' : 'prelims'}')" title="Click to open all questions">${item.name}</span>
+                <span class="microtheme-clickable" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(item.name)}', '${isCoinciding ? 'mains' : 'prelims'}', '${Utils.escapeQuotes(sub)}')" title="Click to open all questions">${item.name}</span>
               </td>
               <td><span class="qs-pill">${item.qs} Qs</span></td>
               <td>
-                <span class="status-badge ${isCoinciding ? 'completed' : 'delayed'} microtheme-clickable" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(item.name)}', '${isCoinciding ? 'mains' : 'prelims'}')" style="font-size: 0.72rem; cursor: pointer;" title="Click to view ${isCoinciding ? 'Mains' : 'Prelims'} questions">
+                <span class="status-badge ${isCoinciding ? 'completed' : 'delayed'} microtheme-clickable" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(item.name)}', '${isCoinciding ? 'mains' : 'prelims'}', '${Utils.escapeQuotes(sub)}')" style="font-size: 0.72rem; cursor: pointer;" title="Click to view ${isCoinciding ? 'Mains' : 'Prelims'} questions">
                   ${isCoinciding ? '🔗 Overlaps with Mains' : '⚡ Prelims-Exclusive'}
                 </span>
               </td>
@@ -67,7 +67,7 @@
                   'Distinct factual focus (articles, lists, geographical locations, treaties, definitions). Revise via flashnotes.'}
               </td>
               <td>
-                <button class="pyq-pill-trigger" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(item.name)}', '${isCoinciding ? 'mains' : 'prelims'}')">👁️ View PYQs</button>
+                <button class="pyq-pill-trigger" onclick="AWFG_APP.openPyqModal('${Utils.escapeQuotes(item.name)}', '${isCoinciding ? 'mains' : 'prelims'}', '${Utils.escapeQuotes(sub)}')">👁️ View PYQs</button>
               </td>
             </tr>
           `;

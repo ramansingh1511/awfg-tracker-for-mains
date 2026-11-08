@@ -20,11 +20,11 @@
       return currentPyqData;
     },
 
-    open(microthemeName, preferredTab) {
+    open(microthemeName, preferredTab, context) {
       if (!microthemeName) return;
 
       const qData = (window.getMicrothemeQuestions && typeof window.getMicrothemeQuestions === 'function')
-        ? window.getMicrothemeQuestions(microthemeName)
+        ? window.getMicrothemeQuestions(microthemeName, context)
         : { mains: [], prelims: [] };
 
       currentPyqData.name = microthemeName;

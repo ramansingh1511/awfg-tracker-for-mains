@@ -1,4 +1,145 @@
 {
+  "nonconstitutionalstatutorybodies": {
+    "name": "Non-Constitutional/Statutory Bodies",
+    "tokens": [
+      "non",
+      "constitutional",
+      "statutory",
+      "bodies"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2025,
+        "stem": "With reference to the Government of India, consider the following informationOrganization: Some of its functions: It works under I. Directorate of Enforcement Enforcement of the Fugitive Economic Offenders Act, 2018 Internal Security Division–I, Ministry of Home Affairs II. Directorate of Revenue Intelligence Enforces the provisions of the Customs Act, 1962 Department of Revenue, Ministry of Finance III. Directorate General of Systems and Data Management Carrying out big data analytics to assist tax officers for better policy and nabbing tax evaders Department of Revenue, Ministry of Finance In how many of the above rows is the information correctly matched?",
+        "options": [
+          "(a) Only one",
+          "(b) Only two",
+          "(c) All three",
+          "(d) None"
+        ],
+        "ans": "B",
+        "fullText": "With reference to the Government of India, consider the following informationOrganization: Some of its functions: It works under I. Directorate of Enforcement Enforcement of the Fugitive Economic Offenders Act, 2018 Internal Security Division–I, Ministry of Home Affairs II. Directorate of Revenue Intelligence Enforces the provisions of the Customs Act, 1962 Department of Revenue, Ministry of Finance III. Directorate General of Systems and Data Management Carrying out big data analytics to assist tax officers for better policy and nabbing tax evaders Department of Revenue, Ministry of Finance In how many of the above rows is the information correctly matched? (a) Only one (b) Only two (c) All three (d) None"
+      },
+      {
+        "qNum": 2,
+        "year": 2025,
+        "stem": "With reference to India, consider the following: I. The Inter-State Council II. The National Security Council III. Zonal Councils How many of the above were established as per the provisions of the Constitution of India?",
+        "options": [
+          "(a) Only one",
+          "(b) Only two",
+          "(c) All the three",
+          "(d) None"
+        ],
+        "ans": "A",
+        "fullText": "With reference to India, consider the following: I. The Inter-State Council II. The National Security Council III. Zonal Councils How many of the above were established as per the provisions of the Constitution of India? (a) Only one (b) Only two (c) All the three (d) None"
+      },
+      {
+        "qNum": 3,
+        "year": 2025,
+        "stem": "Consider the following statements about Lokpal: I. The power of Lokpal applies to public servants of India, but not to the Indian public servants posted outside India. II. The Chairperson or a Member shall not be a Member of the Parliament or a Member of the Legislature of any State or Union Territory, and only the Chief Justice of India, whether incumbent or retired, has to be its Chairperson. III. The Chairperson or a Member shall not be a person of less than forty-five years of age on the date of assuming office. IV. Lokpal cannot inquire into the allegations of corruption against a sitting Prime Minister of India. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) III only",
+          "(b) II and III",
+          "(c) I and IV",
+          "(d) None of the above statements is correc"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following statements about Lokpal: I. The power of Lokpal applies to public servants of India, but not to the Indian public servants posted outside India. II. The Chairperson or a Member shall not be a Member of the Parliament or a Member of the Legislature of any State or Union Territory, and only the Chief Justice of India, whether incumbent or retired, has to be its Chairperson. III. The Chairperson or a Member shall not be a person of less than forty-five years of age on the date of assuming office. IV. Lokpal cannot inquire into the allegations of corruption against a sitting Prime Minister of India. Which of the statements given above is/ are correct? (a) III only (b) II and III (c) I and IV (d) None of the above statements is correc"
+      },
+      {
+        "qNum": 4,
+        "year": 2024,
+        "stem": "The North Eastern Council (NEC) was established by the North Eastern Council Act, 1971. Subsequent to the amendment of NEC Act in 2002, the Council comprises which of the following members: 1. Governor of the Constituent State 2. Chief Minister of the Constituent State 3. Three Members to be nominated by the President of India 4. The Home Minister of India Select the correct answer using the code given below:",
+        "options": [
+          "(a) 1,2 and 3*",
+          "(b) 1.3 and 4",
+          "(c) 2 and 4",
+          "(d) 1,2, 3 and 4"
+        ],
+        "ans": "A",
+        "fullText": "The North Eastern Council (NEC) was established by the North Eastern Council Act, 1971. Subsequent to the amendment of NEC Act in 2002, the Council comprises which of the following members: 1. Governor of the Constituent State 2. Chief Minister of the Constituent State 3. Three Members to be nominated by the President of India 4. The Home Minister of India Select the correct answer using the code given below: (a) 1,2 and 3* (b) 1.3 and 4 (c) 2 and 4 (d) 1,2, 3 and 4"
+      },
+      {
+        "qNum": 5,
+        "year": 2023,
+        "stem": "Consider the following organizations/bodies in India: 1. The National Commission for Backward Classes 2. The National Human Rights Commission 3. The National Law Commission 4. The National Consumer Disputes Redressal Commission How many of the above are constitutional bodies?",
+        "options": [
+          "(a) Only one",
+          "(b) Only two",
+          "(c) Only thrree",
+          "(d) All four"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following organizations/bodies in India: 1. The National Commission for Backward Classes 2. The National Human Rights Commission 3. The National Law Commission 4. The National Consumer Disputes Redressal Commission How many of the above are constitutional bodies? (a) Only one (b) Only two (c) Only thrree (d) All four"
+      },
+      {
+        "qNum": 6,
+        "year": 2015,
+        "stem": "The Government of India has established NITI Aayoga to replace the",
+        "options": [
+          "(a) Human Rights Commission",
+          "(b) Finance Commission",
+          "(c) Law Commission",
+          "(d) Planning Commission"
+        ],
+        "ans": "D",
+        "fullText": "The Government of India has established NITI Aayoga to replace the (a) Human Rights Commission (b) Finance Commission (c) Law Commission (d) Planning Commission"
+      },
+      {
+        "qNum": 7,
+        "year": 2013,
+        "stem": "Consider the following statements : 1. National Development Council is an organ of the Planning Commission. 2. The Economic and Social Planning is kept in the Concurrent List in the Constitution of India. 3. The Constitution of India prescribes that Panchayats should be assigned the task of preparation of plans for economic development and social justice. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following statements : 1. National Development Council is an organ of the Planning Commission. 2. The Economic and Social Planning is kept in the Concurrent List in the Constitution of India. 3. The Constitution of India prescribes that Panchayats should be assigned the task of preparation of plans for economic development and social justice. Which of the statements given above is/ are correct? (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 8,
+        "year": 2013,
+        "stem": "Which of the following bodies doenot/do not find mention in the Constitution? (1). National Development Council (2). Planning Commission (3). Zonal Councils Select the correct answer using the codes given below.",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 2 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "Which of the following bodies doenot/do not find mention in the Constitution? (1). National Development Council (2). Planning Commission (3). Zonal Councils Select the correct answer using the codes given below. (a) 1 and 2 only (b) 2 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 9,
+        "year": 2013,
+        "stem": "Who among the following constitute the National Development Council? (1). The Prime Minister (2). The Chairman, Finance Commission (3). Ministers of the Union Cabinet (4). Chief Ministers of the States Select the correct answer using the codes given below.",
+        "options": [
+          "(a) 1, 2 and 3 only",
+          "(b) 1, 3 and 4 only",
+          "(c) 2 and 4 only",
+          "(d) 1, 2, 3 and 4"
+        ],
+        "ans": "B",
+        "fullText": "Who among the following constitute the National Development Council? (1). The Prime Minister (2). The Chairman, Finance Commission (3). Ministers of the Union Cabinet (4). Chief Ministers of the States Select the correct answer using the codes given below. (a) 1, 2 and 3 only (b) 1, 3 and 4 only (c) 2 and 4 only (d) 1, 2, 3 and 4"
+      },
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "With reference to organisations under the Government of India: Sl. No.Organisation | Function | Controlling Union Ministry 1. Central Economic Intelligence Bureau (CEIB) | To coordinate between various laenforcement agencies | Ministry of Home Affairs 2. Serious Fraud Investigation Office (SFIO) | To investigate complex corporate frauds | Ministry of Finance 3. Central Bureau of Investigation (CBI) | To preserve values in public life and ensure the health of the national economy | Ministry of Personnel, Public Grievances and Pension In how many of the above rows are the given details correctly matched?",
+        "options": [
+          "(a) 1",
+          "(b) 2",
+          "(c) 3",
+          "(d) None"
+        ],
+        "ans": "A",
+        "fullText": "With reference to organisations under the Government of India: Sl. No.Organisation | Function | Controlling Union Ministry 1. Central Economic Intelligence Bureau (CEIB) | To coordinate between various laenforcement agencies | Ministry of Home Affairs 2. Serious Fraud Investigation Office (SFIO) | To investigate complex corporate frauds | Ministry of Finance 3. Central Bureau of Investigation (CBI) | To preserve values in public life and ensure the health of the national economy | Ministry of Personnel, Public Grievances and Pension In how many of the above rows are the given details correctly matched? (a) 1 (b) 2 (c) 3 (d) None"
+      }
+    ]
+  },
   "schemexruralagri": {
     "name": "SchemeXRural/Agri",
     "tokens": [
