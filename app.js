@@ -1616,6 +1616,9 @@
   // =============================================================
 
   function detectQuestionDomain(qText, subject) {
+    if (window.TOPPER_ENGINE && window.TOPPER_ENGINE.detectQuestionDomain) {
+      return window.TOPPER_ENGINE.detectQuestionDomain(qText, subject);
+    }
     const s = (subject || '').toLowerCase();
     const q = (qText || '').toLowerCase();
 
@@ -1691,6 +1694,9 @@
   }
 
   function generateComprehensiveBlueprint(qText, marks, subject) {
+    if (window.TOPPER_ENGINE && window.TOPPER_ENGINE.getComprehensiveBlueprint) {
+      return window.TOPPER_ENGINE.getComprehensiveBlueprint(qText, marks, subject);
+    }
     const marksNum = parseFloat(marks) || 10;
     const targetWords = (marksNum >= 15) ? 250 : 150;
     const suggestedTime = (marksNum >= 15) ? 11 : 7;
@@ -2320,7 +2326,9 @@
     // DOMAIN-CALIBRATED SMART FALLBACK ENGINES
     // ---------------------------------------------------------
     const cleanWords = qText.replace(/[^a-zA-Z0-9\s]/g, ' ').split(/\s+/).filter(w => w.length > 3 && !['what', 'explain', 'discuss', 'examine', 'critically', 'comment', 'analyse', 'analyze', 'their', 'which', 'about', 'under'].includes(w.toLowerCase()));
-    const keyTopicTitle = cleanWords.slice(0, 4).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') || 'Core Subject Matter';
+    const keyTopicTitle = (window.TOPPER_ENGINE && window.TOPPER_ENGINE.extractCleanTopicTitle)
+      ? window.TOPPER_ENGINE.extractCleanTopicTitle(qText)
+      : (cleanWords.slice(0, 4).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') || 'Core Subject Matter');
 
     // FALLBACK 1: GEOGRAPHY (Climatology / Physical / Environmental)
     if (domain.startsWith('GEOGRAPHY')) {
@@ -2614,7 +2622,12 @@
     md += `\n`;
 
     md += `### Conclusion & Way Forward\n`;
-    md += `${bp.conclusion}\n`;
+    md += `${bp.conclusion}\n\n`;
+
+    if (bp.evaluation) {
+      md += `### Critical Evaluation & Modern India Linkage\n`;
+      md += `${bp.evaluation}\n`;
+    }
 
     return md;
   }
@@ -2686,8 +2699,9 @@
   const activeTopperByMKey = {};
 
   function getRecommendedTopperKey(qText, subject) {
-    if (window.TOPPER_ENGINE && window.TOPPER_ENGINE.getRecommendedKey) {
-      return window.TOPPER_ENGINE.getRecommendedKey(qText, subject);
+    if (window.TOPPER_ENGINE && (window.TOPPER_ENGINE.getRecommendedTopperKey || window.TOPPER_ENGINE.getRecommendedKey)) {
+      const fn = window.TOPPER_ENGINE.getRecommendedTopperKey || window.TOPPER_ENGINE.getRecommendedKey;
+      return fn(qText, subject);
     }
     const domain = detectQuestionDomain(qText, subject);
     if (domain === 'GEOGRAPHY_CLIMATOLOGY') return 'medha';
@@ -2698,6 +2712,9 @@
   }
 
   function getDynamicTopperProfile(topperKey, qText, marks, subject) {
+    if (window.TOPPER_ENGINE && window.TOPPER_ENGINE.generateBlueprint) {
+      return window.TOPPER_ENGINE.generateBlueprint(topperKey, qText, marks, subject);
+    }
     const bp = generateComprehensiveBlueprint(qText, marks, subject);
     const baseTopper = TOPPER_ARCHETYPES_DB[topperKey] || TOPPER_ARCHETYPES_DB['aditya'];
 
@@ -2917,12 +2934,13 @@
     const marksBadge = card ? card.querySelector('.pyq-marks-badge') : null;
     const marksMatch = marksBadge ? marksBadge.textContent.match(/(\d+(?:\.\d+)?)\s*Marks/) : null;
     const marks = marksMatch ? parseFloat(marksMatch[1]) : 10;
+    const subject = (currentPyqData && currentPyqData.name) ? currentPyqData.name : '';
 
     activeTopperByMKey[mKey] = topperKey;
 
     const cont = document.getElementById(`topper-content-${mKey}`);
     if (cont) {
-      cont.innerHTML = renderTopperContentHtml(mKey, topperKey, qText, marks, '');
+      cont.innerHTML = renderTopperContentHtml(mKey, topperKey, qText, marks, subject);
     }
 
     const pillBar = document.getElementById(`topper-pills-${mKey}`);
@@ -2957,17 +2975,18 @@
     const card = document.getElementById(`mcard-${mKey}`);
     const stemEl = card ? card.querySelector('.pyq-stem-text') : null;
     const qText = stemEl ? stemEl.textContent : '';
+    const subject = (currentPyqData && currentPyqData.name) ? currentPyqData.name : '';
 
     let outline = '';
     let topperName = 'Topper';
 
     if (window.TOPPER_ENGINE && window.TOPPER_ENGINE.getMarkdownOutline) {
-      outline = window.TOPPER_ENGINE.getMarkdownOutline(topperKey, qText, marks, '');
+      outline = window.TOPPER_ENGINE.getMarkdownOutline(topperKey, qText, marks, subject);
       const t = window.TOPPER_ENGINE.ARCHETYPES[topperKey];
       if (t) topperName = t.name;
     } else {
-      const topper = getDynamicTopperProfile(topperKey, qText, marks, '');
-      outline = getComprehensiveOutlineText(qText, marks, '');
+      const topper = getDynamicTopperProfile(topperKey, qText, marks, subject);
+      outline = getComprehensiveOutlineText(qText, marks, subject);
       if (topper) topperName = topper.name;
     }
 
@@ -3003,7 +3022,7 @@
               ${esc(bp.domainLabel)}
             </div>
             <h3 style="margin: 2px 0 0; color: var(--text-primary); font-size: 1.12rem; display: flex; align-items: center; gap: 8px;">
-              <span>📐</span> Comprehensive Answer Blueprint & Strategy
+              <span>📐</span> GS-1 Answer Blueprint (5-Point UPSC Framework)
             </h3>
           </div>
           <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
@@ -3014,84 +3033,109 @@
           </div>
         </div>
 
-        <!-- Directive Meaning & Strategy -->
-        <div class="approach-directive-desc" style="margin-top: 10px;">
-          <strong>Directive Guidance (${esc(bp.directive)}):</strong> ${esc(bp.directiveMeaning)}
-        </div>
-
-        <!-- Section 1: Exact Ready-to-Write Introductions (Multiple Types) -->
-        <div style="margin-top: 14px;">
-          <h4 style="margin: 0 0 8px; font-size: 0.92rem; color: #f59e0b; display: flex; align-items: center; gap: 6px;">
-            <span>✍️</span> Ready-to-Write Introductions (${bp.intros.length} High-Scoring Approaches):
-          </h4>
-          <div style="display: flex; flex-direction: column; gap: 8px;">
-            ${bp.intros.map(intro => `
-              <div class="bp-intro-card">
-                <div class="bp-intro-tag">${esc(intro.type)}</div>
-                <div class="bp-intro-text">${esc(intro.text)}</div>
-              </div>
-            `).join('')}
+        <!-- Point 1: Simplify the Question (Demand Deconstruction) -->
+        <div style="margin-top: 12px; padding: 12px 14px; background: rgba(99, 102, 241, 0.06); border-radius: var(--radius-sm); border: 1px solid rgba(99, 102, 241, 0.2);">
+          <div style="font-size: 0.86rem; font-weight: 700; color: #818cf8; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+            <span>1️⃣</span> Simplify the Question & Demand Deconstruction
+          </div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.55;">
+            <div><strong>🎯 Directive Guidance (${esc(bp.directive)}):</strong> ${esc(bp.directiveMeaning)}</div>
+            ${bp.explicitDemands ? `<div style="margin-top: 4px;"><strong>📌 Explicit Demands:</strong> ${esc(bp.explicitDemands)}</div>` : ''}
+            ${bp.implicitDemands ? `<div style="margin-top: 4px;"><strong>🔍 Implicit Demands:</strong> ${esc(bp.implicitDemands)}</div>` : ''}
           </div>
         </div>
 
-        <!-- Section 2: Real Hand-Drawable Copy Diagram & Sketch Guide -->
+        <!-- Point 2: Approach Framework -->
         <div style="margin-top: 16px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 6px;">
-            <h4 style="margin: 0; font-size: 0.92rem; color: #38bdf8; display: flex; align-items: center; gap: 6px;">
-              <span>📊</span> Real-Looking Copy-Drawable Diagram:
-            </h4>
-            <span style="font-size: 0.76rem; color: var(--text-muted);">${esc(bp.diagramTitle)}</span>
+          <div style="font-size: 0.88rem; font-weight: 700; color: #f59e0b; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+            <span>2️⃣</span> Approach: Structured Framework (Intro, Body & Visual)
           </div>
-          <div class="bp-diagram-canvas">
-            <pre class="bp-diagram-pre">${esc(bp.diagramVisual)}</pre>
+
+          <!-- Section 2A: Ready-to-Write Introductions -->
+          <div style="margin-top: 6px;">
+            <div style="font-size: 0.82rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">
+              ✍️ Ready-to-Write Introductions (${bp.intros.length} High-Scoring Approaches):
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              ${bp.intros.map(intro => `
+                <div class="bp-intro-card">
+                  <div class="bp-intro-tag">${esc(intro.type)}</div>
+                  <div class="bp-intro-text">${esc(intro.text)}</div>
+                </div>
+              `).join('')}
+            </div>
           </div>
-          <div style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 6px; padding: 6px 10px; background: rgba(56, 189, 248, 0.08); border-radius: var(--radius-sm); border-left: 3px solid #38bdf8;">
-            <strong style="color: #38bdf8;">📝 1-Minute Copy Sketch Guide:</strong> ${esc(bp.diagramSketchInstructions)}
+
+          <!-- Section 2B: Real Hand-Drawable Copy Diagram & Sketch Guide -->
+          <div style="margin-top: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 6px;">
+              <span style="font-size: 0.82rem; font-weight: 700; color: #38bdf8;">📊 Real Hand-Drawable Copy Diagram (Smart Art):</span>
+              <span style="font-size: 0.76rem; color: var(--text-muted);">${esc(bp.diagramTitle)}</span>
+            </div>
+            <div class="bp-diagram-canvas">
+              <pre class="bp-diagram-pre">${esc(bp.diagramVisual)}</pre>
+            </div>
+            <div style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 6px; padding: 6px 10px; background: rgba(56, 189, 248, 0.08); border-radius: var(--radius-sm); border-left: 3px solid #38bdf8;">
+              <strong style="color: #38bdf8;">📝 1-Minute Copy Sketch Guide:</strong> ${esc(bp.diagramSketchInstructions)}
+            </div>
+          </div>
+
+          <!-- Section 2C: Exact Body Subheadings & Comprehensive Points -->
+          <div style="margin-top: 14px;">
+            <div style="font-size: 0.82rem; font-weight: 700; color: #10b981; margin-bottom: 8px;">
+              🏗️ Main Body Subheadings & Evidence-Backed Points:
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              ${bp.headings.map(h => `
+                <div class="bp-heading-card">
+                  <div class="bp-heading-title">${esc(h.title)}</div>
+                  <ul class="bp-heading-list">
+                    ${h.points.map(pt => `<li>${esc(pt)}</li>`).join('')}
+                  </ul>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Section 2D: Balanced Model Concluding Synthesis -->
+          <div style="margin-top: 12px; padding: 10px 14px; background: rgba(245, 158, 11, 0.08); border-radius: var(--radius-sm); border-left: 3px solid #f59e0b;">
+            <strong style="color: #f59e0b; font-size: 0.84rem;">🏁 Balanced Concluding Perspective:</strong>
+            <span style="color: var(--text-primary); margin-left: 6px; font-size: 0.84rem; line-height: 1.5;">${esc(bp.conclusion)}</span>
           </div>
         </div>
 
-        <!-- Section 3: Exact Body Subheadings & Comprehensive Points -->
-        <div style="margin-top: 16px;">
-          <h4 style="margin: 0 0 10px; font-size: 0.92rem; color: #10b981; display: flex; align-items: center; gap: 6px;">
-            <span>🏗️</span> Exact Subheadings & Technical Body Deconstruction:
-          </h4>
-          <div style="display: flex; flex-direction: column; gap: 10px;">
-            ${bp.headings.map(h => `
-              <div class="bp-heading-card">
-                <div class="bp-heading-title">${esc(h.title)}</div>
-                <ul class="bp-heading-list">
-                  ${h.points.map(pt => `<li>${esc(pt)}</li>`).join('')}
-                </ul>
-              </div>
-            `).join('')}
+        <!-- Point 3: Value Additions -->
+        <div style="margin-top: 16px; padding: 12px 14px; background: var(--bg-secondary); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <div style="font-size: 0.86rem; font-weight: 700; color: #10b981; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+            <span>3️⃣</span> Value Additions (Standard Texts, Archaeological/Empirical Benchmarks & Cultural Ethos)
           </div>
-        </div>
-
-        <!-- Section 4: Subject-Specific Value Additions -->
-        <div style="margin-top: 14px; padding: 12px 14px; background: var(--bg-secondary); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-          <strong style="color: var(--text-primary); font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
-            <span>💡</span> Disciplinary Value Additions & Empirical Anchors:
-          </strong>
-          <ul style="margin: 6px 0 0 18px; padding: 0; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.55;">
+          <ul style="margin: 4px 0 0 18px; padding: 0; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.55;">
             ${bp.valueAdds.map(va => `<li>${esc(va)}</li>`).join('')}
           </ul>
         </div>
 
-        <!-- Section 5: Model Concluding Synthesis -->
-        <div style="margin-top: 12px; padding: 10px 14px; background: rgba(245, 158, 11, 0.08); border-radius: var(--radius-sm); border-left: 3px solid #f59e0b;">
-          <strong style="color: #f59e0b;">🏁 Model Concluding Synthesis:</strong>
-          <span style="color: var(--text-primary); margin-left: 6px; font-size: 0.84rem; line-height: 1.5;">${esc(bp.conclusion)}</span>
-        </div>
-
-        <!-- Section 6: UPSC Topper Archetype Engine Integration -->
-        <div style="margin-top: 16px;">
+        <!-- Point 4: Model Answer via UPSC Topper Archetype Engine Integration -->
+        <div style="margin-top: 18px;">
+          <div style="font-size: 0.88rem; font-weight: 700; color: #8b5cf6; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+            <span>4️⃣</span> Model Topper Answers (Directly calibrated from AIR 1–13 copies)
+          </div>
           ${renderTopperSectionHtml(mKey, qText, marks, subject)}
         </div>
 
+        <!-- Point 5: Critical Evaluation & Modern India Linkage -->
+        ${bp.evaluation ? `
+          <div style="margin-top: 14px; padding: 12px 14px; background: rgba(56, 189, 248, 0.08); border-radius: var(--radius-sm); border-left: 3px solid #38bdf8;">
+            <strong style="color: #38bdf8; font-size: 0.84rem;">5️⃣ Critical Evaluation & Modern India Linkage:</strong>
+            <p style="margin: 4px 0 0; font-size: 0.84rem; color: var(--text-primary); line-height: 1.5;">
+              ${esc(bp.evaluation)}
+            </p>
+          </div>
+        ` : ''}
+
         <!-- Quick Outline Actions -->
-        <div class="approach-actions" style="margin-top: 14px;">
+        <div class="approach-actions" style="margin-top: 16px;">
           <button class="btn btn-subtle btn-sm" onclick="AWFG_APP.copyMainsOutline('${mKey}', this)">
-            📋 Copy Complete Structure
+            📋 Copy Complete 5-Point Structure
           </button>
           <button class="btn btn-primary btn-sm" onclick="AWFG_APP.insertTemplateToPad('${mKey}', ${marks})">
             📥 Insert Comprehensive Structure into Answer Pad
@@ -3123,8 +3167,9 @@
     const card = document.getElementById(`mcard-${mKey}`);
     const stemEl = card ? card.querySelector('.pyq-stem-text') : null;
     const qText = stemEl ? stemEl.textContent : '';
+    const subject = (currentPyqData && currentPyqData.name) ? currentPyqData.name : '';
 
-    const approach = generateMainsApproach(qText, marks);
+    const approach = generateMainsApproach(qText, marks, subject);
     const outline = getMainsOutlineText(qText, marks, approach);
 
     if (ta.value.trim().length > 0) {
@@ -3150,8 +3195,9 @@
     const marksBadge = card ? card.querySelector('.pyq-marks-badge') : null;
     const marksMatch = marksBadge ? marksBadge.textContent.match(/(\d+(?:\.\d+)?)\s*Marks/) : null;
     const marks = marksMatch ? parseFloat(marksMatch[1]) : 10;
+    const subject = (currentPyqData && currentPyqData.name) ? currentPyqData.name : '';
 
-    const approach = generateMainsApproach(qText, marks);
+    const approach = generateMainsApproach(qText, marks, subject);
     const outline = getMainsOutlineText(qText, marks, approach);
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
