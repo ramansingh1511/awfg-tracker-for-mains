@@ -1,0 +1,1128 @@
+{
+  "diversityandpluralism": {
+    "name": "Diversity and pluralism",
+    "subject": "Society",
+    "tokens": [
+      "diversity",
+      "pluralism"
+    ],
+    "questions": [
+      {
+        "year": 2024,
+        "marks": 15,
+        "text": "Critically analyse the proposition that there is a high correlation between India’s cultural diversities and socio-economic marginalities.",
+        "subject": "Society",
+        "microtheme": "Diversity and pluralism",
+        "page": 12
+      },
+      {
+        "year": 2024,
+        "marks": 15,
+        "text": "What is regional disparity? How does it differ from diversity?",
+        "subject": "Society",
+        "microtheme": "Diversity and pluralism",
+        "page": 12
+      },
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "How serious is the issue of regional disparity in India?",
+        "subject": "Society",
+        "microtheme": "Diversity and pluralism",
+        "page": 12
+      },
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "Do we have cultural pockets of small India all over the nation?",
+        "subject": "Society",
+        "microtheme": "Diversity and pluralism",
+        "page": 12
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Elaborate with examples. In the context of diversity of India, can it be said that the regions form cultural units rather than the States?",
+        "subject": "Society",
+        "microtheme": "Diversity and pluralism",
+        "page": 12
+      },
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "Give reasons with examples for your viewpoint. Describe any four cultural elements of diversity in India and rate their relative significance in building a national identity.",
+        "subject": "Society",
+        "microtheme": "Diversity and pluralism",
+        "page": 12
+      }
+    ]
+  },
+  "uniquenessofindiansociety": {
+    "name": "Uniqueness of Indian society",
+    "subject": "Society",
+    "tokens": [
+      "indian",
+      "uniqueness",
+      "society"
+    ],
+    "questions": [
+      {
+        "year": 2019,
+        "marks": 15,
+        "text": "Analyse the salience of 'sect' in Indian society vis-a-vis caste, region and religion.",
+        "subject": "Society",
+        "microtheme": "Uniqueness of Indian society",
+        "page": 12
+      },
+      {
+        "year": 2021,
+        "marks": 15,
+        "text": "How do you explain the statistics that show that the sex ratio in Tribes in India is more favourable to women than the sex ratio among Scheduled Castes?",
+        "subject": "Society",
+        "microtheme": "Uniqueness of Indian society",
+        "page": 12
+      },
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "How does Indian society maintain continuity in traditional social values?",
+        "subject": "Society",
+        "microtheme": "Uniqueness of Indian society",
+        "page": 12
+      },
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "Enumerate the changes taking place in it. What makes Indian society unique in sustaining its culture? Discuss. The spirit tolerance and love is not only an interesting feature of Indian society from very early times, but it is also playing an important part at the present. Elaborate.",
+        "subject": "Society",
+        "microtheme": "Uniqueness of Indian society",
+        "page": 12
+      }
+    ]
+  },
+  "family": {
+    "name": "Family",
+    "subject": "Society",
+    "tokens": [
+      "family"
+    ],
+    "questions": [
+      {
+        "year": 2023,
+        "marks": 10,
+        "text": "Intercaste marriages between castes which have socio-economic parity have increased, to some extent, but this is less true of interreligious marriages.",
+        "subject": "Society",
+        "microtheme": "Family",
+        "page": 12
+      },
+      {
+        "year": 2023,
+        "marks": 10,
+        "text": "Discuss. Child cuddling is now being replaced by mobile phones. Discuss its impact on the socialization of children.",
+        "subject": "Society",
+        "microtheme": "Family",
+        "page": 12
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Explore and evaluate the impact of 'Work From Home' on family relationships.",
+        "subject": "Society",
+        "microtheme": "Family",
+        "page": 12
+      },
+      {
+        "year": 2025,
+        "marks": 15,
+        "text": "The life cycle of a joint family depends on economic factors rather than social values.",
+        "subject": "Society",
+        "microtheme": "Family",
+        "page": 12
+      }
+    ]
+  },
+  "tribalissues": {
+    "name": "Tribal Issues",
+    "subject": "Society",
+    "tokens": [
+      "tribal"
+    ],
+    "questions": [
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "Do you think marriage as a sacrament in losing its value in Modern India?",
+        "subject": "Society",
+        "microtheme": "Tribal Issues",
+        "page": 12
+      },
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "Discuss. Does tribal development in India centre around two axes, those of displacement and of rehabilitation?",
+        "subject": "Society",
+        "microtheme": "Tribal Issues",
+        "page": 12
+      },
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "Give your opinion. Given the diversities among tribal communities in India, in which specific contexts should they be considered as a single category?",
+        "subject": "Society",
+        "microtheme": "Tribal Issues",
+        "page": 12
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Examine the uniqueness of tribal knowledge system when compared with mainstream knowledge and cultural systems.",
+        "subject": "Society",
+        "microtheme": "Tribal Issues",
+        "page": 12
+      }
+    ]
+  },
+  "populationandassociatedissues": {
+    "name": "Population and associated issues",
+    "subject": "Society",
+    "tokens": [
+      "population",
+      "associated"
+    ],
+    "questions": [
+      {
+        "year": 2021,
+        "marks": 15,
+        "text": "Discuss the main objectives of Population Education and point out the measures to achieve them in India in detail.",
+        "subject": "Society",
+        "microtheme": "Population and associated issues",
+        "page": 13
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Critically examine whether growing population is the cause of poverty OR poverty is the main cause of population increase in India.",
+        "subject": "Society",
+        "microtheme": "Population and associated issues",
+        "page": 13
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Discuss the changes in the trends of labour migration within and outside India in the last four decades.",
+        "subject": "Society",
+        "microtheme": "Population and associated issues",
+        "page": 13
+      },
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "“Empowering women is the key to control population growth”.",
+        "subject": "Society",
+        "microtheme": "Population and associated issues",
+        "page": 13
+      }
+    ]
+  },
+  "developmentandrelatedissues": {
+    "name": "Development and related issues",
+    "subject": "Society",
+    "tokens": [
+      "related",
+      "development"
+    ],
+    "questions": [
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "‘Achieving sustainable growth with emphasis on environmental protection could come into conflict with poor people’s needs in a country like India X Comment.",
+        "subject": "Society",
+        "microtheme": "Development and related issues",
+        "page": 13
+      },
+      {
+        "year": 2021,
+        "marks": 15,
+        "text": "In dealing with socio-economic issues of development, what kind of collaboration between government, NGO's and private sector would be most productive? What is Cryptocurrency? How does it affect global society?",
+        "subject": "Society",
+        "microtheme": "Development and related issues",
+        "page": 13
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "Has it been affecting Indian society also? How have digital initiatives in India contributed to the functioning of the educational system in the country?",
+        "subject": "Society",
+        "microtheme": "Development and related issues",
+        "page": 13
+      },
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "Elaborate your answer. Critically examine the challenges of demographic transition in contemporary India.",
+        "subject": "Society",
+        "microtheme": "Development and related issues",
+        "page": 13
+      },
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "What is the concept of a 'demographic winter'? Is the world moving towards such a situation?",
+        "subject": "Society",
+        "microtheme": "Development and related issues",
+        "page": 13
+      },
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "Elaborate. Why did human development fail to keep pace with economic development in India?",
+        "subject": "Society",
+        "microtheme": "Development and related issues",
+        "page": 13
+      }
+    ]
+  },
+  "poverty": {
+    "name": "Poverty",
+    "subject": "Society",
+    "tokens": [
+      "poverty"
+    ],
+    "questions": [
+      {
+        "year": 2020,
+        "marks": 10,
+        "text": "COVID-19 pandemic accelerated class inequalities and poverty in India.",
+        "subject": "Society",
+        "microtheme": "Poverty",
+        "page": 13
+      },
+      {
+        "year": 2018,
+        "marks": 10,
+        "text": "Comment. Despite implementation of various programmes for eradication of poverty by the government in India, poverty is still existing.' Explain by giving reasons.",
+        "subject": "Society",
+        "microtheme": "Poverty",
+        "page": 13
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "An essential condition to eradicate poverty is to liberate the poor from deprivation.",
+        "subject": "Society",
+        "microtheme": "Poverty",
+        "page": 13
+      },
+      {
+        "year": 2023,
+        "marks": 10,
+        "text": "Why is it important to take gender concerns into account in programme design and implementation?",
+        "subject": "Society",
+        "microtheme": "Poverty",
+        "page": 13
+      },
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "Inequality in the ownership pattern of resources is one of the major causes of poverty.",
+        "subject": "Society",
+        "microtheme": "Poverty",
+        "page": 43
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "Discuss in the context of 'paradox of poverty'. Poverty and malnutrition create a vicious cycle, adversely affecting human capital formation.",
+        "subject": "Society",
+        "microtheme": "Poverty",
+        "page": 43
+      },
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "What steps can be taken to break the cycle? Besides the welfare schemes, India needs deft management of inflation and unemployment to serve the poor and the underprivileged sections of the society.",
+        "subject": "Society",
+        "microtheme": "Poverty",
+        "page": 43
+      },
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "Discuss. “The incidence and intensity of poverty are more important in determining poverty based on income alone”.",
+        "subject": "Society",
+        "microtheme": "Poverty",
+        "page": 43
+      }
+    ]
+  },
+  "women": {
+    "name": "Women",
+    "subject": "Society",
+    "tokens": [
+      "women"
+    ],
+    "questions": [
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "Substantiate this statement with suitable examples Distinguish between gender equality, gender equity and women's empowerment.",
+        "subject": "Society",
+        "microtheme": "Women",
+        "page": 13
+      },
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "Explain why suicide among young women is increasing in Indian Society.",
+        "subject": "Society",
+        "microtheme": "Women",
+        "page": 13
+      },
+      {
+        "year": 2019,
+        "marks": 15,
+        "text": "Examine the role of ‘Gig Economy’ in the process of empowerment of women in India.",
+        "subject": "Society",
+        "microtheme": "Women",
+        "page": 13
+      },
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "What are the continued challenges for women in India against time and space?",
+        "subject": "Society",
+        "microtheme": "Women",
+        "page": 13
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Discuss Women's movement in India has not addressed the issues of women of lower social strata.",
+        "subject": "Society",
+        "microtheme": "Women",
+        "page": 13
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Substantiate your view. Discuss the various economic and socio-cultural forces that are driving increasing feminization of agriculture in India.",
+        "subject": "Society",
+        "microtheme": "Women",
+        "page": 13
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "How does patriarchy impact the position of a middle class working woman in India?",
+        "subject": "Society",
+        "microtheme": "Women",
+        "page": 13
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Why do some of the most prosperous regions of India have an adverse sex ratio for women? Give your arguments. Male membership needs to be encouraged in order to make women's organization free from gender bias. Comment.",
+        "subject": "Society",
+        "microtheme": "Women",
+        "page": 13
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "The Central Government frequently complains on the poor performance of the State Governments in eradicating suffering of the vulnerable sections of the society.",
+        "subject": "Social Justice",
+        "microtheme": "Women",
+        "page": 41
+      }
+    ]
+  },
+  "emergingurbanisationtrends": {
+    "name": "Emerging Urbanisation Trends",
+    "subject": "Society",
+    "tokens": [
+      "trends",
+      "emerging",
+      "urbanisation"
+    ],
+    "questions": [
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "How is the growth of Tier 2 cities related to the rise of a new middle class with an emphasis on the culture of consumption?",
+        "subject": "Society",
+        "microtheme": "Emerging Urbanisation Trends",
+        "page": 14
+      },
+      {
+        "year": 2021,
+        "marks": 15,
+        "text": "What are the main socio-economic implications arising out of the development of IT industries in major cities of India?.",
+        "subject": "Society",
+        "microtheme": "Emerging Urbanisation Trends",
+        "page": 14
+      },
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "The growth of cities as I.T. hubs has opened up new avenues employment but has also created new problems.",
+        "subject": "Society",
+        "microtheme": "Emerging Urbanisation Trends",
+        "page": 14
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Substantiate this statement with examples. Discussion the various social problems which originated out of the speedy process of urbanization in India.",
+        "subject": "Society",
+        "microtheme": "Emerging Urbanisation Trends",
+        "page": 14
+      }
+    ]
+  },
+  "povertyxurbanxmigrationurbanplanning": {
+    "name": "Poverty X Urban X Migration Urban Planning",
+    "subject": "Society",
+    "tokens": [
+      "migration",
+      "poverty",
+      "urban",
+      "planning"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "How does smart city in India, address the issues of urban poverty and distributive justice?",
+        "subject": "Society",
+        "microtheme": "Poverty X Urban X Migration Urban Planning",
+        "page": 14
+      },
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "Why do large cities tend to attract more migrants than smaller towns? Discuss in the light of conditions in developing countries.",
+        "subject": "Society",
+        "microtheme": "Poverty X Urban X Migration Urban Planning",
+        "page": 14
+      },
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "Does urbanization lead to more segregation and/or marginalization of the poor in Indian metropolises?",
+        "subject": "Society",
+        "microtheme": "Poverty X Urban X Migration Urban Planning",
+        "page": 14
+      },
+      {
+        "year": 2019,
+        "marks": 15,
+        "text": "How is efficient and affordable urban mass transport key to the rapid economic development of India?",
+        "subject": "Society",
+        "microtheme": "Poverty X Urban X Migration Urban Planning",
+        "page": 14
+      },
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "Mention core strategies for the transformation of aspirational districts in India and explain the nature of convergence, collaboration and competition for its success.",
+        "subject": "Society",
+        "microtheme": "Poverty X Urban X Migration Urban Planning",
+        "page": 14
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "With a brief background of quality of urban life in India, introduce the objectives and strategy of the 'Smart City Programme'.",
+        "subject": "Society",
+        "microtheme": "Poverty X Urban X Migration Urban Planning",
+        "page": 14
+      },
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "Discuss this statement in the backdrop of rural urban integration.",
+        "subject": "Society",
+        "microtheme": "Poverty X Urban X Migration Urban Planning",
+        "page": 14
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "What are the environmental implications of the reclamation of water bodies into urban land use?",
+        "subject": "Society",
+        "microtheme": "Poverty X Urban X Migration Urban Planning",
+        "page": 14
+      }
+    ]
+  },
+  "urbanwatermanagement": {
+    "name": "Urban Water Management",
+    "subject": "Society",
+    "tokens": [
+      "management",
+      "urban",
+      "water"
+    ],
+    "questions": [
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Smart cities in India cannot sustain without smart villages.",
+        "subject": "Society",
+        "microtheme": "Urban Water Management",
+        "page": 14
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Explain with examples. Account for the huge flooding of million cities in India including the smart ones like Hyderabad and Pune. Suggest lasting remedial measures. Major cities of India are becoming more vulnerable to flood conditions. Discuss.",
+        "subject": "Society",
+        "microtheme": "Urban Water Management",
+        "page": 14
+      }
+    ]
+  },
+  "globalisation": {
+    "name": "Globalisation",
+    "subject": "Society",
+    "tokens": [
+      "globalisation"
+    ],
+    "questions": [
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "Evaluate the impact of globalization on Indian youths with reference to social, political, economic and cultural spheres.",
+        "subject": "Society",
+        "microtheme": "Globalisation",
+        "page": 15
+      },
+      {
+        "year": 2025,
+        "marks": 15,
+        "text": "How do you account for the growing fast food industries given that there are increased health concerns in modern society? Illustrate your answer with the Indian experience.",
+        "subject": "Society",
+        "microtheme": "Globalisation",
+        "page": 15
+      },
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "Do you think that globalization results in only an aggressive consumer culture?",
+        "subject": "Society",
+        "microtheme": "Globalisation",
+        "page": 15
+      },
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "Globalization has increased urban migration by skilled, young, unmarried women from various classes.",
+        "subject": "Society",
+        "microtheme": "Globalisation",
+        "page": 15
+      },
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "How has this trend impacted upon their personal freedom and relationship with family?",
+        "subject": "Society",
+        "microtheme": "Globalisation",
+        "page": 15
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "Elucidate the relationship between globalization and new technology in a world of scarce resources, with special reference to India.",
+        "subject": "Society",
+        "microtheme": "Globalisation",
+        "page": 15
+      },
+      {
+        "year": 2019,
+        "marks": 15,
+        "text": "Is diversity and pluralism in India under threat due to globalisation?",
+        "subject": "Society",
+        "microtheme": "Globalisation",
+        "page": 15
+      },
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "Justify your answer. Are we losing our local identity for the global identity?",
+        "subject": "Society",
+        "microtheme": "Globalisation",
+        "page": 15
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Discuss. Globalization is generally said to promote cultural homogenization but due to this cultural specificities appear to be strengthened in the Indian Society.",
+        "subject": "Society",
+        "microtheme": "Globalisation",
+        "page": 15
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Elucidate. To what extent globalization has influenced the core of cultural diversity in India?",
+        "subject": "Society",
+        "microtheme": "Globalisation",
+        "page": 15
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Explain. Discuss the positive and negative effects of globalization on women in India. Critically examine the effects of globalization on the aged population in India.",
+        "subject": "Society",
+        "microtheme": "Globalisation",
+        "page": 15
+      }
+    ]
+  },
+  "castesystem": {
+    "name": "Caste System",
+    "subject": "Society",
+    "tokens": [
+      "caste",
+      "system"
+    ],
+    "questions": [
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "Is caste disappearing in urban India?",
+        "subject": "Society",
+        "microtheme": "Caste System",
+        "page": 16
+      },
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "Illustrate your answer with examples. Why is caste identity in India both fluid and static?",
+        "subject": "Society",
+        "microtheme": "Caste System",
+        "page": 16
+      },
+      {
+        "year": 2020,
+        "marks": 10,
+        "text": "Has caste lost its relevance in understanding the multi-cultural Indian Society?",
+        "subject": "Society",
+        "microtheme": "Caste System",
+        "page": 16
+      },
+      {
+        "year": 2018,
+        "marks": 10,
+        "text": "Elaborate your answer with illustrations. Caste system is assuming new identities and associational forms. Hence, caste system cannot be eradicated in India.",
+        "subject": "Society",
+        "microtheme": "Caste System",
+        "page": 16
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Comment. Debate the issue of whether and how contemporary movements for assertion of Dalit identity work towards annihilation of caste.",
+        "subject": "Society",
+        "microtheme": "Caste System",
+        "page": 16
+      }
+    ]
+  },
+  "communalism": {
+    "name": "Communalism",
+    "subject": "Society",
+    "tokens": [
+      "communalism"
+    ],
+    "questions": [
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "Discuss the impact of post-liberal economy on ethnic identity and communalism.",
+        "subject": "Society",
+        "microtheme": "Communalism",
+        "page": 16
+      },
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "Communalism arises either due to power struggle or relative deprivation.",
+        "subject": "Society",
+        "microtheme": "Communalism",
+        "page": 16
+      },
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "Argue by giving suitable illustrations. Distinguish between religiousness/religiosity and communalism giving one example of how the former has got transformed into the latter in independent India.",
+        "subject": "Society",
+        "microtheme": "Communalism",
+        "page": 16
+      },
+      {
+        "year": 2026,
+        "marks": 10,
+        "text": "Unity in diversity remains the defining feature of Indian society despite the challenges from communalism and regionalism.",
+        "subject": "Society",
+        "microtheme": "Communalism",
+        "page": 16
+      }
+    ]
+  },
+  "diversityandpluralismregionalism": {
+    "name": "Diversity and pluralism Regionalism",
+    "subject": "Society",
+    "tokens": [
+      "diversity",
+      "regionalism",
+      "pluralism"
+    ],
+    "questions": [
+      {
+        "year": 2020,
+        "marks": 10,
+        "text": "Comment. Do you agree that regionalism in India appears to be a consequence of rising cultural assertiveness?",
+        "subject": "Society",
+        "microtheme": "Diversity and pluralism Regionalism",
+        "page": 16
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Argue. What is the basis of regionalism? Is it that unequal distribution of benefits of development on regional basis eventually promotes regionalism?",
+        "subject": "Society",
+        "microtheme": "Diversity and pluralism Regionalism",
+        "page": 16
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Substantiate your answer. Growing feeling of regionalism is an important factor in the generation of demand for a separate state.",
+        "subject": "Society",
+        "microtheme": "Diversity and pluralism Regionalism",
+        "page": 16
+      },
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "Discuss. Are tolerance, assimilation and pluralism the key elements in the making of an Indian form of secularism?",
+        "subject": "Society",
+        "microtheme": "Diversity and pluralism Regionalism",
+        "page": 16
+      }
+    ]
+  },
+  "secularism": {
+    "name": "Secularism",
+    "subject": "Society",
+    "tokens": [
+      "secularism"
+    ],
+    "questions": [
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "Justify your answer. What are the challenges to our cultural practices in the name of secularism.",
+        "subject": "Society",
+        "microtheme": "Secularism",
+        "page": 16
+      },
+      {
+        "year": 2018,
+        "marks": 10,
+        "text": "How the Indian concept of secularism is different from the western model of secularism?",
+        "subject": "Society",
+        "microtheme": "Secularism",
+        "page": 16
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Discuss. How do the Indian debates on secularism differ from the debates in the West?",
+        "subject": "Society",
+        "microtheme": "Secularism",
+        "page": 16
+      }
+    ]
+  },
+  "socialempowerment": {
+    "name": "Social empowerment",
+    "subject": "Society",
+    "tokens": [
+      "empowerment",
+      "social"
+    ],
+    "questions": [
+      {
+        "year": 2026,
+        "marks": 10,
+        "text": "Do you think digital technology promotes social empowerment?",
+        "subject": "Society",
+        "microtheme": "Social empowerment",
+        "page": 16
+      },
+      {
+        "year": 2026,
+        "marks": 10,
+        "text": "Explain with examples. How do you understand disability?",
+        "subject": "Society",
+        "microtheme": "Social empowerment",
+        "page": 16
+      },
+      {
+        "year": 2024,
+        "marks": 15,
+        "text": "Substantiate the need for inclusive policy framework in India in this regard.",
+        "subject": "Society",
+        "microtheme": "Social empowerment",
+        "page": 16
+      },
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "Despite comprehensive policies for equity and social justice, underprivileged sections are not yet getting the full benefits of affirmative action envisaged by the Constitution.",
+        "subject": "Society",
+        "microtheme": "Social empowerment",
+        "page": 16
+      }
+    ]
+  },
+  "syllabus12welfareschemesforvulnerablesectionsofthepopulationbythecentreastatesandtheperformanctheseschemesmechanismlawsinstitutionsandbodieconstitutedfortheprotectibettermentofthesevulnersections": {
+    "name": "Syllabus 12. Welfare schemes for vulnerable sections of the population by the Centre aStates and the performancthese schemes; mechanismlaws, institutions and Bodieconstituted for the protectibetterment of these vulnersections.",
+    "subject": "Society",
+    "tokens": [
+      "sections",
+      "syllabus",
+      "protectibetterment",
+      "bodieconstituted",
+      "institutions",
+      "population",
+      "welfare",
+      "mechanismlaws",
+      "schemes",
+      "performancthese",
+      "centre",
+      "these",
+      "vulnersections",
+      "vulnerable",
+      "astates"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 15,
+        "text": "2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2nd e of s, s on and able 1 1 - 1 1 - 1 - 1 1 1 - ment elating an 1 2 2 2 1 1 1 2 2 1 2 1rty 1 - 1 - 2 1 1 1 - 1 - 1ountther er, s, ons, 2 - 2 2 - 2 1 2 1 1 1 3 a - 1 - 1 1 - - 1 - - - 1dre4 - 2 - - - - - - 1 - - obal involvdia’s 1 1 1 2 - 1 2 2 3 2 1 2itics of coundian 2 - - - 3 2 1 1 1 1 2 1l insti- - their 1 4 1 2 1 1 1 1 - - 1 125 20 20 20 20 20 20 20 20 20 20 2",
+        "subject": "Society",
+        "microtheme": "Syllabus 12. Welfare schemes for vulnerable sections of the population by the Centre aStates and the performancthese schemes; mechanismlaws, institutions and Bodieconstituted for the protectibetterment of these vulnersections.",
+        "page": 25
+      }
+    ]
+  },
+  "civilsociety": {
+    "name": "Civil Society",
+    "subject": "Society",
+    "tokens": [
+      "society",
+      "civil"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "Civil Society Organizations are often perceived as being anti-State actors rather than non-State actors.",
+        "subject": "Society",
+        "microtheme": "Civil Society",
+        "page": 38
+      },
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "Do you agree? Justify. Discuss the contribution of civil society groups for women’s effective and meaningful participation and representation in state legislatures in India.",
+        "subject": "Society",
+        "microtheme": "Civil Society",
+        "page": 38
+      },
+      {
+        "year": 2021,
+        "marks": 15,
+        "text": "Can Civil Society and Non-Governmental Organizations present an alternative model of public service delivery to benefit the common citizen?",
+        "subject": "Society",
+        "microtheme": "Civil Society",
+        "page": 38
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Discuss the challenges of this alternative model. In the Indian governance system, the role of non-state actors has been only marginal.",
+        "subject": "Society",
+        "microtheme": "Civil Society",
+        "page": 38
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Critically examine this statement. Examine critically the recent changes in the rules governing foreign funding of NGOs under the Foreign Contribution (Regulation) Act (FCRA), 1976.",
+        "subject": "Society",
+        "microtheme": "Civil Society",
+        "page": 38
+      }
+    ]
+  },
+  "donoragencies": {
+    "name": "Donor Agencies",
+    "subject": "Society",
+    "tokens": [
+      "agencies",
+      "donor"
+    ],
+    "questions": [
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "How can the role of NGOs be strengthened in India for development works relating to protection of the environment?",
+        "subject": "Society",
+        "microtheme": "Donor Agencies",
+        "page": 38
+      },
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "Discuss throwing light on the major constraints. Public charitable trusts have the potential to make India's development more inclusive as they relate to certain vital public issues.",
+        "subject": "Society",
+        "microtheme": "Donor Agencies",
+        "page": 38
+      },
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "Comment. Do you agree with the view that increasing dependence on donor agencies for development reduces the importance of community participation in the development process?",
+        "subject": "Society",
+        "microtheme": "Donor Agencies",
+        "page": 38
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "Explain with examples. “Micro-Finance as an anti-poverty vaccine, is aimed at asset creation and income security of the rural poor in India”.",
+        "subject": "Society",
+        "microtheme": "Donor Agencies",
+        "page": 38
+      }
+    ]
+  },
+  "shgs": {
+    "name": "SHGs",
+    "subject": "Society",
+    "tokens": [
+      "shgs"
+    ],
+    "questions": [
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "Justify your answer. Can the vicious cycle of gender inequality, poverty and malnutrition be broken through microfinancing of women SHGs?",
+        "subject": "Society",
+        "microtheme": "SHGs",
+        "page": 38
+      },
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "Evaluate the role of Self Help Groups in achieving the twin objectives along with empowering women in rural India. ‘The emergence of Self Help Groups(SHGs) in contemporary times points to the slow but steady withdrawal of the state from developmental activities’.",
+        "subject": "Society",
+        "microtheme": "SHGs",
+        "page": 38
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Examine the role of the SHGs in developmental activities and the measures taken by the Government of India to promote the SHGs.",
+        "subject": "Society",
+        "microtheme": "SHGs",
+        "page": 38
+      },
+      {
+        "year": 2014,
+        "marks": 12.5,
+        "text": "The Self-Help Group (SHG) Bank Linkage Programme (SBLP), which is India's own innovation, has proved to be one of the most effective poverty alleviation and women empowerment programmes.",
+        "subject": "Society",
+        "microtheme": "SHGs",
+        "page": 38
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Elucidate. The penetration of Self Help Groups (SHGs) in rural areas in promoting participation in development programmes is facing socio-cultural hurdles. Examine. The legitimacy and accountability of Self Help Groups (SHGs) and their patrons, the micro-finance outfits, need systematic assessment and scrutiny for the sustained success of the concept. Discuss.",
+        "subject": "Society",
+        "microtheme": "SHGs",
+        "page": 38
+      }
+    ]
+  },
+  "hunger": {
+    "name": "Hunger",
+    "subject": "Society",
+    "tokens": [
+      "hunger"
+    ],
+    "questions": [
+      {
+        "year": 2026,
+        "marks": 10,
+        "text": "Malnutrition in India is not merely a public health concern; it is also a challenge of social equity, human development and effective welfare governance.",
+        "subject": "Society",
+        "microtheme": "Hunger",
+        "page": 43
+      },
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "Discuss. There is a growing divergence in the relationship between poverty and hunger in India.",
+        "subject": "Society",
+        "microtheme": "Hunger",
+        "page": 43
+      },
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "The shrinking of social expenditure by the government is forcing the poor to spend more on NonFood essential items squeezing their food X budget.- Elucidate.",
+        "subject": "Society",
+        "microtheme": "Hunger",
+        "page": 43
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "How far do you agree with the view that the focus on lack of availability of food as the main cause of hunger takes the attention away from ineffective human development policies in India?",
+        "subject": "Society",
+        "microtheme": "Hunger",
+        "page": 43
+      },
+      {
+        "year": 2025,
+        "marks": 15,
+        "text": "The concept of Mid Day Meal (MDM) scheme is almost a century old in India with early beginnings in Madras Presidency in pre-independent India.",
+        "subject": "Society",
+        "microtheme": "Hunger",
+        "page": 43
+      },
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "The scheme has again been given impetus in most states in the last two decades. Critically examine its twin objectives, latest mandates and success.",
+        "subject": "Society",
+        "microtheme": "Hunger",
+        "page": 43
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "In this context analyse the latest United Nations Multidimensional Poverty Index Report. ‘Poverty Alleviation Programmes in India remain mere show pieces until and unless they are backed by political will’. Discuss with reference to the performance of the major poverty alleviation programmes in India. Hunger and Poverty are the biggest challenges for good governance in India still today. Evaluate how far successive governments have progressed in dealing with these humongous problems. Suggest measures for improvement. Though there have been several different estimates of poverty in India, all indicate reduction in poverty levels over time. Do you agree? Critically examine with reference to urban and rural poverty indicators.",
+        "subject": "Society",
+        "microtheme": "Hunger",
+        "page": 43
+      }
+    ]
+  }
+}

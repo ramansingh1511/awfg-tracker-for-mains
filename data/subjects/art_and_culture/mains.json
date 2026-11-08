@@ -1,0 +1,1104 @@
+{
+  "ancienthistoryxeducationsciencemedicine": {
+    "name": "Ancient History X Education, Science, Medicine",
+    "subject": "Art and Culture",
+    "tokens": [
+      "ancient",
+      "science",
+      "history",
+      "medicine",
+      "education"
+    ],
+    "questions": [
+      {
+        "year": 2020,
+        "marks": 10,
+        "text": "Taxila university was one of the oldest universities of the world with which were associated a number of renowned learned personalities of different disciplines.",
+        "subject": "Art and Culture",
+        "microtheme": "Ancient History X Education, Science, Medicine",
+        "page": 6
+      },
+      {
+        "year": 2013,
+        "marks": 5,
+        "text": "Discuss. The rock-cut architecture represents one of the most important sources of our knowledge of early Indian art and history.",
+        "subject": "Art and Culture",
+        "microtheme": "Ancient History X Education, Science, Medicine",
+        "page": 6
+      },
+      {
+        "year": 2026,
+        "marks": 10,
+        "text": "Discuss. Assess the importance of the accounts of the Chinese and Arab travellers in the reconstruction of the history of India.",
+        "subject": "Art and Culture",
+        "microtheme": "Ancient History X Education, Science, Medicine",
+        "page": 6
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Analyze the importance of Ashokan inscriptions for reconstructing Mauryan history. Though not very useful from the point of view of a connected political history of South India, the Sangam literature portrays the social and economic conditions of its time with remarkable vividness. Comment.",
+        "subject": "Art and Culture",
+        "microtheme": "Ancient History X Education, Science, Medicine",
+        "page": 6
+      }
+    ]
+  },
+  "architecturexcaves": {
+    "name": "Architecture X Caves,",
+    "subject": "Art and Culture",
+    "tokens": [
+      "caves",
+      "architecture"
+    ],
+    "questions": [
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Its strategic location caused its fame to flourish, but unlike Nalanda, it is not considered as a university in the modern sense.",
+        "subject": "Art and Culture",
+        "microtheme": "Architecture X Caves,",
+        "page": 6
+      },
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "Discuss. Mesolithic rock cut architecture of India not only reflects the cultural life of the times but also a tine aesthetic sense comparable to modern painting.",
+        "subject": "Art and Culture",
+        "microtheme": "Architecture X Caves,",
+        "page": 6
+      }
+    ]
+  },
+  "artformsxdancebhaktiandsufi": {
+    "name": "Art forms X Dance Bhakti and Sufi",
+    "subject": "Art and Culture",
+    "tokens": [
+      "bhakti",
+      "art",
+      "dance",
+      "forms",
+      "sufi"
+    ],
+    "questions": [
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "Critically evaluate this comment. Discuss the Tandava dance as recorded in the early Indian inscriptions.",
+        "subject": "Art and Culture",
+        "microtheme": "Art forms X Dance Bhakti and Sufi",
+        "page": 6
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Evaluate the nature of the Bhakti literature and its contribution to Indian culture.",
+        "subject": "Art and Culture",
+        "microtheme": "Art forms X Dance Bhakti and Sufi",
+        "page": 6
+      },
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "The Bhakti movement received a remarkable re-orientation with the advent of Sri Chaitanya Mahaprabhu.",
+        "subject": "Art and Culture",
+        "microtheme": "Art forms X Dance Bhakti and Sufi",
+        "page": 6
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Comment. Highlight the Central Asian and Greco -Bactrian elements in Gandhara art.",
+        "subject": "Art and Culture",
+        "microtheme": "Art forms X Dance Bhakti and Sufi",
+        "page": 6
+      },
+      {
+        "year": 2018,
+        "marks": 10,
+        "text": "Early Buddhist Stupa-art, while depicting folk motifs and narratives successfully expounds Buddhist ideals.",
+        "subject": "Art and Culture",
+        "microtheme": "Art forms X Dance Bhakti and Sufi",
+        "page": 6
+      },
+      {
+        "year": 2018,
+        "marks": 10,
+        "text": "Elucidate. Gandhara sculpture owed as much to the Romans as to the Greeks. Explain. Safeguarding the Indian art heritage is the need of the moment.",
+        "subject": "Art and Culture",
+        "microtheme": "Art forms X Dance Bhakti and Sufi",
+        "page": 6
+      }
+    ]
+  },
+  "movements": {
+    "name": "Movements",
+    "subject": "Art and Culture",
+    "tokens": [
+      "movements"
+    ],
+    "questions": [
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Discuss. Sufis and medieval mystic saints failed to modify either the religious ideas and practices or the outward structure of Hindu/Muslim societies to any appreciable extent.",
+        "subject": "Art and Culture",
+        "microtheme": "Movements",
+        "page": 6
+      }
+    ]
+  },
+  "indusvalleycivilizationkingdomxcholaxguptakingdomxsultanatekingdoms": {
+    "name": "Indus Valley Civilization Kingdom X Chola X Gupta Kingdom X Sultanate Kingdoms",
+    "subject": "Art and Culture",
+    "tokens": [
+      "indus",
+      "sultanate",
+      "valley",
+      "chola",
+      "kingdoms",
+      "civilization",
+      "gupta",
+      "kingdom"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "Discuss the salient features of the Harappan architecture.",
+        "subject": "Art and Culture",
+        "microtheme": "Indus Valley Civilization Kingdom X Chola X Gupta Kingdom X Sultanate Kingdoms",
+        "page": 7
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "The ancient civilization in Indian sub-continent differed from those of Egypt, Mesopotamia and Greece in that its culture and traditions have been preserved without a breakdown to the present day.",
+        "subject": "Art and Culture",
+        "microtheme": "Indus Valley Civilization Kingdom X Chola X Gupta Kingdom X Sultanate Kingdoms",
+        "page": 7
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Comment. To what extent has the urban planning and culture of the Indus Valley Civilization provided inputs to the present day urbanization?",
+        "subject": "Art and Culture",
+        "microtheme": "Indus Valley Civilization Kingdom X Chola X Gupta Kingdom X Sultanate Kingdoms",
+        "page": 7
+      },
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "Discuss. Discuss the main contributions of Gupta period and Chola period to Indian heritage and culture.",
+        "subject": "Art and Culture",
+        "microtheme": "Indus Valley Civilization Kingdom X Chola X Gupta Kingdom X Sultanate Kingdoms",
+        "page": 7
+      },
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "What were the major technological changes introduced during the Sultanate period?",
+        "subject": "Art and Culture",
+        "microtheme": "Indus Valley Civilization Kingdom X Chola X Gupta Kingdom X Sultanate Kingdoms",
+        "page": 7
+      },
+      {
+        "year": 2024,
+        "marks": 15,
+        "text": "Enumerate. How do you justify the view that the level of excellence of Gupta numismatic art is not at all noticeable in later times?",
+        "subject": "Art and Culture",
+        "microtheme": "Indus Valley Civilization Kingdom X Chola X Gupta Kingdom X Sultanate Kingdoms",
+        "page": 7
+      },
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "Chola architecture represents a high watermark in the evolution of temple architecture.",
+        "subject": "Art and Culture",
+        "microtheme": "Indus Valley Civilization Kingdom X Chola X Gupta Kingdom X Sultanate Kingdoms",
+        "page": 7
+      }
+    ]
+  },
+  "kingdomsxchola": {
+    "name": "Kingdoms X Chola",
+    "subject": "Art and Culture",
+    "tokens": [
+      "chola",
+      "kingdoms"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "How did those technological changes influence the Indian society?",
+        "subject": "Art and Culture",
+        "microtheme": "Kingdoms X Chola",
+        "page": 7
+      },
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "'The sculptors filled the Chandella artform with resilient vigor and breadth of life.' Elucidate.",
+        "subject": "Art and Culture",
+        "microtheme": "Kingdoms X Chola",
+        "page": 7
+      }
+    ]
+  },
+  "sourcesxliteraturevedicculture": {
+    "name": "Sources X Literature Vedic Culture",
+    "subject": "Art and Culture",
+    "tokens": [
+      "vedic",
+      "literature",
+      "sources",
+      "culture"
+    ],
+    "questions": [
+      {
+        "year": 2020,
+        "marks": 10,
+        "text": "Estimate the contribution of Pallavas of Kanchi for the development of art and literature of South India.",
+        "subject": "Art and Culture",
+        "microtheme": "Sources X Literature Vedic Culture",
+        "page": 7
+      },
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "Krishnadeva Raya, the King of Vijayanagar, was not only an accomplished scholar himself but was also a great patron of learning and literature.",
+        "subject": "Art and Culture",
+        "microtheme": "Sources X Literature Vedic Culture",
+        "page": 7
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "Discuss. Vijayanagara architecture exemplifies the amalgamation of past traditions with contemporary practices.",
+        "subject": "Art and Culture",
+        "microtheme": "Sources X Literature Vedic Culture",
+        "page": 7
+      },
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "Elucidate with examples. Indian philosophy and tradition played a significant role in conceiving and shaping the monuments and their art in India.",
+        "subject": "Art and Culture",
+        "microtheme": "Sources X Literature Vedic Culture",
+        "page": 7
+      },
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "Discuss. Discuss the significance of the lion and bull figures in Indian mythology, art and architecture.",
+        "subject": "Art and Culture",
+        "microtheme": "Sources X Literature Vedic Culture",
+        "page": 7
+      },
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "Persian literary sources of medieval India reflect the spirit of the age.",
+        "subject": "Art and Culture",
+        "microtheme": "Sources X Literature Vedic Culture",
+        "page": 7
+      },
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "Comment. Underline the changes in the field of society and economy from the Rig Vedic to the later Vedic period. What are the main features of Vedic society and religion?",
+        "subject": "Art and Culture",
+        "microtheme": "Sources X Literature Vedic Culture",
+        "page": 7
+      }
+    ]
+  },
+  "kingdomsxkings": {
+    "name": "Kingdoms X Kings",
+    "subject": "Art and Culture",
+    "tokens": [
+      "kingdoms",
+      "kings"
+    ],
+    "questions": [
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "Pala period is the most significant phase in the history of Buddhism in India.",
+        "subject": "Art and Culture",
+        "microtheme": "Kingdoms X Kings",
+        "page": 7
+      },
+      {
+        "year": 2013,
+        "marks": 5,
+        "text": "Though the great Cholas are no more yet their name is still remembered with great pride because of their highest achievements in the domain of art and architecture.\" Comment.",
+        "subject": "Art and Culture",
+        "microtheme": "Kingdoms X Kings",
+        "page": 7
+      }
+    ]
+  },
+  "philosophicalschoolssculptures": {
+    "name": "Philosophical Schools Sculptures",
+    "subject": "Art and Culture",
+    "tokens": [
+      "sculptures",
+      "schools",
+      "philosophical"
+    ],
+    "questions": [
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Discuss. Examine the main aspects of Akbar’s religious syncretism.",
+        "subject": "Art and Culture",
+        "microtheme": "Philosophical Schools Sculptures",
+        "page": 7
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "How will you explain that medieval Indian temple sculptures represent the social life of those days?",
+        "subject": "Art and Culture",
+        "microtheme": "Philosophical Schools Sculptures",
+        "page": 7
+      }
+    ]
+  },
+  "miscellaneous": {
+    "name": "Miscellaneous",
+    "subject": "Art and Culture",
+    "tokens": [
+      "miscellaneous"
+    ],
+    "questions": [
+      {
+        "year": 2023,
+        "marks": 10,
+        "text": "Do you think some of the features are still prevailing in Indian society? Explain the role of geographical factors towards the development of Ancient India.",
+        "subject": "Art and Culture",
+        "microtheme": "Miscellaneous",
+        "page": 7
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Comment. What are the two major legal initiatives by the State since Independence, addressing discrimination against Scheduled Tribes (STs)?",
+        "subject": "Society",
+        "microtheme": "Miscellaneous",
+        "page": 16
+      },
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "Why are the tribals in India referred to as the Scheduled Tribes?",
+        "subject": "Society",
+        "microtheme": "Miscellaneous",
+        "page": 16
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "Indicate the major provisions enshrined in the Constitution of India for their upliftment. The ethos of civil service in India stand for the combination of professionalism with nationalistic consciousness X Elucidate. Customs and traditions suppress reason leading to obscurantism. Do you agree?",
+        "subject": "Society",
+        "microtheme": "Miscellaneous",
+        "page": 16
+      }
+    ]
+  },
+  "foodprocessingsector": {
+    "name": "Food Processing Sector",
+    "subject": "Agriculture",
+    "tokens": [
+      "food",
+      "processing"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 15,
+        "text": "Examine the scope of the food processing industries in India.",
+        "subject": "Agriculture",
+        "microtheme": "Food Processing Sector",
+        "page": 55
+      },
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "Elaborate the measures taken by the government in the food processing industries for generating employment opportunities.",
+        "subject": "Agriculture",
+        "microtheme": "Food Processing Sector",
+        "page": 55
+      },
+      {
+        "year": 2020,
+        "marks": 10,
+        "text": "Elaborate the scope and significance of the food processing industry in India What are the challenges and opportunities of food processing sector in the country?",
+        "subject": "Agriculture",
+        "microtheme": "Food Processing Sector",
+        "page": 55
+      },
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "How can income of the farmers be substantially increased by encouraging food processing?",
+        "subject": "Agriculture",
+        "microtheme": "Food Processing Sector",
+        "page": 55
+      },
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "Elaborate on the policy taken by the government of India to meet the challenges of the food processing sector.",
+        "subject": "Agriculture",
+        "microtheme": "Food Processing Sector",
+        "page": 55
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "What are the reasons for poor acceptance of cost-effective small processing unit?",
+        "subject": "Agriculture",
+        "microtheme": "Food Processing Sector",
+        "page": 55
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "How the food processing unit will be helpful to uplift the socio-economic status of poor farmers?",
+        "subject": "Agriculture",
+        "microtheme": "Food Processing Sector",
+        "page": 55
+      },
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "What are the impediments in marketing and supply chain management in developing the food processing industry in India?",
+        "subject": "Agriculture",
+        "microtheme": "Food Processing Sector",
+        "page": 55
+      }
+    ]
+  },
+  "economicdevelopm12effectsoflibandtheireffectbopfdifpiexternal": {
+    "name": "Economic Developm12. Effects of liband their effectBoP, FDI, FPI, External",
+    "subject": "Agriculture",
+    "tokens": [
+      "effects",
+      "developm12",
+      "liband",
+      "economic",
+      "fpi",
+      "their",
+      "fdi",
+      "effectbop",
+      "external"
+    ],
+    "questions": [
+      {
+        "year": 2024,
+        "marks": 15,
+        "text": "Craze for gold in Indians have led to a surge in import of gold in recent years and put pressure on balance of payments and external value of rupee. In view of this, examine the merits of Gold Monetization Scheme.",
+        "subject": "Agriculture",
+        "microtheme": "Economic Developm12. Effects of liband their effectBoP, FDI, FPI, External",
+        "page": 55
+      },
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "Normally countries shift from agriculture to industry and then later to services, but India shifted directly from agriculture to services. What are the reasons for the huge growth-services vis-a-visindustry in the country? Can India become a developed country without a strong industrial base? Examine the impact of liberalization on companies owned by Indians. Are they competing with the MNCs satisfactorily? Discuss. Account for the failure of manufacturing sector in achieving the goal of labour-intensive exports rather than capital-intensive exports. Suggest measures for more labour-intensive rather than capital-intensive exports. There is a clear acknowledgement that Special Economic Zones (SEZs) are a tool of industrial development, manufacturing and exports. Recognising this potential, the whole instrumentality of SEZs require augmentation. Discuss the issue plaguing the success of SEZs with respect to taxation, governing laws and administration. What are the challenges before the Indian economy when the world is moving away from free trade and multilateralism to protectionism and bilateralism? How can these challenges be met?",
+        "subject": "Agriculture",
+        "microtheme": "Economic Developm12. Effects of liband their effectBoP, FDI, FPI, External",
+        "page": 55
+      }
+    ]
+  },
+  "foreignexchangecurrencydevaluationlabourreformlpgreforms": {
+    "name": "Foreign Exchange, Currency Devaluation Labour Reform LPG Reforms",
+    "subject": "Agriculture",
+    "tokens": [
+      "reforms",
+      "lpg",
+      "labour",
+      "foreign",
+      "exchange",
+      "reform",
+      "currency",
+      "devaluation"
+    ],
+    "questions": [
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "How would the recent phenomena of protectionism and currency manipulations in world trade affect macroeconomic stability of India?",
+        "subject": "Agriculture",
+        "microtheme": "Foreign Exchange, Currency Devaluation Labour Reform LPG Reforms",
+        "page": 55
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Discuss the merits and demerits of the four 'Labour Codes' in the context of labour market reforms in India.",
+        "subject": "Agriculture",
+        "microtheme": "Foreign Exchange, Currency Devaluation Labour Reform LPG Reforms",
+        "page": 55
+      },
+      {
+        "year": 2014,
+        "marks": 12.5,
+        "text": "What has been the progress so far in this regard? “Industrial growth rate has lagged behind in the overall growth of Gross-Domestic-Product (GDP)in the post-reform period” Give reasons.",
+        "subject": "Agriculture",
+        "microtheme": "Foreign Exchange, Currency Devaluation Labour Reform LPG Reforms",
+        "page": 55
+      }
+    ]
+  },
+  "sez": {
+    "name": "SEZ",
+    "subject": "Agriculture",
+    "tokens": [
+      "sez"
+    ],
+    "questions": [
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "How far the recent changes is Industrial Policy are capable of increasing the industrial growth rate?",
+        "subject": "Agriculture",
+        "microtheme": "SEZ",
+        "page": 55
+      },
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "How globalization has led to the reduction of employment in the formal sector of the Indian economy?",
+        "subject": "Agriculture",
+        "microtheme": "SEZ",
+        "page": 55
+      }
+    ]
+  },
+  "trade": {
+    "name": "Trade",
+    "subject": "Agriculture",
+    "tokens": [
+      "trade"
+    ],
+    "questions": [
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Is increased informalization detrimental to the development of the country?",
+        "subject": "Agriculture",
+        "microtheme": "Trade",
+        "page": 55
+      }
+    ]
+  },
+  "cropdiversificationcroppingpatternintegratedfarming": {
+    "name": "Crop Diversification Cropping pattern Integrated Farming",
+    "subject": "Agriculture",
+    "tokens": [
+      "crop",
+      "integrated",
+      "diversification",
+      "pattern",
+      "cropping",
+      "farming"
+    ],
+    "questions": [
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "How Indian agriculture has been transformed from food scarcity to food surplus level?",
+        "subject": "Agriculture",
+        "microtheme": "Crop Diversification Cropping pattern Integrated Farming",
+        "page": 58
+      },
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "Explain the various government policies implemented for diversification of Indian agriculture.",
+        "subject": "Agriculture",
+        "microtheme": "Crop Diversification Cropping pattern Integrated Farming",
+        "page": 58
+      },
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "Explain the factors influencing the decision of the farmers on the selection of high value crops in India.",
+        "subject": "Agriculture",
+        "microtheme": "Crop Diversification Cropping pattern Integrated Farming",
+        "page": 58
+      },
+      {
+        "year": 2021,
+        "marks": 15,
+        "text": "Explain the changes in cropping pattern in India in the context of changes in consumption pattern and marketing conditions. What are the present challenges before crop diversification?",
+        "subject": "Agriculture",
+        "microtheme": "Crop Diversification Cropping pattern Integrated Farming",
+        "page": 58
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "How do emerging technologies provide an opportunity for crop diversification?",
+        "subject": "Agriculture",
+        "microtheme": "Crop Diversification Cropping pattern Integrated Farming",
+        "page": 58
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "How has the emphasis on certain crops brought about changes in cropping patterns in recent past?",
+        "subject": "Agriculture",
+        "microtheme": "Crop Diversification Cropping pattern Integrated Farming",
+        "page": 58
+      },
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "What are the major reasons for declining rice and wheat yield in the cropping system?",
+        "subject": "Agriculture",
+        "microtheme": "Crop Diversification Cropping pattern Integrated Farming",
+        "page": 58
+      },
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "How crop diversification is helpful to stabilize the yield of the crop in the system?",
+        "subject": "Agriculture",
+        "microtheme": "Crop Diversification Cropping pattern Integrated Farming",
+        "page": 58
+      },
+      {
+        "year": 2018,
+        "marks": 10,
+        "text": "What is allelopathy? Discuss its role in major cropping systems of irrigated agriculture. What is Integrated Farming System? How is it helpful to small and marginal farmers in India? How far is Integrated Farming System (IFS) helpful in sustaining agricultural production? Explain the role of millets for ensuring health and nutritional security in India. Sikkim is the first ‘Organic State’ in India. What are the ecological and economical benefits of Organic State?",
+        "subject": "Agriculture",
+        "microtheme": "Crop Diversification Cropping pattern Integrated Farming",
+        "page": 58
+      }
+    ]
+  },
+  "system": {
+    "name": "System",
+    "subject": "Agriculture",
+    "tokens": [
+      "system"
+    ],
+    "questions": [
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "What are the major factors responsible for making rice-wheat system a success?",
+        "subject": "Agriculture",
+        "microtheme": "System",
+        "page": 58
+      },
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "In spite of this success how has this system become bane in India?",
+        "subject": "Agriculture",
+        "microtheme": "System",
+        "page": 58
+      }
+    ]
+  },
+  "milletspulsesorganicfarming": {
+    "name": "Millets, Pulses Organic Farming",
+    "subject": "Agriculture",
+    "tokens": [
+      "farming",
+      "millets",
+      "pulses",
+      "organic"
+    ],
+    "questions": [
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "Elaborate the emphasis on millets production and consumption.",
+        "subject": "Agriculture",
+        "microtheme": "Millets, Pulses Organic Farming",
+        "page": 58
+      }
+    ]
+  },
+  "irrigationmicroirrigationwaterstorageandconservationagriculture": {
+    "name": "Irrigation Micro-Irrigation Water Storage and Conservation Agriculture",
+    "subject": "Agriculture",
+    "tokens": [
+      "irrigation",
+      "agriculture",
+      "water",
+      "conservation",
+      "storage",
+      "micro"
+    ],
+    "questions": [
+      {
+        "year": 2024,
+        "marks": 15,
+        "text": "What are the major challenges faced by Indian irrigation system in recent times?",
+        "subject": "Agriculture",
+        "microtheme": "Irrigation Micro-Irrigation Water Storage and Conservation Agriculture",
+        "page": 59
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "State the measures taken by the government for efficient irrigation management.",
+        "subject": "Agriculture",
+        "microtheme": "Irrigation Micro-Irrigation Water Storage and Conservation Agriculture",
+        "page": 59
+      },
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "Suggest measures to improve water storage and irrigation system to make its judicious use under depleting scenario.",
+        "subject": "Agriculture",
+        "microtheme": "Irrigation Micro-Irrigation Water Storage and Conservation Agriculture",
+        "page": 59
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "How and to what extent would micro-irrigation help in solving India’s water crisis?",
+        "subject": "Agriculture",
+        "microtheme": "Irrigation Micro-Irrigation Water Storage and Conservation Agriculture",
+        "page": 59
+      },
+      {
+        "year": 2020,
+        "marks": 10,
+        "text": "What is water-use efficiency? Describe the role of micro-irrigation in increasing the water-use efficiency What are the salient features of the Jal Shakti Abhiyan launched by the Government of India for water conservation and water security?",
+        "subject": "Agriculture",
+        "microtheme": "Irrigation Micro-Irrigation Water Storage and Conservation Agriculture",
+        "page": 59
+      },
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "Explain the factors responsible for inefficiency of agri-produce marketing. How e-commerce helps to reduce inefficiency of agri-produce marketing?",
+        "subject": "Agriculture",
+        "microtheme": "Irrigation Micro-Irrigation Water Storage and Conservation Agriculture",
+        "page": 59
+      },
+      {
+        "year": 2018,
+        "marks": 10,
+        "text": "How do they eliminate number of intermediaries? There is also a point of view that Agricultural Produce Market Committees [APMCs] set up under the State Acts have not only impeded the development of agriculture but also have been the cause of food inflation in India.",
+        "subject": "Agriculture",
+        "microtheme": "Irrigation Micro-Irrigation Water Storage and Conservation Agriculture",
+        "page": 59
+      },
+      {
+        "year": 2014,
+        "marks": 12.5,
+        "text": "Describe the various Technology Missions initiated in Indian agriculture and examine their role in food security.",
+        "subject": "Agriculture",
+        "microtheme": "Irrigation Micro-Irrigation Water Storage and Conservation Agriculture",
+        "page": 59
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "How can technology be used to better reach and serve rural clients? How does nanotechnology offer significant advancements in the field of agriculture? How can this technology help to uplift the socio-economic status of farmers? How can the Digital India program help farmers to improve farm productivity and income? What step has the government taken in this regard?",
+        "subject": "Agriculture",
+        "microtheme": "Irrigation Micro-Irrigation Water Storage and Conservation Agriculture",
+        "page": 59
+      }
+    ]
+  },
+  "agriculture": {
+    "name": "Agriculture",
+    "subject": "Agriculture",
+    "tokens": [
+      "agriculture"
+    ],
+    "questions": [
+      {
+        "year": 2026,
+        "marks": 10,
+        "text": "Explain. Elaborate the scope and significance of supply chain management of agricultural commodities in India.",
+        "subject": "Agriculture",
+        "microtheme": "Agriculture",
+        "page": 59
+      }
+    ]
+  },
+  "agrimarketing": {
+    "name": "Agri-Marketing",
+    "subject": "Agriculture",
+    "tokens": [
+      "marketing",
+      "agri"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "What are the main bottlenecks in upstream and downstream process of marketing of agricultural products in India?",
+        "subject": "Agriculture",
+        "microtheme": "Agri-Marketing",
+        "page": 59
+      },
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "What are the main constraints in transport and marketing of agricultural produce in India?",
+        "subject": "Agriculture",
+        "microtheme": "Agri-Marketing",
+        "page": 59
+      },
+      {
+        "year": 2026,
+        "marks": 10,
+        "text": "How does e-Technology help farmers in production and marketing of agricultural produce?",
+        "subject": "Agriculture",
+        "microtheme": "Agri-Marketing",
+        "page": 59
+      }
+    ]
+  },
+  "revolutionsandmissionstechxagriproductionandmarketing": {
+    "name": "Revolutions and Missions Tech X Agri Production and Marketing",
+    "subject": "Agriculture",
+    "tokens": [
+      "revolutions",
+      "tech",
+      "production",
+      "marketing",
+      "missions",
+      "agri"
+    ],
+    "questions": [
+      {
+        "year": 2020,
+        "marks": 10,
+        "text": "Examine the role of supermarkets in supply chain management of fruits, vegetables and food items.",
+        "subject": "Agriculture",
+        "microtheme": "Revolutions and Missions Tech X Agri Production and Marketing",
+        "page": 59
+      }
+    ]
+  },
+  "techxagriculturecredit": {
+    "name": "Tech X Agriculture Credit",
+    "subject": "Agriculture",
+    "tokens": [
+      "credit",
+      "agriculture",
+      "tech"
+    ],
+    "questions": [
+      {
+        "year": 2023,
+        "marks": 10,
+        "text": "“In the villages itself no form of credit organization will be suitable except the cooperative society.”–All India Rural Credit Survey.",
+        "subject": "Agriculture",
+        "microtheme": "Tech X Agriculture Credit",
+        "page": 59
+      },
+      {
+        "year": 2014,
+        "marks": 12.5,
+        "text": "Discuss this statement in the background of agricultural finance in India.",
+        "subject": "Agriculture",
+        "microtheme": "Tech X Agriculture Credit",
+        "page": 59
+      }
+    ]
+  },
+  "techxfarmproductivityandincome": {
+    "name": "Tech X Farm Productivity and Income",
+    "subject": "Agriculture",
+    "tokens": [
+      "tech",
+      "productivity",
+      "farm",
+      "income"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 15,
+        "text": "What constraints and challenges do financial institutions supplying agricultural finance face?",
+        "subject": "Agriculture",
+        "microtheme": "Tech X Farm Productivity and Income",
+        "page": 59
+      }
+    ]
+  },
+  "alliedsectorxhorticulture": {
+    "name": "Allied Sector X Horticulture",
+    "subject": "Agriculture",
+    "tokens": [
+      "allied",
+      "horticulture"
+    ],
+    "questions": [
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "Assess the role of National Horticulture Mission (NHM) in boosting the production, productivity and income of horticulture farms. How far has it succeeded in increasing the income of farmers?",
+        "subject": "Agriculture",
+        "microtheme": "Allied Sector X Horticulture",
+        "page": 60
+      }
+    ]
+  },
+  "cropinsurance": {
+    "name": "Crop Insurance",
+    "subject": "Agriculture",
+    "tokens": [
+      "crop",
+      "insurance"
+    ],
+    "questions": [
+      {
+        "year": 2021,
+        "marks": 15,
+        "text": "Give the vulnerability of Indian agriculture to vagaries of nature, discuss the need for crop insurance and bring out the salient features of the Pradhan Mantri Fasal Bima Yojana (PMFBY).",
+        "subject": "Agriculture",
+        "microtheme": "Crop Insurance",
+        "page": 60
+      }
+    ]
+  },
+  "pds": {
+    "name": "PDS",
+    "subject": "Agriculture",
+    "tokens": [
+      "pds"
+    ],
+    "questions": [
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "What are the major challenges of Public Distribution System (PDS) in India?",
+        "subject": "Agriculture",
+        "microtheme": "PDS",
+        "page": 60
+      }
+    ]
+  },
+  "subsidiesxagriculture": {
+    "name": "Subsidies X Agriculture",
+    "subject": "Agriculture",
+    "tokens": [
+      "agriculture",
+      "subsidies"
+    ],
+    "questions": [
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Discuss the different types of subsidies and supports provided by the Government of India to agricultural sector.",
+        "subject": "Agriculture",
+        "microtheme": "Subsidies X Agriculture",
+        "page": 60
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Examine the related issues pertaining to Agreement on Agriculture of World Trade Organisation (WTO).",
+        "subject": "Agriculture",
+        "microtheme": "Subsidies X Agriculture",
+        "page": 60
+      }
+    ]
+  },
+  "contractfarminglandleasing": {
+    "name": "Contract farming, land leasing",
+    "subject": "Agriculture",
+    "tokens": [
+      "contract",
+      "leasing",
+      "land",
+      "farming"
+    ],
+    "questions": [
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "In view of the declining average size of land holdings in India which has made agriculture non-viable for a majority of farmers, should contract farming and land leasing be promoted in agriculture?",
+        "subject": "Agriculture",
+        "microtheme": "Contract farming, land leasing",
+        "page": 61
+      },
+      {
+        "year": 2014,
+        "marks": 12.5,
+        "text": "Critically evaluate the pros and cons. The Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013 has come into effect from Ist January, 2014.",
+        "subject": "Agriculture",
+        "microtheme": "Contract farming, land leasing",
+        "page": 61
+      },
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "What were the factors responsible for the successful implementation of land reforms in some parts of the country? Elaborate. State the objectives and measures of land reforms in India.",
+        "subject": "Agriculture",
+        "microtheme": "Contract farming, land leasing",
+        "page": 61
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Discuss how land ceiling policy on landholding can be considered as an effective reform under economic criteria How did land reforms in some parts of the country help to improve the socio-economic conditions of marginal and small farmers?",
+        "subject": "Agriculture",
+        "microtheme": "Contract farming, land leasing",
+        "page": 61
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Discuss the role of land reforms in agricultural development. Identify the factors that were responsible for the success of land reforms in India. Establish relationship between land reforms, agricultural productivity and elimination of poverty in the Indian economy. Discuss the difficulties in designing and implementation of agriculture–friendly land reforms in India",
+        "subject": "Agriculture",
+        "microtheme": "Contract farming, land leasing",
+        "page": 61
+      }
+    ]
+  },
+  "landreformxactbased": {
+    "name": "Land Reform X Act Based",
+    "subject": "Agriculture",
+    "tokens": [
+      "reform",
+      "land",
+      "act",
+      "based"
+    ],
+    "questions": [
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "What are the key issues which would get addressed with the Act in place?",
+        "subject": "Agriculture",
+        "microtheme": "Land Reform X Act Based",
+        "page": 61
+      },
+      {
+        "year": 2023,
+        "marks": 10,
+        "text": "What implications would it have on industrialization and agriculture in India?",
+        "subject": "Agriculture",
+        "microtheme": "Land Reform X Act Based",
+        "page": 61
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Discuss the measures adopted by the Government in this respect as part of the conflict resolution in Jammu and Kashmir.",
+        "subject": "Science & Technology",
+        "microtheme": "Land Reform X Act Based",
+        "page": 73
+      }
+    ]
+  }
+}

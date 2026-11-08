@@ -1,0 +1,128 @@
+{
+  "disasterpreparednessandresilience": {
+    "name": "Disaster Preparedness and Resilience",
+    "subject": "Disaster Management",
+    "tokens": [
+      "disaster",
+      "preparedness",
+      "resilience"
+    ],
+    "questions": [
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "Explain the mechanism and occurrence of cloudburst in the context of the Indian subcontinent.",
+        "subject": "Disaster Management",
+        "microtheme": "Disaster Preparedness and Resilience",
+        "page": 68
+      },
+      {
+        "year": 2026,
+        "marks": 10,
+        "text": "“Community participation is the cornerstone of effective disaster management”.",
+        "subject": "Disaster Management",
+        "microtheme": "Disaster Preparedness and Resilience",
+        "page": 68
+      },
+      {
+        "year": 2024,
+        "marks": 15,
+        "text": "Analyse this statement with suitable examples from India.",
+        "subject": "Disaster Management",
+        "microtheme": "Disaster Preparedness and Resilience",
+        "page": 68
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "Also discuss the challenges to community participation and measures to strengthen it.",
+        "subject": "Disaster Management",
+        "microtheme": "Disaster Preparedness and Resilience",
+        "page": 68
+      },
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "Discuss how the contradiction between 'rapid infrastructure development' and 'disaster-risk reduction' in ecologically-sensitive areas of India can be managed, with suitable examples. What is disaster resilience? How is it determined?",
+        "subject": "Disaster Management",
+        "microtheme": "Disaster Preparedness and Resilience",
+        "page": 68
+      },
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "Describe various elements of a resilience framework.",
+        "subject": "Disaster Management",
+        "microtheme": "Disaster Preparedness and Resilience",
+        "page": 68
+      },
+      {
+        "year": 2014,
+        "marks": 12.5,
+        "text": "Also mention the global targets of the Sendai Framework for Disaster Risk Reduction (2015-2030).",
+        "subject": "Disaster Management",
+        "microtheme": "Disaster Preparedness and Resilience",
+        "page": 68
+      },
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "Discuss the recent measures initiated in disaster management by the Government of India departing from the earlier reactive approach.",
+        "subject": "Disaster Management",
+        "microtheme": "Disaster Preparedness and Resilience",
+        "page": 68
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Disaster preparedness is the first step in any disaster management process. Explain how hazard zonation mapping will help in disaster mitigation in the case of landslides. Describe various measures taken in India for Disaster Risk Reduction (DRR) before and after signing ‘Sendai Framework for DRR (2015-2030)’. How is this framework different from ‘Hyogo Framework for Action, 2005? Drought has been recognised as a disaster in view of its party expense, temporal duration, slow onset and lasting effect on various vulnerable sections. With a focus on the September 2010 guidelines from the National disaster management authority, discuss the mechanism for preparedness to deal with the El Nino and La Nina fallouts in India. Discuss about the vulnerability of India to earthquake-related hazards. Give examples including the salient features of major disasters caused by earthquakes in different parts of India during the last three decades The frequency of earthquakes appears to have increased in the Indian subcontinent. However, India’s preparedness for mitigating their impact has significant gaps. Discuss",
+        "subject": "Disaster Management",
+        "microtheme": "Disaster Preparedness and Resilience",
+        "page": 68
+      }
+    ]
+  },
+  "cloudbursts": {
+    "name": "Cloudbursts",
+    "subject": "Disaster Management",
+    "tokens": [
+      "cloudbursts"
+    ],
+    "questions": [
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Discuss two recent examples. With reference to National Disaster Management Authority (NDMA) guidelines, discuss the measures to be adopted to mitigate the impact of the recent incidents of cloudbursts in many places of Uttarakhand.",
+        "subject": "Disaster Management",
+        "microtheme": "Cloudbursts",
+        "page": 68
+      }
+    ]
+  },
+  "damfailures": {
+    "name": "Dam Failures",
+    "subject": "Disaster Management",
+    "tokens": [
+      "failures",
+      "dam"
+    ],
+    "questions": [
+      {
+        "year": 2023,
+        "marks": 10,
+        "text": "Dam failures are always catastrophic, especially on the downstream side, resulting in a colossal loss of life and property.",
+        "subject": "Disaster Management",
+        "microtheme": "Dam Failures",
+        "page": 68
+      },
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "Analyze the various causes of dam failures. Give two examples of large dam failures.",
+        "subject": "Disaster Management",
+        "microtheme": "Dam Failures",
+        "page": 68
+      }
+    ]
+  }
+}

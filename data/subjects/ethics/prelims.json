@@ -1,0 +1,25 @@
+{
+  "ethicaldilemmaresolution": {
+    "name": "Ethical Dilemma Resolution",
+    "tokens": [
+      "ethical",
+      "dilemma",
+      "resolution"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "In a multi-ethnic district where both economic competition and historical grievances frequently led to community tensions, a flashpoint has arisen with a Government decision to allocate land for a waste management facility near a tribal hamlet, sparking protests by the tribal community, which claimed that the land was sacred and critical to their cultural identity. At the same time, urban residents and local industries supported the projectciting severe solid waste challenges and health concerns due to lack of a proper disposal site. The conflict has escalated with road blockades, social media campaigns, and allegations of police excesses. As a - responsible Government official, you are tasked with resolving the situation through mediation, ensuring a sustainable outcome that balances environmental needs, tribal rights, and urban public health. Consider the following statements with reference to the above: 1. A successful conflict resolution process must begin with acknowledging the cultural concerns of the protesting tribal community before discussing technical alternatives. 2. The Government should move ahead with the project without delay to address urban health concerns, which outweigh the sentiments of a small group. 3. Creating a multi-stakeholder dialogue platform — including tribal leaders, environmental experts, and municipal representatives - to build mutual understanding and help de-escalate tensions. 4. Conducting an independent Environmental and Social Impact Assessment (ESIA) and sharing findings transparently with both sides to facilitate evidence-based decision-making. Which of the statements given above would contribute to the resolution process?",
+        "options": [
+          "(a) 1, 3 and 4 only",
+          "(b) 2, 3 and 4 only",
+          "(c) 1 and 2 only",
+          "(d) 1, 2, 3 and 4"
+        ],
+        "ans": "A",
+        "fullText": "In a multi-ethnic district where both economic competition and historical grievances frequently led to community tensions, a flashpoint has arisen with a Government decision to allocate land for a waste management facility near a tribal hamlet, sparking protests by the tribal community, which claimed that the land was sacred and critical to their cultural identity. At the same time, urban residents and local industries supported the projectciting severe solid waste challenges and health concerns due to lack of a proper disposal site. The conflict has escalated with road blockades, social media campaigns, and allegations of police excesses. As a - responsible Government official, you are tasked with resolving the situation through mediation, ensuring a sustainable outcome that balances environmental needs, tribal rights, and urban public health. Consider the following statements with reference to the above: 1. A successful conflict resolution process must begin with acknowledging the cultural concerns of the protesting tribal community before discussing technical alternatives. 2. The Government should move ahead with the project without delay to address urban health concerns, which outweigh the sentiments of a small group. 3. Creating a multi-stakeholder dialogue platform — including tribal leaders, environmental experts, and municipal representatives - to build mutual understanding and help de-escalate tensions. 4. Conducting an independent Environmental and Social Impact Assessment (ESIA) and sharing findings transparently with both sides to facilitate evidence-based decision-making. Which of the statements given above would contribute to the resolution process? (a) 1, 3 and 4 only (b) 2, 3 and 4 only (c) 1 and 2 only (d) 1, 2, 3 and 4"
+      }
+    ]
+  }
+}

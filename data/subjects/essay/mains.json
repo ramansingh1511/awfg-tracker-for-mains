@@ -1,0 +1,13 @@
+{
+  "essays": {
+    "name": "Essay Papers",
+    "subject": "UPSC Essay",
+    "tokens": [
+      "essay",
+      "philosophical",
+      "quotes",
+      "topics"
+    ],
+    "questions": []
+  }
+}

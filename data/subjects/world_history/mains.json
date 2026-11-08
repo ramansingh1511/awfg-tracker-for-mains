@@ -1,0 +1,182 @@
+{
+  "revolutiondecolonisationindiandiasporaindustrialrevolutionworldhistoryevents": {
+    "name": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
+    "subject": "World History",
+    "tokens": [
+      "history",
+      "revolution",
+      "industrial",
+      "indian",
+      "world",
+      "diaspora",
+      "decolonisation",
+      "events"
+    ],
+    "questions": [
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "The anti-colonial struggles in West Africa were led by the new elite of Western-educated Africans.",
+        "subject": "World History",
+        "microtheme": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
+        "page": 11
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Examine. What were the major political, economic and social developments in the world which motivated the anti-colonial struggle in India?",
+        "subject": "World History",
+        "microtheme": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
+        "page": 11
+      },
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "Africa was chopped into states artificially created by accident of European competition.",
+        "subject": "World History",
+        "microtheme": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
+        "page": 11
+      },
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "Why indentured labour was taken by the British from India to other colonies? Have they been able to preserve their cultural identity over there?",
+        "subject": "World History",
+        "microtheme": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
+        "page": 11
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "How far was the Industrial Revolution in England responsible for the decline of handicrafts and cottage industries in India?",
+        "subject": "World History",
+        "microtheme": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
+        "page": 11
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Why did the industrial revolution first occur in England?",
+        "subject": "World History",
+        "microtheme": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
+        "page": 11
+      },
+      {
+        "year": 2024,
+        "marks": 15,
+        "text": "Latecomer Industrial revolution in Japan involved certain factors that were markedly different from what west had experience.",
+        "subject": "World History",
+        "microtheme": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
+        "page": 11
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "What were the events that led to the Suez Crisis in 1956? How did it deal a final blow to Britain's self-image as a world power?",
+        "subject": "World History",
+        "microtheme": "Revolution Decolonisation Indian Diaspora Industrial Revolution World History Events",
+        "page": 11
+      }
+    ]
+  },
+  "americanandfrench": {
+    "name": "American and French",
+    "subject": "World History",
+    "tokens": [
+      "american",
+      "french"
+    ],
+    "questions": [
+      {
+        "year": 2019,
+        "marks": 15,
+        "text": "The French Revolution has enduring relevance to the contemporary world.",
+        "subject": "World History",
+        "microtheme": "American and French",
+        "page": 11
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Explain. Explain how the foundations of the modern world were laid by the American and French revolution.",
+        "subject": "World History",
+        "microtheme": "American and French",
+        "page": 11
+      },
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "American Revolution was an economic revolt against mercantilism.",
+        "subject": "World History",
+        "microtheme": "American and French",
+        "page": 11
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Substantiate. What problems were germane to the decolonization process of Malay Peninsula.",
+        "subject": "World History",
+        "microtheme": "American and French",
+        "page": 11
+      }
+    ]
+  },
+  "worldwars": {
+    "name": "World Wars",
+    "subject": "World History",
+    "tokens": [
+      "wars",
+      "world"
+    ],
+    "questions": [
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "How far is it correct to say that the First World War was fought essentially for the preservation of balance of power?",
+        "subject": "World History",
+        "microtheme": "World Wars",
+        "page": 11
+      },
+      {
+        "year": 2021,
+        "marks": 15,
+        "text": "“There arose a serious challenge to the Democratic State System between the two World Wars.” Evaluate the statement.",
+        "subject": "World History",
+        "microtheme": "World Wars",
+        "page": 11
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "To what extent can Germany be held responsible for causing the two World Wars? Discuss critically.",
+        "subject": "World History",
+        "microtheme": "World Wars",
+        "page": 11
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "What policy instruments were deployed to contain the Great Economic Depression?",
+        "subject": "World History",
+        "microtheme": "World Wars",
+        "page": 11
+      },
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "Bring out the socio-economic effects of the introduction of railways in different countries of the world.",
+        "subject": "World History",
+        "microtheme": "World Wars",
+        "page": 11
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "The Industrial Revolution was a mixed blessing. Discuss the quality of life of the people there during the industrialization. How does it compare with that in India at present?",
+        "subject": "World History",
+        "microtheme": "World Wars",
+        "page": 11
+      }
+    ]
+  }
+}

@@ -1,0 +1,955 @@
+{
+  "schemexruralagri": {
+    "name": "SchemeXRural/Agri",
+    "tokens": [
+      "agri",
+      "schemexrural"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "Which of the following statements with respect to the Revamped RGSA is/arcorrect? 1. Period of implementation: 1st April, 2021 to 31st March, 2026. 2. Key objective: develop governance capabilities of PRIs to deliver on SDGs. 3. The share of Central funding is 100% foall States and Union Territories.",
+        "options": [
+          "(a) 1 and 2",
+          "(b) 2 only",
+          "(c) 1 and 3",
+          "(d) 2 and 3"
+        ],
+        "ans": "B",
+        "fullText": "Which of the following statements with respect to the Revamped RGSA is/arcorrect? 1. Period of implementation: 1st April, 2021 to 31st March, 2026. 2. Key objective: develop governance capabilities of PRIs to deliver on SDGs. 3. The share of Central funding is 100% foall States and Union Territories. (a) 1 and 2 (b) 2 only (c) 1 and 3 (d) 2 and 3"
+      },
+      {
+        "qNum": 2,
+        "year": 2025,
+        "stem": "Consider the following statements about the Rashtriya Gokul Mission: I. It is important for the upliftment of rural poor as majority of low producing indigenous animals are with small and marginal farmers and landless labourers. II. It was initiated to promote indigenous cattle and buffalo rearing and conservatioin a scientific and holistic manner. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) I only",
+          "(b) II only",
+          "(c) Both I and II",
+          "(d) Neither I nor II"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following statements about the Rashtriya Gokul Mission: I. It is important for the upliftment of rural poor as majority of low producing indigenous animals are with small and marginal farmers and landless labourers. II. It was initiated to promote indigenous cattle and buffalo rearing and conservatioin a scientific and holistic manner. Which of the statements given above is/ are correct? (a) I only (b) II only (c) Both I and II (d) Neither I nor II"
+      },
+      {
+        "qNum": 3,
+        "year": 2024,
+        "stem": "With reference to the Digital India Land Records Modernisation Programme, consider the following statements: 1. To implement the scheme, the Central Government provides 100% funding. 2. Under the Scheme, Cadastral Maps are digitised. 3. An initiative has been undertaken to transliterate the Records of Rights from local language to any of the languages recognized by the Constitution of India. Which of the statements given above are correct?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3*"
+        ],
+        "ans": "D",
+        "fullText": "With reference to the Digital India Land Records Modernisation Programme, consider the following statements: 1. To implement the scheme, the Central Government provides 100% funding. 2. Under the Scheme, Cadastral Maps are digitised. 3. An initiative has been undertaken to transliterate the Records of Rights from local language to any of the languages recognized by the Constitution of India. Which of the statements given above are correct? (a) 1 and 2 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3*"
+      },
+      {
+        "qNum": 4,
+        "year": 2020,
+        "stem": "With reference to the funds under Members of Parliament Local Area Development Scheme (MPLADS), which of the following statements are correct? 1. MPLADS funds must be used to create durable assets like physical infrastructure for health, education, etc. 2. A specified portion of each MP’s ‘fund must benefit SC/ST populations. 3. MPLADS funds are sanctioned on yearlbasis and the unused funds cannot be carried forward to the next year. 4. The district authority must inspect at least 10% of all works under implementation every year. Select the correct answer using the code given below:",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 3 and 4 only",
+          "(c) 1, 2 and 3 only",
+          "(d) 1, 2 and 4 only"
+        ],
+        "ans": "D",
+        "fullText": "With reference to the funds under Members of Parliament Local Area Development Scheme (MPLADS), which of the following statements are correct? 1. MPLADS funds must be used to create durable assets like physical infrastructure for health, education, etc. 2. A specified portion of each MP’s ‘fund must benefit SC/ST populations. 3. MPLADS funds are sanctioned on yearlbasis and the unused funds cannot be carried forward to the next year. 4. The district authority must inspect at least 10% of all works under implementation every year. Select the correct answer using the code given below: (a) 1 and 2 only (b) 3 and 4 only (c) 1, 2 and 3 only (d) 1, 2 and 4 only"
+      },
+      {
+        "qNum": 5,
+        "year": 2020,
+        "stem": "Under the Kisan Credit Card scheme, short-term credit support is given to farmers for which of the following purposes? 1. Working capital for maintenance of farm assets 2. Purchase of combine harvesters, tractors and mini truck 3. Consumption requirements of farm households 4. Post-harvest expenses 5. Construction of family house and settinup of village cold storage facility Select the correct answer using the code given below:",
+        "options": [
+          "(a) 1, 2 and 5 only",
+          "(b) 1, 3 and 4 only",
+          "(c) 2, 3, 4 and 5 only",
+          "(d) 1, 2, 3, 4 and 5"
+        ],
+        "ans": "B",
+        "fullText": "Under the Kisan Credit Card scheme, short-term credit support is given to farmers for which of the following purposes? 1. Working capital for maintenance of farm assets 2. Purchase of combine harvesters, tractors and mini truck 3. Consumption requirements of farm households 4. Post-harvest expenses 5. Construction of family house and settinup of village cold storage facility Select the correct answer using the code given below: (a) 1, 2 and 5 only (b) 1, 3 and 4 only (c) 2, 3, 4 and 5 only (d) 1, 2, 3, 4 and 5"
+      },
+      {
+        "qNum": 6,
+        "year": 2018,
+        "stem": "With reference to the provisions made under the National Food Security Act, 2013, consider the following statements: The families coming under the category of ‘below poverty line (BPL)’ only are eligible to receive subsidies food grains. The eldest woman in a household, of age 18 years or above, shall be the head of the household for the purpose of issuance of a ration card. Pregnant women and lactating mothers are entitled to a ‘take-home ration’ of 160calories per day during pregnancy and for six months thereafter Which of the statement given above is/are correct?",
+        "options": [
+          "(a) 1 and 2",
+          "(b) 2 only",
+          "(c) 1 and 3",
+          "(d) 3 only"
+        ],
+        "ans": "B",
+        "fullText": "With reference to the provisions made under the National Food Security Act, 2013, consider the following statements: The families coming under the category of ‘below poverty line (BPL)’ only are eligible to receive subsidies food grains. The eldest woman in a household, of age 18 years or above, shall be the head of the household for the purpose of issuance of a ration card. Pregnant women and lactating mothers are entitled to a ‘take-home ration’ of 160calories per day during pregnancy and for six months thereafter Which of the statement given above is/are correct? (a) 1 and 2 (b) 2 only (c) 1 and 3 (d) 3 only"
+      },
+      {
+        "qNum": 7,
+        "year": 2017,
+        "stem": "What is/are the advantage/advantages of implementing the `National Agriculture Market’ scheme? 1. It is a pan-India electronic trading portal for agricultural commodities. 2. It provides the farmers access to nationwide market, with prices commensurate with the quality of their produce. Select the correct answer using the code given below:",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "C",
+        "fullText": "What is/are the advantage/advantages of implementing the `National Agriculture Market’ scheme? 1. It is a pan-India electronic trading portal for agricultural commodities. 2. It provides the farmers access to nationwide market, with prices commensurate with the quality of their produce. Select the correct answer using the code given below: (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 8,
+        "year": 2017,
+        "stem": "Consider the following statementsThe nation-wide ‘Soil Health Card Schemeaims at 1. Expanding the cultivable area under irrigation. 2. Enabling the banks to assess the quantum of loans to be granted to farmers on the basis of soil quality. 3. Checking the overuse of fertilizers in farmlands. Which of the above statements is/are correct ?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 3 only",
+          "(c) 2 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following statementsThe nation-wide ‘Soil Health Card Schemeaims at 1. Expanding the cultivable area under irrigation. 2. Enabling the banks to assess the quantum of loans to be granted to farmers on the basis of soil quality. 3. Checking the overuse of fertilizers in farmlands. Which of the above statements is/are correct ? (a) 1 and 2 only (b) 3 only (c) 2 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 9,
+        "year": 2015,
+        "stem": "Consider the following statements : (1) The Accelerated Irrigation Benefits Programme was launched during 1996-97 to provide loan assistance to poor farmers. (2) The Command Area Development Programme was launched in 1974-75 for the development of water-use efficiency. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following statements : (1) The Accelerated Irrigation Benefits Programme was launched during 1996-97 to provide loan assistance to poor farmers. (2) The Command Area Development Programme was launched in 1974-75 for the development of water-use efficiency. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 10,
+        "year": 2012,
+        "stem": "How does the National Rural Livelihood Mission seek to improve livelihood options of rural poor? 1. By setting up a large number of new manufacturing industries and agri-business centres in rural areas 2. By strengthening ‘Self-Help Groups’ and providing skill development 3. By supplying seeds, fertilizers, diesel pumpsets, and micro-irrigation equipmenfree of cost to farmers",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 2 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "B",
+        "fullText": "How does the National Rural Livelihood Mission seek to improve livelihood options of rural poor? 1. By setting up a large number of new manufacturing industries and agri-business centres in rural areas 2. By strengthening ‘Self-Help Groups’ and providing skill development 3. By supplying seeds, fertilizers, diesel pumpsets, and micro-irrigation equipmenfree of cost to farmers (a) 1 and 2 only (b) 2 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 11,
+        "year": 2011,
+        "stem": "Among the following who are eligible to benefit from the “Mahatma Gandhi National Rural Employment Guarantee Act”?",
+        "options": [
+          "(a) Adult members of only the scheduled caste and scheduled tribe households",
+          "(b) Adult members of below poverty line (BPL) households",
+          "(c) Adult members of households of all backward communities",
+          "(d) Adult members of any household"
+        ],
+        "ans": "D",
+        "fullText": "Among the following who are eligible to benefit from the “Mahatma Gandhi National Rural Employment Guarantee Act”? (a) Adult members of only the scheduled caste and scheduled tribe households (b) Adult members of below poverty line (BPL) households (c) Adult members of households of all backward communities (d) Adult members of any household"
+      }
+    ]
+  },
+  "schemexinsurance": {
+    "name": "SchemeXInsurance",
+    "tokens": [
+      "schemexinsurance"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2024,
+        "stem": "With reference to the Pradhan Mantri Shram Yogi Maan-dhan (PM-SYM) Yojana, consider the following statements1. The entry age group for enrolment in thscheme is 21 to 40 years. 2. Age specific contribution shall be made by the beneficiary. 3. Each subscriber under the scheme shalreceive a minimum pension of ₹ 3,000 per month after attaining the age of 60 years. 4. Family pension is applicable to the spouse and unmarried daughters. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 and 4",
+          "(b) 2 and 3*",
+          "(c) 2 only",
+          "(d) 1,2 and 4"
+        ],
+        "ans": "B",
+        "fullText": "With reference to the Pradhan Mantri Shram Yogi Maan-dhan (PM-SYM) Yojana, consider the following statements1. The entry age group for enrolment in thscheme is 21 to 40 years. 2. Age specific contribution shall be made by the beneficiary. 3. Each subscriber under the scheme shalreceive a minimum pension of ₹ 3,000 per month after attaining the age of 60 years. 4. Family pension is applicable to the spouse and unmarried daughters. Which of the statements given above is/ are correct? (a) 1 and 4 (b) 2 and 3* (c) 2 only (d) 1,2 and 4"
+      },
+      {
+        "qNum": 2,
+        "year": 2021,
+        "stem": "With reference to casual workers employed in India, consider the following statements: 1.All casual workers are entitled to Employees Provident Fund coverage. 2.All casual workers are entitled to regular working hours and overtime payment. 3.The government can, by notification, specify that an establishment or industry shall pay wages only through its bank account. Which of the above statements are correct?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2, and 3"
+        ],
+        "ans": "B",
+        "fullText": "With reference to casual workers employed in India, consider the following statements: 1.All casual workers are entitled to Employees Provident Fund coverage. 2.All casual workers are entitled to regular working hours and overtime payment. 3.The government can, by notification, specify that an establishment or industry shall pay wages only through its bank account. Which of the above statements are correct? (a) 1 and 2 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2, and 3"
+      },
+      {
+        "qNum": 3,
+        "year": 2020,
+        "stem": "In India, under cyber insurance for individuals, which of the following benefits are generally covered, in addition to payment for the loss of funds and other benefits? 1. Cost of restoration of the computer system in case of malware disrupting access to one’s computer 2. Cost of a new computer if some miscreant wilfully damages it, if proved so 3. Cost of hiring a specialized consultant tminimize the loss in case of cyber extortio4. Cost of defence in the Court of Law if any third party files a suit Select the correct answer using the code given below:",
+        "options": [
+          "(a) 1, 2 and 4 only",
+          "(b) 1, 3 and 4 only",
+          "(c) 2 and 3 only",
+          "(d) 1, 2, 3 and 4"
+        ],
+        "ans": "B",
+        "fullText": "In India, under cyber insurance for individuals, which of the following benefits are generally covered, in addition to payment for the loss of funds and other benefits? 1. Cost of restoration of the computer system in case of malware disrupting access to one’s computer 2. Cost of a new computer if some miscreant wilfully damages it, if proved so 3. Cost of hiring a specialized consultant tminimize the loss in case of cyber extortio4. Cost of defence in the Court of Law if any third party files a suit Select the correct answer using the code given below: (a) 1, 2 and 4 only (b) 1, 3 and 4 only (c) 2 and 3 only (d) 1, 2, 3 and 4"
+      },
+      {
+        "qNum": 4,
+        "year": 2017,
+        "stem": "Who among the following can join the National Pension System (NPS)?",
+        "options": [
+          "(a) Resident Indian citizens only",
+          "(b) Persons of age from 21 to 55 only",
+          "(c) All State Government employees joining the services after the date of notification by the respective State Governments",
+          "(d) All Central Governments Employees including those of Armed Forces joining the services on or after 1st April, 2004"
+        ],
+        "ans": "C",
+        "fullText": "Who among the following can join the National Pension System (NPS)? (a) Resident Indian citizens only (b) Persons of age from 21 to 55 only (c) All State Government employees joining the services after the date of notification by the respective State Governments (d) All Central Governments Employees including those of Armed Forces joining the services on or after 1st April, 2004"
+      },
+      {
+        "qNum": 5,
+        "year": 2016,
+        "stem": "Regarding ‘Atal Pension Yojana’, which of the following statements is/are correct? 1. It is a minimum guaranteed pension scheme mainly targeted at unorganized sector workers. 2. Only one member of a family can join the scheme. 3. Same amount of pension is guaranteed for the spouse for life after subscriber’s death. Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "C",
+        "fullText": "Regarding ‘Atal Pension Yojana’, which of the following statements is/are correct? 1. It is a minimum guaranteed pension scheme mainly targeted at unorganized sector workers. 2. Only one member of a family can join the scheme. 3. Same amount of pension is guaranteed for the spouse for life after subscriber’s death. Select the correct answer using the code given below. (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 6,
+        "year": 2016,
+        "stem": "With reference to ‘Pradhan Mantri Fasal Bima Yojana’, consider the following statements: 1. Under this scheme, farmers will have to pay a uniform premium of two percent for any crop they cultivate in any season of the year. 2. This scheme covers post-harvest losses arising out of cyclones and unseasonal rains. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "B",
+        "fullText": "With reference to ‘Pradhan Mantri Fasal Bima Yojana’, consider the following statements: 1. Under this scheme, farmers will have to pay a uniform premium of two percent for any crop they cultivate in any season of the year. 2. This scheme covers post-harvest losses arising out of cyclones and unseasonal rains. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 7,
+        "year": 2012,
+        "stem": "Consider the following: 1. Hotels and restaurants 2. Motor transport undertakings 3. Newspaper establishments 4. Private medical institutions The employees of which of the above can have the ‘Social Security’ coverage under Employees’ State Insurance Scheme?",
+        "options": [
+          "(a) 1, 2 and 3 only",
+          "(b) 4 only",
+          "(c) 1, 3 and 4 only",
+          "(d) 1, 2, 3 and 4"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following: 1. Hotels and restaurants 2. Motor transport undertakings 3. Newspaper establishments 4. Private medical institutions The employees of which of the above can have the ‘Social Security’ coverage under Employees’ State Insurance Scheme? (a) 1, 2 and 3 only (b) 4 only (c) 1, 3 and 4 only (d) 1, 2, 3 and 4"
+      },
+      {
+        "qNum": 8,
+        "year": 2011,
+        "stem": "With reference to “Aam Admi Bima Yojana”. Consider the following statements: 1. The member insured under the scheme must be the head of the family or earning member of the family in a rural landless household. 2. The member insured must be in the age group of 30 to 65 years. 3. There is a provision for free scholarship for up to two children of the insured who are studying between classes 9 and 12. Which of the statements given above is/are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "C",
+        "fullText": "With reference to “Aam Admi Bima Yojana”. Consider the following statements: 1. The member insured under the scheme must be the head of the family or earning member of the family in a rural landless household. 2. The member insured must be in the age group of 30 to 65 years. 3. There is a provision for free scholarship for up to two children of the insured who are studying between classes 9 and 12. Which of the statements given above is/are correct? (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 9,
+        "year": 2009,
+        "stem": "With reference to the scheme launched by the Union Government, consider the following statements: 1. Ministry of Health and Family Welfare launched the Rashtriya Swasthya Bima Yojana 2. Ministry of Textiles launched the Rajiv Gandhi Shilpi Swasthya Bima Yojana Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "B",
+        "fullText": "With reference to the scheme launched by the Union Government, consider the following statements: 1. Ministry of Health and Family Welfare launched the Rashtriya Swasthya Bima Yojana 2. Ministry of Textiles launched the Rajiv Gandhi Shilpi Swasthya Bima Yojana Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 10,
+        "year": 2008,
+        "stem": "Consider the following statements with reference to Indira Gandhi National Old Age Pension Scheme (IGNOAPS): 1. All persons of 60 years or above belonging to the household below the poverty line in rural areas are eligible. 2. The Central Assistance under this Scheme is at the rate of Rs. 300 per month per beneficiary. Under the Scheme, States have been urged to give matching amounts.",
+        "options": [
+          "(a) 1 Only",
+          "(b) 2 Only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following statements with reference to Indira Gandhi National Old Age Pension Scheme (IGNOAPS): 1. All persons of 60 years or above belonging to the household below the poverty line in rural areas are eligible. 2. The Central Assistance under this Scheme is at the rate of Rs. 300 per month per beneficiary. Under the Scheme, States have been urged to give matching amounts. (a) 1 Only (b) 2 Only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      }
+    ]
+  },
+  "schemexhealth": {
+    "name": "SchemeXHealth",
+    "tokens": [
+      "schemexhealth"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2024,
+        "stem": "With reference to the ‘Pradhan Mantri Surakshit Matritva Abhiyan’, consider the following statements: 1. This scheme guarantees a minimum package of antenatal care services to women in their second and third trimesterof pregnancy and six months post-delivery health care service in any government health facility. 2. Under this scheme, private sector healtcare providers of certain specialities can volunteer to provide services at nearby government health facilities. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "B",
+        "fullText": "With reference to the ‘Pradhan Mantri Surakshit Matritva Abhiyan’, consider the following statements: 1. This scheme guarantees a minimum package of antenatal care services to women in their second and third trimesterof pregnancy and six months post-delivery health care service in any government health facility. 2. Under this scheme, private sector healtcare providers of certain specialities can volunteer to provide services at nearby government health facilities. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 2,
+        "year": 2023,
+        "stem": "Consider the following statements in relation to Janani Suraksha Yojna: 1. It is safe motherhood intervention of thState Health Departments. 2. Its objective is to reduce maternal and neonatal mortality among poor pregnant women. 3. It aims to promote institutional delivery among poor pregnant women. 4. Its objective includes providing public health facilities to sick infants up to one year of age. How many of the statements given above are correct?",
+        "options": [
+          "(a) Only one",
+          "(b) Only two",
+          "(c) Only three",
+          "(d) All four"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following statements in relation to Janani Suraksha Yojna: 1. It is safe motherhood intervention of thState Health Departments. 2. Its objective is to reduce maternal and neonatal mortality among poor pregnant women. 3. It aims to promote institutional delivery among poor pregnant women. 4. Its objective includes providing public health facilities to sick infants up to one year of age. How many of the statements given above are correct? (a) Only one (b) Only two (c) Only three (d) All four"
+      },
+      {
+        "qNum": 3,
+        "year": 2023,
+        "stem": "Consider the following statements in the context of interventions being undertaken under Anaemia Mukt Bharat Strategy: 1. It provides prophylactic calcium supplementation for pre-school children, adolescents and pregnant women. 2. It runs a compaign for delayed cord clamping at the time of child-birth. 3. It provides for periodic deworming to children and adolescents. 4. It addresses non-nutritional causes of anaemia in endemic pockets with special focus on malaria, hemoglobinopathies and fluorosis. How many of the statements given above are correct?",
+        "options": [
+          "(a) Only one",
+          "(b) Only two",
+          "(c) Only three",
+          "(d) All four"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following statements in the context of interventions being undertaken under Anaemia Mukt Bharat Strategy: 1. It provides prophylactic calcium supplementation for pre-school children, adolescents and pregnant women. 2. It runs a compaign for delayed cord clamping at the time of child-birth. 3. It provides for periodic deworming to children and adolescents. 4. It addresses non-nutritional causes of anaemia in endemic pockets with special focus on malaria, hemoglobinopathies and fluorosis. How many of the statements given above are correct? (a) Only one (b) Only two (c) Only three (d) All four"
+      },
+      {
+        "qNum": 4,
+        "year": 2022,
+        "stem": "With reference to Ayushman Bharat Digital Mission, consider the following statements : 1. Private and public hospitals must adopt it. 2. As it aims to achieve universal health coverage, every citizen of India should be part of it ultimately. 3. It has seamless portability across the country. Which of the statements given above is/arcorrect ?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "B",
+        "fullText": "With reference to Ayushman Bharat Digital Mission, consider the following statements : 1. Private and public hospitals must adopt it. 2. As it aims to achieve universal health coverage, every citizen of India should be part of it ultimately. 3. It has seamless portability across the country. Which of the statements given above is/arcorrect ? (a) 1 and 2 only (b) 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 5,
+        "year": 2019,
+        "stem": "With reference to the Maternity Benefit Amendment Act, 2017, consider the following statements: 1. Pregnant women are entitled for three months pre-delivery and three months post-delivery paid leave 2. Enterprises with creches must allow the mother minimum six creche visits daily. 3. Women with two children get reduced entitlements. Which of the given statements is/are correct?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 2 only",
+          "(c) 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "C",
+        "fullText": "With reference to the Maternity Benefit Amendment Act, 2017, consider the following statements: 1. Pregnant women are entitled for three months pre-delivery and three months post-delivery paid leave 2. Enterprises with creches must allow the mother minimum six creche visits daily. 3. Women with two children get reduced entitlements. Which of the given statements is/are correct? (a) 1 and 2 only (b) 2 only (c) 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 6,
+        "year": 2017,
+        "stem": "Which of the following are the objectives of ‘National Nutrition Mission’? 1. To create awareness relating to malnutrition among pregnant women and lactating mothers. 2. To reduce the incidence of anaemia among young children, adolescent girls anwomen. 3. To promote the consumption of millets, coarse cereals and unpolished rice. 4. To promote the consumption of poultry eggs. Select the correct answer using the code given below:",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 1, 2 and 3 only",
+          "(c) 1, 2 and 4 only",
+          "(d) 3 and 4 only"
+        ],
+        "ans": "A",
+        "fullText": "Which of the following are the objectives of ‘National Nutrition Mission’? 1. To create awareness relating to malnutrition among pregnant women and lactating mothers. 2. To reduce the incidence of anaemia among young children, adolescent girls anwomen. 3. To promote the consumption of millets, coarse cereals and unpolished rice. 4. To promote the consumption of poultry eggs. Select the correct answer using the code given below: (a) 1 and 2 only (b) 1, 2 and 3 only (c) 1, 2 and 4 only (d) 3 and 4 only"
+      },
+      {
+        "qNum": 7,
+        "year": 2016,
+        "stem": "Mission Indradhanush’ launched bthe Government of India pertains to",
+        "options": [
+          "(a) immunization of children and pregnant women",
+          "(b) construction of smart cities across the country",
+          "(c) India’s own search for the Earth-like planets in outer space",
+          "(d) New Educational Policy"
+        ],
+        "ans": "A",
+        "fullText": "Mission Indradhanush’ launched bthe Government of India pertains to (a) immunization of children and pregnant women (b) construction of smart cities across the country (c) India’s own search for the Earth-like planets in outer space (d) New Educational Policy"
+      },
+      {
+        "qNum": 8,
+        "year": 2012,
+        "stem": "With reference to National Rural Health Mission, which of the following are the jobs of ‘ASHA”, trained community health workers? 1. Accompanying women to the health facility for antenatal care check-up 2. Using pregnancy test kits for early detection pregnancy 3. Providing information on nutrition and immunization 4. Conducting the delivery of baby.",
+        "options": [
+          "(a) 1, 2 and 3 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2, 3 and 4"
+        ],
+        "ans": "A",
+        "fullText": "With reference to National Rural Health Mission, which of the following are the jobs of ‘ASHA”, trained community health workers? 1. Accompanying women to the health facility for antenatal care check-up 2. Using pregnancy test kits for early detection pregnancy 3. Providing information on nutrition and immunization 4. Conducting the delivery of baby. (a) 1, 2 and 3 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2, 3 and 4"
+      },
+      {
+        "qNum": 9,
+        "year": 2012,
+        "stem": "The endeavour of Janani Suraksha yojana programme is 1. to promote institutional deliveries 2. to provide monetary assistance to the mother to meet the cost of delivery 3. to provide for wage loss due to pregnancy and confinements Which of the statements given above is/are correct",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 2 only",
+          "(c) 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "A",
+        "fullText": "The endeavour of Janani Suraksha yojana programme is 1. to promote institutional deliveries 2. to provide monetary assistance to the mother to meet the cost of delivery 3. to provide for wage loss due to pregnancy and confinements Which of the statements given above is/are correct (a) 1 and 2 only (b) 2 only (c) 3 only (d) 1, 2 and 3"
+      }
+    ]
+  },
+  "schemexhr": {
+    "name": "SchemeXHR",
+    "tokens": [
+      "schemexhr"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2018,
+        "stem": "Consider the following statements1. As per the Right to Education (RTE) Actto be eligible for appointment as a teacher in a State, a person would be required to possess the minimum qualification laid down by the concerned State Council of Teacher Education. 2. As per the RTE Act, for teaching primary classes, a candidate is required to pass a Teacher Eligibility Test conducted in accordance with the National Council of TeacheEducation guidelines. 3. In India, more than 90% of teacher education institutions are directly under the State Governments Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 and 2",
+          "(b) 2 only",
+          "(c) 1 and 3",
+          "(d) 3 only"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following statements1. As per the Right to Education (RTE) Actto be eligible for appointment as a teacher in a State, a person would be required to possess the minimum qualification laid down by the concerned State Council of Teacher Education. 2. As per the RTE Act, for teaching primary classes, a candidate is required to pass a Teacher Eligibility Test conducted in accordance with the National Council of TeacheEducation guidelines. 3. In India, more than 90% of teacher education institutions are directly under the State Governments Which of the statements given above is/ are correct? (a) 1 and 2 (b) 2 only (c) 1 and 3 (d) 3 only"
+      },
+      {
+        "qNum": 2,
+        "year": 2018,
+        "stem": "With reference to Pradhan Mantri Kaushal Vikas Yojana, consider the following statements : 1. It is the flagship scheme of the Ministry of Labour and Employment. 2. It, among other things, will also impart training in soft skills, entrepreneurship, financial and digital literacy. 3. It aims to align the competencies of the unregulated workforce of the country to the National Skill Qualification FrameworkWhich of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 and 3 only",
+          "(b) 2 only",
+          "(c) 2 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "C",
+        "fullText": "With reference to Pradhan Mantri Kaushal Vikas Yojana, consider the following statements : 1. It is the flagship scheme of the Ministry of Labour and Employment. 2. It, among other things, will also impart training in soft skills, entrepreneurship, financial and digital literacy. 3. It aims to align the competencies of the unregulated workforce of the country to the National Skill Qualification FrameworkWhich of the statements given above is/ are correct? (a) 1 and 3 only (b) 2 only (c) 2 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 3,
+        "year": 2017,
+        "stem": "What is the aim of the programme ‘Unnat Bharat Abhiyan’ ?",
+        "options": [
+          "(a) Achieving 100% literacy by promoting collaboration between voluntary organizations and government’s education system and local communities.",
+          "(b) Connecting institutions of higher education with local communities to address development challenges through appropriate techhologies.",
+          "(c) Strengthening India’s scientific researcinstitutions in order to make India a scientific and technological Power.",
+          "(d) Developing human capital by allocating special funds for healthcare and education of rural and urban poor, and organizinskill development programmes and vocational training for them."
+        ],
+        "ans": "B",
+        "fullText": "What is the aim of the programme ‘Unnat Bharat Abhiyan’ ? (a) Achieving 100% literacy by promoting collaboration between voluntary organizations and government’s education system and local communities. (b) Connecting institutions of higher education with local communities to address development challenges through appropriate techhologies. (c) Strengthening India’s scientific researcinstitutions in order to make India a scientific and technological Power. (d) Developing human capital by allocating special funds for healthcare and education of rural and urban poor, and organizinskill development programmes and vocational training for them."
+      },
+      {
+        "qNum": 4,
+        "year": 2017,
+        "stem": "What is the purpose of Vidyanjali Yojana’? 1. To enable the famous foreign campuses in India. 2. To increase the quality of education provided in government schools by taking help from the private sector and the community3. To encourage voluntary monetary contributions from private individuals and organizations so as to improve the infrastructure facilities for primary and secondary schools. Select the correct answer using the code given below:",
+        "options": [
+          "(a) 2 only",
+          "(b) 3 only",
+          "(c) 1 and 2 only",
+          "(d) 2 and 3 only"
+        ],
+        "ans": "A",
+        "fullText": "What is the purpose of Vidyanjali Yojana’? 1. To enable the famous foreign campuses in India. 2. To increase the quality of education provided in government schools by taking help from the private sector and the community3. To encourage voluntary monetary contributions from private individuals and organizations so as to improve the infrastructure facilities for primary and secondary schools. Select the correct answer using the code given below: (a) 2 only (b) 3 only (c) 1 and 2 only (d) 2 and 3 only"
+      },
+      {
+        "qNum": 5,
+        "year": 2017,
+        "stem": "With reference to ‘National Skills Qualification Framework (NSQF)’, which of the statements given below is/are correct? 1. Under NSQF, a learner can acquire the certification for competency only through formal learning. 2. An outcome expected from the implementation of NSQF is the mobility betweevocational and general education. Select the correct answer using the code given below:",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "B",
+        "fullText": "With reference to ‘National Skills Qualification Framework (NSQF)’, which of the statements given below is/are correct? 1. Under NSQF, a learner can acquire the certification for competency only through formal learning. 2. An outcome expected from the implementation of NSQF is the mobility betweevocational and general education. Select the correct answer using the code given below: (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 6,
+        "year": 2017,
+        "stem": "Consider the following in respect of ‘National Career Service’ : 1. National Career Service is an initiative of the Department of Personnel and Training, Government of India. 2. National Career Service has been launched in a Mission Mode to improve the employment opportunities to uneducated youth of the country. Which of the above statements is/are correct ?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following in respect of ‘National Career Service’ : 1. National Career Service is an initiative of the Department of Personnel and Training, Government of India. 2. National Career Service has been launched in a Mission Mode to improve the employment opportunities to uneducated youth of the country. Which of the above statements is/are correct ? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 7,
+        "year": 2017,
+        "stem": "‘Recognition of Prior Learning Scheme’ is sometimes mentioned in the news with reference to",
+        "options": [
+          "(a) Certifying the skills acquired by construction workers through traditional channels.",
+          "(b) Enrolling the persons in Universities for distance learning programmes.",
+          "(c) Reserving some skilled jobs to rural and urban poor in some public sector undertakings.",
+          "(d) Certifying the skills acquired by trainees under the National Skill Development Programme."
+        ],
+        "ans": "A",
+        "fullText": "‘Recognition of Prior Learning Scheme’ is sometimes mentioned in the news with reference to (a) Certifying the skills acquired by construction workers through traditional channels. (b) Enrolling the persons in Universities for distance learning programmes. (c) Reserving some skilled jobs to rural and urban poor in some public sector undertakings. (d) Certifying the skills acquired by trainees under the National Skill Development Programme."
+      },
+      {
+        "qNum": 8,
+        "year": 2016,
+        "stem": "SWAYAM’, an initiative of the Government of India, aims at",
+        "options": [
+          "(a) promoting the Self Help Groups in rural areas",
+          "(b) providing financial and technical assistance to young start-up entrepreneurs",
+          "(c) promoting the education and health of adolescent girls",
+          "(d) providing affordable and quality education to the citizens for free"
+        ],
+        "ans": "D",
+        "fullText": "SWAYAM’, an initiative of the Government of India, aims at (a) promoting the Self Help Groups in rural areas (b) providing financial and technical assistance to young start-up entrepreneurs (c) promoting the education and health of adolescent girls (d) providing affordable and quality education to the citizens for free"
+      }
+    ]
+  },
+  "census": {
+    "name": "Census",
+    "tokens": [
+      "census"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2009,
+        "stem": "Consider the following statements : 1. Between Census 1951 and Census 2001, the density of the population of Indihas increased more than three times. 2. Between Census 1951 and Census 2001, the annual growth rate (exponentialof the population of India has doubled. Which of the statements given abova is/arcorrect ?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following statements : 1. Between Census 1951 and Census 2001, the density of the population of Indihas increased more than three times. 2. Between Census 1951 and Census 2001, the annual growth rate (exponentialof the population of India has doubled. Which of the statements given abova is/arcorrect ? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 2,
+        "year": 2009,
+        "stem": "Which one among the following South Asian countries has the highest population density ?",
+        "options": [
+          "(a) India",
+          "(b) Nepal",
+          "(c) Pakistan",
+          "(d) Sri Lanka"
+        ],
+        "ans": "A",
+        "fullText": "Which one among the following South Asian countries has the highest population density ? (a) India (b) Nepal (c) Pakistan (d) Sri Lanka"
+      },
+      {
+        "qNum": 3,
+        "year": 2008,
+        "stem": "Among the following, which one has the minimum population on the basis of data of Census of India, 2001?",
+        "options": [
+          "(a) Chandigarh",
+          "(b) Mizoram",
+          "(c) Puducherry",
+          "(d) Sikkim"
+        ],
+        "ans": "D",
+        "fullText": "Among the following, which one has the minimum population on the basis of data of Census of India, 2001? (a) Chandigarh (b) Mizoram (c) Puducherry (d) Sikkim"
+      },
+      {
+        "qNum": 4,
+        "year": 2008,
+        "stem": "Amongst the following States, which one has the highest percentage of rural population (on the basis of the Census, 2001)?",
+        "options": [
+          "(a) Himachal Pradesh",
+          "(b) Bihar",
+          "(c) Odisha",
+          "(d) Uttar Pradesh"
+        ],
+        "ans": "A",
+        "fullText": "Amongst the following States, which one has the highest percentage of rural population (on the basis of the Census, 2001)? (a) Himachal Pradesh (b) Bihar (c) Odisha (d) Uttar Pradesh"
+      },
+      {
+        "qNum": 5,
+        "year": 2008,
+        "stem": "Which of the following are among the million-plus cities in India on the basis of data of the Census, 2001?",
+        "options": [
+          "(a) 1, 2 and 3 only",
+          "(b) 2, 3 and 4 only",
+          "(c) 1 and 4 only",
+          "(d) 1, 2, 3 and 4"
+        ],
+        "ans": "D",
+        "fullText": "Which of the following are among the million-plus cities in India on the basis of data of the Census, 2001? (a) 1, 2 and 3 only (b) 2, 3 and 4 only (c) 1 and 4 only (d) 1, 2, 3 and 4"
+      },
+      {
+        "qNum": 6,
+        "year": 2008,
+        "stem": "What is the approximate percentage of persons above 65 years of age in India’s current population?",
+        "options": [
+          "(a) 14-15%",
+          "(b) 11-12%",
+          "(c) 8-9%",
+          "(d) 5-6%"
+        ],
+        "ans": "C",
+        "fullText": "What is the approximate percentage of persons above 65 years of age in India’s current population? (a) 14-15% (b) 11-12% (c) 8-9% (d) 5-6%"
+      },
+      {
+        "qNum": 7,
+        "year": 2008,
+        "stem": "As per India’s National Population Policy, 2000, by which one of the following years is it our long-term objective to achieve population stabilization?",
+        "options": [
+          "(a) 2025",
+          "(b) 2035",
+          "(c) 2045",
+          "(d) 2055"
+        ],
+        "ans": "C",
+        "fullText": "As per India’s National Population Policy, 2000, by which one of the following years is it our long-term objective to achieve population stabilization? (a) 2025 (b) 2035 (c) 2045 (d) 2055"
+      }
+    ]
+  },
+  "schemexvulnerable": {
+    "name": "SchemeXVulnerable",
+    "tokens": [
+      "schemexvulnerable"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2019,
+        "stem": "Consider the following statements about Particularly Vulnerable Tribal Group(PVTGs) in India: 1. PVTGs reside in 18 States and one Union Territory. 2. A stagnant or declining population is onof the criteria for determining PVTG status3. There are 95 PVTGs officially notified in the country so far. 4. Irular and Konda Reddi tribes are included in the list of PVTGs. Which of the statements given above are correct?",
+        "options": [
+          "(a) 1, 2 and 3",
+          "(b) 2, 3 and 4",
+          "(c) 1, 2 and 4",
+          "(d) 1, 3 and 4"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following statements about Particularly Vulnerable Tribal Group(PVTGs) in India: 1. PVTGs reside in 18 States and one Union Territory. 2. A stagnant or declining population is onof the criteria for determining PVTG status3. There are 95 PVTGs officially notified in the country so far. 4. Irular and Konda Reddi tribes are included in the list of PVTGs. Which of the statements given above are correct? (a) 1, 2 and 3 (b) 2, 3 and 4 (c) 1, 2 and 4 (d) 1, 3 and 4"
+      },
+      {
+        "qNum": 2,
+        "year": 2016,
+        "stem": "Rashtriya Garima Abhiyaan’ is a national campaign to",
+        "options": [
+          "(a) rehabilitate the homeless and destitute persons and provide them with suitable sources of livelihood",
+          "(b) release the sex workers from their practice and provide them with alternative sources of livelihood",
+          "(c) eradicate the practice of manual scavenging and rehabilitate the manual scavengers",
+          "(d) release the bonded labourers from theibondage and rehabilitate them"
+        ],
+        "ans": "C",
+        "fullText": "Rashtriya Garima Abhiyaan’ is a national campaign to (a) rehabilitate the homeless and destitute persons and provide them with suitable sources of livelihood (b) release the sex workers from their practice and provide them with alternative sources of livelihood (c) eradicate the practice of manual scavenging and rehabilitate the manual scavengers (d) release the bonded labourers from theibondage and rehabilitate them"
+      },
+      {
+        "qNum": 3,
+        "year": 2016,
+        "stem": "With reference to ‘Stand Up India Scheme’, which of the following statementis/are correct? 1. Its purpose is to promote entrepreneurship among SC/ST and women entrepreneurs. 2. It provides for refinance through SIDBI. Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "C",
+        "fullText": "With reference to ‘Stand Up India Scheme’, which of the following statementis/are correct? 1. Its purpose is to promote entrepreneurship among SC/ST and women entrepreneurs. 2. It provides for refinance through SIDBI. Select the correct answer using the code given below. (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 4,
+        "year": 2010,
+        "stem": "An objective of the Nations Food Security Mission is to increase the production of certain crops through area expansion and productivity enhancement in a sustainable manner in the identified districts of the country. What are the those crops?",
+        "options": [
+          "(a) Rice and Wheat only",
+          "(b) Rice, Wheat and Pulses only",
+          "(c) Rice, Wheat, Pulses and Oilseeds only",
+          "(d) Rice, Wheat, Pulses, Oilseeds and Vegetables only"
+        ],
+        "ans": "B",
+        "fullText": "An objective of the Nations Food Security Mission is to increase the production of certain crops through area expansion and productivity enhancement in a sustainable manner in the identified districts of the country. What are the those crops? (a) Rice and Wheat only (b) Rice, Wheat and Pulses only (c) Rice, Wheat, Pulses and Oilseeds only (d) Rice, Wheat, Pulses, Oilseeds and Vegetables only"
+      },
+      {
+        "qNum": 5,
+        "year": 2010,
+        "stem": "With reference to the National Rehabilitation and Resettlement Policy, 2007, consider the following statements : 1. This policy is applicable only to the persons affected by the acquisition of land for projects and not to the involuntary displacement due to any other reason. 2. This policy has been formulated by the Ministry of Social Justice and Empowerment. Which of the statements given above is/are correct ?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "With reference to the National Rehabilitation and Resettlement Policy, 2007, consider the following statements : 1. This policy is applicable only to the persons affected by the acquisition of land for projects and not to the involuntary displacement due to any other reason. 2. This policy has been formulated by the Ministry of Social Justice and Empowerment. Which of the statements given above is/are correct ? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 6,
+        "year": 2010,
+        "stem": "Two of the schemes launched by the Government of India for Women’s development are Swadhar and Swayam Siddha. As regards the difference betweethem, consider the following statements: 1. Swayam Siddha is meant for those in difficult circumstances such as women survivors of natural disasters or terrorism, women prisoners released from jails, mentally challenged women etc. whereas Swadhar is meant for holistic empowerment of women through Self Help Groups. 2. Swayam Siddha is implemented througLocal Self Government bodies or reputed Voluntary Organizations whereas Swadhais implemented through the ICDS. units seup in the states. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "Two of the schemes launched by the Government of India for Women’s development are Swadhar and Swayam Siddha. As regards the difference betweethem, consider the following statements: 1. Swayam Siddha is meant for those in difficult circumstances such as women survivors of natural disasters or terrorism, women prisoners released from jails, mentally challenged women etc. whereas Swadhar is meant for holistic empowerment of women through Self Help Groups. 2. Swayam Siddha is implemented througLocal Self Government bodies or reputed Voluntary Organizations whereas Swadhais implemented through the ICDS. units seup in the states. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 7,
+        "year": 2008,
+        "stem": "What is the name of the scheme which provides training and skills to women in traditional and non-traditional trades(a) Kishori Shakti Yojana",
+        "options": [
+          "(b) Rashtriya Mahila Kosh",
+          "(c) Swayamsiddha",
+          "(d) Swawlamban"
+        ],
+        "ans": "D",
+        "fullText": "What is the name of the scheme which provides training and skills to women in traditional and non-traditional trades(a) Kishori Shakti Yojana (b) Rashtriya Mahila Kosh (c) Swayamsiddha (d) Swawlamban"
+      }
+    ]
+  },
+  "certificationpromotionalbodies": {
+    "name": "Certification/Promotional Bodies",
+    "tokens": [
+      "bodies",
+      "certification",
+      "promotional"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "Which of the following is/are the most significant implication(s) of obtaining Oeko-Tex certification for Eri Silk in the global textile industry? 1. It allows Indian exporters to compete in high-end markets that prioritise chemical-free products. 2. It confirms that Eri Silk meets international safety, environmental, and quality standards, enabling its entry into premium eco-conscious markets.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "C",
+        "fullText": "Which of the following is/are the most significant implication(s) of obtaining Oeko-Tex certification for Eri Silk in the global textile industry? 1. It allows Indian exporters to compete in high-end markets that prioritise chemical-free products. 2. It confirms that Eri Silk meets international safety, environmental, and quality standards, enabling its entry into premium eco-conscious markets. (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 2,
+        "year": 2022,
+        "stem": "With reference to the “Tea Board” in India, consider the following statements1. The Tea Board is a statutory body. 2. It is a regulatory body attached to the Ministry of Agriculture and Farmers Welfare. 3. The Tea Board’s Head Office is situated in Bengaluru. 4. The Board has overseas offices at Dubaand Moscow. Which of the statements given above are correct ?",
+        "options": [
+          "(a) 1 and 3",
+          "(b) 2 and 4",
+          "(c) 3 and 4",
+          "(d) 1 and 4"
+        ],
+        "ans": "D",
+        "fullText": "With reference to the “Tea Board” in India, consider the following statements1. The Tea Board is a statutory body. 2. It is a regulatory body attached to the Ministry of Agriculture and Farmers Welfare. 3. The Tea Board’s Head Office is situated in Bengaluru. 4. The Board has overseas offices at Dubaand Moscow. Which of the statements given above are correct ? (a) 1 and 3 (b) 2 and 4 (c) 3 and 4 (d) 1 and 4"
+      },
+      {
+        "qNum": 3,
+        "year": 2017,
+        "stem": "With reference to `Quality Council of India (QCI)’, consider the following statements: 1. QCI was set up jointly by the Government of India and the Indian Industry. 2. Chairman of QCI is appointed by the Prime Minister on the recommendations of the industry to the Government. Which of the above statements is/are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "C",
+        "fullText": "With reference to `Quality Council of India (QCI)’, consider the following statements: 1. QCI was set up jointly by the Government of India and the Indian Industry. 2. Chairman of QCI is appointed by the Prime Minister on the recommendations of the industry to the Government. Which of the above statements is/are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 4,
+        "year": 2017,
+        "stem": "Consider the following statements1. The Standard Mark of Bureau of Indian Standards (BIS) is mandatory for automotive tyres and tubes. 2. AGMARK is a quality Certification Mark issued by the Food and Agriculture Organisation (FAO). Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following statements1. The Standard Mark of Bureau of Indian Standards (BIS) is mandatory for automotive tyres and tubes. 2. AGMARK is a quality Certification Mark issued by the Food and Agriculture Organisation (FAO). Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 5,
+        "year": 2016,
+        "stem": "On which of the following can you find the Bureau of Energy Efficiency Star Label? 1. Ceiling fans 2. Electric geysers 3. Tubular fluorescent lamps Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 3 only",
+          "(c) 2 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "On which of the following can you find the Bureau of Energy Efficiency Star Label? 1. Ceiling fans 2. Electric geysers 3. Tubular fluorescent lamps Select the correct answer using the code given below. (a) 1 and 2 only (b) 3 only (c) 2 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 6,
+        "year": 2008,
+        "stem": "Match List-I with List-II and select the correct answer using the codes given below the lists: List-I (Board) and List-II (Headquarters): A. Coffee Board - 1. Bangalore B. Rubber Board - 2. Guntur C. Tea Board - 3. Kottayam D. Tobacco Board - 4. Kolkata.",
+        "options": [
+          "(a) 2-4-3-1",
+          "(b) 1-3-4-2",
+          "(c) 2-3-4-1",
+          "(d) 1-4-3-2"
+        ],
+        "ans": "B",
+        "fullText": "Match List-I with List-II and select the correct answer using the codes given below the lists: List-I (Board) and List-II (Headquarters): A. Coffee Board - 1. Bangalore B. Rubber Board - 2. Guntur C. Tea Board - 3. Kottayam D. Tobacco Board - 4. Kolkata. (a) 2-4-3-1 (b) 1-3-4-2 (c) 2-3-4-1 (d) 1-4-3-2"
+      },
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "The Bureau of Indian Standard (BIS) recently introduced a national standard to test and assess bomb disposal system. Which of the following is/are correct? 1. The new standard is known as IS 1944: 2025. 2. It will improve interoperability of equipment across agencies. 3. It was developed by TBRL, DRDO in collaboration with the 30th Central Scientific Research Institute, Russia.",
+        "options": [
+          "(a) 1, 2 and 3",
+          "(b) 2 and 3 only",
+          "(c) 1 and 2 only",
+          "(d) 1 only"
+        ],
+        "ans": "C",
+        "fullText": "The Bureau of Indian Standard (BIS) recently introduced a national standard to test and assess bomb disposal system. Which of the following is/are correct? 1. The new standard is known as IS 1944: 2025. 2. It will improve interoperability of equipment across agencies. 3. It was developed by TBRL, DRDO in collaboration with the 30th Central Scientific Research Institute, Russia. (a) 1, 2 and 3 (b) 2 and 3 only (c) 1 and 2 only (d) 1 only"
+      }
+    ]
+  },
+  "schemexaadhar": {
+    "name": "SchemeXAADHAR",
+    "tokens": [
+      "schemexaadhar"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2020,
+        "stem": "Consider the following statements1. Aadhaar metadata cannot be stored for more than three months. 2. State cannot enter into any contract with private corporations for sharing of Aadhaar data. 3. Aadhaar is mandatory for obtaining insurance products. 4. Aadhaar is mandatory for getting benefits funded out of the Consolidated Fund oIndia. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 and 4 only",
+          "(b) 2 and 4 only",
+          "(c) 3 only",
+          "(d) 1, 2 and 3 only"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following statements1. Aadhaar metadata cannot be stored for more than three months. 2. State cannot enter into any contract with private corporations for sharing of Aadhaar data. 3. Aadhaar is mandatory for obtaining insurance products. 4. Aadhaar is mandatory for getting benefits funded out of the Consolidated Fund oIndia. Which of the statements given above is/ are correct? (a) 1 and 4 only (b) 2 and 4 only (c) 3 only (d) 1, 2 and 3 only"
+      },
+      {
+        "qNum": 2,
+        "year": 2018,
+        "stem": "The identity platform ‘Aadhaar‘ provides open “Application Programming Interfaces (APIs)”. What does it imply? 1.It can be integrated into any electronic device. 2.Online authentication using iris is possible. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "C",
+        "fullText": "The identity platform ‘Aadhaar‘ provides open “Application Programming Interfaces (APIs)”. What does it imply? 1.It can be integrated into any electronic device. 2.Online authentication using iris is possible. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 3,
+        "year": 2018,
+        "stem": "Consider the following statements: 1. Aadhaar card can be used as a proof of citizenship or domicile. 2. Once issued, Aadhaar number cannot be deactivated or omitted by the Issuing Authority. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following statements: 1. Aadhaar card can be used as a proof of citizenship or domicile. 2. Once issued, Aadhaar number cannot be deactivated or omitted by the Issuing Authority. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      }
+    ]
+  },
+  "schemexfinance": {
+    "name": "SchemeXFinance",
+    "tokens": [
+      "schemexfinance"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2016,
+        "stem": "Which one of the following is a purpose of ‘UDAY’, a scheme of the Government?",
+        "options": [
+          "(a) Providing technical and financial assistance to start-up entrepreneurs in the field of renewable sources of energy",
+          "(b) Providing electricity to every household in the countries by 2018",
+          "(c) Replacing the coal-based power plants with natural gas, nuclear, solar, wind and tidal power plants over a period of time",
+          "(d) Providing for financial turnaround and revival of power distribution companies"
+        ],
+        "ans": "D",
+        "fullText": "Which one of the following is a purpose of ‘UDAY’, a scheme of the Government? (a) Providing technical and financial assistance to start-up entrepreneurs in the field of renewable sources of energy (b) Providing electricity to every household in the countries by 2018 (c) Replacing the coal-based power plants with natural gas, nuclear, solar, wind and tidal power plants over a period of time (d) Providing for financial turnaround and revival of power distribution companies"
+      },
+      {
+        "qNum": 2,
+        "year": 2016,
+        "stem": "Pradhan Mantri MUDRA Yojana is aimed at",
+        "options": [
+          "(a) bringing the small entrepreneurs into formal financial system",
+          "(b) providing loans to poor farmers for cultivating particular crops",
+          "(c) providing pensions to old and destitute persons",
+          "(d) funding the voluntary organizations involved in the promotion of skill development and employment generation"
+        ],
+        "ans": "A",
+        "fullText": "Pradhan Mantri MUDRA Yojana is aimed at (a) bringing the small entrepreneurs into formal financial system (b) providing loans to poor farmers for cultivating particular crops (c) providing pensions to old and destitute persons (d) funding the voluntary organizations involved in the promotion of skill development and employment generation"
+      },
+      {
+        "qNum": 3,
+        "year": 2015,
+        "stem": "Pradhan Mantri Jan-Dhan Yojana’ has been launched for",
+        "options": [
+          "(a) providing housing loan to poor people acheaper interest rates",
+          "(b) promoting women’s Self-Help Groups in backward areas",
+          "(c) promoting financial inclusion in the country",
+          "(d) providing financial help to the marginalized communities"
+        ],
+        "ans": "C",
+        "fullText": "Pradhan Mantri Jan-Dhan Yojana’ has been launched for (a) providing housing loan to poor people acheaper interest rates (b) promoting women’s Self-Help Groups in backward areas (c) promoting financial inclusion in the country (d) providing financial help to the marginalized communities"
+      }
+    ]
+  },
+  "disabled": {
+    "name": "Disabled",
+    "tokens": [
+      "disabled"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "Which of the following statements with regard to the persons with disabilities in India is/are correct? 1. The Rights of Persons with Disabilities Act, an Act passed by the Parliament of India in 2018, mandates reservation in education and employment, places a legal duty on Governments to ensure accessibility and non-discrimination. 2. The Sugamya Bharat Abhiyan focuses on achieving universal accessibility for Persons with Disabilities across three key domains — built infrastructure, transport systems and information and communication technology. 3. The National Divyangjan Finance and Development Corporation (NDFDC) is a public sector organisation set up by the Ministry of Corporate Affairs as a not-for-profit company to promote entrepreneurship among Persons with Disabilities (PwDs). Select the answer using the code given below:",
+        "options": [
+          "(a) 1 and 2",
+          "(b) 2 only",
+          "(c) 1 and 3",
+          "(d) 1 only"
+        ],
+        "ans": "B",
+        "fullText": "Which of the following statements with regard to the persons with disabilities in India is/are correct? 1. The Rights of Persons with Disabilities Act, an Act passed by the Parliament of India in 2018, mandates reservation in education and employment, places a legal duty on Governments to ensure accessibility and non-discrimination. 2. The Sugamya Bharat Abhiyan focuses on achieving universal accessibility for Persons with Disabilities across three key domains — built infrastructure, transport systems and information and communication technology. 3. The National Divyangjan Finance and Development Corporation (NDFDC) is a public sector organisation set up by the Ministry of Corporate Affairs as a not-for-profit company to promote entrepreneurship among Persons with Disabilities (PwDs). Select the answer using the code given below: (a) 1 and 2 (b) 2 only (c) 1 and 3 (d) 1 only"
+      },
+      {
+        "qNum": 2,
+        "year": 2011,
+        "stem": "India is home to lakhs of persons with disabilities. What are the benefits available to them under the law? 1. Free schooling till the age of 18 years in government-run schools. 2. Preferential allotment of land for getting up business. 3. Ramps in public buildings.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1,2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "India is home to lakhs of persons with disabilities. What are the benefits available to them under the law? 1. Free schooling till the age of 18 years in government-run schools. 2. Preferential allotment of land for getting up business. 3. Ramps in public buildings. (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1,2 and 3"
+      }
+    ]
+  }
+}

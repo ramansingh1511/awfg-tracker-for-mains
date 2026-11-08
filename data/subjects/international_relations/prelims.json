@@ -1,0 +1,2147 @@
+{
+  "nationalincomeaccountinggdp": {
+    "name": "National Income Accounting(GDP)",
+    "tokens": [
+      "gdp",
+      "income",
+      "accounting",
+      "national"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2019,
+        "stem": "Consider the following statements1.Purchasing Power Parity (PPP) exchange rates are calculated by comparing the prices of the same basket of goods and services in different countries. 2.In terms of PPP dollars, India is the sixth largest economy in the world. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2",
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following statements1.Purchasing Power Parity (PPP) exchange rates are calculated by comparing the prices of the same basket of goods and services in different countries. 2.In terms of PPP dollars, India is the sixth largest economy in the world. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2 (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 2,
+        "year": 2018,
+        "stem": "Increase in absolute and per capitreal GNP do not connote a higher level of economic development, if",
+        "options": [
+          "(a) industrial output fails to keep pace with agricultural output.",
+          "(b) agricultural output fails to keep pace with industrial output.",
+          "(c) poverty and unemployme crease.",
+          "(d) imports grow faster than exports."
+        ],
+        "ans": "C",
+        "fullText": "Increase in absolute and per capitreal GNP do not connote a higher level of economic development, if (a) industrial output fails to keep pace with agricultural output. (b) agricultural output fails to keep pace with industrial output. (c) poverty and unemployme crease. (d) imports grow faster than exports."
+      },
+      {
+        "qNum": 3,
+        "year": 2015,
+        "stem": "A decrease in tax to GDP ratio of a country indicates which of the following? (1) Slowing economic growth rate (2) Less equitable distribution of national income Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "A",
+        "fullText": "A decrease in tax to GDP ratio of a country indicates which of the following? (1) Slowing economic growth rate (2) Less equitable distribution of national income Select the correct answer using the code given below. (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 4,
+        "year": 2015,
+        "stem": "With reference to Indian economy, consider the following statements : (1) The rate of growth of Real Gross Domestic product has steadily increased in the last decade. (2) The Gross Domestic product at market prices (in rupees) has steadily increased in the last decade. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "B",
+        "fullText": "With reference to Indian economy, consider the following statements : (1) The rate of growth of Real Gross Domestic product has steadily increased in the last decade. (2) The Gross Domestic product at market prices (in rupees) has steadily increased in the last decade. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 5,
+        "year": 2015,
+        "stem": "In the ‘Index of Eight Core Industries, which one of the following is given the highest weight?",
+        "options": [
+          "(a) Coal Production",
+          "(b) Electricity generation",
+          "(c) Fertilizer production",
+          "(d) Steel production"
+        ],
+        "ans": "B",
+        "fullText": "In the ‘Index of Eight Core Industries, which one of the following is given the highest weight? (a) Coal Production (b) Electricity generation (c) Fertilizer production (d) Steel production"
+      },
+      {
+        "qNum": 6,
+        "year": 2013,
+        "stem": "The national income of a country for a given period is equal to the",
+        "options": [
+          "(a) total value of goods and services produced by the nationals",
+          "(b) sum of total consumption and investment expenditure",
+          "(c) sum of personal income of all individual(d) money value of final goods and services produced"
+        ],
+        "ans": "D",
+        "fullText": "The national income of a country for a given period is equal to the (a) total value of goods and services produced by the nationals (b) sum of total consumption and investment expenditure (c) sum of personal income of all individual(d) money value of final goods and services produced"
+      },
+      {
+        "qNum": 7,
+        "year": 2012,
+        "stem": "In India the overall Index of Industrial Production, the Indices of Eight Core Industries have combined weight of 37.90%. Which of the following are among those Eight Core Industries? 1. Cement 2. Fertilizers 3. Natural Gas 4. Refinery products 5. Textiles Select the correct answer using the code given below:",
+        "options": [
+          "(a) 1 and 5 only",
+          "(b) 2, 3 and 4 only",
+          "(c) 1, 2, 3 and 4 only",
+          "(d) 1, 2, 3, 4 and 5"
+        ],
+        "ans": "C",
+        "fullText": "In India the overall Index of Industrial Production, the Indices of Eight Core Industries have combined weight of 37.90%. Which of the following are among those Eight Core Industries? 1. Cement 2. Fertilizers 3. Natural Gas 4. Refinery products 5. Textiles Select the correct answer using the code given below: (a) 1 and 5 only (b) 2, 3 and 4 only (c) 1, 2, 3 and 4 only (d) 1, 2, 3, 4 and 5"
+      },
+      {
+        "qNum": 8,
+        "year": 2011,
+        "stem": "In terms of economy, the visit by foreign nationals to witness the XIX Commonwealth Games in India amounted to",
+        "options": [
+          "(a) Export",
+          "(b) Import",
+          "(c) Production",
+          "(d) Consumption"
+        ],
+        "ans": "A",
+        "fullText": "In terms of economy, the visit by foreign nationals to witness the XIX Commonwealth Games in India amounted to (a) Export (b) Import (c) Production (d) Consumption"
+      },
+      {
+        "qNum": 9,
+        "year": 2011,
+        "stem": "In the context of Indian economy, consider the following statements: 1. The growth rate of GDP has steadily increased in the last five years. 2. The growth rate in per capita income has steadily increased in the last five years.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "In the context of Indian economy, consider the following statements: 1. The growth rate of GDP has steadily increased in the last five years. 2. The growth rate in per capita income has steadily increased in the last five years. (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 10,
+        "year": 2010,
+        "stem": "With reference to India economy, consider the following statements: 1. The Gross Domestic Product (GDP) has increased by four times in the last 10 years 2. The percentage share of Public Sector in GDP has declined in the last 10 years Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "B",
+        "fullText": "With reference to India economy, consider the following statements: 1. The Gross Domestic Product (GDP) has increased by four times in the last 10 years 2. The percentage share of Public Sector in GDP has declined in the last 10 years Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 11,
+        "year": 2008,
+        "stem": "Which of the following pairs about India’s economic indicator and agricultural production (all in rounded figures) are correctly matched? 1. GDP per capita (current prices): Rs 37,000 2. Rice: 180 million tons 3. Wheat: 75 million tons.",
+        "options": [
+          "(a) 1, 2 and 3",
+          "(b) 1 and 2 Only",
+          "(c) 2 and 3 Only",
+          "(d) 1 and 3 Only"
+        ],
+        "ans": "D",
+        "fullText": "Which of the following pairs about India’s economic indicator and agricultural production (all in rounded figures) are correctly matched? 1. GDP per capita (current prices): Rs 37,000 2. Rice: 180 million tons 3. Wheat: 75 million tons. (a) 1, 2 and 3 (b) 1 and 2 Only (c) 2 and 3 Only (d) 1 and 3 Only"
+      }
+    ]
+  },
+  "unitednationsagenciesadjacentbodie12026whichofthefollowinginternation": {
+    "name": "“United Nations,Agencies,Adjacent Bodie1.   [2026] Which of the following internation-",
+    "tokens": [
+      "adjacent",
+      "nations",
+      "2026",
+      "bodie1",
+      "following",
+      "united",
+      "internation",
+      "agencies"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "Which of the following international conventions have NOT been ratified by India? 1. Employment Policy Convention 2. Abolition of Forced Labour Convention 3. International Convention on the Protection of the Rights of All Migrant Workers and Members of Their Families 4. Geneva Convention Relative to the Protection of Civilian Persons in Time of War 5. Convention on Reduction of Statelessness",
+        "options": [
+          "(a) 2 and 4",
+          "(b) 1 and 2",
+          "(c) 3 and 4 only",
+          "(d) 3, 4 and 5 Ans:"
+        ],
+        "ans": "",
+        "fullText": "Which of the following international conventions have NOT been ratified by India? 1. Employment Policy Convention 2. Abolition of Forced Labour Convention 3. International Convention on the Protection of the Rights of All Migrant Workers and Members of Their Families 4. Geneva Convention Relative to the Protection of Civilian Persons in Time of War 5. Convention on Reduction of Statelessness (a) 2 and 4 (b) 1 and 2 (c) 3 and 4 only (d) 3, 4 and 5 Ans:"
+      },
+      {
+        "qNum": 2,
+        "year": 2026,
+        "stem": "Consider the following statements about platforms for multilateral co-operation: 1. The ‘Colombo Process’ is a regional consultative process in which member states take binding decisions by consensus. 2. The ‘Abu Dhabi Dialogue’ is a voluntary non-binding consultative process among Asian countries of labour origin and destination to facilitate regional cooperation on contractual labour mobility. 3. The ‘Global Forum for Migration and Development’, created upon the proposal of a former UN Secretary General, is a voluntary forum whose decisions are non-binding.",
+        "options": [
+          "(a) 1, 2 and 3",
+          "(b) 1 and 3 only",
+          "(c) 2 and 3 only",
+          "(d) 2 only"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following statements about platforms for multilateral co-operation: 1. The ‘Colombo Process’ is a regional consultative process in which member states take binding decisions by consensus. 2. The ‘Abu Dhabi Dialogue’ is a voluntary non-binding consultative process among Asian countries of labour origin and destination to facilitate regional cooperation on contractual labour mobility. 3. The ‘Global Forum for Migration and Development’, created upon the proposal of a former UN Secretary General, is a voluntary forum whose decisions are non-binding. (a) 1, 2 and 3 (b) 1 and 3 only (c) 2 and 3 only (d) 2 only"
+      },
+      {
+        "qNum": 3,
+        "year": 2026,
+        "stem": "How many of the following UN organisations/agencies have been awardethe Nobel Prize twice? 1. World Food Programme 2. United Nations Children’s Fund 3. United Nations High Commissioner for Refugees 4. International Labour Organisation",
+        "options": [
+          "(a) 1",
+          "(b) 2",
+          "(c) 3",
+          "(d) 4"
+        ],
+        "ans": "A",
+        "fullText": "How many of the following UN organisations/agencies have been awardethe Nobel Prize twice? 1. World Food Programme 2. United Nations Children’s Fund 3. United Nations High Commissioner for Refugees 4. International Labour Organisation (a) 1 (b) 2 (c) 3 (d) 4"
+      },
+      {
+        "qNum": 4,
+        "year": 2026,
+        "stem": "Match List I (UN Peacekeeping Operation) with List II (Period of OperationA. UNMIL 1. 2007-2010 B. MINURCAT 2. 2002-2005 C. MINUSTAH 3. 2003-2018 D. UNMISET 4. 2004-2017",
+        "options": [
+          "(a) A-3, B-4, C-1, D-2",
+          "(b) A-3, B-1, C-4, D-2",
+          "(c) A-2, B-1, C-4, D-3",
+          "(d) A-2, B-4, C-1, D-3"
+        ],
+        "ans": "B",
+        "fullText": "Match List I (UN Peacekeeping Operation) with List II (Period of OperationA. UNMIL 1. 2007-2010 B. MINURCAT 2. 2002-2005 C. MINUSTAH 3. 2003-2018 D. UNMISET 4. 2004-2017 (a) A-3, B-4, C-1, D-2 (b) A-3, B-1, C-4, D-2 (c) A-2, B-1, C-4, D-3 (d) A-2, B-4, C-1, D-3"
+      },
+      {
+        "qNum": 5,
+        "year": 2025,
+        "stem": "Consider the following statements in respect of BIMSTEC: I. It is a regional organization consisting of seven member States till January 2025. II. It came into existence with the signing othe Dhaka Declaration, 1999. III. Bangladesh, India, Sri Lanka, Thailand, and Nepal are founding member States of BIMSTEC. IV. In BIMSTEC, the subsector of ‘tourism’ is being led by India. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) I and II",
+          "(b) II and III",
+          "(c) I and IV",
+          "(d) I only"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following statements in respect of BIMSTEC: I. It is a regional organization consisting of seven member States till January 2025. II. It came into existence with the signing othe Dhaka Declaration, 1999. III. Bangladesh, India, Sri Lanka, Thailand, and Nepal are founding member States of BIMSTEC. IV. In BIMSTEC, the subsector of ‘tourism’ is being led by India. Which of the statements given above is/ are correct? (a) I and II (b) II and III (c) I and IV (d) I only"
+      },
+      {
+        "qNum": 6,
+        "year": 2025,
+        "stem": "Consider the following pairs: I. International Year of the Woman Farmer – 2026 II. International Year of Sustainable and Resilient Tourism – 2027 III. International Year of Peace and Trust – 2025 IV. International Year of Asteroid Awareness and Planetary Defence – 2029 How many of the pairs given above are correctly matched?",
+        "options": [
+          "(a) Only one",
+          "(b) Only two",
+          "(c) Only three",
+          "(d) All the four"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following pairs: I. International Year of the Woman Farmer – 2026 II. International Year of Sustainable and Resilient Tourism – 2027 III. International Year of Peace and Trust – 2025 IV. International Year of Asteroid Awareness and Planetary Defence – 2029 How many of the pairs given above are correctly matched? (a) Only one (b) Only two (c) Only three (d) All the four"
+      },
+      {
+        "qNum": 7,
+        "year": 2024,
+        "stem": "Consider the following statements d regarding World Toilet Organization: 1. It is one of the agencies of the United Nations. 2. World Toilet Summit, World Toilet Day, and World Toilet College are the initiatives of this organization, to inspire action to tackle the global sanitation crisis. 3. The main focus of its function is to grant funds to the least developed countries and developing countries to achieve the end of open defecation. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 2 only*",
+          "(b) 3 only :",
+          "(c) 1 and 2",
+          "(d) 2 and 3"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following statements d regarding World Toilet Organization: 1. It is one of the agencies of the United Nations. 2. World Toilet Summit, World Toilet Day, and World Toilet College are the initiatives of this organization, to inspire action to tackle the global sanitation crisis. 3. The main focus of its function is to grant funds to the least developed countries and developing countries to achieve the end of open defecation. Which of the statements given above is/ are correct? (a) 2 only* (b) 3 only : (c) 1 and 2 (d) 2 and 3"
+      },
+      {
+        "qNum": 8,
+        "year": 2023,
+        "stem": "Consider the following infrastructure sectors : 1. Affordable housing 2. Mass rapid transport 3. Health care 4. Renewable energy On how many of the above does UNOPS Sustainable Investments in Infrastructure and Innovation (S3i) initiative focus for its investments?",
+        "options": [
+          "(a) Only one",
+          "(b) Only two",
+          "(c) All three",
+          "(d) All four"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following infrastructure sectors : 1. Affordable housing 2. Mass rapid transport 3. Health care 4. Renewable energy On how many of the above does UNOPS Sustainable Investments in Infrastructure and Innovation (S3i) initiative focus for its investments? (a) Only one (b) Only two (c) All three (d) All four"
+      },
+      {
+        "qNum": 9,
+        "year": 2023,
+        "stem": "Consier the following statements: 1. Recently, all the countries of the United Nations have adopted the first-ever compact for international migration, the ‘Global Compact for Safe, Orderly and Regular Migration (GCM)’. 2. The objectives and commitments stated in the GCM are binding on the UN member countries. 3. The GCM addresses internal migration or internally displaced people also in its objectives and commitments. How many of the above statements are correct?",
+        "options": [
+          "(a) Only one",
+          "(b) Only two",
+          "(c) All three",
+          "(d) None"
+        ],
+        "ans": "D",
+        "fullText": "Consier the following statements: 1. Recently, all the countries of the United Nations have adopted the first-ever compact for international migration, the ‘Global Compact for Safe, Orderly and Regular Migration (GCM)’. 2. The objectives and commitments stated in the GCM are binding on the UN member countries. 3. The GCM addresses internal migration or internally displaced people also in its objectives and commitments. How many of the above statements are correct? (a) Only one (b) Only two (c) All three (d) None"
+      },
+      {
+        "qNum": 10,
+        "year": 2023,
+        "stem": "Consider the following statements: Statement-I: According to the United Nations’ ‘World Water Development Report, 2022’, India extracts more than a quarter of world’s groundwater withdrawal each year. Statement-II: India needs to extract more than a quarter of the world’s groundwater each year to satisfy the drinking water and sanitation needs of almost 18% of world’s population living in its territory. Which one of the following is correct in respect of the above statements?",
+        "options": [
+          "(a) Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+          "(b) Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I",
+          "(c) Statement-I is correct but Statement-II is incorrect",
+          "(d) Statement-I is incorrect but Statement-II is correct"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following statements: Statement-I: According to the United Nations’ ‘World Water Development Report, 2022’, India extracts more than a quarter of world’s groundwater withdrawal each year. Statement-II: India needs to extract more than a quarter of the world’s groundwater each year to satisfy the drinking water and sanitation needs of almost 18% of world’s population living in its territory. Which one of the following is correct in respect of the above statements? (a) Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I (b) Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I (c) Statement-I is correct but Statement-II is incorrect (d) Statement-I is incorrect but Statement-II is correct"
+      },
+      {
+        "qNum": 11,
+        "year": 2022,
+        "stem": "With reference to the “United Nations Credentials Committee”, considethe following statements : 1. It is a committee set up by the UN Security Council and works under its supervision. 2. It traditionally meets in March, June and September every year. 3. It assesses the credentials of all UN members before submitting a report to the General Assembly for approval. Which of the statements given above is/ are correct ?",
+        "options": [
+          "(a) 3 only",
+          "(b) 1 and 3",
+          "(c) 2 and 3",
+          "(d) 1 and 2"
+        ],
+        "ans": "A",
+        "fullText": "With reference to the “United Nations Credentials Committee”, considethe following statements : 1. It is a committee set up by the UN Security Council and works under its supervision. 2. It traditionally meets in March, June and September every year. 3. It assesses the credentials of all UN members before submitting a report to the General Assembly for approval. Which of the statements given above is/ are correct ? (a) 3 only (b) 1 and 3 (c) 2 and 3 (d) 1 and 2"
+      },
+      {
+        "qNum": 12,
+        "year": 2022,
+        "stem": "With reference to the United Nations Convention on the Law of Sea, consider the following statements : 1. A coastal state has the right to establish the breadth of its territorial sea up to a limit not exceeding 12 nautical miles, measured from baseline determined in accordance with the convention. 2. Ships of all states, whether coastal or land-locked, enjoy the right of innocent passage through the territorial sea. 3. The Exclusive Economic Zone shall noextend beyond 200 nautical miles from the baseline from which the breadth of the territorial sea is measured. Which of the statements given above are correct ?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "With reference to the United Nations Convention on the Law of Sea, consider the following statements : 1. A coastal state has the right to establish the breadth of its territorial sea up to a limit not exceeding 12 nautical miles, measured from baseline determined in accordance with the convention. 2. Ships of all states, whether coastal or land-locked, enjoy the right of innocent passage through the territorial sea. 3. The Exclusive Economic Zone shall noextend beyond 200 nautical miles from the baseline from which the breadth of the territorial sea is measured. Which of the statements given above are correct ? (a) 1 and 2 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 13,
+        "year": 2022,
+        "stem": "With reference to the United Nations General Assembly, consider the following statements : 1. The UN General Assembly can grant observer status to the non-member States. 2. Inter-governmental organisations can seek observer status in the UN General Assembly. 3. Permanent Observers in the UN Geneal Assembly can maintain missions at thUN headquarters. Which of the statements given above are correct ?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "With reference to the United Nations General Assembly, consider the following statements : 1. The UN General Assembly can grant observer status to the non-member States. 2. Inter-governmental organisations can seek observer status in the UN General Assembly. 3. Permanent Observers in the UN Geneal Assembly can maintain missions at thUN headquarters. Which of the statements given above are correct ? (a) 1 and 2 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 14,
+        "year": 2021,
+        "stem": "Consider the following statements: Statement 1: The United Nations Capital Development Fund (UNCDF) and the Arbor Day Foundation have recently recognized Hyderabad as the 2020 Tree City of the World. Statement 2: Hyderabad was selected for the recognition for a year following its commitment to grow and maintain the urban forests. Which one of the following is correct in respect of the above statements?",
+        "options": [
+          "(a) Both Statement 1 and Statement 2 are correct, and Statement 2 is the correct explanation for Statement 1.",
+          "(b) Both Statement 1 and Statement 2 are correct, but Statement 2 is not the correct explanation for Statement 1.",
+          "(c) Statement 1 is correct, but Statement 2 is not correct.",
+          "(d) Statement 1 is not correct, but Statement 2 is correct."
+        ],
+        "ans": "D",
+        "fullText": "Consider the following statements: Statement 1: The United Nations Capital Development Fund (UNCDF) and the Arbor Day Foundation have recently recognized Hyderabad as the 2020 Tree City of the World. Statement 2: Hyderabad was selected for the recognition for a year following its commitment to grow and maintain the urban forests. Which one of the following is correct in respect of the above statements? (a) Both Statement 1 and Statement 2 are correct, and Statement 2 is the correct explanation for Statement 1. (b) Both Statement 1 and Statement 2 are correct, but Statement 2 is not the correct explanation for Statement 1. (c) Statement 1 is correct, but Statement 2 is not correct. (d) Statement 1 is not correct, but Statement 2 is correct."
+      },
+      {
+        "qNum": 15,
+        "year": 2021,
+        "stem": "Consider the following statements: 1. 21st February is declared to be the International Mother Language Day by UNICEF. 2. The demand that Bangla has to be one of the national languages was raised in the Constituent Assembly of Pakistan. Which of the above statements is/are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following statements: 1. 21st February is declared to be the International Mother Language Day by UNICEF. 2. The demand that Bangla has to be one of the national languages was raised in the Constituent Assembly of Pakistan. Which of the above statements is/are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 16,
+        "year": 2021,
+        "stem": "Consider the following statements: 1.‘Right to the City’ is an agreed human right, and the UN-Habitat monitors the commitments made by each country in this regard. 2.‘Right to the City’ gives every occupant of the city the right to reclaim public spaces and participate in public life. 3.‘Right to the City’ means that the State cannot deny any public service or facility to the unauthorized colonies in the city. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 3 only",
+          "(c) 1 and 2",
+          "(d) 2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following statements: 1.‘Right to the City’ is an agreed human right, and the UN-Habitat monitors the commitments made by each country in this regard. 2.‘Right to the City’ gives every occupant of the city the right to reclaim public spaces and participate in public life. 3.‘Right to the City’ means that the State cannot deny any public service or facility to the unauthorized colonies in the city. Which of the statements given above is/ are correct? (a) 1 only (b) 3 only (c) 1 and 2 (d) 2 and 3"
+      },
+      {
+        "qNum": 17,
+        "year": 2020,
+        "stem": "Consider the following pairs: International agreement /set-up Subject 1. Alma-Ata Declaration — Healthcare of the people 2. Hague Convention — Biological and chemical weapons 3. Talanoa Dialogue — Global climate change 4. Under2 Coalition — Child rights Which of the pairs given above is/are correctly matched?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 4 only",
+          "(c) 1 and 3 only",
+          "(d) 2, 3 and 4 only"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following pairs: International agreement /set-up Subject 1. Alma-Ata Declaration — Healthcare of the people 2. Hague Convention — Biological and chemical weapons 3. Talanoa Dialogue — Global climate change 4. Under2 Coalition — Child rights Which of the pairs given above is/are correctly matched? (a) 1 and 2 only (b) 4 only (c) 1 and 3 only (d) 2, 3 and 4 only"
+      },
+      {
+        "qNum": 18,
+        "year": 2019,
+        "stem": "Consider the following statements: 1. The United Nations Convention against Corruption (UNCAC) has a ‘Protocol against the Smuggling of Migrants by Land, Sea and Air’. 2. The UNCAC is the ever-first legally binding global anti-corruption instrument. 3. A highlight of the United Nations Convention against Transnational Organized Crime (UNTOC) is the inclusion of a specific chapter aimed at returning assets to their rightful owners from whom they had been taken illicitly. 4. The United Nations Office on Drugs and Crime (UNODC) is mandated by its member States to assist in the implementation of both UNCAC and UNTOC. Which of the statements given above are correct?",
+        "options": [
+          "(a) 1 and 3 only",
+          "(b) 2, 3 and 4 only",
+          "(c) 2 and 4 only",
+          "(d) 1, 2, 3 and 4"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following statements: 1. The United Nations Convention against Corruption (UNCAC) has a ‘Protocol against the Smuggling of Migrants by Land, Sea and Air’. 2. The UNCAC is the ever-first legally binding global anti-corruption instrument. 3. A highlight of the United Nations Convention against Transnational Organized Crime (UNTOC) is the inclusion of a specific chapter aimed at returning assets to their rightful owners from whom they had been taken illicitly. 4. The United Nations Office on Drugs and Crime (UNODC) is mandated by its member States to assist in the implementation of both UNCAC and UNTOC. Which of the statements given above are correct? (a) 1 and 3 only (b) 2, 3 and 4 only (c) 2 and 4 only (d) 1, 2, 3 and 4"
+      },
+      {
+        "qNum": 19,
+        "year": 2018,
+        "stem": "International Labour Organization’s Conventions 138 and 182 are related to",
+        "options": [
+          "(a) Child labour",
+          "(b) Adaptation of agriculture practices to global climate change",
+          "(c) Regulation of food prices and food security",
+          "(d) d)Gender parity at the workplace"
+        ],
+        "ans": "A",
+        "fullText": "International Labour Organization’s Conventions 138 and 182 are related to (a) Child labour (b) Adaptation of agriculture practices to global climate change (c) Regulation of food prices and food security (d) d)Gender parity at the workplace"
+      },
+      {
+        "qNum": 20,
+        "year": 2017,
+        "stem": "With reference to `Asia Pacific’ Ministerial Conference on Housing and Urban Development (APMCHUD)’, consider the following statements: 1. The first APMCHUD was held in India in 2006 on the theme `Emerging Urban Forms-Policy Responses and GovernancStructure’. 2. India hosts all the Annual Ministerial Conferences in partnership with ADB, APEC and ASEAN. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "With reference to `Asia Pacific’ Ministerial Conference on Housing and Urban Development (APMCHUD)’, consider the following statements: 1. The first APMCHUD was held in India in 2006 on the theme `Emerging Urban Forms-Policy Responses and GovernancStructure’. 2. India hosts all the Annual Ministerial Conferences in partnership with ADB, APEC and ASEAN. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 21,
+        "year": 2017,
+        "stem": "With reference to the role of UN-Habitat in the United Nations programme working towards a better urban future, which of the statements is/are correct ? 1. UN-Habitat has been mandated by the United Nations General Assembly to promote socially and environmentally sustainable towns and cities to provide adequate shelter for all. 2. Its partners are either governments or local urban authorities only. 3. UN-Habitat contributes to the overall objective of the United Nations system treduce poverty and to promote access-tsafe drinking water and bask sanitation. Select the correct answer using the codgiven below :",
+        "options": [
+          "(a) 1, 2 and 3",
+          "(b) 1 and 3 only",
+          "(c) 2 and 3 only",
+          "(d) 1 only"
+        ],
+        "ans": "B",
+        "fullText": "With reference to the role of UN-Habitat in the United Nations programme working towards a better urban future, which of the statements is/are correct ? 1. UN-Habitat has been mandated by the United Nations General Assembly to promote socially and environmentally sustainable towns and cities to provide adequate shelter for all. 2. Its partners are either governments or local urban authorities only. 3. UN-Habitat contributes to the overall objective of the United Nations system treduce poverty and to promote access-tsafe drinking water and bask sanitation. Select the correct answer using the codgiven below : (a) 1, 2 and 3 (b) 1 and 3 only (c) 2 and 3 only (d) 1 only"
+      },
+      {
+        "qNum": 22,
+        "year": 2015,
+        "stem": "Beijing Declaration and Platform for Action’, often seen in the news, is",
+        "options": [
+          "(a) a strategy to tackle the regional terrorism, an outcome of a meeting of thShanghai Cooperation Organization",
+          "(b) a plan of action for sustainable economic growth in the Asia-Pacific Region, an outcome of the deliberations of the Asia-Pacific Economic Forum",
+          "(c) an agenda for women’s empowermentan outcome of a World Conferene convened by the United Nations",
+          "(d) a strategy to combat wildlife trafficking, a declaration of the East Asia Summ"
+        ],
+        "ans": "C",
+        "fullText": "Beijing Declaration and Platform for Action’, often seen in the news, is (a) a strategy to tackle the regional terrorism, an outcome of a meeting of thShanghai Cooperation Organization (b) a plan of action for sustainable economic growth in the Asia-Pacific Region, an outcome of the deliberations of the Asia-Pacific Economic Forum (c) an agenda for women’s empowermentan outcome of a World Conferene convened by the United Nations (d) a strategy to combat wildlife trafficking, a declaration of the East Asia Summ"
+      },
+      {
+        "qNum": 23,
+        "year": 2010,
+        "stem": "Which one of the following is not related to United Nations ?",
+        "options": [
+          "(a) Multilateral Investment Guarantee Agency",
+          "(b) International Finance Corporation",
+          "(c) International Centre for Settlement of Investment Disputes",
+          "(d) Bank for International Settlements ,"
+        ],
+        "ans": "",
+        "fullText": "Which one of the following is not related to United Nations ? (a) Multilateral Investment Guarantee Agency (b) International Finance Corporation (c) International Centre for Settlement of Investment Disputes (d) Bank for International Settlements ,"
+      },
+      {
+        "qNum": 24,
+        "year": 2010,
+        "stem": "Stiglitz Commission established by the President of the United Nations General Assembly was in the international news. The commission was supposed to deal with (a) The challenges posed by the impending global climate change and prepare a road map. (b) The working of the global financial systems and to explore ways and means to secure a more sustainable global order(c) Global terrorism and prepare a global action plan for the mitigation of terrorism(d) Expansion of the United Nations Security Council in the present global scenario.",
+        "options": [],
+        "ans": "B",
+        "fullText": "Stiglitz Commission established by the President of the United Nations General Assembly was in the international news. The commission was supposed to deal with (a) The challenges posed by the impending global climate change and prepare a road map. (b) The working of the global financial systems and to explore ways and means to secure a more sustainable global order(c) Global terrorism and prepare a global action plan for the mitigation of terrorism(d) Expansion of the United Nations Security Council in the present global scenario."
+      },
+      {
+        "qNum": 25,
+        "year": 2010,
+        "stem": "Consider the following countries 1. Brazil 2. Mexico 3. South Africa According to UNCTAD, which of the above is/are categorized as ‘Emerging Economies’?",
+        "options": [
+          "(a) 1 only",
+          "(b) 1 and 3 only",
+          "(c) 2 and 3 only",
+          "(d) 1,2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following countries 1. Brazil 2. Mexico 3. South Africa According to UNCTAD, which of the above is/are categorized as ‘Emerging Economies’? (a) 1 only (b) 1 and 3 only (c) 2 and 3 only (d) 1,2 and 3"
+      },
+      {
+        "qNum": 26,
+        "year": 2010,
+        "stem": "With reference to the United Nations Convention on the Rights of the Child, consider the following: 1. The Right to Development 2. The Right to Expression 3. The Right to Recreation Which of the above is/ are the Rights of the child ?",
+        "options": [
+          "(a) 1 only",
+          "(b) 1 and 3 only",
+          "(c) 2 and 3 only",
+          "(d) 1,2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "With reference to the United Nations Convention on the Rights of the Child, consider the following: 1. The Right to Development 2. The Right to Expression 3. The Right to Recreation Which of the above is/ are the Rights of the child ? (a) 1 only (b) 1 and 3 only (c) 2 and 3 only (d) 1,2 and 3"
+      },
+      {
+        "qNum": 27,
+        "year": 2009,
+        "stem": "With reference to the United Nations, consider the following statements : 1. The Economic and Social Council (ECOSOC) of UN consists of 24 member States. 2. It is elected by a 2/3 majority of The General Assembly for a 3-year term. Which of the statements given above is/ are correct ?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "B",
+        "fullText": "With reference to the United Nations, consider the following statements : 1. The Economic and Social Council (ECOSOC) of UN consists of 24 member States. 2. It is elected by a 2/3 majority of The General Assembly for a 3-year term. Which of the statements given above is/ are correct ? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 28,
+        "year": 2009,
+        "stem": "The Security Council of UN consists of 5 permanent members, and the remaining 10 members are elected by the General Assembly for a term of",
+        "options": [
+          "(a) 1 year",
+          "(b) 2 years",
+          "(c) 3 years",
+          "(d) 5 years"
+        ],
+        "ans": "B",
+        "fullText": "The Security Council of UN consists of 5 permanent members, and the remaining 10 members are elected by the General Assembly for a term of (a) 1 year (b) 2 years (c) 3 years (d) 5 years"
+      },
+      {
+        "qNum": 29,
+        "year": 2008,
+        "stem": "How is the United Nations Monetary and Financial Conference wherein the agreements were signed to set up IBRD, GATT, and IMF, commonly known?",
+        "options": [
+          "(a) Bandung Conference",
+          "(b) Bretton Woods Conference",
+          "(c) Versailles Conference",
+          "(d) Yalta Conference"
+        ],
+        "ans": "B",
+        "fullText": "How is the United Nations Monetary and Financial Conference wherein the agreements were signed to set up IBRD, GATT, and IMF, commonly known? (a) Bandung Conference (b) Bretton Woods Conference (c) Versailles Conference (d) Yalta Conference"
+      }
+    ]
+  },
+  "groupingsxregional": {
+    "name": "GroupingsXRegional",
+    "tokens": [
+      "groupingsxregional"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "Which of the following countries are members of the European Union? 1. Belarus 2. Poland 3. Germany 4. Switzerland",
+        "options": [
+          "(a) 1, 2 and 4",
+          "(b) 1 and 4 only",
+          "(c) 2 and 3",
+          "(d) 2 and 4 only"
+        ],
+        "ans": "C",
+        "fullText": "Which of the following countries are members of the European Union? 1. Belarus 2. Poland 3. Germany 4. Switzerland (a) 1, 2 and 4 (b) 1 and 4 only (c) 2 and 3 (d) 2 and 4 only"
+      },
+      {
+        "qNum": 2,
+        "year": 2025,
+        "stem": "Consider the following countries: I. Austria II. Bulgaria III. Croatia IV. Serbia V. Sweden VI. North Macedonia How many of the above are members of thNorth Atlantic Treaty Organization?",
+        "options": [
+          "(a) Only three",
+          "(b) Only four",
+          "(c) Only five",
+          "(d) All the six"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following countries: I. Austria II. Bulgaria III. Croatia IV. Serbia V. Sweden VI. North Macedonia How many of the above are members of thNorth Atlantic Treaty Organization? (a) Only three (b) Only four (c) Only five (d) All the six"
+      },
+      {
+        "qNum": 3,
+        "year": 2025,
+        "stem": "Consider the following statements with regard to BRICS: I. The 16th BRICS Summit was held under the Chairship of Russia in Kazan. II. Indonesia has become a full member of BRICS. III. The theme of the 16th BRICS Summit was Strengthening Multiculturalism for Just Global Development and Security. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) I and II",
+          "(b) II and III",
+          "(c) I and III",
+          "(d) I only"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following statements with regard to BRICS: I. The 16th BRICS Summit was held under the Chairship of Russia in Kazan. II. Indonesia has become a full member of BRICS. III. The theme of the 16th BRICS Summit was Strengthening Multiculturalism for Just Global Development and Security. Which of the statements given above is/ are correct? (a) I and II (b) II and III (c) I and III (d) I only"
+      },
+      {
+        "qNum": 4,
+        "year": 2023,
+        "stem": "Consider the following statementsStatement-I: Israel has established diplomatic relations with some Arab States. Statement-II: The ‘Arab Peace Initiative’ mediated by Saudi Arabia was signed by Israel and AraLeague. Which one of the following is correct in respect of the above statements?",
+        "options": [
+          "(a) Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+          "(b) Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I",
+          "(c) Statement-I is correct but Statement-II is incorrect",
+          "(d) Statement-I is incorrect but Statement-II is correct"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following statementsStatement-I: Israel has established diplomatic relations with some Arab States. Statement-II: The ‘Arab Peace Initiative’ mediated by Saudi Arabia was signed by Israel and AraLeague. Which one of the following is correct in respect of the above statements? (a) Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I (b) Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I (c) Statement-I is correct but Statement-II is incorrect (d) Statement-I is incorrect but Statement-II is correct"
+      },
+      {
+        "qNum": 5,
+        "year": 2023,
+        "stem": "Consider the following statementsStatement-I: Recently, the United States of America (USA) and the European Union (EU) have launched the ‘Trade and Technology Council’. Statement-II: The USA and the EU claim that through this they are trying to bring technological progress and physical productivity under their control. Which one of the following is correct in respect of the above statements?",
+        "options": [
+          "(a) Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+          "(b) Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I",
+          "(c) Statement-I is correct but Statement-II is incorrect",
+          "(d) Statement-I is incorrect but Statement-II is correct"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following statementsStatement-I: Recently, the United States of America (USA) and the European Union (EU) have launched the ‘Trade and Technology Council’. Statement-II: The USA and the EU claim that through this they are trying to bring technological progress and physical productivity under their control. Which one of the following is correct in respect of the above statements? (a) Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I (b) Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I (c) Statement-I is correct but Statement-II is incorrect (d) Statement-I is incorrect but Statement-II is correct"
+      },
+      {
+        "qNum": 6,
+        "year": 2023,
+        "stem": "Consider the following statementsThe ‘Stability and Growth Pact’ of the European Union is a treaty that 1. limits the levels of the budgetary deficit of the countries of the European Union 2. makes the countries of the European Union to share their infrastructure facilities 3. enables the countries of the European Union to share their technologies How many of the above statements are correct?",
+        "options": [
+          "(a) Only one",
+          "(b) Only two",
+          "(c) All three",
+          "(d) None"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following statementsThe ‘Stability and Growth Pact’ of the European Union is a treaty that 1. limits the levels of the budgetary deficit of the countries of the European Union 2. makes the countries of the European Union to share their infrastructure facilities 3. enables the countries of the European Union to share their technologies How many of the above statements are correct? (a) Only one (b) Only two (c) All three (d) None"
+      },
+      {
+        "qNum": 7,
+        "year": 2023,
+        "stem": "Consider the following statements about G-20: 1. The G-20 group was originally established as a platform for the Finance Ministers and Central Bank Governors to discuss the international economic and financial issues. 2. Digital public infrastructure is one of India’s G-20 priorities. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following statements about G-20: 1. The G-20 group was originally established as a platform for the Finance Ministers and Central Bank Governors to discuss the international economic and financial issues. 2. Digital public infrastructure is one of India’s G-20 priorities. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 8,
+        "year": 2022,
+        "stem": "With reference to the “G20 Common Framework”, consider the following statements: 1. It is an initiative endorsed by the G20 together with the Paris Club. 2. It is an initiative to support Low Income Countries with unsustainable debt. Which of the statements given above is/are correct ?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "C",
+        "fullText": "With reference to the “G20 Common Framework”, consider the following statements: 1. It is an initiative endorsed by the G20 together with the Paris Club. 2. It is an initiative to support Low Income Countries with unsustainable debt. Which of the statements given above is/are correct ? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 9,
+        "year": 2022,
+        "stem": "Consider the following countries : 1. Armenia 2. Azerbaijan 3. Croatia 4. Romania 5. Uzbekistan Which of the above are members of the Organization of Turkic States ?",
+        "options": [
+          "(a) 1, 2 and 4",
+          "(b) 1 and 3",
+          "(c) 2 and 5",
+          "(d) 3, 4 and 5"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following countries : 1. Armenia 2. Azerbaijan 3. Croatia 4. Romania 5. Uzbekistan Which of the above are members of the Organization of Turkic States ? (a) 1, 2 and 4 (b) 1 and 3 (c) 2 and 5 (d) 3, 4 and 5"
+      },
+      {
+        "qNum": 10,
+        "year": 2019,
+        "stem": "Which of the following adopted a law on data protection and privacy for its citizens known as ‘General Data Protection Regulation’ in April 2016 and started implementation of it from 25th May, 2018?",
+        "options": [
+          "(a) Australia",
+          "(b) Canada",
+          "(c) The European Union",
+          "(d) The United States of America"
+        ],
+        "ans": "C",
+        "fullText": "Which of the following adopted a law on data protection and privacy for its citizens known as ‘General Data Protection Regulation’ in April 2016 and started implementation of it from 25th May, 2018? (a) Australia (b) Canada (c) The European Union (d) The United States of America"
+      },
+      {
+        "qNum": 11,
+        "year": 2018,
+        "stem": "Consider the following countries: 1. Australia 2. Canada 3. China 4. India 5. Japan 6. USA Which of the above are among the ‘freetrade partners’ of ASEAN?",
+        "options": [
+          "(a) 1, 2, 4 and 5",
+          "(b) 3, 4, 5 and 6",
+          "(c) 1, 3, 4 and 5",
+          "(d) 2, 3, 4 and 6"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following countries: 1. Australia 2. Canada 3. China 4. India 5. Japan 6. USA Which of the above are among the ‘freetrade partners’ of ASEAN? (a) 1, 2, 4 and 5 (b) 3, 4, 5 and 6 (c) 1, 3, 4 and 5 (d) 2, 3, 4 and 6"
+      },
+      {
+        "qNum": 12,
+        "year": 2017,
+        "stem": "The term ‘Digital Single Market Strategy’ seen in the news refers to",
+        "options": [
+          "(a) ASEAN",
+          "(b) BRICS",
+          "(c) EU",
+          "(d) G20"
+        ],
+        "ans": "C",
+        "fullText": "The term ‘Digital Single Market Strategy’ seen in the news refers to (a) ASEAN (b) BRICS (c) EU (d) G20"
+      },
+      {
+        "qNum": 13,
+        "year": 2016,
+        "stem": "With reference to the ‘Trans-Pacific Partnership’, consider the following statements: 1. It is an agreement among all the PacifiRim countries except China and Russia. 2. It is a strategic alliance for the purpose of maritime security only. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "With reference to the ‘Trans-Pacific Partnership’, consider the following statements: 1. It is an agreement among all the PacifiRim countries except China and Russia. 2. It is a strategic alliance for the purpose of maritime security only. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 14,
+        "year": 2016,
+        "stem": "European Stability Mechanism’, sometimes seen in the news, is an",
+        "options": [
+          "(a) agency created by EU to deal with the impact of millions of refugees arriving from Middle East",
+          "(b) agency of EU that provides financial assistance to eurozone countries",
+          "(c) agency of EU to deal with all the bilateral and multilateral agreements on trade",
+          "(d) agency of EU to deal with the conflictarising among the member countries"
+        ],
+        "ans": "B",
+        "fullText": "European Stability Mechanism’, sometimes seen in the news, is an (a) agency created by EU to deal with the impact of millions of refugees arriving from Middle East (b) agency of EU that provides financial assistance to eurozone countries (c) agency of EU to deal with all the bilateral and multilateral agreements on trade (d) agency of EU to deal with the conflictarising among the member countries"
+      },
+      {
+        "qNum": 15,
+        "year": 2016,
+        "stem": "Which of the following is not a member of ‘Gulf Cooperation Council’?",
+        "options": [
+          "(a) Iran",
+          "(b) Saudi Arabia",
+          "(c) Oman",
+          "(d) Kuwait"
+        ],
+        "ans": "A",
+        "fullText": "Which of the following is not a member of ‘Gulf Cooperation Council’? (a) Iran (b) Saudi Arabia (c) Oman (d) Kuwait"
+      },
+      {
+        "qNum": 16,
+        "year": 2016,
+        "stem": "The term ‘Regional Comprehensive Economic Partnership’ often appearin the news in the’ context of the affairs of a group of countries known as",
+        "options": [
+          "(a) G2O",
+          "(b) ASEAN",
+          "(c) SCO",
+          "(d) SAARC"
+        ],
+        "ans": "B",
+        "fullText": "The term ‘Regional Comprehensive Economic Partnership’ often appearin the news in the’ context of the affairs of a group of countries known as (a) G2O (b) ASEAN (c) SCO (d) SAARC"
+      },
+      {
+        "qNum": 17,
+        "year": 2016,
+        "stem": "Consider the following statements: 1. New Development Bank has been set up by APEC. 2. The headquarters of New DevelopmenBank is in Shanghai. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following statements: 1. New Development Bank has been set up by APEC. 2. The headquarters of New DevelopmenBank is in Shanghai. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 18,
+        "year": 2015,
+        "stem": "The ‘Fortaleza Declaration’, recently in the news, is related to the affairs of",
+        "options": [
+          "(a) ASEAN",
+          "(b) BRICS",
+          "(c) OECD",
+          "(d) WTO"
+        ],
+        "ans": "B",
+        "fullText": "The ‘Fortaleza Declaration’, recently in the news, is related to the affairs of (a) ASEAN (b) BRICS (c) OECD (d) WTO"
+      },
+      {
+        "qNum": 19,
+        "year": 2014,
+        "stem": "With reference to a grouping of countries known as BRICS, consider the following statements: 1. The First Summit of BRICS was held in Rio de Janeiro in 2009. 2. South Africa was the last to join the BRICS grouping. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "B",
+        "fullText": "With reference to a grouping of countries known as BRICS, consider the following statements: 1. The First Summit of BRICS was held in Rio de Janeiro in 2009. 2. South Africa was the last to join the BRICS grouping. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 20,
+        "year": 2011,
+        "stem": "Southeast Asia has captivated the attention of the global community over space and time as a geo-strategically significant region. Which among the following is the most convincing explanatiofor this global perspective?",
+        "options": [
+          "(a) It was the hot theatre during the Second World War.",
+          "(b) Its location between the Asian powers of China and India.",
+          "(c) It was the arena of superpower confrontation during the Cold War period.",
+          "(d) Its location between the Pacific and Indian Oceans and its preeminent maritime character."
+        ],
+        "ans": "D",
+        "fullText": "Southeast Asia has captivated the attention of the global community over space and time as a geo-strategically significant region. Which among the following is the most convincing explanatiofor this global perspective? (a) It was the hot theatre during the Second World War. (b) Its location between the Asian powers of China and India. (c) It was the arena of superpower confrontation during the Cold War period. (d) Its location between the Pacific and Indian Oceans and its preeminent maritime character."
+      },
+      {
+        "qNum": 21,
+        "year": 2010,
+        "stem": "In the context of bilateral trade negotiations between India and European Union, what is the difference between European commission and European Council? 1. European Commission represents the EU in trade negotiations whereas European Council participated in the legislation of matters pertaining to economipolicies of the European Union 2. European Commission comprises the heads of State of govt. of member countries whereas the European Council comprises of the persons nominated by European Parliament Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "In the context of bilateral trade negotiations between India and European Union, what is the difference between European commission and European Council? 1. European Commission represents the EU in trade negotiations whereas European Council participated in the legislation of matters pertaining to economipolicies of the European Union 2. European Commission comprises the heads of State of govt. of member countries whereas the European Council comprises of the persons nominated by European Parliament Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 22,
+        "year": 2010,
+        "stem": "With reference to BRIC countriesconsider the following statements: 1. At present, China’s GDP is more than the combined GDP of all the three other countries. 2. China’s population is more than the combined population of any two other countries.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "A",
+        "fullText": "With reference to BRIC countriesconsider the following statements: 1. At present, China’s GDP is more than the combined GDP of all the three other countries. 2. China’s population is more than the combined population of any two other countries. (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 23,
+        "year": 2009,
+        "stem": "A present group of nations known as G-8 started first as G-7, Which one among the following was not one of them?",
+        "options": [
+          "(a) Canada",
+          "(b) Italy",
+          "(c) Japan",
+          "(d) Russia"
+        ],
+        "ans": "D",
+        "fullText": "A present group of nations known as G-8 started first as G-7, Which one among the following was not one of them? (a) Canada (b) Italy (c) Japan (d) Russia"
+      },
+      {
+        "qNum": 24,
+        "year": 2009,
+        "stem": "Consider the following countries : 1. Brunei Darussalam 2. East Timor 3. Laos Which of the above is/are member/members of ASEAN ?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1,2 and 3"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following countries : 1. Brunei Darussalam 2. East Timor 3. Laos Which of the above is/are member/members of ASEAN ? (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1,2 and 3"
+      },
+      {
+        "qNum": 25,
+        "year": 2009,
+        "stem": "Consider the following countries : 1. Switzerland 2. Malta 3. Bulgaria Which of the above are members of European Union?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1,2 and 3"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following countries : 1. Switzerland 2. Malta 3. Bulgaria Which of the above are members of European Union? (a) 1 and 2 only (b) 2 and 3 only (c) 1 and 3 only (d) 1,2 and 3"
+      }
+    ]
+  },
+  "conflictzonesareasofinterestbroadba12024considerthefollowingpairs": {
+    "name": "Conflict Zones/Areas of Interest broad-ba1.   [2024] Consider the following pairs:",
+    "tokens": [
+      "conflict",
+      "zones",
+      "2024",
+      "ba1",
+      "pairs",
+      "following",
+      "interest",
+      "areas",
+      "broad",
+      "consider"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2024,
+        "stem": "Consider the following pairs: Country Reason for being in the news 1. Argentina Worst economic crisis 2. Sudan War between the country’s regular army and paramilitary forces 3. Turkey Rescinded its membership of NATO How many of the pairs given above are correctly matched?",
+        "options": [
+          "(a) Only one pair",
+          "(b) Only two pairs*",
+          "(c) All three pairs",
+          "(d) None of the pairs"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following pairs: Country Reason for being in the news 1. Argentina Worst economic crisis 2. Sudan War between the country’s regular army and paramilitary forces 3. Turkey Rescinded its membership of NATO How many of the pairs given above are correctly matched? (a) Only one pair (b) Only two pairs* (c) All three pairs (d) None of the pairs"
+      },
+      {
+        "qNum": 2,
+        "year": 2024,
+        "stem": "Consider the following statementsStatement-I: There is instability and worsening security situation in the Sahel regionStatement-II: There have been military takeovers/coups d’état in several countrieof the Sahel region in the recent past. Which one of the following is correct in respect of the above statements?",
+        "options": [
+          "(a) Both Statement-I and Statement-II are correct and Statement-II explains Statement-I*",
+          "(b) Both Statement-I and Statement-II are correct, but Statement-II does not explain Statement-I",
+          "(c) Statement-I is correct, but Statement-II is incorrect",
+          "(d) Statement-I is incorrect, but Statement-II is correct"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following statementsStatement-I: There is instability and worsening security situation in the Sahel regionStatement-II: There have been military takeovers/coups d’état in several countrieof the Sahel region in the recent past. Which one of the following is correct in respect of the above statements? (a) Both Statement-I and Statement-II are correct and Statement-II explains Statement-I* (b) Both Statement-I and Statement-II are correct, but Statement-II does not explain Statement-I (c) Statement-I is correct, but Statement-II is incorrect (d) Statement-I is incorrect, but Statement-II is correct"
+      },
+      {
+        "qNum": 3,
+        "year": 2023,
+        "stem": "Consider the following pairs: Regions often mentioned in news : Reason for being in news 1. North Kivu and Ituri : War between Armenia an Azerbaijan 2. Nagorno-Karabakh : Insurgency in Mozambique 3. Kherson and Zaporizhzhia : Dispute between Israel and Lebanon How many of the above pairs are correctly matched?",
+        "options": [
+          "(a) Only one",
+          "(b) Only two",
+          "(c) All three",
+          "(d) None"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following pairs: Regions often mentioned in news : Reason for being in news 1. North Kivu and Ituri : War between Armenia an Azerbaijan 2. Nagorno-Karabakh : Insurgency in Mozambique 3. Kherson and Zaporizhzhia : Dispute between Israel and Lebanon How many of the above pairs are correctly matched? (a) Only one (b) Only two (c) All three (d) None"
+      },
+      {
+        "qNum": 4,
+        "year": 2023,
+        "stem": "In the recent years Chad, Guinea, Mali and Sudan caught the international attention for which one of the following reasons common to all of them?",
+        "options": [
+          "(a) Discovery of rich deposits of rare earth elements",
+          "(b) Establishement of Chinese military bases",
+          "(c) Southward expansion of Sahara Desert",
+          "(d) Successful coups"
+        ],
+        "ans": "D",
+        "fullText": "In the recent years Chad, Guinea, Mali and Sudan caught the international attention for which one of the following reasons common to all of them? (a) Discovery of rich deposits of rare earth elements (b) Establishement of Chinese military bases (c) Southward expansion of Sahara Desert (d) Successful coups"
+      },
+      {
+        "qNum": 5,
+        "year": 2023,
+        "stem": "Which of the following countries has been suffering from decades of civil strife and food shortages and was in news in the recent past for its very severe famine?",
+        "options": [
+          "(a) Angola",
+          "(b) Costa Rica",
+          "(c) Ecuador",
+          "(d) Somalia"
+        ],
+        "ans": "D",
+        "fullText": "Which of the following countries has been suffering from decades of civil strife and food shortages and was in news in the recent past for its very severe famine? (a) Angola (b) Costa Rica (c) Ecuador (d) Somalia"
+      },
+      {
+        "qNum": 6,
+        "year": 2023,
+        "stem": "Consider the following pairs: Area of conflict mentioned in news : Country where it is located 1. Donbas : Syria 2. Kachin : Ethiopia 3. Tigray : North Yemen How many of the above pairs are correctly matched?",
+        "options": [
+          "(a) Only one",
+          "(b) Only two",
+          "(c) All three",
+          "(d) None"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following pairs: Area of conflict mentioned in news : Country where it is located 1. Donbas : Syria 2. Kachin : Ethiopia 3. Tigray : North Yemen How many of the above pairs are correctly matched? (a) Only one (b) Only two (c) All three (d) None"
+      },
+      {
+        "qNum": 7,
+        "year": 2022,
+        "stem": "Which one of the following statements best reflects the issue with Senkaku Islands, sometimes mentioned in the news?",
+        "options": [
+          "(a) It is generally believed that they are artificial islands made by a country around South China Sea.",
+          "(b) China and Japan engage in maritime disputes over these islands in East China Sea. -",
+          "(c) A permanent American military base has been set up there to help Taiwan to increase its defence capabilities.",
+          "(d) Though International Court of Justice declared them as no man’s land, some South-East Asian countries claim them."
+        ],
+        "ans": "B",
+        "fullText": "Which one of the following statements best reflects the issue with Senkaku Islands, sometimes mentioned in the news? (a) It is generally believed that they are artificial islands made by a country around South China Sea. (b) China and Japan engage in maritime disputes over these islands in East China Sea. - (c) A permanent American military base has been set up there to help Taiwan to increase its defence capabilities. (d) Though International Court of Justice declared them as no man’s land, some South-East Asian countries claim them."
+      },
+      {
+        "qNum": 8,
+        "year": 2022,
+        "stem": "Consider the following pairs : Region often mentioned in the news - Country 1. Anatolia — Turkey 2. Amhara — Ethiopia 3. Cabo Delgado — Spain 4. Catalonia — Italy How many pairs given above are correctly matched ?",
+        "options": [
+          "(a) Only one pair",
+          "(b) Only two pairs",
+          "(c) Only three pairs",
+          "(d) All four pairs"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following pairs : Region often mentioned in the news - Country 1. Anatolia — Turkey 2. Amhara — Ethiopia 3. Cabo Delgado — Spain 4. Catalonia — Italy How many pairs given above are correctly matched ? (a) Only one pair (b) Only two pairs (c) Only three pairs (d) All four pairs"
+      },
+      {
+        "qNum": 9,
+        "year": 2022,
+        "stem": "Consider the following statements : 1. Bidibidi is a large refugee settlement in north-western Kenya. 2. Some people who fled from South Sudan civil war live in Bidibidi. 3. Some people who fled from civil war in Somalia live in Dadaab refugee complex in Kenya. Which of the statements given above is/are correct ?",
+        "options": [
+          "(a) 1 and 2",
+          "(b) 2 only",
+          "(c) 2 and 3",
+          "(d) 3 only"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following statements : 1. Bidibidi is a large refugee settlement in north-western Kenya. 2. Some people who fled from South Sudan civil war live in Bidibidi. 3. Some people who fled from civil war in Somalia live in Dadaab refugee complex in Kenya. Which of the statements given above is/are correct ? (a) 1 and 2 (b) 2 only (c) 2 and 3 (d) 3 only"
+      },
+      {
+        "qNum": 10,
+        "year": 2022,
+        "stem": "Consider the following countries : 1. Azerbaijan 2. Kyrgyzstan 3. Tajikistan 4. Turkmenistan 5. Uzbekistan Which of the above have borders with Afghanistan ?",
+        "options": [
+          "(a) 1, 2 and 5 only",
+          "(b) 1, 2, 3 and 4 only",
+          "(c) 3, 4 and 5 only",
+          "(d) 1, 2, 3, 4 and 5"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following countries : 1. Azerbaijan 2. Kyrgyzstan 3. Tajikistan 4. Turkmenistan 5. Uzbekistan Which of the above have borders with Afghanistan ? (a) 1, 2 and 5 only (b) 1, 2, 3 and 4 only (c) 3, 4 and 5 only (d) 1, 2, 3, 4 and 5"
+      },
+      {
+        "qNum": 11,
+        "year": 2022,
+        "stem": "Consider the following pairs : Country - Important reason for being in the news recently 1. Chad — Setting up of permanent military base by China 2. Guinea — Suspension of Constitution and Government by military 3. Lebanon — Severe and prolonged economic depression 4. Tunisia — Suspension of Parliament by President How many pairs given above are correctly matched ?",
+        "options": [
+          "(a) Only one pair",
+          "(b) Only two pairs",
+          "(c) Only three pairs",
+          "(d) All four pairs"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following pairs : Country - Important reason for being in the news recently 1. Chad — Setting up of permanent military base by China 2. Guinea — Suspension of Constitution and Government by military 3. Lebanon — Severe and prolonged economic depression 4. Tunisia — Suspension of Parliament by President How many pairs given above are correctly matched ? (a) Only one pair (b) Only two pairs (c) Only three pairs (d) All four pairs"
+      },
+      {
+        "qNum": 12,
+        "year": 2018,
+        "stem": "Consider the following pairs : Towns sometimes mentioned in news Country 1. Aleppo Syria 2. Kirkuk Yemen 3. Mosul Palestine 4. Mazar-i-sharif Afghanistan Which of the pairs given above are correctly matched?",
+        "options": [
+          "(a) 1 and 2",
+          "(b) 1 and 4",
+          "(c) 2 and 3",
+          "(d) 3 and 4"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following pairs : Towns sometimes mentioned in news Country 1. Aleppo Syria 2. Kirkuk Yemen 3. Mosul Palestine 4. Mazar-i-sharif Afghanistan Which of the pairs given above are correctly matched? (a) 1 and 2 (b) 1 and 4 (c) 2 and 3 (d) 3 and 4"
+      },
+      {
+        "qNum": 13,
+        "year": 2018,
+        "stem": "The term “two-state solution” is sometimes mentioned in the news in the context of the affairs of",
+        "options": [
+          "(a) China",
+          "(b) Israel",
+          "(c) Iraq",
+          "(d) Yemen"
+        ],
+        "ans": "B",
+        "fullText": "The term “two-state solution” is sometimes mentioned in the news in the context of the affairs of (a) China (b) Israel (c) Iraq (d) Yemen"
+      },
+      {
+        "qNum": 14,
+        "year": 2018,
+        "stem": "Very recently, in which of the following countries have lakhs of people either suffered from severe famine/acute malnutrition or died due to starvation caused by war/ethnic conflicts?",
+        "options": [
+          "(a) 1.Angola and Zambia",
+          "(b) 2.Morocco Tunisia",
+          "(c) 3.Venezuela and Colombia",
+          "(d) 4.Yemen and South Sudan"
+        ],
+        "ans": "D",
+        "fullText": "Very recently, in which of the following countries have lakhs of people either suffered from severe famine/acute malnutrition or died due to starvation caused by war/ethnic conflicts? (a) 1.Angola and Zambia (b) 2.Morocco Tunisia (c) 3.Venezuela and Colombia (d) 4.Yemen and South Sudan"
+      },
+      {
+        "qNum": 15,
+        "year": 2016,
+        "stem": "Consider the following pairs: Community sometimes mentioned in the news In the affairs of 1. Kurd : Bangladesh 2. Madhesi : Nepal 3. Rohingya : Myanmar Which of the pairs given above is/are correctly matched?",
+        "options": [
+          "(a) 1 and 2",
+          "(b) 2 only",
+          "(c) 2 and 3",
+          "(d) 3 only"
+        ],
+        "ans": "C",
+        "fullText": "Consider the following pairs: Community sometimes mentioned in the news In the affairs of 1. Kurd : Bangladesh 2. Madhesi : Nepal 3. Rohingya : Myanmar Which of the pairs given above is/are correctly matched? (a) 1 and 2 (b) 2 only (c) 2 and 3 (d) 3 only"
+      },
+      {
+        "qNum": 16,
+        "year": 2015,
+        "stem": "The area known as ‘Golan Heights’ sometimes appears in the news in the context of the events related to",
+        "options": [
+          "(a) Central Asia",
+          "(b) Middle East",
+          "(c) South-East Asia",
+          "(d) Central Afria"
+        ],
+        "ans": "B",
+        "fullText": "The area known as ‘Golan Heights’ sometimes appears in the news in the context of the events related to (a) Central Asia (b) Middle East (c) South-East Asia (d) Central Afria"
+      },
+      {
+        "qNum": 17,
+        "year": 2014,
+        "stem": "Recently, a series of uprisings of people referred to as ‘Arab Spring’ originally started from",
+        "options": [
+          "(a) Egypt",
+          "(b) Lebanon",
+          "(c) Syria",
+          "(d) Tunisia"
+        ],
+        "ans": "D",
+        "fullText": "Recently, a series of uprisings of people referred to as ‘Arab Spring’ originally started from (a) Egypt (b) Lebanon (c) Syria (d) Tunisia"
+      },
+      {
+        "qNum": 18,
+        "year": 2014,
+        "stem": "Consider the following pairs : Region often in news Country 1. Chechnya : Russian Federation 2. Darfur : Mali 3. Swat Valley : Iraq Which of the above pairs is/are correctly matched ?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following pairs : Region often in news Country 1. Chechnya : Russian Federation 2. Darfur : Mali 3. Swat Valley : Iraq Which of the above pairs is/are correctly matched ? (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 19,
+        "year": 2009,
+        "stem": "A very big refugee camp called Dadaab, recently in the news, is located in",
+        "options": [
+          "(a) Ethiopia",
+          "(b) Kenya",
+          "(c) Somalia",
+          "(d) Sudan"
+        ],
+        "ans": "B",
+        "fullText": "A very big refugee camp called Dadaab, recently in the news, is located in (a) Ethiopia (b) Kenya (c) Somalia (d) Sudan"
+      },
+      {
+        "qNum": 20,
+        "year": 2009,
+        "stem": "From which one of the following did Kosovo declare its independence ?",
+        "options": [
+          "(a) Bulgaria",
+          "(b) Croatia",
+          "(c) Macedonia",
+          "(d) Serbia"
+        ],
+        "ans": "D",
+        "fullText": "From which one of the following did Kosovo declare its independence ? (a) Bulgaria (b) Croatia (c) Macedonia (d) Serbia"
+      },
+      {
+        "qNum": 21,
+        "year": 2009,
+        "stem": "Which one of the following pairs of countries fought wars over a region called Ogaden ?",
+        "options": [
+          "(a) Eritrea and Sudan",
+          "(b) Ethiopia and Somalia",
+          "(c) Kenya and Somalia",
+          "(d) Ethiopia and Sudan"
+        ],
+        "ans": "B",
+        "fullText": "Which one of the following pairs of countries fought wars over a region called Ogaden ? (a) Eritrea and Sudan (b) Ethiopia and Somalia (c) Kenya and Somalia (d) Ethiopia and Sudan"
+      },
+      {
+        "qNum": 22,
+        "year": 2008,
+        "stem": "Yom Kippur War was fought between which sides/countries?",
+        "options": [
+          "(a) Turkey and Greece",
+          "(b) Serbs and Croats",
+          "(c) Israel and Arab countries led by Egypt and Syria",
+          "(d) Iran and Iraq"
+        ],
+        "ans": "C",
+        "fullText": "Yom Kippur War was fought between which sides/countries? (a) Turkey and Greece (b) Serbs and Croats (c) Israel and Arab countries led by Egypt and Syria (d) Iran and Iraq"
+      }
+    ]
+  },
+  "internationalreportsindices": {
+    "name": "“International Reports,Indices”",
+    "tokens": [
+      "international",
+      "reports",
+      "indices"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "Consider the following statements with respect to the AI Impact Summit, 2026 held in New Delhi: 1. The Summit’s intellectual framework was based on three foundational Sutras: People, Planning, and Progress. 2. The Preamble of the Summit stresses Democratising AI Resources, which acknowledges the Charter for Democratic Diffusion of AI as a binding framework to support locally relevant innovation and strengthen resilient AI ecosystems while respecting national laws. 3. The New Delhi Declaration on AI Impact was structured around seven Access Chakras (Pillars), which included Access for Social Empowerment, AI for Science, and Secure and Trusted AI. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1, 2 and 3",
+          "(b) 1 and 2 only",
+          "(c) 2 and 3 only",
+          "(d) 3 only"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following statements with respect to the AI Impact Summit, 2026 held in New Delhi: 1. The Summit’s intellectual framework was based on three foundational Sutras: People, Planning, and Progress. 2. The Preamble of the Summit stresses Democratising AI Resources, which acknowledges the Charter for Democratic Diffusion of AI as a binding framework to support locally relevant innovation and strengthen resilient AI ecosystems while respecting national laws. 3. The New Delhi Declaration on AI Impact was structured around seven Access Chakras (Pillars), which included Access for Social Empowerment, AI for Science, and Secure and Trusted AI. Which of the statements given above is/ are correct? (a) 1, 2 and 3 (b) 1 and 2 only (c) 2 and 3 only (d) 3 only"
+      },
+      {
+        "qNum": 2,
+        "year": 2026,
+        "stem": "Consider the following statements about Multidimensional Poverty Index (MPI): 1. MPI is calculated using Alkire-Foster methodology. 2. MPI calculated by NITI Aayog has a total of twelve indicators. 3. Maternal Health and Bank Account are common indicators in both NITI Aayog MPI and UNDP MPI.",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 1, 2 and 3",
+          "(c) 1 and 3 only",
+          "(d) 2 only"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following statements about Multidimensional Poverty Index (MPI): 1. MPI is calculated using Alkire-Foster methodology. 2. MPI calculated by NITI Aayog has a total of twelve indicators. 3. Maternal Health and Bank Account are common indicators in both NITI Aayog MPI and UNDP MPI. (a) 1 and 2 only (b) 1, 2 and 3 (c) 1 and 3 only (d) 2 only"
+      },
+      {
+        "qNum": 3,
+        "year": 2025,
+        "stem": "Consider the following statements regarding AI Action Summit held in Grand Palais, Paris in February 2025: I. Co-chaired with India, the event builds on the advances made at the Bletchley Park Summit held in 2023 and the Seoul Summit held in 2024. II. Along with other countries, the US and UK also signed the declaration on inclusive and sustainable AI. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) I only",
+          "(b) II only",
+          "(c) Both I and II",
+          "(d) Neither I nor II"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following statements regarding AI Action Summit held in Grand Palais, Paris in February 2025: I. Co-chaired with India, the event builds on the advances made at the Bletchley Park Summit held in 2023 and the Seoul Summit held in 2024. II. Along with other countries, the US and UK also signed the declaration on inclusive and sustainable AI. Which of the statements given above is/ are correct? (a) I only (b) II only (c) Both I and II (d) Neither I nor II"
+      },
+      {
+        "qNum": 4,
+        "year": 2019,
+        "stem": "The Global Competitiveness Report is published by the",
+        "options": [
+          "(a) International Monetary Fund",
+          "(b) United Nations Conference on Trade and Development",
+          "(c) World Economic Forum",
+          "(d) World Bank"
+        ],
+        "ans": "C",
+        "fullText": "The Global Competitiveness Report is published by the (a) International Monetary Fund (b) United Nations Conference on Trade and Development (c) World Economic Forum (d) World Bank"
+      },
+      {
+        "qNum": 5,
+        "year": 2019,
+        "stem": "Which one of the following is not a sub-index of the World’s Bank ‘Ease of Doing Business Index’?",
+        "options": [
+          "(a) Maintenance of law and order",
+          "(b) Paying taxes",
+          "(c) Registering property",
+          "(d) Dealing with construction permits"
+        ],
+        "ans": "A",
+        "fullText": "Which one of the following is not a sub-index of the World’s Bank ‘Ease of Doing Business Index’? (a) Maintenance of law and order (b) Paying taxes (c) Registering property (d) Dealing with construction permits"
+      },
+      {
+        "qNum": 6,
+        "year": 2018,
+        "stem": "“Rule of Law Index” is released by which of the following ?",
+        "options": [
+          "(a) a)Amnesty International",
+          "(b) b)International Court of Justice",
+          "(c) c)The Office of UN Commissioner for Human Rights",
+          "(d) d)World Justice Project"
+        ],
+        "ans": "D",
+        "fullText": "“Rule of Law Index” is released by which of the following ? (a) a)Amnesty International (b) b)International Court of Justice (c) c)The Office of UN Commissioner for Human Rights (d) d)World Justice Project"
+      },
+      {
+        "qNum": 7,
+        "year": 2017,
+        "stem": "Which of the following gives ‘Global Gender Gap Index’ ranking to the countries of the world?",
+        "options": [
+          "(a) World Economic Forum",
+          "(b) UN Human Rights Council",
+          "(c) UN Women",
+          "(d) World Health Organization"
+        ],
+        "ans": "A",
+        "fullText": "Which of the following gives ‘Global Gender Gap Index’ ranking to the countries of the world? (a) World Economic Forum (b) UN Human Rights Council (c) UN Women (d) World Health Organization"
+      },
+      {
+        "qNum": 8,
+        "year": 2016,
+        "stem": "India’s ranking in the ‘Ease of DoinBusiness Index’ is sometimes seen in the news. Which of the following has declared that ranking?",
+        "options": [
+          "(a) Organization for Economic Cooperatioand Development (OECD)",
+          "(b) World Economic Forum",
+          "(c) World Bank",
+          "(d) World Trade Organization (WTO)"
+        ],
+        "ans": "C",
+        "fullText": "India’s ranking in the ‘Ease of DoinBusiness Index’ is sometimes seen in the news. Which of the following has declared that ranking? (a) Organization for Economic Cooperatioand Development (OECD) (b) World Economic Forum (c) World Bank (d) World Trade Organization (WTO)"
+      },
+      {
+        "qNum": 9,
+        "year": 2016,
+        "stem": "Which of the following is/are the indicator/ indicators used by IFPRI to compute the Global Hunger Index Report? 1. Undernourishment 2. Child stunting 3. Child mortality Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 1, 2 and 3",
+          "(d) 1 and 3 only"
+        ],
+        "ans": "C",
+        "fullText": "Which of the following is/are the indicator/ indicators used by IFPRI to compute the Global Hunger Index Report? 1. Undernourishment 2. Child stunting 3. Child mortality Select the correct answer using the code given below. (a) 1 only (b) 2 and 3 only (c) 1, 2 and 3 (d) 1 and 3 only"
+      },
+      {
+        "qNum": 10,
+        "year": 2016,
+        "stem": "Global Financial Stability Report is prepared by the",
+        "options": [
+          "(a) European Central Bank",
+          "(b) International Monetary Fund",
+          "(c) International Bank for Reconstruction and Development",
+          "(d) Organization for Economic Cooperation and Development"
+        ],
+        "ans": "B",
+        "fullText": "Global Financial Stability Report is prepared by the (a) European Central Bank (b) International Monetary Fund (c) International Bank for Reconstruction and Development (d) Organization for Economic Cooperation and Development"
+      },
+      {
+        "qNum": 11,
+        "year": 2015,
+        "stem": "Which one of the following issues the ‘Global Economic Prospects’ report periodically?",
+        "options": [
+          "(a) The Asian Development Bank",
+          "(b) The European Bank for Reconstruction and Development",
+          "(c) The US Federal Reserve Bank",
+          "(d) The World Bank"
+        ],
+        "ans": "D",
+        "fullText": "Which one of the following issues the ‘Global Economic Prospects’ report periodically? (a) The Asian Development Bank (b) The European Bank for Reconstruction and Development (c) The US Federal Reserve Bank (d) The World Bank"
+      },
+      {
+        "qNum": 12,
+        "year": 2014,
+        "stem": "Which of the following organizations brings out the publication known as ‘World Economic Outlook?",
+        "options": [
+          "(a) a ) The International Monetary Fund",
+          "(b) The United Nations Development Programme",
+          "(c) The World Economic Forum",
+          "(d) The World Bank"
+        ],
+        "ans": "A",
+        "fullText": "Which of the following organizations brings out the publication known as ‘World Economic Outlook? (a) a ) The International Monetary Fund (b) The United Nations Development Programme (c) The World Economic Forum (d) The World Bank"
+      },
+      {
+        "qNum": 13,
+        "year": 2012,
+        "stem": "The Multi-dimensional Poverty Index developed by Oxford Poverty and Human Development Initiative with UNDP support covers which of the following? 1. Deprivation of education, health, assets and services at household level 2. Purchasing power parity at national level 3. Extent of budget deficit and GDP growth rate at national level",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "A",
+        "fullText": "The Multi-dimensional Poverty Index developed by Oxford Poverty and Human Development Initiative with UNDP support covers which of the following? 1. Deprivation of education, health, assets and services at household level 2. Purchasing power parity at national level 3. Extent of budget deficit and GDP growth rate at national level (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 14,
+        "year": 2010,
+        "stem": "As per the UN-Habitat’s Global Report on Human Settlements 2009, which one among the following regions has shown the fastest growth of urbanization in the last three decades?",
+        "options": [
+          "(a) Asia",
+          "(b) Europe",
+          "(c) Latin America and Caribbean",
+          "(d) North America"
+        ],
+        "ans": "A",
+        "fullText": "As per the UN-Habitat’s Global Report on Human Settlements 2009, which one among the following regions has shown the fastest growth of urbanization in the last three decades? (a) Asia (b) Europe (c) Latin America and Caribbean (d) North America"
+      },
+      {
+        "qNum": 15,
+        "year": 2009,
+        "stem": "Which one of the following brings out the publication called “Energy Statistics” from time to time?",
+        "options": [
+          "(a) Central Power Research Institute",
+          "(b) Planning Commission",
+          "(c) Power Finance Corporation Ltd.",
+          "(d) Central Statistical Organization"
+        ],
+        "ans": "D",
+        "fullText": "Which one of the following brings out the publication called “Energy Statistics” from time to time? (a) Central Power Research Institute (b) Planning Commission (c) Power Finance Corporation Ltd. (d) Central Statistical Organization"
+      },
+      {
+        "qNum": 16,
+        "year": 2009,
+        "stem": "To integrate cultural leaders into its meetings, which one of the following gives ‘Crystal Award’",
+        "options": [
+          "(a) Asia Pacific Economic Cooperation",
+          "(b) International Bank for Reconstruction and Development",
+          "(c) World Health Organization",
+          "(d) World Economic Forum"
+        ],
+        "ans": "D",
+        "fullText": "To integrate cultural leaders into its meetings, which one of the following gives ‘Crystal Award’ (a) Asia Pacific Economic Cooperation (b) International Bank for Reconstruction and Development (c) World Health Organization (d) World Economic Forum"
+      }
+    ]
+  },
+  "groupingsxneighbourhood": {
+    "name": "GroupingsXNeighbourhood",
+    "tokens": [
+      "groupingsxneighbourhood"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "Match List I (BIMSTEC Centre) with List II (Location): A. BIMSTEC Cultural Industries Observatory B. BIMSTEC Energy Centre C. BIMSTEC Centre for Weather and Climate D. BIMSTEC Technology Transfer Facility 1. NOIDA 2. Bengaluru 3. Colombo 4. Thimphu",
+        "options": [
+          "(a) A-3, B-2, C-1, D-4",
+          "(b) A-3, B-1, C-2, D-4",
+          "(c) A-4, B-2, C-1, D-3",
+          "(d) A-4, B-1, C-2, D-3"
+        ],
+        "ans": "C",
+        "fullText": "Match List I (BIMSTEC Centre) with List II (Location): A. BIMSTEC Cultural Industries Observatory B. BIMSTEC Energy Centre C. BIMSTEC Centre for Weather and Climate D. BIMSTEC Technology Transfer Facility 1. NOIDA 2. Bengaluru 3. Colombo 4. Thimphu (a) A-3, B-2, C-1, D-4 (b) A-3, B-1, C-2, D-4 (c) A-4, B-2, C-1, D-3 (d) A-4, B-1, C-2, D-3"
+      },
+      {
+        "qNum": 2,
+        "year": 2022,
+        "stem": "Consider the following : 1. Asian Infrastructure Investment Bank 2. Missile Technology Control Regime 3. Shanghai Cooperation Organisation India is a member of which of the above ?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 3 only",
+          "(c) 2 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following : 1. Asian Infrastructure Investment Bank 2. Missile Technology Control Regime 3. Shanghai Cooperation Organisation India is a member of which of the above ? (a) 1 and 2 only (b) 3 only (c) 2 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 3,
+        "year": 2017,
+        "stem": "Consider the following in respect of Indian Ocean Naval Symposium (IONS) 1. Inaugural IONS was held in India in 2015 under the chairmanship of the IndiaNavy. 2. IONS is a voluntary initiative that seeks to increase maritime co-operation among navies of the littoral states of the Indian Ocean Region. Which of the above statements is/are correct ?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "B",
+        "fullText": "Consider the following in respect of Indian Ocean Naval Symposium (IONS) 1. Inaugural IONS was held in India in 2015 under the chairmanship of the IndiaNavy. 2. IONS is a voluntary initiative that seeks to increase maritime co-operation among navies of the littoral states of the Indian Ocean Region. Which of the above statements is/are correct ? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 4,
+        "year": 2016,
+        "stem": "Belt and Road Initiative’ is sometimes mentioned in the news in the contexof the affairs of",
+        "options": [
+          "(a) African Union",
+          "(b) Brazil",
+          "(c) European Union",
+          "(d) China"
+        ],
+        "ans": "D",
+        "fullText": "Belt and Road Initiative’ is sometimes mentioned in the news in the contexof the affairs of (a) African Union (b) Brazil (c) European Union (d) China"
+      },
+      {
+        "qNum": 5,
+        "year": 2016,
+        "stem": "Consider the following statementsThe India-Africa Summit 1. held in 2015 was the third such Summi2. was actually initiated by Jawaharlal Nehru in 1951 Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following statementsThe India-Africa Summit 1. held in 2015 was the third such Summi2. was actually initiated by Jawaharlal Nehru in 1951 Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 6,
+        "year": 2015,
+        "stem": "India is a member of which among the following? (1) Asia-Pacific Economic Cooperation (2) Association of South-East Asian Nations (3) East Asia Summit Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 3 only",
+          "(c) 1, 2 and 3",
+          "(d) India is a member of none of them"
+        ],
+        "ans": "B",
+        "fullText": "India is a member of which among the following? (1) Asia-Pacific Economic Cooperation (2) Association of South-East Asian Nations (3) East Asia Summit Select the correct answer using the code given below. (a) 1 and 2 only (b) 3 only (c) 1, 2 and 3 (d) India is a member of none of them"
+      },
+      {
+        "qNum": 7,
+        "year": 2015,
+        "stem": "In the Mekong-Ganga Cooperationan initiative of six countries, which of the following is/are not a participant/participants? (1) Bangladesh (2) Cambodia (3) China (4) Mayanmar (5) Thailand Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2, 3 and 4",
+          "(c) 1 and 3",
+          "(d) 1, 2 and 5"
+        ],
+        "ans": "C",
+        "fullText": "In the Mekong-Ganga Cooperationan initiative of six countries, which of the following is/are not a participant/participants? (1) Bangladesh (2) Cambodia (3) China (4) Mayanmar (5) Thailand Select the correct answer using the code given below. (a) 1 only (b) 2, 3 and 4 (c) 1 and 3 (d) 1, 2 and 5"
+      },
+      {
+        "qNum": 8,
+        "year": 2015,
+        "stem": "With reference to ‘Indian Ocean Rim Association for Regional Cooperation (IOR-ARC)’ consider the following statements : (1) It was established very recently in response to incidents of piracy and accidents of oil spills. (2) It is an alliance meant for maritime security only. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "With reference to ‘Indian Ocean Rim Association for Regional Cooperation (IOR-ARC)’ consider the following statements : (1) It was established very recently in response to incidents of piracy and accidents of oil spills. (2) It is an alliance meant for maritime security only. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 9,
+        "year": 2011,
+        "stem": "With reference to “Look East Policy” of India, consider the following statements: 1. India wants to establish itself as an important regional player in East Asian affairs. 2. India wants to plug the vacuum created by the termination of the Cold War. 3. India wants to restore the historical and cultural ties with its neighbours in Southeast and East Asia. Which of the statements given above is/are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 1 and 3 only",
+          "(c) 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "B",
+        "fullText": "With reference to “Look East Policy” of India, consider the following statements: 1. India wants to establish itself as an important regional player in East Asian affairs. 2. India wants to plug the vacuum created by the termination of the Cold War. 3. India wants to restore the historical and cultural ties with its neighbours in Southeast and East Asia. Which of the statements given above is/are correct? (a) 1 only (b) 1 and 3 only (c) 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 10,
+        "year": 2010,
+        "stem": "Consider the following statements: 1. The Commonwealth has no charter, treaty or constitution 2. All the territories/countries once under the British empire (jurisdiction/rule/mandate) automatically joined the Commonwealth as its members. Which of the statement given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following statements: 1. The Commonwealth has no charter, treaty or constitution 2. All the territories/countries once under the British empire (jurisdiction/rule/mandate) automatically joined the Commonwealth as its members. Which of the statement given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 11,
+        "year": 2009,
+        "stem": "Other than Venezuela, which one among the following from South America is a member of OPEC?",
+        "options": [
+          "(a) Argentina",
+          "(b) Brazil",
+          "(c) Ecuador",
+          "(d) Bolivia"
+        ],
+        "ans": "C",
+        "fullText": "Other than Venezuela, which one among the following from South America is a member of OPEC? (a) Argentina (b) Brazil (c) Ecuador (d) Bolivia"
+      },
+      {
+        "qNum": 12,
+        "year": 2009,
+        "stem": "In the latter half of the year 2008, which one of the following countries pulled out of Commonwealth of Independent States ?",
+        "options": [
+          "(a) Azerbaijan",
+          "(b) Belarus",
+          "(c) Georgia",
+          "(d) Kazakhstan"
+        ],
+        "ans": "C",
+        "fullText": "In the latter half of the year 2008, which one of the following countries pulled out of Commonwealth of Independent States ? (a) Azerbaijan (b) Belarus (c) Georgia (d) Kazakhstan"
+      }
+    ]
+  },
+  "internationalorgtreatiesxnuclear": {
+    "name": "“International Org,TreatiesXNuclear”",
+    "tokens": [
+      "international",
+      "org",
+      "treatiesxnuclear"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2020,
+        "stem": "In India, why are some nuclear reactors kept ‘IAEA Safeguards’ while others are not?",
+        "options": [
+          "(a) Some use uranium and others use thorium",
+          "(b) Some use imported uranium and otheruse domestic supplies",
+          "(c) Some are operated by foreign enterprises and others are operated by domestic",
+          "(d) Some are State-owned and others are privately-owned"
+        ],
+        "ans": "B",
+        "fullText": "In India, why are some nuclear reactors kept ‘IAEA Safeguards’ while others are not? (a) Some use uranium and others use thorium (b) Some use imported uranium and otheruse domestic supplies (c) Some are operated by foreign enterprises and others are operated by domestic (d) Some are State-owned and others are privately-owned"
+      },
+      {
+        "qNum": 2,
+        "year": 2019,
+        "stem": "Recently, India signed a deal known as ‘Action Plan for Prioritization anImplementation of Cooperation Areas in the Nuclear Field’ with which of the following countries?",
+        "options": [
+          "(a) Japan",
+          "(b) Russia",
+          "(c) The United Kingdom",
+          "(d) The United States of America"
+        ],
+        "ans": "B",
+        "fullText": "Recently, India signed a deal known as ‘Action Plan for Prioritization anImplementation of Cooperation Areas in the Nuclear Field’ with which of the following countries? (a) Japan (b) Russia (c) The United Kingdom (d) The United States of America"
+      },
+      {
+        "qNum": 3,
+        "year": 2018,
+        "stem": "In the Indian context, what is the implication of ratifying the ‘Additional Protocol’ with the ‘International Atomic EnergAgency (IAEA)’?",
+        "options": [
+          "(a) The civilian nuclear reactors come under IAEA safeguards.",
+          "(b) (b)The military nuclear installations come under the inspection of IAEA",
+          "(c) (c)The country will have the privilege to buy uranium from the Nuclear Suppliers Group (NSG).",
+          "(d) The country automatically becomes a member of the NSG."
+        ],
+        "ans": "A",
+        "fullText": "In the Indian context, what is the implication of ratifying the ‘Additional Protocol’ with the ‘International Atomic EnergAgency (IAEA)’? (a) The civilian nuclear reactors come under IAEA safeguards. (b) (b)The military nuclear installations come under the inspection of IAEA (c) (c)The country will have the privilege to buy uranium from the Nuclear Suppliers Group (NSG). (d) The country automatically becomes a member of the NSG."
+      },
+      {
+        "qNum": 4,
+        "year": 2018,
+        "stem": "What is/are the consequence/ consequences of a country becoming the member of the ‘Nuclear Suppliers Group’? 1.It will have access to the latest and mosefficient nuclear technologies. 2.It automatically becomes a member of “The Treaty on the Non-Proliferation of Nuclear Weapons (NPT)”. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "A",
+        "fullText": "What is/are the consequence/ consequences of a country becoming the member of the ‘Nuclear Suppliers Group’? 1.It will have access to the latest and mosefficient nuclear technologies. 2.It automatically becomes a member of “The Treaty on the Non-Proliferation of Nuclear Weapons (NPT)”. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 5,
+        "year": 2017,
+        "stem": "Consider the following statements1. The Nuclear Security Summits are periodically held under the aegis of the United Nations. 2. The International Panel on Fissile Materials is an organ of International Atomic Energy Agency. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following statements1. The Nuclear Security Summits are periodically held under the aegis of the United Nations. 2. The International Panel on Fissile Materials is an organ of International Atomic Energy Agency. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 6,
+        "year": 2016,
+        "stem": "India is an important member of the ‘International Thermonuclear Experimental Reactor’. If this experiment succeeds, what is the immediate advantage for India?",
+        "options": [
+          "(a) It can use thorium in place of uranium for power generation",
+          "(b) It attain a global role in satellite-navigation",
+          "(c) It can drastically improve the efficiency of its fission reactors in power generation",
+          "(d) It can build fusion reactors for power generation"
+        ],
+        "ans": "D",
+        "fullText": "India is an important member of the ‘International Thermonuclear Experimental Reactor’. If this experiment succeeds, what is the immediate advantage for India? (a) It can use thorium in place of uranium for power generation (b) It attain a global role in satellite-navigation (c) It can drastically improve the efficiency of its fission reactors in power generation (d) It can build fusion reactors for power generation"
+      },
+      {
+        "qNum": 7,
+        "year": 2015,
+        "stem": "Consider the following countries : (1) China (2) France (3) India (4) Israel (5) Pakistan Which among the above are Nuclear Weapons States as recognized by the Treaty on the Non Proliferaion of Nuclear weapons, commonly known as Nuclear Non-Proliferation Treaty (NPT)?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 1, 3, 4 and 5 only",
+          "(c) 2, 4 and 5 only",
+          "(d) 1, 2, 3, 4 and 5"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following countries : (1) China (2) France (3) India (4) Israel (5) Pakistan Which among the above are Nuclear Weapons States as recognized by the Treaty on the Non Proliferaion of Nuclear weapons, commonly known as Nuclear Non-Proliferation Treaty (NPT)? (a) 1 and 2 only (b) 1, 3, 4 and 5 only (c) 2, 4 and 5 only (d) 1, 2, 3, 4 and 5"
+      },
+      {
+        "qNum": 8,
+        "year": 2011,
+        "stem": "The “New START” treaty was in thnews. What is this treaty?",
+        "options": [
+          "(a) It is a bilateral strategic nuclear arms reduction treaty between the USA and the Russian Federation.",
+          "(b) It is a multilateral energy security cooperation treaty among the members of the East Asia Summit.",
+          "(c) It is a treaty between the Russian Federation and the European Union for energy security cooperation.",
+          "(d) It is a multilateral cooperation treaty among the BRICS countries for the promotion of trade."
+        ],
+        "ans": "A",
+        "fullText": "The “New START” treaty was in thnews. What is this treaty? (a) It is a bilateral strategic nuclear arms reduction treaty between the USA and the Russian Federation. (b) It is a multilateral energy security cooperation treaty among the members of the East Asia Summit. (c) It is a treaty between the Russian Federation and the European Union for energy security cooperation. (d) It is a multilateral cooperation treaty among the BRICS countries for the promotion of trade."
+      },
+      {
+        "qNum": 9,
+        "year": 2008,
+        "stem": "Consider the following statements: 1. The Nuclear Suppliers Group has 24 countries as the members. 2. India is a member of the Nuclear Suppliers Group.",
+        "options": [
+          "(a) 1 Only",
+          "(b) 2 Only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following statements: 1. The Nuclear Suppliers Group has 24 countries as the members. 2. India is a member of the Nuclear Suppliers Group. (a) 1 Only (b) 2 Only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 10,
+        "year": 2008,
+        "stem": "In which one of the following locations is the International Thermonuclear Experimental Reactor (ITER) Project to be built?",
+        "options": [
+          "(a) Northern Spain",
+          "(b) Southern France",
+          "(c) Eastern Germany",
+          "(d) Southern Italy"
+        ],
+        "ans": "B",
+        "fullText": "In which one of the following locations is the International Thermonuclear Experimental Reactor (ITER) Project to be built? (a) Northern Spain (b) Southern France (c) Eastern Germany (d) Southern Italy"
+      }
+    ]
+  },
+  "internationalinitiativesngoexportcon12026matchlistiinterpolnotice": {
+    "name": "“International Initiatives(NGO,Export Con1.   [2026] Match List I (INTERPOL Notice)",
+    "tokens": [
+      "international",
+      "initiatives",
+      "2026",
+      "match",
+      "list",
+      "notice",
+      "export",
+      "con1",
+      "ngo",
+      "interpol"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "Match List I (INTERPOL Notice) with List II (Description): A. Silver Notice - 1. To seek information on unidentified bodies B. Blue Notice - 2. To collect additional information about a person’s identity/location in a criminal investigation C. Black Notice - 3. To provide warning about a person’s criminal activities/threat to public safety D. Green Notice - 4. To identify and trace criminal assets",
+        "options": [
+          "(a) A-3, B-1, C-2, D-4",
+          "(b) A-3, B-2, C-1, D-4",
+          "(c) A-4, B-2, C-1, D-3",
+          "(d) A-4, B-1, C-2, D-3"
+        ],
+        "ans": "C",
+        "fullText": "Match List I (INTERPOL Notice) with List II (Description): A. Silver Notice - 1. To seek information on unidentified bodies B. Blue Notice - 2. To collect additional information about a person’s identity/location in a criminal investigation C. Black Notice - 3. To provide warning about a person’s criminal activities/threat to public safety D. Green Notice - 4. To identify and trace criminal assets (a) A-3, B-1, C-2, D-4 (b) A-3, B-2, C-1, D-4 (c) A-4, B-2, C-1, D-3 (d) A-4, B-1, C-2, D-3"
+      },
+      {
+        "qNum": 2,
+        "year": 2026,
+        "stem": "Which of the following statements about insurance in aviation sector is/are correct? 1. ‘Aviation Hull Insurance’ covers the physical aircraft, including the body, engine, anonboard equipment. 2. Under the Montreal Convention, adopted in 1999 by over 130 countries, including India, airlines are strictly liable to pay compensation to the family/nominee of every deceased passenger without requiring the family to prove fault. Select the answer using the code given below:",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "C",
+        "fullText": "Which of the following statements about insurance in aviation sector is/are correct? 1. ‘Aviation Hull Insurance’ covers the physical aircraft, including the body, engine, anonboard equipment. 2. Under the Montreal Convention, adopted in 1999 by over 130 countries, including India, airlines are strictly liable to pay compensation to the family/nominee of every deceased passenger without requiring the family to prove fault. Select the answer using the code given below: (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 3,
+        "year": 2024,
+        "stem": "Consider the following statements1. India is a member of the International Grains Council. 2. The country needs to be a member of the International Grains Council for exporting or importing rice and wheat. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following statements1. India is a member of the International Grains Council. 2. The country needs to be a member of the International Grains Council for exporting or importing rice and wheat. Which of the statements given above is/ are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 4,
+        "year": 2021,
+        "stem": "With reference to ‘Water Credit’, consider the following statements: 1.It puts microfinance tools to work in the water and sanitation sector. 2.It is a global initiative launched under the aegis of the World Health Organization and the World Bank. 3.It aims to enable the poor people to meetheir water needs without depending on subsidies. Which of the statements given above are correct?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "C",
+        "fullText": "With reference to ‘Water Credit’, consider the following statements: 1.It puts microfinance tools to work in the water and sanitation sector. 2.It is a global initiative launched under the aegis of the World Health Organization and the World Bank. 3.It aims to enable the poor people to meetheir water needs without depending on subsidies. Which of the statements given above are correct? (a) 1 and 2 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 5,
+        "year": 2016,
+        "stem": "Doctors Without Borders (Medecins Sans Frontieres)’, often in the news, is -",
+        "options": [
+          "(a) a division of World Health Organization d",
+          "(b) a non-governmental international organization",
+          "(c) an inter-governmental agency sponsored by European Union",
+          "(d) a specialized agency of the United Nations"
+        ],
+        "ans": "B",
+        "fullText": "Doctors Without Borders (Medecins Sans Frontieres)’, often in the news, is - (a) a division of World Health Organization d (b) a non-governmental international organization (c) an inter-governmental agency sponsored by European Union (d) a specialized agency of the United Nations"
+      },
+      {
+        "qNum": 6,
+        "year": 2016,
+        "stem": "With reference to ‘Organisation for the Prohibition of Chemical Weapons (OPCW)’, consider the following statements: 1. It is an organization of European Union iworking relation with NATO and WHO. 2. It monitors chemical industry to prevent new weapons from emerging. 3. It provides assistance and protection to States (Parties) against chemical weapons threats. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "B",
+        "fullText": "With reference to ‘Organisation for the Prohibition of Chemical Weapons (OPCW)’, consider the following statements: 1. It is an organization of European Union iworking relation with NATO and WHO. 2. It monitors chemical industry to prevent new weapons from emerging. 3. It provides assistance and protection to States (Parties) against chemical weapons threats. Which of the statements given above is/ are correct? (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 7,
+        "year": 2015,
+        "stem": "Amnesty International is",
+        "options": [
+          "(a) an agency of the United Nations to help refugees of civil wars",
+          "(b) a global Human Rights Movement",
+          "(c) a non-governmental voluntary organization to help very poor people",
+          "(d) an inter-governmental agency to cater to medical emergencies in war-ravaged regions"
+        ],
+        "ans": "B",
+        "fullText": "Amnesty International is (a) an agency of the United Nations to help refugees of civil wars (b) a global Human Rights Movement (c) a non-governmental voluntary organization to help very poor people (d) an inter-governmental agency to cater to medical emergencies in war-ravaged regions"
+      },
+      {
+        "qNum": 8,
+        "year": 2011,
+        "stem": "Recently, the USA decided to support India’s membership in multilateral export control regimes called the “Australia Group” and the “Wassenaar Arrangement”. What is the difference between them? 1. The Australia Group is an informal arrangement which aims to allow exporting countries to minimize the risk of assisting chemical and biological weapons proliferation, whereas the WassenaarArrangement is a formal group under the OECD holding identical objectives. 2. The Australia Group comprises predominantly of Asian, African, and North American countries, whereas the member countries of Wassenaar Arrangement are predominantly from the European Union and American continents. Which of the statements given above is/are correct?",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "Recently, the USA decided to support India’s membership in multilateral export control regimes called the “Australia Group” and the “Wassenaar Arrangement”. What is the difference between them? 1. The Australia Group is an informal arrangement which aims to allow exporting countries to minimize the risk of assisting chemical and biological weapons proliferation, whereas the WassenaarArrangement is a formal group under the OECD holding identical objectives. 2. The Australia Group comprises predominantly of Asian, African, and North American countries, whereas the member countries of Wassenaar Arrangement are predominantly from the European Union and American continents. Which of the statements given above is/are correct? (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 9,
+        "year": 2008,
+        "stem": "Match List-I with List-II and select the correct answer using the codes given below the lists: List-I (Service/Agency) and List-II (Country): A. Foreign Intelligence Service - 1. Israel B. Ministry of State Security - 2. Britain C. Secret Intelligence Service - 3. China D. The Mossad - 4. Russia.",
+        "options": [
+          "(a) 4-1-2-3",
+          "(b) 2-3-4-1",
+          "(c) 4-3-2-1",
+          "(d) 2-1-4-3"
+        ],
+        "ans": "C",
+        "fullText": "Match List-I with List-II and select the correct answer using the codes given below the lists: List-I (Service/Agency) and List-II (Country): A. Foreign Intelligence Service - 1. Israel B. Ministry of State Security - 2. Britain C. Secret Intelligence Service - 3. China D. The Mossad - 4. Russia. (a) 4-1-2-3 (b) 2-3-4-1 (c) 4-3-2-1 (d) 2-1-4-3"
+      }
+    ]
+  },
+  "wto": {
+    "name": "WTO",
+    "tokens": [
+      "wto"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2017,
+        "stem": "Consider the following statements1. India has ratified the Trade Facilitation Agreement (TFA) of WTO. 2. TFA is a part of WTO’s Bali Ministerial Package of 2013. 3. TFA came into force in January 2016. Which of the statements given above is/ are correct?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 1 and 3 only",
+          "(c) 2 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following statements1. India has ratified the Trade Facilitation Agreement (TFA) of WTO. 2. TFA is a part of WTO’s Bali Ministerial Package of 2013. 3. TFA came into force in January 2016. Which of the statements given above is/ are correct? (a) 1 and 2 only (b) 1 and 3 only (c) 2 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 2,
+        "year": 2010,
+        "stem": "In the context of the affairs of which of the following is the phrase ‘Special Safeguard Mechanisms’ mentioned in the news frequently ?",
+        "options": [
+          "(a) UNEP",
+          "(b) WTO",
+          "(c) ASEAN-Free Trade Agreement",
+          "(d) G-20 Summits"
+        ],
+        "ans": "B",
+        "fullText": "In the context of the affairs of which of the following is the phrase ‘Special Safeguard Mechanisms’ mentioned in the news frequently ? (a) UNEP (b) WTO (c) ASEAN-Free Trade Agreement (d) G-20 Summits"
+      },
+      {
+        "qNum": 3,
+        "year": 2010,
+        "stem": "As regards the use of international food safety standards as reference point for the dispute settlements, which one of the following does WTO collaborate with?",
+        "options": [
+          "(a) Codex Alimentarius Commission",
+          "(b) International Federation of Standard Users",
+          "(c) International Organization of Standardization",
+          "(d) World Standards Cooperation"
+        ],
+        "ans": "A",
+        "fullText": "As regards the use of international food safety standards as reference point for the dispute settlements, which one of the following does WTO collaborate with? (a) Codex Alimentarius Commission (b) International Federation of Standard Users (c) International Organization of Standardization (d) World Standards Cooperation"
+      }
+    ]
+  },
+  "bilateralrelations": {
+    "name": "Bilateral Relations",
+    "tokens": [
+      "bilateral",
+      "relations"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "The Chancellor of Germany visited India in January 2026. Which of the following is/are NOT correct in terms of outcomes? 1. MoU between All India Institute of Ayurveda and University of Hamburg 2. MoU on Youth Hockey Development between Hockey India and German HockeFederation 3. Establishment of a bilateral dialogue mechanism on the Indo-Pacific 4. Opening of an Honorary Consul of Germany in Lucknow",
+        "options": [
+          "(a) 2 and 3",
+          "(b) 1 and 4",
+          "(c) 3 and 4",
+          "(d) 1 only"
+        ],
+        "ans": "B",
+        "fullText": "The Chancellor of Germany visited India in January 2026. Which of the following is/are NOT correct in terms of outcomes? 1. MoU between All India Institute of Ayurveda and University of Hamburg 2. MoU on Youth Hockey Development between Hockey India and German HockeFederation 3. Establishment of a bilateral dialogue mechanism on the Indo-Pacific 4. Opening of an Honorary Consul of Germany in Lucknow (a) 2 and 3 (b) 1 and 4 (c) 3 and 4 (d) 1 only"
+      }
+    ]
+  },
+  "bilateralxneighbourhood": {
+    "name": "BilateralXNeighbourhood",
+    "tokens": [
+      "bilateralxneighbourhood"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "Match: A. Mangdechhu Hydroelectric Project B. Restoration of Stor Palace C. District Hospital at Dickoya D. Institute of Security and Law Enforcement Studies 1. Maldives 2. Afghanistan 3. Bhutan 4. Sri Lanka",
+        "options": [
+          "(a) A-1, B-4, C-2, D-3",
+          "(b) A-3, B-2, C-4, D-1",
+          "(c) A-3, B-4, C-2, D-1",
+          "(d) A-1, B-2, C-4, D-3"
+        ],
+        "ans": "B",
+        "fullText": "Match: A. Mangdechhu Hydroelectric Project B. Restoration of Stor Palace C. District Hospital at Dickoya D. Institute of Security and Law Enforcement Studies 1. Maldives 2. Afghanistan 3. Bhutan 4. Sri Lanka (a) A-1, B-4, C-2, D-3 (b) A-3, B-2, C-4, D-1 (c) A-3, B-4, C-2, D-1 (d) A-1, B-2, C-4, D-3"
+      }
+    ]
+  },
+  "emergingtechxcommunication": {
+    "name": "Emerging TechXCommunication",
+    "tokens": [
+      "emerging",
+      "techxcommunication"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2025,
+        "stem": "Consider the following statementsI. Indian Railways have prepared a NationaRail Plan (NRP) to create a future ready railway system by 2028. II. ‘Kavach’ is an Automatic Train Protectiosystem developed in collaboration with Germany. III. ‘Kavach’ system consists of RFID tags fitted on track in station section. Which of the statements given above are not correct?",
+        "options": [
+          "(a) I and II only",
+          "(b) II and III only",
+          "(c) I and III only",
+          "(d) I, II and III"
+        ],
+        "ans": "A",
+        "fullText": "Consider the following statementsI. Indian Railways have prepared a NationaRail Plan (NRP) to create a future ready railway system by 2028. II. ‘Kavach’ is an Automatic Train Protectiosystem developed in collaboration with Germany. III. ‘Kavach’ system consists of RFID tags fitted on track in station section. Which of the statements given above are not correct? (a) I and II only (b) II and III only (c) I and III only (d) I, II and III"
+      },
+      {
+        "qNum": 3,
+        "year": 2020,
+        "stem": "With reference to Visible Light Communication (VLC) technology, which othe following statements are correct? (1) VLC uses electromagnetic spectrum wavelengths 375 to 780 nm. (2) VLC is known as long-range optical wireless communication. (3) VLC can transmit large amounts of datfaster than Bluetooth, (4) VLC has no electromagnetic interference. Select the correct using the code given below:",
+        "options": [
+          "(a) 1, 2 and 3 only",
+          "(b) 1, 2 and 4 only",
+          "(c) 1, 3 and 4 only",
+          "(d) 2, 3 and 4 only"
+        ],
+        "ans": "C",
+        "fullText": "With reference to Visible Light Communication (VLC) technology, which othe following statements are correct? (1) VLC uses electromagnetic spectrum wavelengths 375 to 780 nm. (2) VLC is known as long-range optical wireless communication. (3) VLC can transmit large amounts of datfaster than Bluetooth, (4) VLC has no electromagnetic interference. Select the correct using the code given below: (a) 1, 2 and 3 only (b) 1, 2 and 4 only (c) 1, 3 and 4 only (d) 2, 3 and 4 only"
+      },
+      {
+        "qNum": 2,
+        "year": 2022,
+        "stem": "Consider the following communication technologies : 1. Closed-circuit Television 2. Radio Frequency Identification 3. Wireless Local Area Network Which of the above are considered ShortRange devices/technologies?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following communication technologies : 1. Closed-circuit Television 2. Radio Frequency Identification 3. Wireless Local Area Network Which of the above are considered ShortRange devices/technologies? (a) 1 and 2 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 4,
+        "year": 2019,
+        "stem": "With reference to communication technologies, what is/are the difference / differences between LTE (Long-Term Evolution) and VoLTE (Voice over Long-Term Evolution)? f 1. LTE ‘is commonly marketed as 3G and VoLTE is commonly marketed as advanced 3G. 2. LTE is data-only technology and VoLTE ivoice-only technology.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "D",
+        "fullText": "With reference to communication technologies, what is/are the difference / differences between LTE (Long-Term Evolution) and VoLTE (Voice over Long-Term Evolution)? f 1. LTE ‘is commonly marketed as 3G and VoLTE is commonly marketed as advanced 3G. 2. LTE is data-only technology and VoLTE ivoice-only technology. (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 5,
+        "year": 2019,
+        "stem": "In the context of wearable technology, which of the following tasks is/are accomplished by wearable devices? 1. Location identification of a person 2. Sleep monitoring of a person 3. Assisting the hearing impaired person Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "In the context of wearable technology, which of the following tasks is/are accomplished by wearable devices? 1. Location identification of a person 2. Sleep monitoring of a person 3. Assisting the hearing impaired person Select the correct answer using the code given below. (a) 1 only (b) 2 and 3 only (c) 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 6,
+        "year": 2018,
+        "stem": "In which of the following areas can GPS technology be used ? 1. Mobile phone operations 2. Banking operations 3. Controlling the power grids Select the correct answer using the code given below :",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 and 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "D",
+        "fullText": "In which of the following areas can GPS technology be used ? 1. Mobile phone operations 2. Banking operations 3. Controlling the power grids Select the correct answer using the code given below : (a) 1 only (b) 2 and 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 7,
+        "year": 2018,
+        "stem": "When the alarm of your smartphone rings in the morning, you wake up and tap it to stop the alarm which causes your geyser to be switched on automatically. The smart mirror in your bathroom shows the day’s weather and also indicates the level of water in your overhead tank. After you take some groceries from your refrigerator for making breakfast, it recognises the shortage of stock in it and places an order for the supply of fresh grocery items. When you step’ out of your house and lock the door, all lights, fans, geysers and AC machines get switched off automatically. On your way to office, your car warns you about traffic congestion ahead and suggests an alternative route, and if you are late for a meeting, it sends a message to your office accordingly. In the context of emerging communication technologies, which one of the following terms best applies to the above scenario?",
+        "options": [
+          "(a) (a)Border Gateway Protocol",
+          "(b) Internet of Things",
+          "(c) Internet Protocol",
+          "(d) Virtual Private Network"
+        ],
+        "ans": "B",
+        "fullText": "When the alarm of your smartphone rings in the morning, you wake up and tap it to stop the alarm which causes your geyser to be switched on automatically. The smart mirror in your bathroom shows the day’s weather and also indicates the level of water in your overhead tank. After you take some groceries from your refrigerator for making breakfast, it recognises the shortage of stock in it and places an order for the supply of fresh grocery items. When you step’ out of your house and lock the door, all lights, fans, geysers and AC machines get switched off automatically. On your way to office, your car warns you about traffic congestion ahead and suggests an alternative route, and if you are late for a meeting, it sends a message to your office accordingly. In the context of emerging communication technologies, which one of the following terms best applies to the above scenario? (a) (a)Border Gateway Protocol (b) Internet of Things (c) Internet Protocol (d) Virtual Private Network"
+      },
+      {
+        "qNum": 8,
+        "year": 2016,
+        "stem": "With reference to ‘LiFi’, recently in the news, which of the following statements is/are correct? 1. It uses light as the medium for highspeed data transmission. 2. It is a wireless technology and is several times faster than ‘WiFi’. Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 only",
+          "(b) 2 only",
+          "(c) Both 1 and 2",
+          "(d) Neither 1 nor 2"
+        ],
+        "ans": "C",
+        "fullText": "With reference to ‘LiFi’, recently in the news, which of the following statements is/are correct? 1. It uses light as the medium for highspeed data transmission. 2. It is a wireless technology and is several times faster than ‘WiFi’. Select the correct answer using the code given below. (a) 1 only (b) 2 only (c) Both 1 and 2 (d) Neither 1 nor 2"
+      },
+      {
+        "qNum": 9,
+        "year": 2015,
+        "stem": "With reference to ‘Near Field Communication (NFC) Technology’, which of thfollowing statements is/are correct : (1) It is a contactless communication technology that uses electromagnetic radio fields. (2) NFC is designed for use by devices which can be at a distance of even a metre from each other. (3) NFC can use encryption when sending sensitive information. Select the correct answer using the code given below.",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 3 only",
+          "(c) 1 and 3 only",
+          "(d) 1, 2 and 3"
+        ],
+        "ans": "C",
+        "fullText": "With reference to ‘Near Field Communication (NFC) Technology’, which of thfollowing statements is/are correct : (1) It is a contactless communication technology that uses electromagnetic radio fields. (2) NFC is designed for use by devices which can be at a distance of even a metre from each other. (3) NFC can use encryption when sending sensitive information. Select the correct answer using the code given below. (a) 1 and 2 only (b) 3 only (c) 1 and 3 only (d) 1, 2 and 3"
+      },
+      {
+        "qNum": 10,
+        "year": 2011,
+        "stem": "What is a “Virtual Private Network”?",
+        "options": [
+          "(a) It is a private computer network of an organization where the remote users can transmit encrypted information through the server of the organization.",
+          "(b) It is a computer network across a public internet that provides users accesto their organization’s network while maintaining the security of the information transmitted.",
+          "(c) It is a computer network in which usercan access a shared pool of computing resources through a service provider.",
+          "(d) None of the statements",
+          "(a),",
+          "(b) and",
+          "(c) given above is the correct description of virtual private networks."
+        ],
+        "ans": "B",
+        "fullText": "What is a “Virtual Private Network”? (a) It is a private computer network of an organization where the remote users can transmit encrypted information through the server of the organization. (b) It is a computer network across a public internet that provides users accesto their organization’s network while maintaining the security of the information transmitted. (c) It is a computer network in which usercan access a shared pool of computing resources through a service provider. (d) None of the statements (a), (b) and (c) given above is the correct description of virtual private networks."
+      },
+      {
+        "qNum": 11,
+        "year": 2011,
+        "stem": "What is the difference between Bluetooth and Wi-Fi devices?",
+        "options": [
+          "(a) Bluetooth uses 2.4 GHz radio frequency band, whereas Wi-Fi can use 2.4 GHz or 5 GHz frequency band.",
+          "(b) Bluetooth is used for wireless local area networks (WLAN) only, whereas WiFi is used for wireless wide area networks (WWAN) only.",
+          "(c) When information is transmitted between two devices using Bluetooth technology, the devices have to be in the line of sight of each other, but when Wi-Fi technology is used the devices need not be in the line of sight of each other.",
+          "(d) The statements",
+          "(a) and",
+          "(b) given abovare correct in this context."
+        ],
+        "ans": "A",
+        "fullText": "What is the difference between Bluetooth and Wi-Fi devices? (a) Bluetooth uses 2.4 GHz radio frequency band, whereas Wi-Fi can use 2.4 GHz or 5 GHz frequency band. (b) Bluetooth is used for wireless local area networks (WLAN) only, whereas WiFi is used for wireless wide area networks (WWAN) only. (c) When information is transmitted between two devices using Bluetooth technology, the devices have to be in the line of sight of each other, but when Wi-Fi technology is used the devices need not be in the line of sight of each other. (d) The statements (a) and (b) given abovare correct in this context."
+      },
+      {
+        "qNum": 12,
+        "year": 2010,
+        "stem": "Consider the following : 1. Bluetooth device 2. Cordless phone 3. Microwave oven 4. Wi-Fi device Which of the above can operate between 2-4 and 2-5 GHz range of radio frequencband ?",
+        "options": [
+          "(a) 1 and 2 only",
+          "(b) 3 and 4 only",
+          "(c) 1,2 and 4 only",
+          "(d) 1,2,3 and 4"
+        ],
+        "ans": "D",
+        "fullText": "Consider the following : 1. Bluetooth device 2. Cordless phone 3. Microwave oven 4. Wi-Fi device Which of the above can operate between 2-4 and 2-5 GHz range of radio frequencband ? (a) 1 and 2 only (b) 3 and 4 only (c) 1,2 and 4 only (d) 1,2,3 and 4"
+      },
+      {
+        "qNum": 13,
+        "year": 2010,
+        "stem": "Which among the following do/ does not belong/belongs to the GSM family of wireless technologies ?",
+        "options": [
+          "(a) EDGE",
+          "(b) LTE",
+          "(c) DSL",
+          "(d) Both EDGE and LTE"
+        ],
+        "ans": "C",
+        "fullText": "Which among the following do/ does not belong/belongs to the GSM family of wireless technologies ? (a) EDGE (b) LTE (c) DSL (d) Both EDGE and LTE"
+      },
+      {
+        "qNum": 14,
+        "year": 2009,
+        "stem": "WiMAX is related to which one of the following ?",
+        "options": [
+          "(a) Biotechnology",
+          "(b) Space Technology",
+          "(c) Missile Technology",
+          "(d) Communication Technology"
+        ],
+        "ans": "D",
+        "fullText": "WiMAX is related to which one of the following ? (a) Biotechnology (b) Space Technology (c) Missile Technology (d) Communication Technology"
+      }
+    ]
+  },
+  "accountabilityandethicalgovernance": {
+    "name": "Accountability and Ethical Governance",
+    "tokens": [
+      "ethical",
+      "governance",
+      "accountability"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "year": 2026,
+        "stem": "Mr. X, a senior officer, was overseeing a critical vaccination programme durina pandemic. He found that a private servicprovider responsible for vaccine distribution was compromising on quality to make profits. Despite immense pressure tmanage the issue due to vested interests, he raised his voice based on the principles - e of public administration which he learnt during various training programmes attended across his career. He reported the issue to the appropriate vigilance authority and halted the contract to ensure citizen welfare. Which one among the following principles of public administration was most strongly demonstrated by Mr. X’s actions?",
+        "options": [
+          "(a) Esprit de corps",
+          "(b) Equity",
+          "(c) Accountability",
+          "(d) Delegation"
+        ],
+        "ans": "C",
+        "fullText": "Mr. X, a senior officer, was overseeing a critical vaccination programme durina pandemic. He found that a private servicprovider responsible for vaccine distribution was compromising on quality to make profits. Despite immense pressure tmanage the issue due to vested interests, he raised his voice based on the principles - e of public administration which he learnt during various training programmes attended across his career. He reported the issue to the appropriate vigilance authority and halted the contract to ensure citizen welfare. Which one among the following principles of public administration was most strongly demonstrated by Mr. X’s actions? (a) Esprit de corps (b) Equity (c) Accountability (d) Delegation"
+      }
+    ]
+  }
+}

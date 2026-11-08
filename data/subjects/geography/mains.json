@@ -1,0 +1,1241 @@
+{
+  "climatolgyxatmosphere": {
+    "name": "Climatolgy X Atmosphere",
+    "subject": "Geography",
+    "tokens": [
+      "climatolgy",
+      "atmosphere"
+    ],
+    "questions": [
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "Troposphere is a very significant atmospheric layer that determines weather processes.",
+        "subject": "Geography",
+        "microtheme": "Climatolgy X Atmosphere",
+        "page": 17
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "How? Discuss the concept of air mass and explain its role in macro-climatic changes.",
+        "subject": "Geography",
+        "microtheme": "Climatolgy X Atmosphere",
+        "page": 17
+      }
+    ]
+  },
+  "climatologyxmonsoon": {
+    "name": "Climatology X Monsoon,",
+    "subject": "Geography",
+    "tokens": [
+      "climatology",
+      "monsoon"
+    ],
+    "questions": [
+      {
+        "year": 2023,
+        "marks": 10,
+        "text": "Why is the South-West monsoon called ‘Purvaiya’ (easterly) in Bhojpur Region?",
+        "subject": "Geography",
+        "microtheme": "Climatology X Monsoon,",
+        "page": 17
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "What characteristics can be assigned to monsoon climate that succeeds in feeding more than 50 percent of the world population residing in Monsoon Asia?",
+        "subject": "Geography",
+        "microtheme": "Climatology X Monsoon,",
+        "page": 17
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "How far do you agree that the behavior of the Indian monsoon has been changing due to humanizing landscapes?",
+        "subject": "Geography",
+        "microtheme": "Climatology X Monsoon,",
+        "page": 17
+      }
+    ]
+  },
+  "climatologyxtemperatureinversionclimatologyxwindandpressuresystems": {
+    "name": "Climatology X Temperature Inversion Climatology X Wind and Pressure Systems",
+    "subject": "Geography",
+    "tokens": [
+      "temperature",
+      "pressure",
+      "inversion",
+      "climatology",
+      "wind",
+      "systems"
+    ],
+    "questions": [
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "How has this directional seasonal wind system influenced the cultural ethos of the region?",
+        "subject": "Geography",
+        "microtheme": "Climatology X Temperature Inversion Climatology X Wind and Pressure Systems",
+        "page": 17
+      },
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "Do you agree? What do you understand by the phenomenon of temperature inversion in meteorology? How does it affect the weather and the habitants of the place?",
+        "subject": "Geography",
+        "microtheme": "Climatology X Temperature Inversion Climatology X Wind and Pressure Systems",
+        "page": 17
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Compare the Loo, Chinook and Foehn winds with respect to their regions of prevalence, their nature and climatic impacts. Major hot deserts in northern hemisphere are located between 20-30 degree north and on the western side of the continents. Why?",
+        "subject": "Geography",
+        "microtheme": "Climatology X Temperature Inversion Climatology X Wind and Pressure Systems",
+        "page": 17
+      }
+    ]
+  },
+  "ensoiod": {
+    "name": "ENSO, IOD",
+    "subject": "Geography",
+    "tokens": [
+      "iod",
+      "enso"
+    ],
+    "questions": [
+      {
+        "year": 2013,
+        "marks": 5,
+        "text": "Discuss. Most of the unusual climatic happenings are explained as an outcome of the El-Nino effect.",
+        "subject": "Geography",
+        "microtheme": "ENSO, IOD",
+        "page": 17
+      }
+    ]
+  },
+  "geomorphology": {
+    "name": "Geomorphology",
+    "subject": "Geography",
+    "tokens": [
+      "geomorphology"
+    ],
+    "questions": [
+      {
+        "year": 2026,
+        "marks": 10,
+        "text": "Discuss the role of aeolian processes in desertification and land degradation.",
+        "subject": "Geography",
+        "microtheme": "Geomorphology",
+        "page": 18
+      },
+      {
+        "year": 2025,
+        "marks": 15,
+        "text": "Discuss how the changes in shape and sizes of continents and ocean basins of the planet take place due to tectonic movements of the crustal masses.",
+        "subject": "Geography",
+        "microtheme": "Geomorphology",
+        "page": 18
+      },
+      {
+        "year": 2023,
+        "marks": 10,
+        "text": "How are the fjords formed? Why do they constitute some of the most picturesque areas of the world?",
+        "subject": "Geography",
+        "microtheme": "Geomorphology",
+        "page": 18
+      },
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "Describe the characteristics and types of primary rocks.",
+        "subject": "Geography",
+        "microtheme": "Geomorphology",
+        "page": 18
+      },
+      {
+        "year": 2021,
+        "marks": 15,
+        "text": "Briefly mention the alignment of major mountain ranges of the world and explain their impact on local weather conditions, with examples.",
+        "subject": "Geography",
+        "microtheme": "Geomorphology",
+        "page": 18
+      },
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "Why is India considered as a subcontinent? Elaborate your answer.",
+        "subject": "Geography",
+        "microtheme": "Geomorphology",
+        "page": 18
+      },
+      {
+        "year": 2020,
+        "marks": 10,
+        "text": "Discuss the geophysical characteristics of Circum-Pacific Zone.",
+        "subject": "Geography",
+        "microtheme": "Geomorphology",
+        "page": 18
+      },
+      {
+        "year": 2018,
+        "marks": 10,
+        "text": "Define mantle plume and explain its role in plate tectonics.",
+        "subject": "Geography",
+        "microtheme": "Geomorphology",
+        "page": 18
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Explain the formation of thousands of islands in Indonesian and Philippines archipelagos.",
+        "subject": "Geography",
+        "microtheme": "Geomorphology",
+        "page": 18
+      }
+    ]
+  },
+  "oceanography": {
+    "name": "Oceanography",
+    "subject": "Geography",
+    "tokens": [
+      "oceanography"
+    ],
+    "questions": [
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Why are the world's fold mountain systems located along the margins of continents?",
+        "subject": "Geography",
+        "microtheme": "Oceanography",
+        "page": 18
+      },
+      {
+        "year": 2013,
+        "marks": 5,
+        "text": "Bring out the association between the global distribution of Fold Mountains and the earthquakes and volcanoes.",
+        "subject": "Geography",
+        "microtheme": "Oceanography",
+        "page": 18
+      },
+      {
+        "year": 2013,
+        "marks": 5,
+        "text": "There is no formation of deltas by rivers of the Western Ghat.",
+        "subject": "Geography",
+        "microtheme": "Oceanography",
+        "page": 18
+      },
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "Why? What do you understand by the theory of continental drift'?",
+        "subject": "Geography",
+        "microtheme": "Oceanography",
+        "page": 18
+      },
+      {
+        "year": 2019,
+        "marks": 15,
+        "text": "Discuss the prominent evidences in its support. What are the forces that influence ocean currents? Describe their role in fishing industry of the world.",
+        "subject": "Geography",
+        "microtheme": "Oceanography",
+        "page": 18
+      },
+      {
+        "year": 2018,
+        "marks": 10,
+        "text": "How do ocean currents and water masses differ in their impacts on marine life and the coastal environment?",
+        "subject": "Geography",
+        "microtheme": "Oceanography",
+        "page": 18
+      },
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "Give suitable examples? What are the consequences of spreading of 'Dead Zones' on marine ecosystem?",
+        "subject": "Geography",
+        "microtheme": "Oceanography",
+        "page": 18
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Account for variations in oceanic salinity and discuss its multi-dimensional effects.",
+        "subject": "Geography",
+        "microtheme": "Oceanography",
+        "page": 18
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Explain the factors responsible for the origin of ocean currents. How do they influence regional climates, fishing and navigation? Critically evaluate the various resources of the oceans which can be harnessed to meet the resource crisis in the world.",
+        "subject": "Geography",
+        "microtheme": "Oceanography",
+        "page": 18
+      }
+    ]
+  },
+  "oilnaturalresources": {
+    "name": "Oil, Natural Resources",
+    "subject": "Geography",
+    "tokens": [
+      "oil",
+      "natural",
+      "resources"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 15,
+        "text": "Discuss the distribution and density of population in the Ganga River Basin with special reference to land, soil and water resources.",
+        "subject": "Geography",
+        "microtheme": "Oil, Natural Resources",
+        "page": 19
+      },
+      {
+        "year": 2025,
+        "marks": 15,
+        "text": "Give a geographical explanation of the distribution of off-shore oil reserves of the world.",
+        "subject": "Geography",
+        "microtheme": "Oil, Natural Resources",
+        "page": 19
+      },
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "How are they different from the on-shore occurrences of oil reserves?",
+        "subject": "Geography",
+        "microtheme": "Oil, Natural Resources",
+        "page": 19
+      },
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "Comment on the resource potentials of the long coastline of India and highlight the status of natural hazard preparedness in these areas.",
+        "subject": "Geography",
+        "microtheme": "Oil, Natural Resources",
+        "page": 19
+      },
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "Discuss the natural resource potentials of 'Deccan Trap'.",
+        "subject": "Geography",
+        "microtheme": "Oil, Natural Resources",
+        "page": 19
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "Examine the potential of wind energy in India and explain the reasons for their limited spatial spread.",
+        "subject": "Geography",
+        "microtheme": "Oil, Natural Resources",
+        "page": 19
+      },
+      {
+        "year": 2018,
+        "marks": 10,
+        "text": "India has immense potential of solar energy though there are regional variations in its development.",
+        "subject": "Geography",
+        "microtheme": "Oil, Natural Resources",
+        "page": 19
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Elaborate. Why is India taking keen interest in resources of Arctic Region?",
+        "subject": "Geography",
+        "microtheme": "Oil, Natural Resources",
+        "page": 19
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "How does India see its place in the economic space of rising natural resource rich Africa?",
+        "subject": "Geography",
+        "microtheme": "Oil, Natural Resources",
+        "page": 19
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "It is said the India has substantial reserves of shale oil and gas, which can feed the needs of country for quarter century.",
+        "subject": "Geography",
+        "microtheme": "Oil, Natural Resources",
+        "page": 19
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "“Water resources are both an asset and a source of conflict in South Asia.” Examine this statement giving examples. “Tundra regions are ecologically fragile but economically important.” Examine this statement critically. Discuss the multi-dimensional implications of uneven distribution of mineral oil in the world. What are the economic significances of discovery of oil in Arctic Sea and its possible environmental consequences?",
+        "subject": "Geography",
+        "microtheme": "Oil, Natural Resources",
+        "page": 19
+      }
+    ]
+  },
+  "12distributionsubcontinent": {
+    "name": "12. Distributionsubcontinent)",
+    "subject": "Geography",
+    "tokens": [
+      "distributionsubcontinent"
+    ],
+    "questions": [
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "Explain briefly the ecological and economic benefits of solar energy generation in India with suitable examples.",
+        "subject": "Geography",
+        "microtheme": "12. Distributionsubcontinent)",
+        "page": 19
+      }
+    ]
+  },
+  "watermanagementworldgeographymineralsoilandothernatural": {
+    "name": "Water Management World Geography: Minerals, Oil and other Natural",
+    "subject": "Geography",
+    "tokens": [
+      "oil",
+      "water",
+      "natural",
+      "geography",
+      "management",
+      "minerals",
+      "world"
+    ],
+    "questions": [
+      {
+        "year": 2026,
+        "marks": 10,
+        "text": "However, tapping of the resource does not appear to be high on the agenda. Discuss critically the availability and issues involved.",
+        "subject": "Geography",
+        "microtheme": "Water Management World Geography: Minerals, Oil and other Natural",
+        "page": 19
+      },
+      {
+        "year": 2021,
+        "marks": 15,
+        "text": "Discuss the availability of raw material required for the generation of atomic energy in India and in the world.",
+        "subject": "Geography",
+        "microtheme": "Water Management World Geography: Minerals, Oil and other Natural",
+        "page": 19
+      }
+    ]
+  },
+  "resources": {
+    "name": "Resources",
+    "subject": "Geography",
+    "tokens": [
+      "resources"
+    ],
+    "questions": [
+      {
+        "year": 2026,
+        "marks": 10,
+        "text": "With growing scarcity of fossil fuels, the atomic energy is gaining more and more significance in India.",
+        "subject": "Geography",
+        "microtheme": "Resources",
+        "page": 19
+      }
+    ]
+  },
+  "bufferstockfood": {
+    "name": "Buffer Stock & Food",
+    "subject": "Geography",
+    "tokens": [
+      "buffer",
+      "stock",
+      "food"
+    ],
+    "questions": [
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "From being net food importer in 1960s, India has emerged as a net food exporter to the world.",
+        "subject": "Geography",
+        "microtheme": "Buffer Stock & Food",
+        "page": 20
+      },
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "Provide reasons. Discuss the factors for localization of agro-based food processing industries of NorthWest India.",
+        "subject": "Geography",
+        "microtheme": "Buffer Stock & Food",
+        "page": 20
+      },
+      {
+        "year": 2013,
+        "marks": 5,
+        "text": "Discuss with justification Analyze the role of satellite-based technologies in achieving climate-smart agriculture and food security in India.",
+        "subject": "Geography",
+        "microtheme": "Buffer Stock & Food",
+        "page": 20
+      },
+      {
+        "year": 2024,
+        "marks": 15,
+        "text": "Elucidate the importance of buffer stocks for stabilizing agricultural prices in India.",
+        "subject": "Agriculture",
+        "microtheme": "Buffer Stock & Food",
+        "page": 60
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "What are the challenges associated with the storage of buffer stock?",
+        "subject": "Agriculture",
+        "microtheme": "Buffer Stock & Food",
+        "page": 60
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Discuss. The Food Security Bill is expected to eliminate hunger and malnutrition in India.",
+        "subject": "Agriculture",
+        "microtheme": "Buffer Stock & Food",
+        "page": 60
+      },
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "How can it be made effective and transparent? What are the salient features of the National Food Security Act, 2013?",
+        "subject": "Agriculture",
+        "microtheme": "Buffer Stock & Food",
+        "page": 60
+      },
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "How has the Food Security Bill helped in eliminating hunger and malnutrition in India?",
+        "subject": "Agriculture",
+        "microtheme": "Buffer Stock & Food",
+        "page": 60
+      },
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "What are the reformative steps taken by the Government to make food grain distribution system more effective?",
+        "subject": "Agriculture",
+        "microtheme": "Buffer Stock & Food",
+        "page": 60
+      },
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "How these revolutions have helped in poverty alleviation and food security in India?",
+        "subject": "Agriculture",
+        "microtheme": "Buffer Stock & Food",
+        "page": 60
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Livestock rearing has a big potential for providing non-farm employment and income in rural areas. Discuss suggesting suitable measures to promote this sector in India.",
+        "subject": "Agriculture",
+        "microtheme": "Buffer Stock & Food",
+        "page": 60
+      }
+    ]
+  },
+  "foodprocessingsectorlanduseplanningmilletspulsesprimarysector": {
+    "name": "Food Processing Sector Land Use, Planning Millets, Pulses Primary sector",
+    "subject": "Geography",
+    "tokens": [
+      "land",
+      "pulses",
+      "millets",
+      "processing",
+      "primary",
+      "planning",
+      "food",
+      "use"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 15,
+        "text": "How can Artificial Intelligence (AI) and drones be effectively used along with GIS and RS techniques in locational and areal planning?",
+        "subject": "Geography",
+        "microtheme": "Food Processing Sector Land Use, Planning Millets, Pulses Primary sector",
+        "page": 20
+      },
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "Mention the advantages of the cultivation of pulses because of which the year 2016 was declared as the International Year of Pulses by United Nations.",
+        "subject": "Geography",
+        "microtheme": "Food Processing Sector Land Use, Planning Millets, Pulses Primary sector",
+        "page": 20
+      },
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "What are non-farm primary activities? How are these activities related to physiographic features in India?",
+        "subject": "Geography",
+        "microtheme": "Food Processing Sector Land Use, Planning Millets, Pulses Primary sector",
+        "page": 20
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Whereas the British planters had developed tea gardens all along the Shivaliks and Lesser Himalayas from Assam to Himachal Pradesh, in effect they did not succeed beyond the Darjeeling area.",
+        "subject": "Geography",
+        "microtheme": "Food Processing Sector Land Use, Planning Millets, Pulses Primary sector",
+        "page": 20
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Explain. Why did the Green Revolution in India virtually by-pass the eastern region despite fertile soil and good availability of water?",
+        "subject": "Geography",
+        "microtheme": "Food Processing Sector Land Use, Planning Millets, Pulses Primary sector",
+        "page": 20
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "Account for the present location of iron and steel industries away from the source of raw material, by giving examples.",
+        "subject": "Geography",
+        "microtheme": "Food Processing Sector Land Use, Planning Millets, Pulses Primary sector",
+        "page": 20
+      },
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "Can the strategy of regional-resource based manufacturing help in promoting employment in India?",
+        "subject": "Geography",
+        "microtheme": "Food Processing Sector Land Use, Planning Millets, Pulses Primary sector",
+        "page": 20
+      }
+    ]
+  },
+  "security": {
+    "name": "Security",
+    "subject": "Geography",
+    "tokens": [
+      "security"
+    ],
+    "questions": [
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "Discuss with suitable examples. Describing the distribution of rubber producing countries, indicate the major environmental issues faced by them.",
+        "subject": "Geography",
+        "microtheme": "Security",
+        "page": 20
+      },
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "Despite India being one of the countries of the Gondwanaland, its mining industry contributes much less to Gross Domestic Product (GDP) in percentage.",
+        "subject": "Geography",
+        "microtheme": "Security",
+        "page": 20
+      },
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "Discuss. Define blue revolution, explain the problems and strategies for pisciculture development in India.",
+        "subject": "Geography",
+        "microtheme": "Security",
+        "page": 20
+      },
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "In spite of adverse environmental impact, coal mining is still inevitable for development.\" Discuss.",
+        "subject": "Geography",
+        "microtheme": "Security",
+        "page": 20
+      },
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "Critically discuss various apprehensions in its effective implementation along with the concerns it has generated in WTO.",
+        "subject": "Agriculture",
+        "microtheme": "Security",
+        "page": 60
+      }
+    ]
+  },
+  "revolutionsandmissionssecondarysector": {
+    "name": "Revolutions and Missions Secondary Sector",
+    "subject": "Geography",
+    "tokens": [
+      "revolutions",
+      "missions",
+      "secondary"
+    ],
+    "questions": [
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "What is the significance of Industrial Corridors in India Identifying industrial corridors, explain their main characteristics.",
+        "subject": "Geography",
+        "microtheme": "Revolutions and Missions Secondary Sector",
+        "page": 20
+      },
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "Petroleum refineries are not necessarily located nearer to crude oil producing areas, particularly in many of the developing countries.",
+        "subject": "Geography",
+        "microtheme": "Revolutions and Missions Secondary Sector",
+        "page": 20
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Explain its implications. Account for the change in the spatial pattern of the Iron and Steel industry in the world.",
+        "subject": "Geography",
+        "microtheme": "Revolutions and Missions Secondary Sector",
+        "page": 20
+      },
+      {
+        "year": 2013,
+        "marks": 5,
+        "text": "Analyze the factors for highly decentralized cotton textile industry in India Do you agree that there is a growing trend of opening new sugar mills in the Southern states of India?",
+        "subject": "Geography",
+        "microtheme": "Revolutions and Missions Secondary Sector",
+        "page": 20
+      }
+    ]
+  },
+  "spaceprogramsxind": {
+    "name": "Space Programs X IND",
+    "subject": "Geography",
+    "tokens": [
+      "space",
+      "ind",
+      "programs"
+    ],
+    "questions": [
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "Why is Indian Regional Navigational Satellite System (IRNSS) needed?",
+        "subject": "Geography",
+        "microtheme": "Space Programs X IND",
+        "page": 20
+      },
+      {
+        "year": 2018,
+        "marks": 10,
+        "text": "How does it help in navigation? “The centre of global trade is gradually shifting from the Atlantic region to the Indo-Pacific region.” Examine this statement.",
+        "subject": "Geography",
+        "microtheme": "Space Programs X IND",
+        "page": 20
+      },
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "Mention the significance of straits and isthmus in international trade.",
+        "subject": "Geography",
+        "microtheme": "Space Programs X IND",
+        "page": 20
+      },
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "Mention salient features of 'Mission Drishti'. Discuss the imaging techniques used in the satellite launched on 3rd May 2026. Why it is being considered world's first satellite of its kind?",
+        "subject": "Science & Technology",
+        "microtheme": "Space Programs X IND",
+        "page": 65
+      },
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "What is the main task of India’s third moon mission which could not be achieved in its earlier mission?",
+        "subject": "Science & Technology",
+        "microtheme": "Space Programs X IND",
+        "page": 65
+      },
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "List the countries that have achieved this task. Introduce the subsystems in the spacecraft launched and explain the role of the Virtual Launch Control Centre at the Vikram Sarabhai Space Centre which contributed to the successful launch from Srihari Kota.",
+        "subject": "Science & Technology",
+        "microtheme": "Space Programs X IND",
+        "page": 65
+      },
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "What is India’s plan to have its own space station and how will it benefit our space programme?",
+        "subject": "Science & Technology",
+        "microtheme": "Space Programs X IND",
+        "page": 65
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "India has achieved remarkable successes in unmanned space missions including the Chandrayaan and Mars Orbitter Mission, but has not ventured into manned space mission, both in terms of technology and logistics?",
+        "subject": "Science & Technology",
+        "microtheme": "Space Programs X IND",
+        "page": 65
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Explain critically. Discuss India’s achievements in the field of Space Science and Technology.",
+        "subject": "Science & Technology",
+        "microtheme": "Space Programs X IND",
+        "page": 65
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "Discuss the advantages India perceives from its ambitious IRNSS programme employing just seven satellites. Launched on 25th December, 2021, James Webb Space Telescope has been much in the news since then. What are its unique features which make it superior to its predecessor Space Telescopes? What are the key goals of this mission? What potential benefits does it hold for the human race? What are asteroids? How real is the threat of them causing extinction of life? What strategies have been developed to prevent such a catastrophe? COVID-19 pandemic has caused unprecedented devastation worldwide. However, technological advancements are being availed readily to win over the crisis. Give an account of how technology was sought to aid management of the pandemic.",
+        "subject": "Science & Technology",
+        "microtheme": "Space Programs X IND",
+        "page": 65
+      }
+    ]
+  },
+  "tertiarysector": {
+    "name": "Tertiary sector",
+    "subject": "Geography",
+    "tokens": [
+      "tertiary"
+    ],
+    "questions": [
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "How can the mountain ecosystem be restored from the negative impact of development initiatives and tourism?",
+        "subject": "Geography",
+        "microtheme": "Tertiary sector",
+        "page": 20
+      },
+      {
+        "year": 2019,
+        "marks": 15,
+        "text": "Enumerate the problems and prospects of inland water transport in India.",
+        "subject": "Geography",
+        "microtheme": "Tertiary sector",
+        "page": 20
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "The states of Jammu and Kashmir, Himachal Pradesh and Uttarakhand are reaching the limits of their ecological carrying capacity due to tourism. Critically evaluate.",
+        "subject": "Geography",
+        "microtheme": "Tertiary sector",
+        "page": 20
+      }
+    ]
+  },
+  "auroracloudburstscyclones": {
+    "name": "Aurora Cloudbursts Cyclones",
+    "subject": "Geography",
+    "tokens": [
+      "aurora",
+      "cloudbursts",
+      "cyclones"
+    ],
+    "questions": [
+      {
+        "year": 2024,
+        "marks": 15,
+        "text": "What are aurora australis and aurora borealis?",
+        "subject": "Geography",
+        "microtheme": "Aurora Cloudbursts Cyclones",
+        "page": 21
+      },
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "How are these triggered? What is the phenomenon of 'cloudbursts'?",
+        "subject": "Geography",
+        "microtheme": "Aurora Cloudbursts Cyclones",
+        "page": 21
+      },
+      {
+        "year": 2026,
+        "marks": 10,
+        "text": "Explain. What is the Fujiwhara effect? Explain its impact on the movement and intensity of tropical cyclones.",
+        "subject": "Geography",
+        "microtheme": "Aurora Cloudbursts Cyclones",
+        "page": 21
+      },
+      {
+        "year": 2024,
+        "marks": 10,
+        "text": "What is sea surface temperature rise? How does it affect the formation of tropical cyclones?",
+        "subject": "Geography",
+        "microtheme": "Aurora Cloudbursts Cyclones",
+        "page": 21
+      },
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "Discuss the meaning of colour-coded weather warnings for cyclone prone areas given by India Meteorological Department.",
+        "subject": "Geography",
+        "microtheme": "Aurora Cloudbursts Cyclones",
+        "page": 21
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Tropical cyclones are largely confined to South China Sea, Bay of Bengal and Gulf of Mexico.",
+        "subject": "Geography",
+        "microtheme": "Aurora Cloudbursts Cyclones",
+        "page": 21
+      },
+      {
+        "year": 2013,
+        "marks": 5,
+        "text": "Why? The recent cyclone on the east coast of India was called \"Phailin\". How are the tropical cyclones named across the world?",
+        "subject": "Geography",
+        "microtheme": "Aurora Cloudbursts Cyclones",
+        "page": 21
+      }
+    ]
+  },
+  "landslides": {
+    "name": "Landslides",
+    "subject": "Geography",
+    "tokens": [
+      "landslides"
+    ],
+    "questions": [
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "Differentiate the causes of landslides in the Himalayan region and Western Ghats.",
+        "subject": "Geography",
+        "microtheme": "Landslides",
+        "page": 21
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "The Himalayas are highly prone to landslides. Discuss the causes and suggest suitable measures of mitigation.",
+        "subject": "Geography",
+        "microtheme": "Landslides",
+        "page": 21
+      },
+      {
+        "year": 2013,
+        "marks": 5,
+        "text": "Bring out the causes for more frequent landslides in the Himalayas than in Western Ghats What are Tsunamis?",
+        "subject": "Geography",
+        "microtheme": "Landslides",
+        "page": 21
+      }
+    ]
+  },
+  "tsunamitwistersvolcanicactivity": {
+    "name": "Tsunami Twisters Volcanic Activity",
+    "subject": "Geography",
+    "tokens": [
+      "volcanic",
+      "tsunami",
+      "twisters",
+      "activity"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "How and where are they formed? What are their consequences?",
+        "subject": "Geography",
+        "microtheme": "Tsunami Twisters Volcanic Activity",
+        "page": 21
+      },
+      {
+        "year": 2024,
+        "marks": 15,
+        "text": "Explain with examples. What is a twister? Why are the majority of twisters observed in areas around the Gulf of Mexico?",
+        "subject": "Geography",
+        "microtheme": "Tsunami Twisters Volcanic Activity",
+        "page": 21
+      },
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "Mention the global occurrence of volcanic eruptions in 2021 and their impact on regional environment.",
+        "subject": "Geography",
+        "microtheme": "Tsunami Twisters Volcanic Activity",
+        "page": 21
+      }
+    ]
+  },
+  "watermanagement": {
+    "name": "Water Management",
+    "subject": "Geography",
+    "tokens": [
+      "management",
+      "water"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 10,
+        "text": "al features and their locationChanges in criticatures (including water-bodies and ice-caps) ahe effects of such changes.",
+        "subject": "Geography",
+        "microtheme": "Water Management",
+        "page": 22
+      },
+      {
+        "year": 2019,
+        "marks": 15,
+        "text": "Critically examine. What is water stress? How and why does it differ regionally in India?",
+        "subject": "Geography",
+        "microtheme": "Water Management",
+        "page": 22
+      },
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "The ideal solution of depleting ground water resources in India is water harvesting system.",
+        "subject": "Geography",
+        "microtheme": "Water Management",
+        "page": 22
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "In what way micro-watershed Development projects help in water conservation in drought prone and semi-arid regions of India.",
+        "subject": "Geography",
+        "microtheme": "Water Management",
+        "page": 22
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Explain India is well endowed with fresh water resources. Critically examine why it still suffers from water scarcity.",
+        "subject": "Geography",
+        "microtheme": "Water Management",
+        "page": 22
+      }
+    ]
+  },
+  "climatechange": {
+    "name": "Climate Change",
+    "subject": "Geography",
+    "tokens": [
+      "climate",
+      "change"
+    ],
+    "questions": [
+      {
+        "year": 2023,
+        "marks": 10,
+        "text": "How are climate change and the sea level rise affecting the very existence of many island nations?",
+        "subject": "Geography",
+        "microtheme": "Climate Change",
+        "page": 22
+      },
+      {
+        "year": 2020,
+        "marks": 10,
+        "text": "Discuss with examples. Discuss the consequences of climate change on the food security in tropical countries. The process of desertification does not have climatic boundaries.",
+        "subject": "Geography",
+        "microtheme": "Climate Change",
+        "page": 22
+      },
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "How does the cryosphere affect global climate? Bring out the relationship between the shrinking Himalayan glaciers and the symptoms of climate change in the Indian sub-continent.",
+        "subject": "Geography",
+        "microtheme": "Climate Change",
+        "page": 22
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "Examine the status of forest resources of India and its resultant impact on climate change.",
+        "subject": "Geography",
+        "microtheme": "Climate Change",
+        "page": 22
+      }
+    ]
+  },
+  "melting": {
+    "name": "Melting",
+    "subject": "Geography",
+    "tokens": [
+      "melting"
+    ],
+    "questions": [
+      {
+        "year": 2021,
+        "marks": 15,
+        "text": "Justify with examples. How does the melting of the Arctic ice and glaciers of the Antarctic differently affect the weather patterns and human activities on the Earth?",
+        "subject": "Geography",
+        "microtheme": "Melting",
+        "page": 22
+      },
+      {
+        "year": 2020,
+        "marks": 10,
+        "text": "Explain. How will the melting of Himalayan glaciers have a far-reaching impact on the water resources of India?",
+        "subject": "Geography",
+        "microtheme": "Melting",
+        "page": 22
+      },
+      {
+        "year": 2019,
+        "marks": 15,
+        "text": "Assess the impact of global warming on coral life system with examples.",
+        "subject": "Geography",
+        "microtheme": "Melting",
+        "page": 22
+      },
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "Discuss the causes of depletion of mangroves and explain their importance in maintaining coastal ecology.",
+        "subject": "Geography",
+        "microtheme": "Melting",
+        "page": 22
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "South China Sea has assumed great geopolitical significance in the present context.",
+        "subject": "Geography",
+        "microtheme": "Melting",
+        "page": 22
+      }
+    ]
+  },
+  "cryosphereglacier": {
+    "name": "Cryosphere, Glacier",
+    "subject": "Geography",
+    "tokens": [
+      "glacier",
+      "cryosphere"
+    ],
+    "questions": [
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Identify and discuss the factors responsible for diversity of natural vegetation in India.",
+        "subject": "Geography",
+        "microtheme": "Cryosphere, Glacier",
+        "page": 22
+      },
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "Assess the significance of wildlife sanctuaries in rain forests regions of India.",
+        "subject": "Geography",
+        "microtheme": "Cryosphere, Glacier",
+        "page": 22
+      }
+    ]
+  },
+  "landuseplanningpoliticalgeographyspaceprogramsxintlurbangeography": {
+    "name": "Land Use, Planning Political Geography Space Programs X Intl Urban Geography",
+    "subject": "Geography",
+    "tokens": [
+      "land",
+      "programs",
+      "geography",
+      "space",
+      "urban",
+      "planning",
+      "intl",
+      "political",
+      "use"
+    ],
+    "questions": [
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "Analyze the major drivers of human-induced land-use changes in India and their geographical consequences.",
+        "subject": "Geography",
+        "microtheme": "Land Use, Planning Political Geography Space Programs X Intl Urban Geography",
+        "page": 22
+      },
+      {
+        "year": 2013,
+        "marks": 5,
+        "text": "Why is this so? Bring out the causes for the formation of heat islands in the urban habitat of the world.",
+        "subject": "Geography",
+        "microtheme": "Land Use, Planning Political Geography Space Programs X Intl Urban Geography",
+        "page": 22
+      },
+      {
+        "year": 2020,
+        "marks": 15,
+        "text": "The interlinking of rivers can provide viable solutions to the multi-dimensional inter-related problems of droughts, floods and interrupted navigation.",
+        "subject": "Geography",
+        "microtheme": "Land Use, Planning Political Geography Space Programs X Intl Urban Geography",
+        "page": 22
+      },
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "How can it be made effective in urban areas? In what way can floods be converted into a sustainable source of irrigation and all X weather inland navigation in India?",
+        "subject": "Geography",
+        "microtheme": "Land Use, Planning Political Geography Space Programs X Intl Urban Geography",
+        "page": 22
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Present an account of the Indus Water Treaty and examine its ecological, economic and political implications in the context of changing bilateral relations.",
+        "subject": "Geography",
+        "microtheme": "Land Use, Planning Political Geography Space Programs X Intl Urban Geography",
+        "page": 22
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "The effective management of land and water resources will drastically reduce the human miseries.",
+        "subject": "Geography",
+        "microtheme": "Land Use, Planning Political Geography Space Programs X Intl Urban Geography",
+        "page": 22
+      }
+    ]
+  },
+  "floraandfauna": {
+    "name": "Flora and Fauna",
+    "subject": "Geography",
+    "tokens": [
+      "fauna",
+      "flora"
+    ],
+    "questions": [
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "Comment. How does the Juno Mission of NASA help to understand the origin and evolution of the Earth?",
+        "subject": "Geography",
+        "microtheme": "Flora and Fauna",
+        "page": 22
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Mumbai, Delhi and Kolkata are the three mega cities of the country but the air pollution is much more serious problem in Delhi as compared to the other two.",
+        "subject": "Geography",
+        "microtheme": "Flora and Fauna",
+        "page": 22
+      },
+      {
+        "year": 2024,
+        "marks": 15,
+        "text": "The groundwater potential of the gangetic valley is on a serious decline.",
+        "subject": "Geography",
+        "microtheme": "Flora and Fauna",
+        "page": 22
+      },
+      {
+        "year": 2023,
+        "marks": 10,
+        "text": "How may it affect the food security of India? Why is the world today confronted with a crisis of availability of and access to freshwater resources?",
+        "subject": "Geography",
+        "microtheme": "Flora and Fauna",
+        "page": 22
+      }
+    ]
+  }
+}

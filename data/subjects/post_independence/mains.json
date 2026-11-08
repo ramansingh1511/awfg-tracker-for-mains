@@ -1,0 +1,155 @@
+{
+  "foreigninfluenceonindependentindias": {
+    "name": "Foreign influence on Independent India's",
+    "subject": "Post Independence",
+    "tokens": [
+      "india",
+      "foreign",
+      "influence",
+      "independent"
+    ],
+    "questions": [
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "The model of planned economy was adopted in India to address the regional imbalances left behind by colonial rule.",
+        "subject": "Post Independence",
+        "microtheme": "Foreign influence on Independent India's",
+        "page": 10
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Evaluate. Discuss the contribution of Maulana Abul Kalam Azad to pre-and post-independent India.",
+        "subject": "Post Independence",
+        "microtheme": "Foreign influence on Independent India's",
+        "page": 10
+      },
+      {
+        "year": 2018,
+        "marks": 15,
+        "text": "Discuss with examples. Discuss whether the formation of new states in recent times is beneficial or not for the economy of India.",
+        "subject": "Post Independence",
+        "microtheme": "Foreign influence on Independent India's",
+        "page": 10
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Discuss the highlights of the agreement. Critically examine the compulsions which prompted India to play a decisive roles in the emergence of Bangladesh.",
+        "subject": "Post Independence",
+        "microtheme": "Foreign influence on Independent India's",
+        "page": 10
+      }
+    ]
+  },
+  "consolidationafterindependence": {
+    "name": "Consolidation after Independence",
+    "subject": "Post Independence",
+    "tokens": [
+      "independence",
+      "consolidation",
+      "after"
+    ],
+    "questions": [
+      {
+        "year": 2025,
+        "marks": 15,
+        "text": "Comment. Trace India’s consolidation process during early phase of independence in terms of polity, economy, education and international relations.",
+        "subject": "Post Independence",
+        "microtheme": "Consolidation after Independence",
+        "page": 10
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "The New Economic Policy - 1921 of Lenin had influenced the policies adopted by India soon after independence.",
+        "subject": "Post Independence",
+        "microtheme": "Consolidation after Independence",
+        "page": 10
+      }
+    ]
+  },
+  "landreformssloganbasedstatesreorganizationwarsafterindependence": {
+    "name": "Land Reforms Slogan Based States Reorganization Wars after Independence",
+    "subject": "Post Independence",
+    "tokens": [
+      "reforms",
+      "reorganization",
+      "land",
+      "wars",
+      "slogan",
+      "after",
+      "independence",
+      "states",
+      "based"
+    ],
+    "questions": [
+      {
+        "year": 2021,
+        "marks": 10,
+        "text": "Assess the main administrative issues and socio-cultural problems in the integration process of Indian Princely States.",
+        "subject": "Post Independence",
+        "microtheme": "Land Reforms Slogan Based States Reorganization Wars after Independence",
+        "page": 10
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Write a critical note on the evolution and significance of the slogan \"Jai Jawan Jai Kisan\".",
+        "subject": "Post Independence",
+        "microtheme": "Land Reforms Slogan Based States Reorganization Wars after Independence",
+        "page": 10
+      },
+      {
+        "year": 2026,
+        "marks": 15,
+        "text": "Linguistic reorganization of Indian States was driven by popular pressure from below.",
+        "subject": "Post Independence",
+        "microtheme": "Land Reforms Slogan Based States Reorganization Wars after Independence",
+        "page": 10
+      },
+      {
+        "year": 2022,
+        "marks": 15,
+        "text": "Comment. The political and administrative reorganization of states and territories has been a continuous ongoing process since the mid-nineteenth century.",
+        "subject": "Post Independence",
+        "microtheme": "Land Reforms Slogan Based States Reorganization Wars after Independence",
+        "page": 10
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Has the formation of linguistic States strengthened the cause of Indian Unity?",
+        "subject": "Post Independence",
+        "microtheme": "Land Reforms Slogan Based States Reorganization Wars after Independence",
+        "page": 10
+      },
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Analyze the circumstances that led to Tashkent Agreement in 1966.",
+        "subject": "Post Independence",
+        "microtheme": "Land Reforms Slogan Based States Reorganization Wars after Independence",
+        "page": 10
+      }
+    ]
+  },
+  "policies": {
+    "name": "Policies",
+    "subject": "Post Independence",
+    "tokens": [
+      "policies"
+    ],
+    "questions": [
+      {
+        "year": 2013,
+        "marks": 10,
+        "text": "Critically discuss the objectives of Bhoodan and Gramdan movements initiated by Acharya Vinoba Bhave and their success.",
+        "subject": "Post Independence",
+        "microtheme": "Policies",
+        "page": 10
+      }
+    ]
+  }
+}

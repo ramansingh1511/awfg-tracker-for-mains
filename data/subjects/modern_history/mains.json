@@ -1,0 +1,172 @@
+{
+  "1857revoltotherwars": {
+    "name": "1857 Revolt, other wars",
+    "subject": "Modern History",
+    "tokens": [
+      "revolt",
+      "1857",
+      "wars"
+    ],
+    "questions": [
+      {
+        "year": 2019,
+        "marks": 10,
+        "text": "The 1857 Uprising was the culmination the recurrent big and small local rebellions that had occurred in the preceding hundred years of British rule.",
+        "subject": "Modern History",
+        "microtheme": "1857 Revolt, other wars",
+        "page": 8
+      },
+      {
+        "year": 2017,
+        "marks": 10,
+        "text": "Elucidate. Clarify how mid-eighteenth century India was beset with the spectre of a fragmented polity.",
+        "subject": "Modern History",
+        "microtheme": "1857 Revolt, other wars",
+        "page": 8
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Explain how the Uprising of 1857 constitutes an important watershed in the evolution of British policies towards colonial India.",
+        "subject": "Modern History",
+        "microtheme": "1857 Revolt, other wars",
+        "page": 8
+      }
+    ]
+  },
+  "britishpoliciesxarmies": {
+    "name": "British Policies X Armies",
+    "subject": "Modern History",
+    "tokens": [
+      "policies",
+      "armies",
+      "british"
+    ],
+    "questions": [
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "In what ways did the naval mutiny prove to be the last nail in the coffin of British colonial aspirations in India?",
+        "subject": "Modern History",
+        "microtheme": "British Policies X Armies",
+        "page": 8
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "The third battle of Panipat was fought in 1761. Why were so many empire-shaking battles fought at Panipat?",
+        "subject": "Modern History",
+        "microtheme": "British Policies X Armies",
+        "page": 8
+      },
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "Why did the armies of the British East India Company - mostly comprising of Indian soldiers-win consistently against the more numerous and better equipped armies of the then Indian rulers?",
+        "subject": "Modern History",
+        "microtheme": "British Policies X Armies",
+        "page": 8
+      },
+      {
+        "year": 2017,
+        "marks": 15,
+        "text": "Give reasons. Examine how the decline of traditional artisanal industry in colonial India crippled the rural economy.",
+        "subject": "Modern History",
+        "microtheme": "British Policies X Armies",
+        "page": 8
+      },
+      {
+        "year": 2014,
+        "marks": 10,
+        "text": "Examine critically the various facets of economic policies of the British in India from mid-eighteenth century till independence.",
+        "subject": "Modern History",
+        "microtheme": "British Policies X Armies",
+        "page": 8
+      }
+    ]
+  },
+  "britishpoliciesxeconomic": {
+    "name": "British Policies X Economic",
+    "subject": "Modern History",
+    "tokens": [
+      "economic",
+      "policies",
+      "british"
+    ],
+    "questions": [
+      {
+        "year": 2022,
+        "marks": 10,
+        "text": "Why was there a sudden spurt in famines in colonial India since the mid-eighteenth century?",
+        "subject": "Modern History",
+        "microtheme": "British Policies X Economic",
+        "page": 8
+      }
+    ]
+  },
+  "britishpoliciesxfaminebritishpoliciesxtribalgandhixindianleadersoffreedomstruggle": {
+    "name": "British Policies X Famine British Policies X Tribal Gandhi X Indian Leaders of Freedom Struggle",
+    "subject": "Modern History",
+    "tokens": [
+      "struggle",
+      "famine",
+      "british",
+      "gandhi",
+      "freedom",
+      "leaders",
+      "tribal",
+      "indian",
+      "policies"
+    ],
+    "questions": [
+      {
+        "year": 2023,
+        "marks": 15,
+        "text": "Give reasons. How did the colonial rule affect the tribals in India and what was the tribal response to the colonial oppression?",
+        "subject": "Modern History",
+        "microtheme": "British Policies X Famine British Policies X Tribal Gandhi X Indian Leaders of Freedom Struggle",
+        "page": 8
+      },
+      {
+        "year": 2023,
+        "marks": 10,
+        "text": "What was the difference between Mahatma Gandhi and Rabindranath Tagore in their approach towards education and nationalism?",
+        "subject": "Modern History",
+        "microtheme": "British Policies X Famine British Policies X Tribal Gandhi X Indian Leaders of Freedom Struggle",
+        "page": 8
+      },
+      {
+        "year": 2018,
+        "marks": 10,
+        "text": "Throw light on the significance of the thoughts of Mahatma Gandhi in the present times.",
+        "subject": "Modern History",
+        "microtheme": "British Policies X Famine British Policies X Tribal Gandhi X Indian Leaders of Freedom Struggle",
+        "page": 8
+      },
+      {
+        "year": 2016,
+        "marks": 12.5,
+        "text": "Highlight the differences in the approach of Subhash Chandra Bose and Mahatma Gandhi in the struggle for freedom.",
+        "subject": "Modern History",
+        "microtheme": "British Policies X Famine British Policies X Tribal Gandhi X Indian Leaders of Freedom Struggle",
+        "page": 8
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "How different would have been the achievement of Indian independence without Mahatma Gandhi?",
+        "subject": "Modern History",
+        "microtheme": "British Policies X Famine British Policies X Tribal Gandhi X Indian Leaders of Freedom Struggle",
+        "page": 8
+      },
+      {
+        "year": 2015,
+        "marks": 12.5,
+        "text": "Discuss. Mahatma Gandhi and Dr. B.R. Ambedkar, despite having divergent approaches and strategies, had a common goal of amelioration of the downtrodden. Elucidate.",
+        "subject": "Modern History",
+        "microtheme": "British Policies X Famine British Policies X Tribal Gandhi X Indian Leaders of Freedom Struggle",
+        "page": 8
+      }
+    ]
+  }
+}
