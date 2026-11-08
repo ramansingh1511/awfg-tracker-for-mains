@@ -141,6 +141,9 @@
                   <button class="btn btn-outline btn-sm" onclick="AWFG_APP.toggleMainsApproach('${mKey}')" style="border-color: #818cf8; color: #818cf8; font-weight: 600;">
                     📐 How to Approach
                   </button>
+                  <button class="btn btn-sm" onclick="AWFG_APP.toggleMainsApproach('${mKey}'); AWFG_APP.generateGeminiAnswer('${mKey}', ${q.marks});" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(168, 85, 247, 0.25)); border: 1px solid #818cf8; color: #c4b5fd; font-weight: 700;" title="Generate live authentic answer with Google Gemini API">
+                    ✨ Gemini AI
+                  </button>
                   <button class="btn btn-subtle btn-sm" onclick="AWFG_APP.copyQuestion('${Utils.escapeQuotes(q.text)}', this)" title="Copy question text">📋 Copy</button>
                 </div>
               </div>

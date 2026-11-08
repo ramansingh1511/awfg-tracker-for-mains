@@ -53,6 +53,7 @@
       <!-- Actions & Profile -->
       <div class="header-actions">
         <div id="user-badge-container"></div>
+        <button id="gemini-config-btn" class="btn btn-outline btn-sm" onclick="AWFG_APP.openGeminiModal()" title="Configure Google Gemini AI API for Real-Time UPSC Mains Answers">✨ Gemini AI</button>
         <button id="theme-toggle-btn" class="btn btn-outline btn-sm" title="Toggle Light/Dark Theme">☀️ Light</button>
         <button id="export-backup-btn" class="btn btn-outline btn-sm" title="Export all progress as JSON backup file">⬇ Export</button>
         <button id="import-backup-btn" class="btn btn-outline btn-sm" title="Restore progress from JSON backup file">⬆ Restore</button>
@@ -177,6 +178,71 @@
     </div>
   </div>
 
+  <!-- Gemini AI Configuration Modal -->
+  <div id="gemini-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="gemini-modal-title">
+    <div class="modal-card" style="max-width: 520px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 36px; height: 36px; border-radius: 8px; background: linear-gradient(135deg, #6366f1, #a855f7); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+            ✨
+          </div>
+          <div>
+            <h3 id="gemini-modal-title" style="margin: 0; font-size: 1.15rem; color: var(--text-primary);">Google Gemini AI Configuration</h3>
+            <div style="font-size: 0.78rem; color: var(--text-secondary);">Direct API integration for authentic Topper answer generation</div>
+          </div>
+        </div>
+        <button class="btn btn-outline btn-sm" onclick="AWFG_APP.closeGeminiModal()">✕</button>
+      </div>
+
+      <div id="gemini-modal-notice" class="hidden" style="margin-bottom: 14px; padding: 10px 14px; background: rgba(245, 158, 11, 0.12); border-left: 3px solid #f59e0b; border-radius: var(--radius-sm); font-size: 0.82rem; color: #f59e0b;">
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; font-size: 0.84rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">
+          Google Gemini API Key
+        </label>
+        <div style="position: relative;">
+          <input type="password" id="gemini-api-key-inp" class="search-input" placeholder="Paste your Google AI Studio key (e.g. AIzaSy...)" style="width: 100%; padding-right: 40px; font-family: monospace; font-size: 0.85rem;">
+          <button type="button" onclick="const inp=document.getElementById('gemini-api-key-inp'); inp.type = inp.type === 'password' ? 'text' : 'password';" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: var(--text-secondary);" title="Toggle visibility">👁️</button>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px; font-size: 0.76rem;">
+          <span id="gemini-key-status">No key configured</span>
+          <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer" style="color: #818cf8; font-weight: 600; text-decoration: underline;">
+            Get free key from Google AI Studio ➔
+          </a>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; font-size: 0.84rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary);">
+          Select Gemini Model
+        </label>
+        <select id="gemini-model-select" class="select-input" style="width: 100%;">
+          <option value="gemini-2.0-flash">gemini-2.0-flash (Recommended: Free, Fastest & Latest Reasoning)</option>
+          <option value="gemini-1.5-flash">gemini-1.5-flash (High Volume & Free Tier)</option>
+          <option value="gemini-1.5-pro">gemini-1.5-pro (Deep Multimodal Complex Analysis)</option>
+        </select>
+        <p style="margin: 4px 0 0; font-size: 0.74rem; color: var(--text-secondary);">
+          Gemini 2.0 Flash delivers instantaneous generation with structured JSON adherence for Topper archetypes.
+        </p>
+      </div>
+
+      <div id="gemini-test-result" style="margin-bottom: 16px; font-size: 0.82rem; min-height: 20px;"></div>
+
+      <div style="display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap;">
+        <button class="btn btn-outline btn-sm" onclick="AWFG_APP.clearGeminiCache()" title="Clear cached AI answers">
+          🗑️ Clear Cache
+        </button>
+        <button class="btn btn-subtle btn-sm" onclick="AWFG_APP.testGeminiConnection()">
+          ⚡ Test Connection
+        </button>
+        <button class="btn btn-primary btn-sm" onclick="AWFG_APP.saveGeminiSettings()">
+          💾 Save & Connect
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Floating Back to Top Arrow Button -->
   <button id="back-to-top-btn" class="back-to-top-btn hidden" aria-label="Scroll back to top" title="Back to top">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -188,43 +254,45 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- 1. Data Layer: Core Schedule, Subject-Wise Modular Datasets & Loader -->
-  <script src="data.js?v=4.1"></script>
-  <script src="data/subjects/art_and_culture/index.js?v=4.1"></script>
-  <script src="data/subjects/modern_history/index.js?v=4.1"></script>
-  <script src="data/subjects/world_history/index.js?v=4.1"></script>
-  <script src="data/subjects/post_independence/index.js?v=4.1"></script>
-  <script src="data/subjects/geography/index.js?v=4.1"></script>
-  <script src="data/subjects/society/index.js?v=4.1"></script>
-  <script src="data/subjects/polity/index.js?v=4.1"></script>
-  <script src="data/subjects/governance/index.js?v=4.1"></script>
-  <script src="data/subjects/social_justice/index.js?v=4.1"></script>
-  <script src="data/subjects/international_relations/index.js?v=4.1"></script>
-  <script src="data/subjects/economy/index.js?v=4.1"></script>
-  <script src="data/subjects/agriculture/index.js?v=4.1"></script>
-  <script src="data/subjects/science_technology/index.js?v=4.1"></script>
-  <script src="data/subjects/environment/index.js?v=4.1"></script>
-  <script src="data/subjects/disaster_management/index.js?v=4.1"></script>
-  <script src="data/subjects/internal_security/index.js?v=4.1"></script>
-  <script src="data/subjects/ethics/index.js?v=4.1"></script>
-  <script src="data/subjects/essay/index.js?v=4.1"></script>
-  <script src="data/data_loader.js?v=4.1"></script>
+  <script src="data.js?v=4.2"></script>
+  <script src="data/subjects/art_and_culture/index.js?v=4.2"></script>
+  <script src="data/subjects/modern_history/index.js?v=4.2"></script>
+  <script src="data/subjects/world_history/index.js?v=4.2"></script>
+  <script src="data/subjects/post_independence/index.js?v=4.2"></script>
+  <script src="data/subjects/geography/index.js?v=4.2"></script>
+  <script src="data/subjects/society/index.js?v=4.2"></script>
+  <script src="data/subjects/polity/index.js?v=4.2"></script>
+  <script src="data/subjects/governance/index.js?v=4.2"></script>
+  <script src="data/subjects/social_justice/index.js?v=4.2"></script>
+  <script src="data/subjects/international_relations/index.js?v=4.2"></script>
+  <script src="data/subjects/economy/index.js?v=4.2"></script>
+  <script src="data/subjects/agriculture/index.js?v=4.2"></script>
+  <script src="data/subjects/science_technology/index.js?v=4.2"></script>
+  <script src="data/subjects/environment/index.js?v=4.2"></script>
+  <script src="data/subjects/disaster_management/index.js?v=4.2"></script>
+  <script src="data/subjects/internal_security/index.js?v=4.2"></script>
+  <script src="data/subjects/ethics/index.js?v=4.2"></script>
+  <script src="data/subjects/essay/index.js?v=4.2"></script>
+  <script src="data/data_loader.js?v=4.2"></script>
 
   <!-- 2. Master Topper Framing Engine -->
-  <script src="topper_engine.js?v=4.1"></script>
+  <script src="topper_engine.js?v=4.2"></script>
 
   <!-- 3. Page Object Model (POM) Architecture -->
-  <script src="js/core/Utils.js?v=4.1"></script>
-  <script src="js/core/EventBus.js?v=4.1"></script>
-  <script src="js/core/State.js?v=4.1"></script>
-  <script src="js/core/Storage.js?v=4.1"></script>
-  <script src="js/components/TopperEngineView.js?v=4.1"></script>
-  <script src="js/components/AnswerPadModal.js?v=4.1"></script>
-  <script src="js/components/MicrothemeModal.js?v=4.1"></script>
-  <script src="js/pages/DashboardPage.js?v=4.1"></script>
-  <script src="js/pages/SchedulePage.js?v=4.1"></script>
-  <script src="js/pages/RoadmapPage.js?v=4.1"></script>
-  <script src="js/pages/SynergyPage.js?v=4.1"></script>
-  <script src="js/pages/WyskPage.js?v=4.1"></script>
-  <script src="js/app.js?v=4.1"></script>
+  <script src="js/core/Utils.js?v=4.2"></script>
+  <script src="js/core/EventBus.js?v=4.2"></script>
+  <script src="js/core/State.js?v=4.2"></script>
+  <script src="js/core/Storage.js?v=4.2"></script>
+  <script src="js/core/GeminiService.js?v=4.2"></script>
+  <script src="js/components/GeminiModal.js?v=4.2"></script>
+  <script src="js/components/TopperEngineView.js?v=4.2"></script>
+  <script src="js/components/AnswerPadModal.js?v=4.2"></script>
+  <script src="js/components/MicrothemeModal.js?v=4.2"></script>
+  <script src="js/pages/DashboardPage.js?v=4.2"></script>
+  <script src="js/pages/SchedulePage.js?v=4.2"></script>
+  <script src="js/pages/RoadmapPage.js?v=4.2"></script>
+  <script src="js/pages/SynergyPage.js?v=4.2"></script>
+  <script src="js/pages/WyskPage.js?v=4.2"></script>
+  <script src="js/app.js?v=4.2"></script>
 </body>
 </html>

@@ -16,6 +16,8 @@
   const MicrothemeModal = window.AWFG_MICROTHEME_MODAL;
   const TopperEngineView = window.AWFG_TOPPER_VIEW;
   const AnswerPadModal = window.AWFG_ANSWER_PAD;
+  const GeminiService = window.AWFG_GEMINI_SERVICE;
+  const GeminiModal = window.AWFG_GEMINI_MODAL;
 
   function renderView() {
     const state = State.get();
@@ -58,6 +60,9 @@
 
   function initUI() {
     const state = State.get();
+
+    // 0. Update Gemini header badge status
+    if (GeminiModal) GeminiModal.updateHeaderBadge();
 
     // 1. Dashboard Events
     if (DashboardPage) DashboardPage.bindEvents();
@@ -333,6 +338,14 @@
     attemptPrelims: (qKey, choice, correct) => MicrothemeModal.attemptPrelims(qKey, choice, correct),
     resetMicrothemeQuiz: () => MicrothemeModal.resetQuiz(),
     resetQuestionAttempt: (qKey) => MicrothemeModal.resetAttempt(qKey),
+
+    // Gemini AI Integration
+    openGeminiModal: (msg) => GeminiModal.open(msg),
+    closeGeminiModal: () => GeminiModal.close(),
+    testGeminiConnection: () => GeminiModal.testConnection(),
+    saveGeminiSettings: () => GeminiModal.saveSettings(),
+    clearGeminiCache: () => GeminiModal.clearCache(),
+    generateGeminiAnswer: (mKey, marks) => TopperEngineView.generateGemini(mKey, marks),
 
     // Common Utilities
     copyQuestion: (text, btn) => Utils.copyQuestion(text, btn),
