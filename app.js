@@ -1540,6 +1540,247 @@
     }
   }
 
+  // -------------------------------------------------------------
+  // UPSC Mains Answer Framework & "How to Approach" Engine
+  // -------------------------------------------------------------
+  function generateMainsApproach(qText, marks, subject) {
+    const marksNum = parseFloat(marks) || 10;
+    const targetWords = (marksNum >= 15) ? 250 : (marksNum >= 20 ? 300 : 150);
+    const suggestedTime = (marksNum >= 15) ? 11 : (marksNum >= 20 ? 14 : 7);
+
+    let directive = "Discuss";
+    let directiveMeaning = "Explore the topic from multiple dimensions (Social, Economic, Political, Legal, Administrative) and provide a balanced synthesis.";
+    const qLower = (qText || '').toLowerCase();
+
+    if (qLower.includes("critically examine") || qLower.includes("critically analyze") || qLower.includes("critically evaluate")) {
+      directive = "Critically Examine / Analyze";
+      directiveMeaning = "Conduct a rigorous scrutiny of both sides. Highlight strengths/merits vs limitations/concerns, and arrive at a well-substantiated, balanced verdict.";
+    } else if (qLower.includes("examine") || qLower.includes("investigate")) {
+      directive = "Examine";
+      directiveMeaning = "Look deeply into the facts, root causes, and practical implications of the issue with supporting evidence.";
+    } else if (qLower.includes("evaluate") || qLower.includes("assess")) {
+      directive = "Evaluate / Assess";
+      directiveMeaning = "Determine the value, impact, or success of the policy/provision against stated constitutional or socio-economic goals.";
+    } else if (qLower.includes("comment")) {
+      directive = "Comment";
+      directiveMeaning = "Take an informed, principled position on the statement and defend your viewpoint using constitutional provisions and real-world examples.";
+    } else if (qLower.includes("illustrate") || qLower.includes("elaborate")) {
+      directive = "Illustrate / Elaborate";
+      directiveMeaning = "Substantiate the core arguments through concrete instances, landmark judicial precedents, and current case studies.";
+    } else if (qLower.includes("what") || qLower.includes("why") || qLower.includes("how")) {
+      directive = "Direct Question (What / Why / How)";
+      directiveMeaning = "Address all sub-parts directly with crisp, categorized bullet points and practical remedies.";
+    }
+
+    const valueAdds = [];
+    if (qLower.includes("privacy") || qLower.includes("article 21") || qLower.includes("liberty")) {
+      valueAdds.push("Landmark Case: Justice K.S. Puttaswamy v. Union of India (2017) - 9-Judge bench affirmed Right to Privacy as intrinsic to Article 21.");
+      valueAdds.push("Doctrine: 4-Prong Proportionality Test (Legitimate Aim, Suitability, Necessity, Balancing).");
+      valueAdds.push("Statute / Committee: Digital Personal Data Protection (DPDP) Act 2023 & Justice B.N. Srikrishna Committee.");
+    }
+    if (qLower.includes("section 66a") || qLower.includes("speech") || qLower.includes("article 19")) {
+      valueAdds.push("Landmark Case: Shreya Singhal v. Union of India (2015) - Struck down Section 66A of IT Act for chilling free speech.");
+      valueAdds.push("Constitutional Balance: Reasonable restrictions under Article 19(2) (Public order, decency, sovereignty).");
+    }
+    if (qLower.includes("preamble") || qLower.includes("basic structure")) {
+      valueAdds.push("Landmark Cases: Kesavananda Bharati (1973), Minerva Mills (1980), S.R. Bommai (1994).");
+      valueAdds.push("Constitutional Ideal: Preamble reflects the foundational philosophy, goals, and solemn resolve of the Constitution.");
+    }
+    if (qLower.includes("federal") || qLower.includes("governor") || qLower.includes("centre-state")) {
+      valueAdds.push("Key Committees: Sarkaria Commission (1988), M.M. Punchhi Commission (2010), 2nd ARC Report.");
+      valueAdds.push("Landmark Case: S.R. Bommai case (1994) restricting arbitrary imposition of Article 356.");
+    }
+    if (qLower.includes("judiciary") || qLower.includes("collegium") || qLower.includes("judicial review")) {
+      valueAdds.push("Key Cases: Kesavananda Bharati (Judicial review as Basic Structure), NJAC judgment (2015).");
+      valueAdds.push("Constitutional Balance: Separation of Powers (Article 50) vs Judicial Activism vs Complete Justice (Article 142).");
+    }
+    if (qLower.includes("environment") || qLower.includes("pollution") || qLower.includes("climate")) {
+      valueAdds.push("Judicial Doctrines: M.C. Mehta cases - Polluter Pays Principle, Precautionary Principle, Public Trust Doctrine.");
+      valueAdds.push("Constitutional Mandate: Article 48A (State duty) & Article 51A(g) (Citizen's fundamental duty).");
+    }
+    if (qLower.includes("women") || qLower.includes("gender") || qLower.includes("transgender")) {
+      valueAdds.push("Landmark Case: NALSA v. Union of India (2014) recognizing transgender persons under Articles 14, 15, 21.");
+      valueAdds.push("Legal Framework: Transgender Persons (Protection of Rights) Act 2019 & 2026 amendments.");
+      valueAdds.push("Global Benchmark: UN SDG Goal 5 (Gender Equality & Women Empowerment).");
+    }
+
+    if (valueAdds.length === 0) {
+      valueAdds.push("Analytical Framework: PESTLE Dimensions (Political, Economic, Social, Technological, Legal, Environmental).");
+      valueAdds.push("Administrative Touchpoint: 2nd Administrative Reforms Commission (ARC) recommendations.");
+      valueAdds.push("Guiding Compass: Constitutional Morality, Directive Principles (Part IV), and UN Sustainable Development Goals (SDGs).");
+    }
+
+    return {
+      directive,
+      directiveMeaning,
+      targetWords,
+      suggestedTime,
+      valueAdds,
+      marksNum
+    };
+  }
+
+  function getMainsOutlineText(qText, marks, approach) {
+    const is15M = approach.marksNum >= 15;
+    const introWords = is15M ? "35-40" : "25-30";
+    const bodyWords = is15M ? "160-180" : "90-100";
+    const conclWords = is15M ? "35-40" : "25-30";
+    const partWords = Math.round(parseInt(bodyWords.split('-')[0]) / 2);
+
+    return `### 1. Introduction (~${introWords} words)
+- Context / Definition / Constitutional Article / Recent Data point:
+- Core premise addressing the demand of the question:
+
+### 2. Body Part 1: Core Arguments & Dimensions (~${partWords} words)
+- Key Subheading (Arguments / Provisions / Mechanisms):
+  • Point 1 (Fact / Keyword / Impact): 
+  • Point 2 (Institutional dimension): 
+  • Supporting Example / Case Law: 
+
+### 3. Body Part 2: Critical Challenges / Counter-Perspective (~${partWords} words)
+- Analytical Subheading (Bottlenecks / Institutional gaps / Concerns):
+  • Point 1: 
+  • Point 2: 
+  • ${approach.valueAdds[0] ? `Relevant Case / Recommendation: ${approach.valueAdds[0]}` : 'Diagram / Schematic idea: [Draw flowchart or comparative table]'}
+
+### 4. Way Forward & Conclusion (~${conclWords} words)
+- Forward-looking solution / Committee recommendation:
+- Concluding vision / Constitutional Morality / SDG alignment:
+`;
+  }
+
+  function renderMainsApproachHtml(mKey, qText, marks, subject) {
+    const approach = generateMainsApproach(qText, marks, subject);
+    const is15M = approach.marksNum >= 15;
+
+    return `
+      <div class="approach-header">
+        <div class="approach-title">
+          <span>📐</span> Structural Answer Blueprint & Strategy
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+          <span class="approach-directive-badge">🎯 Directive: ${approach.directive}</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-weight: 700; font-size: 0.78rem;">
+            ⏱️ ${approach.suggestedTime} Mins • ~${approach.targetWords} Words
+          </span>
+        </div>
+      </div>
+
+      <div class="approach-directive-desc">
+        <strong>Directive Guidance (${approach.directive}):</strong> ${approach.directiveMeaning}
+      </div>
+
+      <!-- Step-by-Step Architecture -->
+      <div style="margin-top: 4px;">
+        <div class="approach-step-card">
+          <div class="approach-step-header">
+            <span>1. Introduction (~${is15M ? '35-40' : '25-30'} words)</span>
+            <span style="font-size: 0.74rem; color: var(--text-muted);">~15% Word Count</span>
+          </div>
+          <div class="approach-step-desc">
+            Define key terms, cite the governing Constitutional Article/statute, or give a crisp contextual backdrop/recent landmark judgment. Avoid lengthy background history.
+          </div>
+        </div>
+
+        <div class="approach-step-card">
+          <div class="approach-step-header">
+            <span>2. Body Architecture (~${is15M ? '160-180' : '90-100'} words)</span>
+            <span style="font-size: 0.74rem; color: var(--text-muted);">~70% Word Count</span>
+          </div>
+          <div class="approach-step-desc">
+            Divide into 2 distinct subheadings. Use 4-5 crisp, numbered bullet points with underline keywords. Incorporate dimensions: Constitutional, Legal, Socio-Economic, and Institutional. Add a micro-flowchart or hub-and-spoke diagram if applicable.
+          </div>
+        </div>
+
+        <div class="approach-step-card">
+          <div class="approach-step-header">
+            <span>3. Way Forward & Conclusion (~${is15M ? '35-40' : '25-30'} words)</span>
+            <span style="font-size: 0.74rem; color: var(--text-muted);">~15% Word Count</span>
+          </div>
+          <div class="approach-step-desc">
+            Conclude with a progressive, solution-oriented Way Forward citing a committee recommendation (e.g. 2nd ARC, Law Commission), Constitutional Morality, or SDG goals. Never end on a pessimistic note.
+          </div>
+        </div>
+      </div>
+
+      <!-- Value Addition Recommendations -->
+      <div class="approach-value-adds">
+        <h5>💡 Recommended Value Additions for this Question:</h5>
+        <ul>
+          ${approach.valueAdds.map(va => `<li>${escapeHtml(va)}</li>`).join('')}
+        </ul>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="approach-actions">
+        <button class="btn btn-subtle btn-sm" onclick="AWFG_APP.copyMainsOutline('${mKey}', this)">
+          📋 Copy Outline
+        </button>
+        <button class="btn btn-primary btn-sm" onclick="AWFG_APP.insertTemplateToPad('${mKey}', ${marks})">
+          📥 Insert Outline into Answer Pad
+        </button>
+      </div>
+    `;
+  }
+
+  function toggleMainsApproach(mKey) {
+    const el = document.getElementById(`approach-${mKey}`);
+    if (el) {
+      el.classList.toggle('hidden');
+    }
+  }
+
+  function insertTemplateToPad(mKey, marks) {
+    const pad = document.getElementById(`pad-${mKey}`);
+    const ta = document.getElementById(`ta-${mKey}`);
+    if (!pad || !ta) return;
+
+    pad.classList.remove('hidden');
+
+    const card = document.getElementById(`mcard-${mKey}`);
+    const stemEl = card ? card.querySelector('.pyq-stem-text') : null;
+    const qText = stemEl ? stemEl.textContent : '';
+
+    const approach = generateMainsApproach(qText, marks);
+    const outline = getMainsOutlineText(qText, marks, approach);
+
+    if (ta.value.trim().length > 0) {
+      if (confirm('Your answer pad already has some text. Do you want to append the template outline at the bottom?')) {
+        ta.value = ta.value + '\n\n' + outline;
+      }
+    } else {
+      ta.value = outline;
+    }
+
+    const targetWords = (parseFloat(marks) >= 15) ? 250 : 150;
+    handleMainsWordCount(mKey, targetWords);
+
+    ta.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    ta.focus();
+    showToast('Outline inserted into your Answer Pad! Ready to draft.', '✍️');
+  }
+
+  function copyMainsOutline(mKey, btn) {
+    const card = document.getElementById(`mcard-${mKey}`);
+    const stemEl = card ? card.querySelector('.pyq-stem-text') : null;
+    const qText = stemEl ? stemEl.textContent : '';
+    const marksBadge = card ? card.querySelector('.pyq-marks-badge') : null;
+    const marksMatch = marksBadge ? marksBadge.textContent.match(/(\d+(?:\.\d+)?)\s*Marks/) : null;
+    const marks = marksMatch ? parseFloat(marksMatch[1]) : 10;
+
+    const approach = generateMainsApproach(qText, marks);
+    const outline = getMainsOutlineText(qText, marks, approach);
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(outline).then(() => {
+        const old = btn.textContent;
+        btn.textContent = '✓ Copied Outline!';
+        setTimeout(() => btn.textContent = old, 2000);
+        showToast('Template outline copied to clipboard!');
+      });
+    }
+  }
+
   // Prelims Attempt Engine
   function attemptPrelims(qKey, choiceLetter, correctLetter) {
     if (!STATE.currentUser) ensureUser('Aspirant_2027', '');
@@ -1684,14 +1925,22 @@
                 <span class="pyq-marks-badge">${q.marks} Marks • ~${targetWords} words (${suggestedMinutes} mins)</span>
                 ${isAttempted ? `<span class="badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-weight: 700;">✓ Answer Saved (${savedWords} words)</span>` : ''}
               </div>
-              <div style="display: flex; gap: 8px;">
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
                 <button class="btn ${isAttempted ? 'btn-subtle' : 'btn-primary'} btn-sm" onclick="AWFG_APP.toggleAnswerPad('${mKey}')">
                   ✍️ ${isAttempted ? 'Edit Answer' : 'Draft Answer'}
+                </button>
+                <button class="btn btn-outline btn-sm" onclick="AWFG_APP.toggleMainsApproach('${mKey}')" style="border-color: #818cf8; color: #818cf8; font-weight: 600;">
+                  📐 How to Approach
                 </button>
                 <button class="btn btn-subtle btn-sm" onclick="AWFG_APP.copyQuestion('${escapeQuotes(q.text)}', this)" title="Copy question text">📋 Copy</button>
               </div>
             </div>
             <div class="pyq-stem-text">${escapeHtml(q.text)}</div>
+
+            <!-- Dynamic How to Approach Blueprint Box -->
+            <div id="approach-${mKey}" class="pyq-approach-box hidden">
+              ${renderMainsApproachHtml(mKey, q.text, q.marks, q.subject)}
+            </div>
 
             <!-- Expandable Answer Writing Pad -->
             <div id="pad-${mKey}" class="pyq-answer-pad ${isAttempted ? '' : 'hidden'}">
@@ -1965,6 +2214,9 @@
     copyMainsAnswer: copyMainsAnswer,
     toggleTimer: toggleTimer,
     resetTimer: resetTimer,
+    toggleMainsApproach: toggleMainsApproach,
+    insertTemplateToPad: insertTemplateToPad,
+    copyMainsOutline: copyMainsOutline,
     getState: () => STATE,
     showToast: showToast
   };
