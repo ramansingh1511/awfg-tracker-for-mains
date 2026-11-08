@@ -15,7 +15,11 @@
     startDate: '',
     targetDays: 90,
     cadence: 'auto_distribute',
-    theme: 'dark'
+    theme: 'dark',
+    wyskPaper: 'ALL',
+    wyskTopic: 'ALL',
+    wyskSearch: '',
+    wyskLimit: 60
   };
 
   // Helper: Format Date
@@ -127,6 +131,7 @@
         coincidingChecked: {},// 'testId_idx': bool
         exclusiveChecked: {}, // 'testId_idx': bool
         wyskChecked: {},      // 'testId_idx': bool
+        wyskMasterChecked: {},// 'WYSK_id': bool
         notes: {},            // testId: string
         pyqAttempts: {},      // qKey: { selected, isCorrect, score, timestamp }
         mainsAnswers: {}      // mKey: { text, wordCount, targetWords, savedAt }
@@ -135,6 +140,7 @@
       if (!STATE.users[username].targetDays) STATE.users[username].targetDays = 90;
       if (!STATE.users[username].pyqAttempts) STATE.users[username].pyqAttempts = {};
       if (!STATE.users[username].mainsAnswers) STATE.users[username].mainsAnswers = {};
+      if (!STATE.users[username].wyskMasterChecked) STATE.users[username].wyskMasterChecked = {};
     }
     STATE.currentUser = STATE.users[username];
     saveStorage();
@@ -763,53 +769,167 @@
     container.innerHTML = html;
   }
 
-  // Render WYSK Question Explorer
+  // Render Full 1,697 WYSK Question Explorer
   function renderWyskExplorer(container) {
-    const schedule = window.AWFG_SCHEDULE || [];
-    let allQuestions = [];
-    schedule.forEach(t => {
-      (t.wyskQuestions || []).forEach(q => {
-        allQuestions.push({
-          testId: t.id,
-          testName: t.name,
-          paper: t.paper,
-          question: q.question,
-          topic: q.topic
-        });
-      });
-    });
+    const allWysk = window.ALL_WYSK_QUESTIONS || [];
+    const user = STATE.currentUser;
+    const userWysk = (user && user.wyskMasterChecked) ? user.wyskMasterChecked : {};
 
-    if (STATE.paperFilter !== 'ALL') {
-      allQuestions = allQuestions.filter(q => q.paper === STATE.paperFilter);
+    // Calculate Master Stats
+    const totalAll = allWysk.length;
+    const totalMastered = allWysk.filter(q => userWysk[q.id]).length;
+    const masterPct = totalAll > 0 ? Math.round((totalMastered / totalAll) * 100) : 0;
+
+    // Filter by Paper
+    const currentPaper = STATE.wyskPaper || 'ALL';
+    let filtered = currentPaper === 'ALL' ? allWysk : allWysk.filter(q => q.paper === currentPaper);
+
+    // Get unique topics for the selected paper to populate dropdown
+    const topicSet = new Map();
+    filtered.forEach(q => {
+      if (!topicSet.has(q.topicNum)) {
+        topicSet.set(q.topicNum, { num: q.topicNum, label: q.topicName || q.topic });
+      }
+    });
+    const sortedTopics = Array.from(topicSet.values()).sort((a, b) => a.num - b.num);
+
+    // Filter by Topic
+    const currentTopic = STATE.wyskTopic || 'ALL';
+    if (currentTopic !== 'ALL') {
+      const tNum = parseInt(currentTopic, 10);
+      filtered = filtered.filter(q => q.topicNum === tNum);
     }
-    if (STATE.searchQuery.trim()) {
-      const q = STATE.searchQuery.toLowerCase();
-      allQuestions = allQuestions.filter(item => item.question.toLowerCase().includes(q));
+
+    // Filter by Search Query
+    const searchVal = (STATE.wyskSearch || '').trim().toLowerCase();
+    if (searchVal) {
+      filtered = filtered.filter(q => 
+        q.question.toLowerCase().includes(searchVal) || 
+        (q.topicName && q.topicName.toLowerCase().includes(searchVal)) ||
+        q.topic.toLowerCase().includes(searchVal)
+      );
     }
+
+    // Paper counts for badges
+    const paperCounts = {
+      'ALL': allWysk.length,
+      'GS-1': allWysk.filter(q => q.paper === 'GS-1').length,
+      'GS-2': allWysk.filter(q => q.paper === 'GS-2').length,
+      'GS-3': allWysk.filter(q => q.paper === 'GS-3').length,
+      'GS-4': allWysk.filter(q => q.paper === 'GS-4').length
+    };
+
+    const paperMastered = {
+      'ALL': totalMastered,
+      'GS-1': allWysk.filter(q => q.paper === 'GS-1' && userWysk[q.id]).length,
+      'GS-2': allWysk.filter(q => q.paper === 'GS-2' && userWysk[q.id]).length,
+      'GS-3': allWysk.filter(q => q.paper === 'GS-3' && userWysk[q.id]).length,
+      'GS-4': allWysk.filter(q => q.paper === 'GS-4' && userWysk[q.id]).length
+    };
+
+    const limit = STATE.wyskLimit || 60;
+    const visibleList = filtered.slice(0, limit);
 
     let html = `
-      <div class="question-view">
-        <h2>💡 "What You Should Know" (WYSK) Question Repository</h2>
-        <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 6px 0 16px;">
-          High-yield conceptual and analytical questions directly extracted from the official syllabus tabs (${allQuestions.length} questions displayed).
-        </p>
+      <div class="question-view" style="max-width: 1200px; margin: 0 auto;">
+        <!-- Header & Progress Card -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+            <div>
+              <h2 style="margin: 0 0 6px; font-size: 1.4rem; display: flex; align-items: center; gap: 8px;">
+                <span>💡</span> "What You Should Know" (WYSK) Question Bank
+              </h2>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">
+                Comprehensive pool of <strong>${totalAll} high-yield syllabus questions</strong> across all 4 GS papers from official AWFG curriculum.
+              </p>
+            </div>
+            <div style="text-align: right; min-width: 180px;">
+              <div style="font-size: 1.15rem; font-weight: 700; color: #10b981;">${totalMastered} / ${totalAll} Mastered (${masterPct}%)</div>
+              <div style="width: 100%; height: 8px; background: var(--bg-secondary); border-radius: 99px; margin-top: 6px; overflow: hidden; border: 1px solid var(--border-color);">
+                <div style="width: ${masterPct}%; height: 100%; background: linear-gradient(90deg, #10b981, #059669); border-radius: 99px; transition: width 0.3s ease;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paper Filters Tabs -->
+          <div style="display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap;">
+            ${['ALL', 'GS-1', 'GS-2', 'GS-3', 'GS-4'].map(p => `
+              <button class="btn btn-sm ${currentPaper === p ? 'btn-primary' : 'btn-outline'}" 
+                      onclick="AWFG_APP.setWyskPaper('${p}')" 
+                      style="font-weight: 600; font-size: 0.82rem; padding: 6px 14px;">
+                ${p === 'ALL' ? 'All Papers' : p} (${paperCounts[p]}) 
+                <span style="opacity: 0.75; font-size: 0.75rem; margin-left: 4px;">• ${paperMastered[p]}✓</span>
+              </button>
+            `).join('')}
+          </div>
+
+          <!-- Secondary Filters: Topic Dropdown & Search -->
+          <div style="display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap; align-items: center;">
+            <div style="flex: 1; min-width: 260px;">
+              <input type="text" id="wysk-search-input" class="form-input" placeholder="🔍 Search ${filtered.length} questions by keyword..." 
+                     value="${escapeHtml(STATE.wyskSearch || '')}" 
+                     style="width: 100%; font-size: 0.86rem; padding: 8px 14px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm);"
+                     oninput="AWFG_APP.setWyskSearch(this.value)">
+            </div>
+            <div style="min-width: 220px;">
+              <select class="form-select" style="width: 100%; font-size: 0.86rem; padding: 8px 12px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm);"
+                      onchange="AWFG_APP.setWyskTopic(this.value)">
+                <option value="ALL">All Syllabus Topics (${filtered.length})</option>
+                ${sortedTopics.map(t => `
+                  <option value="${t.num}" ${currentTopic === String(t.num) ? 'selected' : ''}>
+                    Topic ${t.num}: ${escapeHtml(t.label.length > 45 ? t.label.substring(0, 42) + '...' : t.label)}
+                  </option>
+                `).join('')}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Count Status -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding: 0 4px;">
+          <span style="font-size: 0.88rem; color: var(--text-secondary);">
+            Showing <strong>${visibleList.length}</strong> of <strong>${filtered.length}</strong> matching questions
+          </span>
+          ${visibleList.length < filtered.length ? `
+            <button class="btn btn-subtle btn-sm" onclick="AWFG_APP.loadAllWysk()">Show All (${filtered.length})</button>
+          ` : ''}
+        </div>
+
+        <!-- Questions List -->
         <div class="checklist">
     `;
 
-    allQuestions.forEach((q, idx) => {
+    visibleList.forEach((q, idx) => {
+      const isMastered = !!userWysk[q.id];
       html += `
-        <div class="checklist-item" style="padding: 12px;">
-          <div class="checklist-content">
-            <div style="display: flex; gap: 8px; margin-bottom: 6px; align-items: center;">
-              <span class="paper-badge ${q.paper}" style="font-size: 0.68rem;">${q.paper}</span>
-              <span class="week-badge" style="font-size: 0.68rem; cursor: pointer;" onclick="window.AWFG_APP.jumpToTest(${q.testId})">${q.testName.split('(')[0]}</span>
-              <span style="font-size: 0.72rem; color: var(--text-muted);">Topic #${q.topic}</span>
+        <div class="checklist-item ${isMastered ? 'is-completed' : ''}" style="padding: 14px 16px; margin-bottom: 8px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: var(--bg-card); display: flex; align-items: flex-start; gap: 14px;">
+          <input type="checkbox" class="custom-checkbox" ${isMastered ? 'checked' : ''} 
+                 onchange="AWFG_APP.toggleWyskMaster('${q.id}')" 
+                 title="Mark as learned/mastered" style="margin-top: 3px; cursor: pointer;">
+          <div class="checklist-content" style="flex: 1;">
+            <div style="display: flex; gap: 8px; margin-bottom: 6px; align-items: center; flex-wrap: wrap;">
+              <span class="paper-badge ${q.paper}" style="font-size: 0.7rem; font-weight: 700; padding: 2px 8px;">${q.paper}</span>
+              <span class="week-badge" style="font-size: 0.72rem; padding: 2px 8px;">${q.topic}</span>
+              <span style="font-size: 0.74rem; color: var(--text-muted); font-weight: 500;">${escapeHtml(q.topicName || '')}</span>
             </div>
-            <div style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">${q.question}</div>
+            <div style="font-size: 0.94rem; font-weight: 600; line-height: 1.45; color: ${isMastered ? 'var(--text-muted)' : 'var(--text-primary)'}; text-decoration: ${isMastered ? 'line-through' : 'none'};">
+              ${escapeHtml(q.question)}
+            </div>
           </div>
+          <button class="btn btn-subtle btn-sm" onclick="AWFG_APP.copyQuestion('${escapeHtml(q.question).replace(/'/g, "\\'")}', this)" title="Copy question" style="padding: 4px 10px; font-size: 0.78rem;">📋 Copy</button>
         </div>
       `;
     });
+
+    if (visibleList.length < filtered.length) {
+      html += `
+        <div style="text-align: center; margin: 24px 0 32px;">
+          <button class="btn btn-outline" onclick="AWFG_APP.loadMoreWysk()" style="padding: 10px 24px; font-weight: 600;">
+            ⬇️ Load Next 60 Questions (${visibleList.length} of ${filtered.length} Loaded)
+          </button>
+        </div>
+      `;
+    }
 
     html += `</div></div>`;
     container.innerHTML = html;
@@ -1464,6 +1584,62 @@
     showToast(`Quiz reset! ${count} question attempts cleared.`);
   }
 
+  function resetQuestionAttempt(qKey) {
+    if (!STATE.currentUser || !STATE.currentUser.pyqAttempts) return;
+    delete STATE.currentUser.pyqAttempts[qKey];
+    saveStorage();
+    showToast('Question reset. You can now re-attempt it fresh!', '🔄');
+    renderPyqBody();
+  }
+
+  // WYSK Question Bank Actions
+  function setWyskPaper(paper) {
+    STATE.wyskPaper = paper;
+    STATE.wyskTopic = 'ALL';
+    STATE.wyskLimit = 60;
+    renderView();
+  }
+
+  function setWyskTopic(topic) {
+    STATE.wyskTopic = topic;
+    STATE.wyskLimit = 60;
+    renderView();
+  }
+
+  function setWyskSearch(query) {
+    STATE.wyskSearch = query;
+    STATE.wyskLimit = 60;
+    renderView();
+    // Maintain focus on search input
+    setTimeout(() => {
+      const inp = document.getElementById('wysk-search-input');
+      if (inp) {
+        inp.focus();
+        inp.selectionStart = inp.selectionEnd = inp.value.length;
+      }
+    }, 10);
+  }
+
+  function loadMoreWysk() {
+    STATE.wyskLimit = (STATE.wyskLimit || 60) + 60;
+    renderView();
+  }
+
+  function loadAllWysk() {
+    STATE.wyskLimit = 99999;
+    renderView();
+  }
+
+  function toggleWyskMaster(qId) {
+    if (!STATE.currentUser) ensureUser('Aspirant_2027', '');
+    if (!STATE.currentUser.wyskMasterChecked) STATE.currentUser.wyskMasterChecked = {};
+    const curr = !!STATE.currentUser.wyskMasterChecked[qId];
+    STATE.currentUser.wyskMasterChecked[qId] = !curr;
+    saveStorage();
+    renderView();
+    showToast(curr ? 'Marked as unread' : '🎉 Question marked as mastered!');
+  }
+
   function renderPyqBody() {
     const body = document.getElementById('pyq-modal-body');
     if (!body) return;
@@ -1692,13 +1868,15 @@
             <!-- Feedback Banner after attempt -->
             ${isAttempted ? `
               <div class="pyq-feedback-banner ${att.isCorrect ? 'correct' : 'wrong'}">
-                <div>
+                <div style="flex: 1;">
                   ${att.isCorrect
                     ? `<strong>🎉 Correct Answer!</strong> You secured <strong>+2.00 marks</strong> (Official Key: <strong>${correctAns}</strong>).`
                     : `<strong>⚠️ Incorrect Attempt (-0.66 marks).</strong> You picked <strong>(${att.selected})</strong>, but the official UPSC answer key is <strong>(${correctAns})</strong>.`
                   }
                 </div>
-                <button class="btn btn-subtle btn-sm" onclick="AWFG_APP.attemptPrelims('${qKey}', '${correctAns}', '${correctAns}')" title="Re-attempt">Re-try</button>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                  <button class="btn btn-subtle btn-sm" onclick="AWFG_APP.resetQuestionAttempt('${qKey}')" title="Reset and re-attempt this question fresh">🔄 Re-attempt</button>
+                </div>
               </div>
             ` : ''}
 
@@ -1774,6 +1952,13 @@
     copyQuestion: copyQuestion,
     attemptPrelims: attemptPrelims,
     resetMicrothemeQuiz: resetMicrothemeQuiz,
+    resetQuestionAttempt: resetQuestionAttempt,
+    setWyskPaper: setWyskPaper,
+    setWyskTopic: setWyskTopic,
+    setWyskSearch: setWyskSearch,
+    loadMoreWysk: loadMoreWysk,
+    loadAllWysk: loadAllWysk,
+    toggleWyskMaster: toggleWyskMaster,
     toggleAnswerPad: toggleAnswerPad,
     handleMainsWordCount: handleMainsWordCount,
     saveMainsAnswer: saveMainsAnswer,

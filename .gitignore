@@ -1,9 +1,16 @@
 # Temporary scrapings and raw dumps
 *.txt
 *.csv
+*.png
 sheet.html
 extracted_raw.json
 website.zip
 build_*.py
 build_*.rb
+scripts/
+test_*.py
+catalogs_code.js
+prelims_raw_bands.json
+mains_raw_columns.json
+mains_perfect_rows.json
 .DS_Store
