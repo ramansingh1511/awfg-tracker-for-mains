@@ -449,7 +449,10 @@
                   <label class="checklist-item">
                     <input type="checkbox" class="mt-cb" data-type="mains" data-testid="${t.id}" data-idx="${idx}" ${checked ? 'checked' : ''}>
                     <div class="checklist-content">
-                      <div class="checklist-title">${mt}</div>
+                      <div class="checklist-title" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
+                        <span class="microtheme-clickable" onclick="event.stopPropagation(); AWFG_APP.openPyqModal('${escapeQuotes(mt)}', 'mains')" title="Click to view & practice Mains questions">${mt}</span>
+                        <button type="button" class="pyq-pill-trigger" onclick="event.stopPropagation(); AWFG_APP.openPyqModal('${escapeQuotes(mt)}', 'mains')" title="Open Mains questions">📝 Mains PYQs</button>
+                      </div>
                       <div class="checklist-meta">
                         <span class="qs-pill">GS Mains Core</span>
                         <span>Structured for 10M & 15M answer frameworks</span>
@@ -477,9 +480,12 @@
                   <label class="checklist-item">
                     <input type="checkbox" class="mt-cb" data-type="coinciding" data-testid="${t.id}" data-idx="${idx}" ${checked ? 'checked' : ''}>
                     <div class="checklist-content">
-                      <div class="checklist-title">
-                        ${cp.name} 
-                        <span class="qs-pill" style="margin-left: 6px;">${cp.qs} Prelims PYQs</span>
+                      <div class="checklist-title" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
+                        <div>
+                          <span class="microtheme-clickable" onclick="event.stopPropagation(); AWFG_APP.openPyqModal('${escapeQuotes(cp.name)}', 'mains')" title="Click to view Mains & Prelims questions">${cp.name}</span>
+                          <span class="qs-pill" style="margin-left: 6px;">${cp.qs} Prelims PYQs</span>
+                        </div>
+                        <button type="button" class="pyq-pill-trigger" onclick="event.stopPropagation(); AWFG_APP.openPyqModal('${escapeQuotes(cp.name)}', 'mains')" title="Open PYQ Explorer">👁️ View PYQs</button>
                       </div>
                       <div class="rationale-note">
                         <strong>Integrated Overlap:</strong> ${cp.overlap_rationale}
@@ -508,9 +514,12 @@
                     <label class="checklist-item" style="border-left: 3px solid #f59e0b;">
                       <input type="checkbox" class="mt-cb" data-type="exclusive" data-testid="${t.id}" data-idx="${idx}" ${checked ? 'checked' : ''}>
                       <div class="checklist-content">
-                        <div class="checklist-title" style="color: #fbbf24;">
-                          ${ep.name}
-                          <span class="qs-pill" style="background: rgba(245, 158, 11, 0.25); color: #fbbf24; margin-left: 6px;">${ep.qs} Prelims Qs</span>
+                        <div class="checklist-title" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; color: #fbbf24;">
+                          <div>
+                            <span class="microtheme-clickable" onclick="event.stopPropagation(); AWFG_APP.openPyqModal('${escapeQuotes(ep.name)}', 'prelims')" title="Click to practice Prelims questions" style="color: #fbbf24;">${ep.name}</span>
+                            <span class="qs-pill" style="background: rgba(245, 158, 11, 0.25); color: #fbbf24; margin-left: 6px;">${ep.qs} Prelims Qs</span>
+                          </div>
+                          <button type="button" class="pyq-pill-trigger" onclick="event.stopPropagation(); AWFG_APP.openPyqModal('${escapeQuotes(ep.name)}', 'prelims')" title="Open Prelims Quiz">🎯 Practice</button>
                         </div>
                         <div style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 4px;">
                           <strong>Key Factual Focus:</strong> ${ep.focus_keypoints}
@@ -761,11 +770,11 @@
           <tr>
             ${i === 0 ? `<td rowspan="${items.length}" style="font-weight: 700; vertical-align: top; background: var(--bg-primary);"><span class="paper-badge ${SUBJECT_PAPER_MAP[sub] || 'GS-1'}" style="font-size: 0.65rem; padding: 2px 6px; margin-right: 4px;">${SUBJECT_PAPER_MAP[sub] || 'GS-1'}</span><br>${sub}</td>` : ''}
             <td style="font-weight: 600;">
-              <span class="microtheme-clickable" onclick="AWFG_APP.openPyqModal('${escapeQuotes(item.name)}')" title="Click to open all questions">${item.name}</span>
+              <span class="microtheme-clickable" onclick="AWFG_APP.openPyqModal('${escapeQuotes(item.name)}', '${isCoinciding ? 'mains' : 'prelims'}')" title="Click to open all questions">${item.name}</span>
             </td>
             <td><span class="qs-pill">${item.qs} Qs</span></td>
             <td>
-              <span class="status-badge ${isCoinciding ? 'completed' : 'delayed'}" style="font-size: 0.72rem;">
+              <span class="status-badge ${isCoinciding ? 'completed' : 'delayed'} microtheme-clickable" onclick="AWFG_APP.openPyqModal('${escapeQuotes(item.name)}', '${isCoinciding ? 'mains' : 'prelims'}')" style="font-size: 0.72rem; cursor: pointer;" title="Click to view ${isCoinciding ? 'Mains' : 'Prelims'} questions">
                 ${isCoinciding ? '🔗 Overlaps with Mains' : '⚡ Prelims-Exclusive'}
               </span>
             </td>
@@ -775,7 +784,7 @@
                 'Distinct factual focus (articles, lists, geographical locations, treaties, definitions). Revise via flashnotes.'}
             </td>
             <td>
-              <button class="pyq-pill-trigger" onclick="AWFG_APP.openPyqModal('${escapeQuotes(item.name)}')">👁️ View PYQs</button>
+              <button class="pyq-pill-trigger" onclick="AWFG_APP.openPyqModal('${escapeQuotes(item.name)}', '${isCoinciding ? 'mains' : 'prelims'}')">👁️ View PYQs</button>
             </td>
           </tr>
         `;
@@ -1420,7 +1429,7 @@
     filterText: ''
   };
 
-  function openPyqModal(microthemeName) {
+  function openPyqModal(microthemeName, preferredTab) {
     if (!microthemeName) return;
 
     // Normalize and fetch from questions_data.js
@@ -1433,13 +1442,17 @@
     currentPyqData.prelims = qData.prelims || [];
     currentPyqData.filterText = '';
 
-    // Choose default active tab based on available questions
-    if (currentPyqData.mains.length > 0) {
+    // Choose default active tab based on preferredTab and available questions
+    if (preferredTab === 'mains' && currentPyqData.mains.length > 0) {
+      currentPyqData.activeTab = 'mains';
+    } else if (preferredTab === 'prelims' && currentPyqData.prelims.length > 0) {
+      currentPyqData.activeTab = 'prelims';
+    } else if (currentPyqData.mains.length > 0) {
       currentPyqData.activeTab = 'mains';
     } else if (currentPyqData.prelims.length > 0) {
       currentPyqData.activeTab = 'prelims';
     } else {
-      currentPyqData.activeTab = 'mains';
+      currentPyqData.activeTab = preferredTab || 'mains';
     }
 
     const titleEl = document.getElementById('pyq-modal-title');
@@ -1673,6 +1686,10 @@
   // -------------------------------------------------------------
   // Comprehensive UPSC Mains Subject Blueprint Engine
   // -------------------------------------------------------------
+  function generateMainsApproach(qText, marks, subject) {
+    return generateComprehensiveBlueprint(qText, marks, subject);
+  }
+
   function generateComprehensiveBlueprint(qText, marks, subject) {
     const marksNum = parseFloat(marks) || 10;
     const targetWords = (marksNum >= 15) ? 250 : 150;

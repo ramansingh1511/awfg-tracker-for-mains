@@ -11,10 +11,11 @@ window.getMicrothemeQuestions = function(microthemeName) {
   
   const rawClean = microthemeName.trim();
   const norm = rawClean.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const stopWords = ['and', 'the', 'for', 'with', 'from', 'under', 'which', 'their', 'into', 'versus', 'limits', 'details', 'traits', 'facts', 'matching', 'systems', 'mapping', 'specific'];
   const tokens = rawClean.toLowerCase()
     .replace(/[^a-z0-9\s]/g, ' ')
     .split(/\s+/)
-    .filter(t => t.length > 2 && !['and', 'the', 'for', 'with', 'from', 'under'].includes(t));
+    .filter(t => t.length > 2 && !stopWords.includes(t));
     
   let prelims = [];
   let mains = [];
@@ -27,16 +28,19 @@ window.getMicrothemeQuestions = function(microthemeName) {
     mains = window.MAINS_QUESTIONS_DB[norm].questions || [];
   }
   
-  // 2. Fuzzy / Token overlap search
+  // 2. Token overlap & substring match on keys & names
   if (prelims.length === 0 && window.PRELIMS_QUESTIONS_DB) {
     let bestScore = 0;
     let bestMatch = [];
     for (const k in window.PRELIMS_QUESTIONS_DB) {
       const entry = window.PRELIMS_QUESTIONS_DB[k];
+      let score = 0;
+      if (norm.length > 4 && (k.includes(norm) || norm.includes(k))) score += 5;
       const eTokens = entry.tokens || entry.name.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/);
-      const overlap = tokens.filter(t => eTokens.includes(t));
-      const score = overlap.length;
-      if (score > bestScore && (score >= 2 || (tokens.length === 1 && score === 1))) {
+      tokens.forEach(t => {
+        if (k.includes(t) || entry.name.toLowerCase().includes(t) || eTokens.includes(t)) score += 2;
+      });
+      if (score > bestScore && score >= 2) {
         bestScore = score;
         bestMatch = entry.questions || [];
       }
@@ -49,10 +53,13 @@ window.getMicrothemeQuestions = function(microthemeName) {
     let bestMatch = [];
     for (const k in window.MAINS_QUESTIONS_DB) {
       const entry = window.MAINS_QUESTIONS_DB[k];
+      let score = 0;
+      if (norm.length > 4 && (k.includes(norm) || norm.includes(k))) score += 5;
       const eTokens = entry.tokens || entry.name.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/);
-      const overlap = tokens.filter(t => eTokens.includes(t));
-      const score = overlap.length;
-      if (score > bestScore && (score >= 2 || (tokens.length === 1 && score === 1))) {
+      tokens.forEach(t => {
+        if (k.includes(t) || entry.name.toLowerCase().includes(t) || eTokens.includes(t)) score += 2;
+      });
+      if (score > bestScore && score >= 2) {
         bestScore = score;
         bestMatch = entry.questions || [];
       }
@@ -60,35 +67,35 @@ window.getMicrothemeQuestions = function(microthemeName) {
     if (bestMatch.length > 0) mains = bestMatch;
   }
   
-  // 3. Fallback: Search question stems/texts directly if still empty
+  // 3. Fallback: question text token scoring (ranked by hits)
   if (prelims.length === 0 && tokens.length > 0 && window.PRELIMS_QUESTIONS_DB) {
-    const hits = [];
+    const scoredHits = [];
     for (const k in window.PRELIMS_QUESTIONS_DB) {
       const qs = window.PRELIMS_QUESTIONS_DB[k].questions || [];
-      for (const q of qs) {
+      qs.forEach(q => {
         const txt = (q.stem + ' ' + (q.options || []).join(' ')).toLowerCase();
-        if (tokens.every(t => txt.includes(t))) {
-          hits.push(q);
-        }
-      }
-      if (hits.length >= 10) break;
+        let hits = 0;
+        tokens.forEach(t => { if (txt.includes(t)) hits++; });
+        if (hits > 0) scoredHits.push({ q, hits });
+      });
     }
-    if (hits.length > 0) prelims = hits;
+    scoredHits.sort((a, b) => b.hits - a.hits);
+    prelims = scoredHits.slice(0, 15).map(x => x.q);
   }
   
   if (mains.length === 0 && tokens.length > 0 && window.MAINS_QUESTIONS_DB) {
-    const hits = [];
+    const scoredHits = [];
     for (const k in window.MAINS_QUESTIONS_DB) {
       const qs = window.MAINS_QUESTIONS_DB[k].questions || [];
-      for (const q of qs) {
+      qs.forEach(q => {
         const txt = (q.text || '').toLowerCase();
-        if (tokens.every(t => txt.includes(t))) {
-          hits.push(q);
-        }
-      }
-      if (hits.length >= 10) break;
+        let hits = 0;
+        tokens.forEach(t => { if (txt.includes(t)) hits++; });
+        if (hits > 0) scoredHits.push({ q, hits });
+      });
     }
-    if (hits.length > 0) mains = hits;
+    scoredHits.sort((a, b) => b.hits - a.hits);
+    mains = scoredHits.slice(0, 10).map(x => x.q);
   }
   
   return { mains, prelims };
