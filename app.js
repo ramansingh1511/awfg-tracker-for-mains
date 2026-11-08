@@ -2686,6 +2686,9 @@
   const activeTopperByMKey = {};
 
   function getRecommendedTopperKey(qText, subject) {
+    if (window.TOPPER_ENGINE && window.TOPPER_ENGINE.getRecommendedKey) {
+      return window.TOPPER_ENGINE.getRecommendedKey(qText, subject);
+    }
     const domain = detectQuestionDomain(qText, subject);
     if (domain === 'GEOGRAPHY_CLIMATOLOGY') return 'medha';
     if (domain === 'GEOGRAPHY_PHYSICAL') return 'ruhani';
@@ -2790,6 +2793,10 @@
   }
 
   function renderTopperContentHtml(mKey, topperKey, qText, marks, subject) {
+    if (window.TOPPER_ENGINE && window.TOPPER_ENGINE.renderContentHtml) {
+      return window.TOPPER_ENGINE.renderContentHtml(mKey, topperKey, qText, marks, subject);
+    }
+
     const topper = getDynamicTopperProfile(topperKey, qText, marks, subject);
     const esc = escapeHtml;
 
@@ -2861,6 +2868,11 @@
     activeTopperByMKey[mKey] = activeKey;
 
     const topperKeys = ['aditya', 'ruhani', 'ishita', 'umaharathi', 'medha', 'anmol'];
+    let paperBadge = 'Subject-Calibrated';
+    if (window.TOPPER_ENGINE && window.TOPPER_ENGINE.generateBlueprint) {
+      const bp = window.TOPPER_ENGINE.generateBlueprint(activeKey, qText, marks, subject);
+      if (bp && bp.paperLabel) paperBadge = bp.paperLabel.split('•')[0].trim();
+    }
 
     return `
       <div class="topper-archetype-card">
@@ -2868,7 +2880,7 @@
           <div style="display: flex; align-items: center; gap: 8px;">
             <span style="font-size: 1.25rem;">🏆</span>
             <div>
-              <strong style="color: #f59e0b; font-size: 0.94rem;">UPSC Topper's Framing Engine (Subject-Calibrated)</strong>
+              <strong style="color: #f59e0b; font-size: 0.94rem;">UPSC Topper's Framing Engine (${escapeHtml(paperBadge)})</strong>
               <div style="font-size: 0.76rem; color: var(--text-secondary);">Directly calibrated from UPSC MGP Topper Copies (AIR 1–13)</div>
             </div>
           </div>
@@ -2946,11 +2958,21 @@
     const stemEl = card ? card.querySelector('.pyq-stem-text') : null;
     const qText = stemEl ? stemEl.textContent : '';
 
-    const topper = getDynamicTopperProfile(topperKey, qText, marks, '');
-    const outline = getComprehensiveOutlineText(qText, marks, '');
+    let outline = '';
+    let topperName = 'Topper';
+
+    if (window.TOPPER_ENGINE && window.TOPPER_ENGINE.getMarkdownOutline) {
+      outline = window.TOPPER_ENGINE.getMarkdownOutline(topperKey, qText, marks, '');
+      const t = window.TOPPER_ENGINE.ARCHETYPES[topperKey];
+      if (t) topperName = t.name;
+    } else {
+      const topper = getDynamicTopperProfile(topperKey, qText, marks, '');
+      outline = getComprehensiveOutlineText(qText, marks, '');
+      if (topper) topperName = topper.name;
+    }
 
     if (ta.value.trim().length > 0) {
-      if (confirm(`Your answer pad already has some text. Do you want to append ${topper.name}'s outline at the bottom?`)) {
+      if (confirm(`Your answer pad already has some text. Do you want to append ${topperName}'s outline at the bottom?`)) {
         ta.value = ta.value + '\n\n' + outline;
       }
     } else {
@@ -2962,7 +2984,7 @@
 
     ta.scrollIntoView({ behavior: 'smooth', block: 'center' });
     ta.focus();
-    showToast(`${topper.name}'s structure inserted into Answer Pad!`, '🏆');
+    showToast(`${topperName}'s structure inserted into Answer Pad!`, '🏆');
   }
 
   // -------------------------------------------------------------
