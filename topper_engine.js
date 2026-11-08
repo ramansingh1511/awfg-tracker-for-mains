@@ -9567,7 +9567,7 @@
     const q = (qText || '').toLowerCase();
 
     // 1. Transgender Rights
-    if (q.includes('transgender') || (q.includes('privacy') && (q.includes('self-identity') || q.includes('article 21')))) {
+    if (q.includes('transgender') || q.includes('trans gender') || q.includes('trans-gender')) {
       return 'transgender_privacy';
     }
 
