@@ -273,33 +273,22 @@
             </div>
           </div>
 
-          <!-- Live Gemini AI Action Bar -->
-          <div class="bp-gemini-toolbar">
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <span style="font-size: 1.25rem;">${isAi ? '✨' : '🤖'}</span>
+          <!-- Master Topper Model Answer Header -->
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: rgba(99, 102, 241, 0.08); border-radius: var(--radius-sm); margin-bottom: 12px; border: 1px solid rgba(99, 102, 241, 0.2); flex-wrap: wrap; gap: 8px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 1.15rem;">👑</span>
               <div>
-                <div style="font-size: 0.84rem; font-weight: 700; color: ${isAi ? '#10b981' : '#818cf8'};">
-                  ${isAi ? `AI Topper Answer (Verified by Gemini 2.0 Flash via ${esc(topperName)})` : 'Google Gemini AI Topper Engine'}
+                <div style="font-size: 0.84rem; font-weight: 700; color: #818cf8;">
+                  Calibrated UPSC Topper Model Answer (${esc(topperName)} Archetype)
                 </div>
                 <div style="font-size: 0.74rem; color: var(--text-secondary);">
-                  ${isAi ? `Model: ${cachedGemini.modelUsed || 'gemini-2.0-flash'} • 100% question-specific curation & topper formatting` : `Generate live answer with authentic facts, diagrams & ${esc(topperName)}'s styling`}
+                  Pre-baked disciplinary blueprint • Structured for AIR 1–13 presentation
                 </div>
               </div>
             </div>
-            <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-              <button class="btn btn-outline btn-sm" onclick="AWFG_APP.openGeminiModal()" title="Gemini API Key Settings" style="font-size: 0.76rem;">
-                ⚙️ API Key
-              </button>
-              ${isAi ? `
-                <button class="btn btn-subtle btn-sm" onclick="AWFG_APP.generateGeminiAnswer('${mKey}', ${marks})" title="Regenerate with Gemini">
-                  🔄 Regenerate
-                </button>
-              ` : `
-                <button class="btn btn-primary btn-sm gemini-gen-btn" onclick="AWFG_APP.generateGeminiAnswer('${mKey}', ${marks})">
-                  ✨ Generate Live with Gemini (${esc(topperName)} Style)
-                </button>
-              `}
-            </div>
+            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.76rem; font-weight: 700;">
+              ✓ Pre-baked Disciplinary Blueprint
+            </span>
           </div>
 
           <!-- Point 1: Simplify the Question (Demand Deconstruction) -->

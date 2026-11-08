@@ -91,68 +91,94 @@
       mains = window.MAINS_QUESTIONS_DB[norm].questions || [];
     }
 
-    // 2. Fuzzy Token Overlap Search
+    // 2. Substring match on key
     if (prelims.length === 0 && window.PRELIMS_QUESTIONS_DB) {
-      let bestScore = 0;
-      let bestMatch = [];
       for (const k in window.PRELIMS_QUESTIONS_DB) {
-        const entry = window.PRELIMS_QUESTIONS_DB[k];
-        const eTokens = entry.tokens || entry.name.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/);
-        const overlap = tokens.filter(t => eTokens.includes(t));
-        const score = overlap.length;
-        if (score > bestScore && (score >= 2 || (tokens.length === 1 && score === 1))) {
-          bestScore = score;
-          bestMatch = entry.questions || [];
+        if (k.length >= 6 && (norm.includes(k) || k.includes(norm))) {
+          prelims = window.PRELIMS_QUESTIONS_DB[k].questions || [];
+          break;
         }
       }
-      if (bestMatch.length > 0) prelims = bestMatch;
     }
-
     if (mains.length === 0 && window.MAINS_QUESTIONS_DB) {
+      for (const k in window.MAINS_QUESTIONS_DB) {
+        if (k.length >= 6 && (norm.includes(k) || k.includes(norm))) {
+          mains = window.MAINS_QUESTIONS_DB[k].questions || [];
+          break;
+        }
+      }
+    }
+
+    // 3. Fuzzy Stemming Overlap Search
+    function findBestOverlap(db) {
       let bestScore = 0;
       let bestMatch = [];
-      for (const k in window.MAINS_QUESTIONS_DB) {
-        const entry = window.MAINS_QUESTIONS_DB[k];
-        const eTokens = entry.tokens || entry.name.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/);
-        const overlap = tokens.filter(t => eTokens.includes(t));
-        const score = overlap.length;
-        if (score > bestScore && (score >= 2 || (tokens.length === 1 && score === 1))) {
+      for (const k in db) {
+        const entry = db[k];
+        const eTokens = entry.tokens || (entry.name || '').toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/);
+        let score = 0;
+        for (let i = 0; i < tokens.length; i++) {
+          const t = tokens[i];
+          for (let j = 0; j < eTokens.length; j++) {
+            const et = eTokens[j];
+            if (t === et || (t.length >= 5 && et.length >= 5 && (t.slice(0, 5) === et.slice(0, 5) || t.includes(et) || et.includes(t)))) {
+              score++;
+              break;
+            }
+          }
+        }
+        if (score > bestScore) {
           bestScore = score;
           bestMatch = entry.questions || [];
         }
       }
-      if (bestMatch.length > 0) mains = bestMatch;
+      return bestMatch;
     }
 
-    // 3. Fallback: Search question stems / texts directly if still empty
-    if (prelims.length === 0 && tokens.length > 0 && window.PRELIMS_QUESTIONS_DB) {
-      const hits = [];
-      for (const k in window.PRELIMS_QUESTIONS_DB) {
-        const qs = window.PRELIMS_QUESTIONS_DB[k].questions || [];
-        for (const q of qs) {
-          const txt = (q.stem + ' ' + (q.options || []).join(' ')).toLowerCase();
-          if (tokens.every(t => txt.includes(t))) {
-            hits.push(q);
-          }
-        }
-        if (hits.length >= 10) break;
-      }
-      if (hits.length > 0) prelims = hits;
+    if (prelims.length === 0 && window.PRELIMS_QUESTIONS_DB) {
+      prelims = findBestOverlap(window.PRELIMS_QUESTIONS_DB);
+    }
+    if (mains.length === 0 && window.MAINS_QUESTIONS_DB) {
+      mains = findBestOverlap(window.MAINS_QUESTIONS_DB);
     }
 
-    if (mains.length === 0 && tokens.length > 0 && window.MAINS_QUESTIONS_DB) {
-      const hits = [];
-      for (const k in window.MAINS_QUESTIONS_DB) {
-        const qs = window.MAINS_QUESTIONS_DB[k].questions || [];
+    // 4. Token Scoring Search in question texts/stems (ensures 100% microthemes hit)
+    function searchByStemTokens(db, isPrelims) {
+      if (!db || tokens.length === 0) return [];
+      const scored = [];
+      const seen = new Set();
+      for (const k in db) {
+        const qs = db[k].questions || [];
         for (const q of qs) {
-          const txt = (q.text || '').toLowerCase();
-          if (tokens.every(t => txt.includes(t))) {
-            hits.push(q);
+          const id = q.text || q.stem || '';
+          if (seen.has(id)) continue;
+          seen.add(id);
+          const txt = (isPrelims ? (q.stem + ' ' + (q.options || []).join(' ')) : (q.text || '')).toLowerCase();
+          let count = 0;
+          for (let i = 0; i < tokens.length; i++) {
+            const tok = tokens[i];
+            if (txt.includes(tok) || (tok.length >= 5 && txt.includes(tok.slice(0, 5)))) {
+              count++;
+            }
+          }
+          if (count > 0) {
+            scored.push({ q, count });
           }
         }
-        if (hits.length >= 10) break;
       }
-      if (hits.length > 0) mains = hits;
+      scored.sort((a, b) => b.count - a.count);
+      if (scored.length > 0) {
+        const minCount = tokens.length <= 1 ? 1 : Math.min(2, scored[0].count);
+        return scored.filter(s => s.count >= minCount).slice(0, 20).map(s => s.q);
+      }
+      return [];
+    }
+
+    if (prelims.length === 0 && window.PRELIMS_QUESTIONS_DB) {
+      prelims = searchByStemTokens(window.PRELIMS_QUESTIONS_DB, true);
+    }
+    if (mains.length === 0 && window.MAINS_QUESTIONS_DB) {
+      mains = searchByStemTokens(window.MAINS_QUESTIONS_DB, false);
     }
 
     return { mains, prelims };

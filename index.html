@@ -53,7 +53,6 @@
       <!-- Actions & Profile -->
       <div class="header-actions">
         <div id="user-badge-container"></div>
-        <button id="gemini-config-btn" class="btn btn-outline btn-sm" onclick="AWFG_APP.openGeminiModal()" title="Configure Google Gemini AI API for Real-Time UPSC Mains Answers">✨ Gemini AI</button>
         <button id="theme-toggle-btn" class="btn btn-outline btn-sm" title="Toggle Light/Dark Theme">☀️ Light</button>
         <button id="export-backup-btn" class="btn btn-outline btn-sm" title="Export all progress as JSON backup file">⬇ Export</button>
         <button id="import-backup-btn" class="btn btn-outline btn-sm" title="Restore progress from JSON backup file">⬆ Restore</button>
@@ -158,10 +157,10 @@
         <!-- Tab Switcher between Mains and Prelims -->
         <div class="pyq-tabs-row">
           <div class="pyq-tabs" role="tablist">
-            <button class="pyq-tab-btn active" data-pyq-tab="mains" id="pyq-tab-mains-btn" role="tab">
+            <button class="pyq-tab-btn active" data-pyq-tab="mains" id="pyq-tab-mains-btn" role="tab" onclick="AWFG_APP.switchPyqTab('mains')">
               📝 Mains PYQs (<span id="pyq-mains-count">0</span>)
             </button>
-            <button class="pyq-tab-btn" data-pyq-tab="prelims" id="pyq-tab-prelims-btn" role="tab">
+            <button class="pyq-tab-btn" data-pyq-tab="prelims" id="pyq-tab-prelims-btn" role="tab" onclick="AWFG_APP.switchPyqTab('prelims')">
               🎯 Prelims PYQs (<span id="pyq-prelims-count">0</span>)
             </button>
           </div>
@@ -253,54 +252,54 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- 1. Data Layer: Core Schedule, Subject-Wise Modular Datasets & Loader -->
-  <script src="data.js?v=4.3"></script>
-  <script src="data/subjects/art_and_culture/index.js?v=4.3"></script>
-  <script src="data/subjects/modern_history/index.js?v=4.3"></script>
-  <script src="data/subjects/world_history/index.js?v=4.3"></script>
-  <script src="data/subjects/post_independence/index.js?v=4.3"></script>
-  <script src="data/subjects/geography/index.js?v=4.3"></script>
-  <script src="data/subjects/society/index.js?v=4.3"></script>
-  <script src="data/subjects/polity/index.js?v=4.3"></script>
-  <script src="data/subjects/governance/index.js?v=4.3"></script>
-  <script src="data/subjects/social_justice/index.js?v=4.3"></script>
-  <script src="data/subjects/international_relations/index.js?v=4.3"></script>
-  <script src="data/subjects/economy/index.js?v=4.3"></script>
-  <script src="data/subjects/agriculture/index.js?v=4.3"></script>
-  <script src="data/subjects/science_technology/index.js?v=4.3"></script>
-  <script src="data/subjects/environment/index.js?v=4.3"></script>
-  <script src="data/subjects/disaster_management/index.js?v=4.3"></script>
-  <script src="data/subjects/internal_security/index.js?v=4.3"></script>
-  <script src="data/subjects/ethics/index.js?v=4.3"></script>
-  <script src="data/subjects/essay/index.js?v=4.3"></script>
+  <script src="data.js?v=4.5"></script>
+  <script src="data/subjects/art_and_culture/index.js?v=4.5"></script>
+  <script src="data/subjects/modern_history/index.js?v=4.5"></script>
+  <script src="data/subjects/world_history/index.js?v=4.5"></script>
+  <script src="data/subjects/post_independence/index.js?v=4.5"></script>
+  <script src="data/subjects/geography/index.js?v=4.5"></script>
+  <script src="data/subjects/society/index.js?v=4.5"></script>
+  <script src="data/subjects/polity/index.js?v=4.5"></script>
+  <script src="data/subjects/governance/index.js?v=4.5"></script>
+  <script src="data/subjects/social_justice/index.js?v=4.5"></script>
+  <script src="data/subjects/international_relations/index.js?v=4.5"></script>
+  <script src="data/subjects/economy/index.js?v=4.5"></script>
+  <script src="data/subjects/agriculture/index.js?v=4.5"></script>
+  <script src="data/subjects/science_technology/index.js?v=4.5"></script>
+  <script src="data/subjects/environment/index.js?v=4.5"></script>
+  <script src="data/subjects/disaster_management/index.js?v=4.5"></script>
+  <script src="data/subjects/internal_security/index.js?v=4.5"></script>
+  <script src="data/subjects/ethics/index.js?v=4.5"></script>
+  <script src="data/subjects/essay/index.js?v=4.5"></script>
 
   <!-- GS-1 Master Topper-Calibrated Answer Datasets -->
-  <script src="data/subjects/art_and_culture/topper_answers.js?v=4.3"></script>
-  <script src="data/subjects/modern_history/topper_answers.js?v=4.3"></script>
-  <script src="data/subjects/world_history/topper_answers.js?v=4.3"></script>
-  <script src="data/subjects/post_independence/topper_answers.js?v=4.3"></script>
-  <script src="data/subjects/geography/topper_answers.js?v=4.3"></script>
-  <script src="data/subjects/society/topper_answers.js?v=4.3"></script>
+  <script src="data/subjects/art_and_culture/topper_answers.js?v=4.5"></script>
+  <script src="data/subjects/modern_history/topper_answers.js?v=4.5"></script>
+  <script src="data/subjects/world_history/topper_answers.js?v=4.5"></script>
+  <script src="data/subjects/post_independence/topper_answers.js?v=4.5"></script>
+  <script src="data/subjects/geography/topper_answers.js?v=4.5"></script>
+  <script src="data/subjects/society/topper_answers.js?v=4.5"></script>
 
-  <script src="data/data_loader.js?v=4.3"></script>
+  <script src="data/data_loader.js?v=4.5"></script>
 
   <!-- 2. Master Topper Framing Engine -->
-  <script src="topper_engine.js?v=4.3"></script>
+  <script src="topper_engine.js?v=4.5"></script>
 
   <!-- 3. Page Object Model (POM) Architecture -->
-  <script src="js/core/Utils.js?v=4.3"></script>
-  <script src="js/core/EventBus.js?v=4.3"></script>
-  <script src="js/core/State.js?v=4.3"></script>
-  <script src="js/core/Storage.js?v=4.3"></script>
-  <script src="js/core/GeminiService.js?v=4.3"></script>
-  <script src="js/components/GeminiModal.js?v=4.3"></script>
-  <script src="js/components/TopperEngineView.js?v=4.3"></script>
-  <script src="js/components/AnswerPadModal.js?v=4.3"></script>
-  <script src="js/components/MicrothemeModal.js?v=4.3"></script>
-  <script src="js/pages/DashboardPage.js?v=4.3"></script>
-  <script src="js/pages/SchedulePage.js?v=4.3"></script>
-  <script src="js/pages/RoadmapPage.js?v=4.3"></script>
-  <script src="js/pages/SynergyPage.js?v=4.3"></script>
-  <script src="js/pages/WyskPage.js?v=4.3"></script>
-  <script src="js/app.js?v=4.3"></script>
+  <script src="js/core/Utils.js?v=4.5"></script>
+  <script src="js/core/EventBus.js?v=4.5"></script>
+  <script src="js/core/State.js?v=4.5"></script>
+  <script src="js/core/Storage.js?v=4.5"></script>
+  <script src="js/core/GeminiService.js?v=4.5"></script>
+  <script src="js/components/GeminiModal.js?v=4.5"></script>
+  <script src="js/components/TopperEngineView.js?v=4.5"></script>
+  <script src="js/components/AnswerPadModal.js?v=4.5"></script>
+  <script src="js/components/MicrothemeModal.js?v=4.5"></script>
+  <script src="js/pages/DashboardPage.js?v=4.5"></script>
+  <script src="js/pages/SchedulePage.js?v=4.5"></script>
+  <script src="js/pages/RoadmapPage.js?v=4.5"></script>
+  <script src="js/pages/SynergyPage.js?v=4.5"></script>
+  <script src="js/pages/WyskPage.js?v=4.5"></script>
+  <script src="js/app.js?v=4.5"></script>
 </body>
 </html>

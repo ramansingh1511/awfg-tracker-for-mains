@@ -135,22 +135,19 @@
                   ${isAttempted ? `<span class="badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-weight: 700;">✓ Answer Saved (${savedWords} words)</span>` : ''}
                 </div>
                 <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                  <button class="btn ${isAttempted ? 'btn-subtle' : 'btn-primary'} btn-sm" onclick="AWFG_APP.toggleAnswerPad('${mKey}')">
-                    ✍️ ${isAttempted ? 'Edit Answer' : 'Draft Answer'}
+                  <button class="btn btn-primary btn-sm" onclick="AWFG_APP.toggleMainsApproach('${mKey}')" style="background: linear-gradient(135deg, #4f46e5, #7c3aed); border: none; font-weight: 700; color: #fff;">
+                    👑 Topper Answer
                   </button>
-                  <button class="btn btn-outline btn-sm" onclick="AWFG_APP.toggleMainsApproach('${mKey}')" style="border-color: #818cf8; color: #818cf8; font-weight: 600;">
-                    📐 How to Approach
-                  </button>
-                  <button class="btn btn-sm" onclick="AWFG_APP.toggleMainsApproach('${mKey}'); AWFG_APP.generateGeminiAnswer('${mKey}', ${q.marks});" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(168, 85, 247, 0.25)); border: 1px solid #818cf8; color: #c4b5fd; font-weight: 700;" title="Generate live authentic answer with Google Gemini API">
-                    ✨ Gemini AI
+                  <button class="btn ${isAttempted ? 'btn-subtle' : 'btn-outline'} btn-sm" onclick="AWFG_APP.toggleAnswerPad('${mKey}')">
+                    ✍️ ${isAttempted ? 'Edit Draft' : 'Draft Answer'}
                   </button>
                   <button class="btn btn-subtle btn-sm" onclick="AWFG_APP.copyQuestion('${Utils.escapeQuotes(q.text)}', this)" title="Copy question text">📋 Copy</button>
                 </div>
               </div>
-              <div class="pyq-stem-text">${Utils.escapeHtml(q.text)}</div>
+              <div class="pyq-stem-text" onclick="AWFG_APP.toggleMainsApproach('${mKey}')" style="cursor: pointer;" title="Click to view Topper Model Answer & Blueprint">${Utils.escapeHtml(q.text)}</div>
 
               <!-- Dynamic 5-Point GS-1 Blueprint & Topper Framing Engine -->
-              <div id="approach-${mKey}" class="pyq-approach-box hidden">
+              <div id="approach-${mKey}" class="pyq-approach-box ${idx === 0 ? '' : 'hidden'}">
                 ${window.AWFG_TOPPER_VIEW ? window.AWFG_TOPPER_VIEW.renderBlueprintHtml(mKey, q.text, q.marks, q.subject) : ''}
               </div>
 
