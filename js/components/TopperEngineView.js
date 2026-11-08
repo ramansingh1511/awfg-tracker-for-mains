@@ -23,7 +23,9 @@
       const marksMatch = marksBadge ? marksBadge.textContent.match(/(\d+(?:\.\d+)?)\s*Marks/) : null;
       const marks = marksMatch ? parseFloat(marksMatch[1]) : 10;
       const modal = window.AWFG_MICROTHEME_MODAL;
-      const subject = (modal && modal.currentData && modal.currentData.name) ? modal.currentData.name : '';
+      const subject = (card && card.dataset.subject) 
+        ? card.dataset.subject 
+        : ((modal && modal.currentData && modal.currentData.name) ? modal.currentData.name : '');
 
       activeTopperByMKey[mKey] = topperKey;
 
@@ -67,7 +69,9 @@
       const stemEl = card ? card.querySelector('.pyq-stem-text') : null;
       const qText = stemEl ? stemEl.textContent : '';
       const modal = window.AWFG_MICROTHEME_MODAL;
-      const subject = (modal && modal.currentData && modal.currentData.name) ? modal.currentData.name : '';
+      const subject = (card && card.dataset.subject) 
+        ? card.dataset.subject 
+        : ((modal && modal.currentData && modal.currentData.name) ? modal.currentData.name : '');
 
       let outline = '';
       let topperName = 'Topper';
@@ -104,7 +108,9 @@
       const marksMatch = marksBadge ? marksBadge.textContent.match(/(\d+(?:\.\d+)?)\s*Marks/) : null;
       const marks = marksMatch ? parseFloat(marksMatch[1]) : 10;
       const modal = window.AWFG_MICROTHEME_MODAL;
-      const subject = (modal && modal.currentData && modal.currentData.name) ? modal.currentData.name : '';
+      const subject = (card && card.dataset.subject) 
+        ? card.dataset.subject 
+        : ((modal && modal.currentData && modal.currentData.name) ? modal.currentData.name : '');
 
       let outline = '';
       if (window.TOPPER_ENGINE && window.TOPPER_ENGINE.getMarkdownOutline) {
@@ -134,7 +140,7 @@
                 ${esc(bp.domainLabel)}
               </div>
               <h3 style="margin: 2px 0 0; color: var(--text-primary); font-size: 1.12rem; display: flex; align-items: center; gap: 8px;">
-                <span>📐</span> GS-1 Answer Blueprint (5-Point UPSC Framework)
+                <span>📐</span> ${esc(bp.paperLabel ? bp.paperLabel.split('•')[0].trim() : (bp.domainLabel ? bp.domainLabel.split('•')[0].trim() : 'GS-1'))} Answer Blueprint (5-Point UPSC Framework)
               </h3>
             </div>
             <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">

@@ -9447,8 +9447,8 @@
   // -------------------------------------------------------------
   function extractCleanTopicTitle(qText) {
     if (!qText) return 'Core Subject Matter';
-    let t = qText.replace(/^(?:ures of World Physical Geography|Salient Features of World Physical Geography|MAINS MICROTHEMES|UPSC PYQs|UPSC MAINS \d{4} GS \d{4}-\d{4})\s*/i, '');
-    t = t.replace(/\s*(?:MAINS MICROTHEMES \(GS \d{4}-\d{2}\).*?$|Copyright © by Civilsdaily.*?$|WARNING: This COPY is ENCRYPTED.*?$)/i, '');
+    let t = qText.replace(/^(?:(?:salient\s+)?(?:fea)?tures\s+of\s+world\s+physical\s+geography|ures\s+of\s+world\s+physical\s+geography|mains\s+microthemes|upsc\s+pyqs|upsc\s+mains\s+\d{4}\s+gs\s+\d{4}-\d{4}|q\d+[\.:]?|\d+[\.:])\s*/i, '');
+    t = t.replace(/\s*(?:mains\s+microthemes\s*\(gs\s*\d{4}-\d{2}\).*?$|copyright\s*©\s*by\s*civilsdaily.*?$|warning:\s*this\s*copy\s*is\s*encrypted.*?$)/i, '');
     
     const stopWords = new Set([
       'what', 'explain', 'discuss', 'examine', 'critically', 'comment', 'analyse', 'analyze',
@@ -9457,7 +9457,9 @@
       'how', 'why', 'where', 'when', 'who', 'does', 'with', 'from', 'into', 'upon',
       'have', 'been', 'were', 'would', 'should', 'could', 'india', 'indian', 'upsc', 'pyqs',
       'the', 'and', 'for', 'are', 'was', 'that', 'this', 'these', 'those', 'can', 'has', 'had',
-      'one', 'some', 'most', 'more', 'than', 'between', 'over', 'also', 'such', 'other'
+      'one', 'some', 'most', 'more', 'than', 'between', 'over', 'also', 'such', 'other',
+      'ures', 'tures', 'features', 'salient', 'topic', 'topics', 'question', 'questions',
+      'statement', 'statements', 'context', 'following', 'give', 'giving', 'gives', 'given'
     ]);
     const words = t.match(/[a-zA-Z0-9\-']+/g) || [];
     const meaningful = words.filter(w => w.length > 2 && !stopWords.has(w.toLowerCase()));
@@ -9472,49 +9474,54 @@
   }
 
   // -------------------------------------------------------------
-  // -------------------------------------------------------------
   // Disciplinary Fine-Domain Classifier (Subject-First + Word-Boundary Regex)
   // -------------------------------------------------------------
   function detectQuestionDomain(qText, subject) {
     const q = (qText || '').toLowerCase();
     const s = (subject || '').toLowerCase();
 
-    // Priority 1: Match explicit UPSC GS Paper Subject if provided
+    // Priority 1: Match explicit UPSC GS Paper Subject or Microtheme if provided
     if (s.includes('world history')) {
       return 'WORLD_HISTORY';
     }
     if (s.includes('post independence') || s.includes('post-independence')) {
       return 'POST_INDEPENDENCE';
     }
-    if (s.includes('modern history')) {
+    if (s.includes('modern history') || /\b(freedom struggle|colonial|national movement)\b/i.test(s)) {
       return 'MODERN_HISTORY';
     }
-    if (s.includes('art and culture') || s.includes('art & culture') || s.includes('ancient history')) {
+    if (s.includes('art and culture') || s.includes('art & culture') || s.includes('ancient history') || /\b(architecture|temple|sculpture|literature)\b/i.test(s)) {
       if (/\b(taxila|nalanda|ashoka|mauryan|sangam|traveller|traveler|fa-hien|hiuen tsang|al-biruni|ibn battuta|bhakti|sufi|chaitanya|kabir|gupta|chola|vijayanagara|vedic)\b/i.test(q)) {
         return 'ANCIENT_MEDIEVAL';
       }
       return 'ART_CULTURE';
     }
-    if (s.includes('geography')) {
-      if (/\b(troposphere|monsoon|purvaiya|el-nino|el nino|enso|iod|cyclone|air mass|inversion|atmosphere|lapse rate|jet stream|insolation|heat budget|wind|climate|precipitation)\b/i.test(q)) {
+    if (s.includes('geography') || /\b(climat|atmosphere|monsoon|physiograph|ocean|drainage|geomorph|glacier|tectonic|volcan)\b/i.test(s)) {
+      if (/\b(troposphere|monsoon|purvaiya|el-nino|el nino|enso|iod|cyclone|air mass|inversion|atmosphere|lapse rate|jet stream|insolation|heat budget|wind|climate|precipitation)\b/i.test(q) || /\b(climat|atmosphere|monsoon)\b/i.test(s)) {
         return 'GEOGRAPHY_CLIMATOLOGY';
       }
-      if (/\b(ocean|marine|coral|sea|arctic|antarctic|polar|natural resource|petroleum|coal|mineral|iron|steel|water|bauxite|soil|catchment|basin)\b/i.test(q)) {
+      if (/\b(ocean|marine|coral|sea|arctic|antarctic|polar|natural resource|petroleum|coal|mineral|iron|steel|water|bauxite|soil|catchment|basin)\b/i.test(q) || /\b(ocean|resource|water)\b/i.test(s)) {
         return 'GEOGRAPHY_RESOURCES';
       }
       return 'GEOGRAPHY_GEOMORPHOLOGY';
     }
-    if (s.includes('society') || s.includes('social justice')) {
-      if (/\b(women|gender|patriarch|care economy|feminization|self-help|shg|fertility|sex ratio|marriage|maternal)\b/i.test(q)) {
+    if (s.includes('society') || s.includes('social justice') || /\b(women|gender|caste|urban|poverty|diversity|secularism)\b/i.test(s)) {
+      if (/\b(women|gender|patriarch|care economy|feminization|self-help|shg|fertility|sex ratio|marriage|maternal)\b/i.test(q) || /\b(women|gender)\b/i.test(s)) {
         return 'SOCIETY_WOMEN';
       }
-      if (/\b(urban|city|cities|slum|smart cit|tier 2|tier-2|migration|poverty|hunger|globalization|globalisation|elderly|aging|youth|family|child labour|child labor|work from home|disability)\b/i.test(q)) {
+      if (/\b(urban|city|cities|slum|smart cit|tier 2|tier-2|migration|poverty|hunger|globalization|globalisation|elderly|aging|youth|family|child labour|child labor|work from home|disability)\b/i.test(q) || /\b(urban|poverty|globaliz)\b/i.test(s)) {
         return 'SOCIETY_URBAN';
       }
       return 'SOCIETY_DIVERSITY';
     }
-    if (s.includes('polity') || s.includes('governance')) {
+    if (s.includes('polity') || s.includes('governance') || /\b(constitution|rights|dpsp|judiciary|parliament|federal|governor|executive)\b/i.test(s)) {
       return 'POLITY_CONSTITUTION';
+    }
+    if (s.includes('economy') || s.includes('agriculture') || /\b(fiscal|banking|gdp|inflation|budget|growth|industry|monetary)\b/i.test(s)) {
+      return 'ECONOMY_GROWTH';
+    }
+    if (s.includes('ethics') || /\b(integrity|morality|attitude|values|probity)\b/i.test(s)) {
+      return 'ETHICS_VALUES';
     }
 
     // Priority 2: Keyword-based inference if subject is absent
@@ -10794,6 +10801,8 @@ ${topper.signatureConclusion}`;
     const recKey = getRecommendedTopperKey(qText, subject);
     const activeKey = recKey;
     const topperKeys = ['aditya', 'ruhani', 'ishita', 'umaharathi', 'medha', 'anmol'];
+    const sampleProfile = generateTopperAnswerBlueprint(activeKey, qText, marks, subject);
+    const paperTag = (sampleProfile && sampleProfile.paperLabel) ? sampleProfile.paperLabel.split('•')[0].trim() : 'GS-1';
 
     return `
       <div class="topper-engine-card" id="topper-card-${mKey}">
@@ -10801,7 +10810,7 @@ ${topper.signatureConclusion}`;
           <div style="display: flex; align-items: center; gap: 8px;">
             <span style="font-size: 1.25rem;">🏆</span>
             <div>
-              <strong style="color: #f59e0b; font-size: 0.94rem;">UPSC Topper's Framing Engine (GS-1 Master Edition)</strong>
+              <strong style="color: #f59e0b; font-size: 0.94rem;">UPSC Topper's Framing Engine (${paperTag} Master Edition)</strong>
               <div style="font-size: 0.74rem; color: var(--text-secondary);">Directly calibrated from UPSC MGP Topper Copies (AIR 1–13)</div>
             </div>
           </div>

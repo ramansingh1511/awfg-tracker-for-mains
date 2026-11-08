@@ -20,6 +20,26 @@
   function renderView() {
     const state = State.get();
 
+    // Sync paper filter pill buttons
+    const curPaper = state.paperFilter || 'ALL';
+    document.querySelectorAll('.pill-btn[data-paper]').forEach(b => {
+      if (b.dataset.paper === curPaper) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+
+    // Sync view switcher buttons
+    const curView = state.activeView || 'schedule';
+    document.querySelectorAll('.tab-btn[data-view]').forEach(b => {
+      if (b.dataset.view === curView) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+
     // 1. Always update Dashboard KPI metrics
     if (DashboardPage) DashboardPage.render();
 

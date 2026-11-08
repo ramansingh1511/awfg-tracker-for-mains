@@ -21,7 +21,7 @@
       const totalMastered = allWysk.filter(q => userWysk[q.id]).length;
       const masterPct = totalAll > 0 ? Math.round((totalMastered / totalAll) * 100) : 0;
 
-      const currentPaper = (state.paperFilter && state.paperFilter !== 'ALL') ? state.paperFilter : (state.wyskPaper || 'ALL');
+      const currentPaper = state.paperFilter || state.wyskPaper || 'ALL';
       state.wyskPaper = currentPaper;
       let filtered = currentPaper === 'ALL' ? allWysk : allWysk.filter(q => q.paper === currentPaper);
 

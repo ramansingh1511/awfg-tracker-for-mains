@@ -127,7 +127,7 @@
           const pct = Math.min(100, Math.round((savedWords / targetWords) * 100));
 
           return `
-            <div class="pyq-question-card mains" id="mcard-${mKey}">
+            <div class="pyq-question-card mains" id="mcard-${mKey}" data-subject="${Utils.escapeHtml(q.subject || '')}">
               <div class="pyq-card-top">
                 <div class="pyq-meta-badges">
                   <span class="pyq-year-badge">UPSC Mains ${q.year}</span>
