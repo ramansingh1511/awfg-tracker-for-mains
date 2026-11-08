@@ -616,6 +616,10 @@
   // Render Current Active View
   function renderView() {
     renderKPIs();
+    // Synchronize top toolbar paper pills with current STATE.paperFilter
+    document.querySelectorAll('.pill-btn[data-paper]').forEach(b => {
+      b.classList.toggle('active', b.dataset.paper === STATE.paperFilter);
+    });
     const container = document.getElementById('view-content');
     if (!container) return;
 
@@ -644,7 +648,10 @@
 
   // Render Dynamic Custom Duration Roadmap View
   function renderRoadmapView(container) {
-    const schedule = window.AWFG_SCHEDULE || [];
+    const baseSchedule = window.AWFG_SCHEDULE || [];
+    const schedule = (STATE.paperFilter === 'ALL')
+      ? baseSchedule
+      : baseSchedule.filter(t => t.paper === STATE.paperFilter);
     const totalDays = getTargetDays();
     const totalWeeks = Math.max(3, Math.ceil(totalDays / 7));
     const baseDate = parseISO(STATE.currentUser ? STATE.currentUser.startDate : STATE.startDate) || new Date();
@@ -712,37 +719,47 @@
     container.innerHTML = html;
   }
 
-  // Render Prelims vs Mains Synergy Matrix View
+  // Render Prelims vs Mains Synergy Matrix View (Filtered by Paper & Search)
   function renderMatrixView(container) {
     const prelims = window.MASTER_PRELIMS_CATALOG || {};
-    
-    let html = `
-      <div class="matrix-view">
-        <h2>🔄 Prelims vs Mains Microthemes Synergy Matrix</h2>
-        <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 6px 0 16px;">
-          Comprehensive alignment of all 209 Prelims Microthemes with Mains Syllabus. Coinciding topics reinforce both papers simultaneously, while exclusive topics demand dedicated factual mastery.
-        </p>
-        <table class="matrix-table">
-          <thead>
-            <tr>
-              <th style="width: 14%;">Subject</th>
-              <th style="width: 24%;">Prelims Microtheme</th>
-              <th style="width: 10%;">Prelims PYQs</th>
-              <th style="width: 14%;">Synergy Status</th>
-              <th style="width: 26%;">Integrated Mains Strategy</th>
-              <th style="width: 12%;">PYQ Explorer</th>
-            </tr>
-          </thead>
-          <tbody>
-    `;
+    const searchQ = (STATE.searchQuery || '').trim().toLowerCase();
 
-    Object.keys(prelims).forEach(sub => {
-      const items = prelims[sub];
+    const SUBJECT_PAPER_MAP = {
+      'Arts & Culture': 'GS-1',
+      'Modern History': 'GS-1',
+      'Geography': 'GS-1',
+      'Off Topics': 'GS-1',
+      'Polity': 'GS-2',
+      'Governance': 'GS-2',
+      'International Relations': 'GS-2',
+      'Economics': 'GS-3',
+      'Agriculture': 'GS-3',
+      'Environment': 'GS-3',
+      'Science & Technology': 'GS-3',
+      'Ethics': 'GS-4'
+    };
+
+    let subjectKeys = Object.keys(prelims);
+    if (STATE.paperFilter !== 'ALL') {
+      subjectKeys = subjectKeys.filter(sub => SUBJECT_PAPER_MAP[sub] === STATE.paperFilter);
+    }
+
+    let rowsHtml = '';
+    let totalMatchingItems = 0;
+
+    subjectKeys.forEach(sub => {
+      let items = prelims[sub] || [];
+      if (searchQ) {
+        items = items.filter(it => it.name.toLowerCase().includes(searchQ) || sub.toLowerCase().includes(searchQ));
+      }
+      if (items.length === 0) return;
+      totalMatchingItems += items.length;
+
       items.forEach((item, i) => {
         const isCoinciding = item.coincides;
-        html += `
+        rowsHtml += `
           <tr>
-            ${i === 0 ? `<td rowspan="${items.length}" style="font-weight: 700; vertical-align: top; background: var(--bg-primary);">${sub}</td>` : ''}
+            ${i === 0 ? `<td rowspan="${items.length}" style="font-weight: 700; vertical-align: top; background: var(--bg-primary);"><span class="paper-badge ${SUBJECT_PAPER_MAP[sub] || 'GS-1'}" style="font-size: 0.65rem; padding: 2px 6px; margin-right: 4px;">${SUBJECT_PAPER_MAP[sub] || 'GS-1'}</span><br>${sub}</td>` : ''}
             <td style="font-weight: 600;">
               <span class="microtheme-clickable" onclick="AWFG_APP.openPyqModal('${escapeQuotes(item.name)}')" title="Click to open all questions">${item.name}</span>
             </td>
@@ -765,7 +782,40 @@
       });
     });
 
-    html += `</tbody></table></div>`;
+    let html = `
+      <div class="matrix-view">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+          <div>
+            <h2>🔄 Prelims vs Mains Microthemes Synergy Matrix</h2>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 4px 0 0;">
+              Filtering by <strong>${STATE.paperFilter === 'ALL' ? 'All Papers' : STATE.paperFilter}</strong> • ${totalMatchingItems} Microthemes displayed.
+            </p>
+          </div>
+          ${STATE.paperFilter !== 'ALL' ? `<button class="btn btn-subtle btn-sm" onclick="AWFG_APP.setFilterPaper('ALL')">Clear Paper Filter (Show All)</button>` : ''}
+        </div>
+        ${totalMatchingItems === 0 ? `
+          <div style="text-align: center; padding: 40px 20px; background: var(--bg-secondary); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <div style="font-size: 2rem; margin-bottom: 8px;">🔍</div>
+            <h3>No Microthemes Match Filter (${STATE.paperFilter})</h3>
+            <p style="color: var(--text-secondary); font-size: 0.88rem;">Try selecting 'ALL' papers or clearing your search term.</p>
+          </div>
+        ` : `
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th style="width: 14%;">Subject</th>
+                <th style="width: 24%;">Prelims Microtheme</th>
+                <th style="width: 10%;">Prelims PYQs</th>
+                <th style="width: 14%;">Synergy Status</th>
+                <th style="width: 26%;">Integrated Mains Strategy</th>
+                <th style="width: 12%;">PYQ Explorer</th>
+              </tr>
+            </thead>
+            <tbody>${rowsHtml}</tbody>
+          </table>
+        `}
+      </div>
+    `;
     container.innerHTML = html;
   }
 
@@ -780,8 +830,10 @@
     const totalMastered = allWysk.filter(q => userWysk[q.id]).length;
     const masterPct = totalAll > 0 ? Math.round((totalMastered / totalAll) * 100) : 0;
 
-    // Filter by Paper
-    const currentPaper = STATE.wyskPaper || 'ALL';
+    // Filter by Paper (Synced with top toolbar paperFilter)
+    const currentPaper = (STATE.paperFilter && STATE.paperFilter !== 'ALL') ? STATE.paperFilter : (STATE.wyskPaper || 'ALL');
+    STATE.wyskPaper = currentPaper;
+    STATE.paperFilter = currentPaper;
     let filtered = currentPaper === 'ALL' ? allWysk : allWysk.filter(q => q.paper === currentPaper);
 
     // Get unique topics for the selected paper to populate dropdown
@@ -1141,12 +1193,16 @@
       });
     });
 
-    // 5. Paper Filter Pills
+    // 5. Paper Filter Pills (Synced across all views including WYSK)
     document.querySelectorAll('.pill-btn[data-paper]').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.pill-btn[data-paper]').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        STATE.paperFilter = btn.dataset.paper;
+        const paper = btn.dataset.paper;
+        STATE.paperFilter = paper;
+        STATE.wyskPaper = paper;
+        STATE.wyskTopic = 'ALL';
+        STATE.wyskLimit = 60;
         renderView();
       });
     });
@@ -1160,11 +1216,12 @@
       });
     }
 
-    // 7. Live Search
+    // 7. Live Search (Synced across all views including WYSK)
     const searchInp = document.getElementById('search-query-input');
     if (searchInp) {
       searchInp.addEventListener('input', (e) => {
         STATE.searchQuery = e.target.value;
+        STATE.wyskSearch = e.target.value;
         renderView();
       });
     }
@@ -2445,6 +2502,7 @@
   // WYSK Question Bank Actions
   function setWyskPaper(paper) {
     STATE.wyskPaper = paper;
+    STATE.paperFilter = paper;
     STATE.wyskTopic = 'ALL';
     STATE.wyskLimit = 60;
     renderView();
@@ -2851,7 +2909,8 @@
     selectTopperLens: selectTopperLens,
     insertTopperOutline: insertTopperOutline,
     getState: () => STATE,
-    showToast: showToast
+    showToast: showToast,
+    setFilterPaper: (paper) => { STATE.paperFilter = paper; STATE.wyskPaper = paper; STATE.wyskTopic = 'ALL'; renderView(); }
   };
 
   // Bootstrap when DOM is ready
