@@ -42,6 +42,28 @@
   // Compile indices immediately from loaded subjects
   compileGlobalIndices();
 
+  // Topper Answers Master Database Compiler
+  window.AWFG_TOPPER_ANSWERS = window.AWFG_TOPPER_ANSWERS || {};
+  window.AWFG_TOPPER_ANSWERS_DB = window.AWFG_TOPPER_ANSWERS_DB || {};
+
+  function compileTopperAnswers() {
+    window.AWFG_TOPPER_ANSWERS_DB = window.AWFG_TOPPER_ANSWERS_DB || {};
+    if (window.AWFG_TOPPER_ANSWERS) {
+      for (const [subj, data] of Object.entries(window.AWFG_TOPPER_ANSWERS)) {
+        for (const [k, ans] of Object.entries(data)) {
+          window.AWFG_TOPPER_ANSWERS_DB[k] = ans;
+          if (ans.q) {
+            const normQ = ans.q.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 80);
+            window.AWFG_TOPPER_ANSWERS_DB[normQ] = ans;
+          }
+        }
+      }
+    }
+    return window.AWFG_TOPPER_ANSWERS_DB;
+  }
+  window.compileTopperAnswers = compileTopperAnswers;
+  compileTopperAnswers();
+
   // Microtheme lookup function
   window.getMicrothemeQuestions = function(microthemeName) {
     if (!microthemeName) return { mains: [], prelims: [] };

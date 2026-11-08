@@ -10337,6 +10337,33 @@
     const cleanKey = topperKey || 'aditya';
     const baseTopper = TOPPER_ARCHETYPES_DB[cleanKey] || TOPPER_ARCHETYPES_DB['aditya'];
 
+    // 0. Check pre-baked Topper Answer Master DB
+    const normQ = (qText || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 80);
+    const baked = (window.AWFG_TOPPER_ANSWERS_DB && window.AWFG_TOPPER_ANSWERS_DB[normQ]) ? window.AWFG_TOPPER_ANSWERS_DB[normQ] : null;
+    if (baked) {
+      const topData = (baked.toppers && baked.toppers[cleanKey]) ? baked.toppers[cleanKey] : (baked.toppers && baked.toppers.aditya);
+      const profileData = {
+        paperLabel: baked.paperLabel,
+        signatureIntro: (topData && topData.signatureIntro) || (baked.intros && baked.intros[0] && baked.intros[0].text) || '',
+        headingDeconstruction: (topData && topData.headingDeconstruction) || {
+          archetype: 'boxed',
+          headingStyle: 'Rectangular Boxed Subheadings with Causal Progression (──►)',
+          sections: (baked.headings || []).map(h => ({
+            title: h.title,
+            points: (h.points || []).map(p => ({ causalChain: p.causalChain || p, evidence: p.evidence || '' }))
+          }))
+        },
+        diagram: (topData && topData.diagram) || baked.diagram || { title: 'Topper Schematic', ascii: '' },
+        valueAdds: baked.valueAdds || [],
+        interPaper: baked.interPaper || {},
+        signatureConclusion: baked.evaluation || ''
+      };
+      return {
+        ...baseTopper,
+        ...profileData
+      };
+    }
+
     // 1. Check calibrated topic match
     const calKey = matchCalibratedTopicKey(qText);
     let profileData = null;
@@ -10386,8 +10413,9 @@
       directiveMeaning = "Directly deconstruct all components of the prompt with technical clarity, diagrams, and empirical substantiation.";
     }
 
-    const calKey = matchCalibratedTopicKey(qText);
-    const topicObj = (calKey && CALIBRATED_TOPICS[calKey]) ? CALIBRATED_TOPICS[calKey] : null;
+    // 0. Check pre-baked Topper Answer Master DB
+    const normQ = (qText || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 80);
+    const baked = (window.AWFG_TOPPER_ANSWERS_DB && window.AWFG_TOPPER_ANSWERS_DB[normQ]) ? window.AWFG_TOPPER_ANSWERS_DB[normQ] : null;
 
     let intros = [];
     let headings = [];
@@ -10397,8 +10425,26 @@
     let valueAdds = [];
     let conclusion = ``;
     let domainLabel = "GS-1 • Core Disciplinary Syllabus";
+    let explicitDemands = `Directly analyze all explicit dimensions of "${cleanTitle}" as specified in the prompt.`;
+    let implicitDemands = `Examine underlying structural causes, counter-perspectives, and long-term socio-economic or environmental outcomes.`;
+    let evaluation = `Critically evaluates the long-term relevance of "${cleanTitle}" for 21st-century India's modern challenges and policy roadmap.`;
 
-    if (topicObj) {
+    if (baked) {
+      domainLabel = baked.paperLabel || domainLabel;
+      intros = baked.intros || [];
+      headings = (baked.headings || []).map(h => ({
+        title: h.title,
+        points: (h.points || []).map(p => typeof p === 'string' ? p : `${p.causalChain} (Evidence: ${p.evidence || ''})`)
+      }));
+      diagramTitle = (baked.diagram && baked.diagram.title) || `Schematic Diagram: ${cleanTitle}`;
+      diagramVisual = (baked.diagram && baked.diagram.ascii) || '';
+      diagramSketchInstructions = (baked.diagram && baked.diagram.sketchGuide) || '1. Draw central conceptual block. 2. Show directional arrows. 3. Annotate with case studies.';
+      valueAdds = baked.valueAdds || [];
+      conclusion = baked.evaluation || '';
+      explicitDemands = (baked.demands && baked.demands.explicit) || explicitDemands;
+      implicitDemands = (baked.demands && baked.demands.implicit) || implicitDemands;
+      evaluation = baked.evaluation || evaluation;
+    } else if (topicObj) {
       domainLabel = topicObj.paperLabel;
       const ad = topicObj.toppers.aditya;
       intros = [
@@ -10434,11 +10480,8 @@
       conclusion = dyn.signatureConclusion;
     }
 
-    let explicitDemands = `Directly analyze all explicit dimensions of "${cleanTitle}" as specified in the prompt.`;
-    let implicitDemands = `Examine underlying structural causes, counter-perspectives, and long-term socio-economic or environmental outcomes.`;
-    let evaluation = `Critically evaluates the long-term relevance of "${cleanTitle}" for 21st-century India's modern challenges and policy roadmap.`;
-
-    if (domain === 'ART_CULTURE' || domain === 'ANCIENT_MEDIEVAL') {
+    if (!baked) {
+      if (domain === 'ART_CULTURE' || domain === 'ANCIENT_MEDIEVAL') {
       explicitDemands = `Deconstruct the artistic style, structural evolution, architectural anatomy, and canonical textual/epigraphic foundations of "${cleanTitle}".`;
       implicitDemands = `Correlate royal/guild patronage, trade route diffusion (Uttarapatha/Dakshinapatha), and spiritual metaphysics with the preservation challenges of living heritage.`;
       evaluation = `Safeguarding "${cleanTitle}" requires transitioning from reactive maintenance to proactive scientific conservation (3D LiDAR mapping, laser cleaning by ASI) and community-driven cultural tourism under PRASHAD & Dekho Apna Desh.`;
@@ -10467,6 +10510,7 @@
       implicitDemands = `Unpack intersectional vulnerabilities (caste, gender, class, geography), institutional barriers to social mobility, and the efficacy of statutory affirmative policies.`;
       evaluation = `Transforming "${cleanTitle}" requires moving beyond formal statutory equality to substantive lived justice through capability expansion (Amartya Sen), targeted social investments, and deepening constitutional morality across all strata of society.`;
     }
+  }
 
     return {
       domainLabel,
