@@ -1916,6 +1916,7 @@
         const suggestedMinutes = (q.marks >= 15) ? 11 : 7;
         const savedWords = draft ? draft.wordCount : 0;
         const pct = Math.min(100, Math.round((savedWords / targetWords) * 100));
+        const approach = generateMainsApproach(q.text, q.marks, q.subject);
 
         return `
           <div class="pyq-question-card mains" id="mcard-${mKey}">
@@ -1944,6 +1945,27 @@
 
             <!-- Expandable Answer Writing Pad -->
             <div id="pad-${mKey}" class="pyq-answer-pad ${isAttempted ? '' : 'hidden'}">
+              <!-- Integrated Approach & Quick Template Toolbar Banner -->
+              <div class="pad-template-banner">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 1.15rem;">💡</span>
+                    <div>
+                      <strong style="color: #818cf8; font-size: 0.88rem;">UPSC Structure Blueprint:</strong>
+                      <span style="color: var(--text-secondary); font-size: 0.82rem; margin-left: 6px;">Directive: <strong style="color: var(--text-primary);">${approach.directive}</strong> • ~${targetWords} words (${suggestedMinutes} mins)</span>
+                    </div>
+                  </div>
+                  <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <button type="button" class="btn btn-subtle btn-sm" onclick="AWFG_APP.toggleMainsApproach('${mKey}')" style="font-size: 0.8rem;">
+                      🔍 View Case Laws & Framework
+                    </button>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="AWFG_APP.insertTemplateToPad('${mKey}', ${q.marks})" style="background: linear-gradient(135deg, #6366f1, #4f46e5); font-weight: 700; font-size: 0.82rem;">
+                      📥 Pre-fill 3-Part Answer Template
+                    </button>
+                  </div>
+                </div>
+              </div>
+
               <div class="pyq-pad-toolbar">
                 <div class="pyq-timer-box">
                   <span>⏱️ Time:</span>

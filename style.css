@@ -1475,6 +1475,13 @@ body {
   font-size: 0.85rem;
 }
 
+.pad-template-banner {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(139, 92, 246, 0.08));
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+
 .pyq-timer-box {
   display: flex;
   align-items: center;
